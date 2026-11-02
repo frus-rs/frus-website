@@ -1,0 +1,32 @@
+name: Build
+
+# Builds the site against frus's master: the sync script clones it, since no checkout sits
+# beside this one here. The build fails on a broken link. Nothing is published.
+
+on:
+  push:
+    branches: [master]
+  pull_request:
+  workflow_dispatch:
+  # frus's pages change without this repository changing: build weekly to catch a broken link.
+  schedule:
+    - cron: "0 6 * * 1"
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    name: Build the site
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci
+      - run: npm run typecheck
+      - run: npm run build

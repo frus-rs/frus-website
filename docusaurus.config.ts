@@ -63,7 +63,6 @@ const config: Config = {
       {
         docs: {
           sidebarPath: './sidebars.ts',
-          editUrl: `${repo}/edit/master/website/`,
           showLastUpdateTime: false,
         },
         blog: {
@@ -73,7 +72,6 @@ const config: Config = {
             type: ['rss', 'atom'],
             xslt: true,
           },
-          editUrl: `${repo}/edit/master/website/`,
           onInlineTags: 'warn',
           onInlineAuthors: 'warn',
           onUntruncatedBlogPosts: 'warn',

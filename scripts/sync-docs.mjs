@@ -1,17 +1,43 @@
-// Copies the repository's documentation into the site before every build.
+// Copies frus's documentation into the site before every build.
 //
-// The pages are written once, in the repository (`docs/`, `ARCHITECTURE.md`, ...), where
+// The pages are written once, in the frus repository (`docs/`, `ARCHITECTURE.md`, ...), where
 // GitHub shows them and frus's test suite compiles their examples. This script places them
 // where the site reads them and points every link that leaves the copied set at GitHub, so
 // the site never holds a second, staler copy.
+//
+// Where the frus repository is found, in order:
+//   1. `FRUS_REPO`, a path to a checkout;
+//   2. `../frus`, a checkout beside this one;
+//   3. `.frus/`, a shallow clone of the public repository, made on first use.
+//      `FRUS_UPDATE=1` pulls it first.
 
+import {execFileSync} from 'node:child_process';
 import fs from 'node:fs';
 import path from 'node:path';
 import {fileURLToPath} from 'node:url';
 
 const site = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
-const repo = path.resolve(site, '..');
 const github = 'https://github.com/KalybosPro/frus/blob/master';
+
+function findRepo() {
+  const isFrus = (dir) => fs.existsSync(path.join(dir, 'docs/guide/README.md'));
+  if (process.env.FRUS_REPO) {
+    const dir = path.resolve(process.env.FRUS_REPO);
+    if (!isFrus(dir)) throw new Error(`FRUS_REPO=${dir} is not a frus checkout`);
+    return dir;
+  }
+  const sibling = path.resolve(site, '../frus');
+  if (isFrus(sibling)) return sibling;
+  const clone = path.join(site, '.frus');
+  if (!isFrus(clone)) {
+    execFileSync('git', ['clone', '--depth', '1', 'https://github.com/KalybosPro/frus.git', clone], {stdio: 'inherit'});
+  } else if (process.env.FRUS_UPDATE === '1') {
+    execFileSync('git', ['-C', clone, 'pull', '--ff-only', '--depth', '1'], {stdio: 'inherit'});
+  }
+  return clone;
+}
+
+const repo = findRepo();
 
 // Repository file → page in the site's `docs/`.
 const pages = {
@@ -63,4 +89,4 @@ for (const file of media) {
   fs.copyFileSync(path.join(repo, 'docs/media', file), path.join(mediaOut, file));
 }
 
-console.log(`synced ${Object.keys(pages).length} pages and ${media.length} pictures`);
+console.log(`synced ${Object.keys(pages).length} pages and ${media.length} pictures from ${repo}`);
