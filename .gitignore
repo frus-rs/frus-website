@@ -26,3 +26,6 @@ yarn-error.log*
 
 # The frus repository, cloned by scripts/sync-docs.mjs when no checkout is beside this one.
 /.frus
+
+# The widget-shots tool's build, when CARGO_TARGET_DIR is not set.
+/tools/widget-shots/target

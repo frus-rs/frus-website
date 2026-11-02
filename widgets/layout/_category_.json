@@ -1,0 +1,9 @@
+{
+  "label": "Layout",
+  "position": 1,
+  "link": {
+    "type": "generated-index",
+    "description": "Boxes, rows, columns, stacks and constraints.",
+    "slug": "/layout"
+  }
+}

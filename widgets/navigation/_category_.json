@@ -1,0 +1,9 @@
+{
+  "label": "Navigation",
+  "position": 7,
+  "link": {
+    "type": "generated-index",
+    "description": "App bars, tabs, navigation bars, rails and drawers.",
+    "slug": "/navigation"
+  }
+}

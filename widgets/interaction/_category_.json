@@ -1,0 +1,9 @@
+{
+  "label": "Interaction",
+  "position": 11,
+  "link": {
+    "type": "generated-index",
+    "description": "Gestures, hover, drag and drop, focus and shortcuts.",
+    "slug": "/interaction"
+  }
+}

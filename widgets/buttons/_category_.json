@@ -1,0 +1,9 @@
+{
+  "label": "Buttons & menus",
+  "position": 3,
+  "link": {
+    "type": "generated-index",
+    "description": "Buttons, icon buttons, toggles and menus.",
+    "slug": "/buttons"
+  }
+}

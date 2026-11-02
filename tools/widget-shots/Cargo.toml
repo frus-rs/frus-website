@@ -1,0 +1,20 @@
+[package]
+name = "widget-shots"
+version = "0.0.0"
+edition = "2021"
+publish = false
+
+# Renders every demo of frus's widget gallery to a PNG, and writes the gallery's table of
+# contents as JSON, for `scripts/gen-widgets.mjs`. Expects the frus repository beside this one
+# (`../frus`), like the docs sync.
+#
+#     cargo run --release --manifest-path tools/widget-shots/Cargo.toml -- static/preview catalog.json
+
+[workspace]
+
+[dependencies]
+widgets = { path = "../../../frus/frus-examples/widgets" }
+frus = { path = "../../../frus/crates/frus" }
+frus-shell = { path = "../../../frus/crates/frus-shell" }
+frus-test = { path = "../../../frus/crates/frus-test" }
+serde_json = "1"

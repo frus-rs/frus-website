@@ -1,0 +1,9 @@
+{
+  "label": "Inputs & forms",
+  "position": 4,
+  "link": {
+    "type": "generated-index",
+    "description": "Text fields, choices, sliders, pickers and validation.",
+    "slug": "/inputs"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "label": "Painting & effects",
+  "position": 10,
+  "link": {
+    "type": "generated-index",
+    "description": "Decoration, clipping, transforms, custom painting and filters.",
+    "slug": "/painting"
+  }
+}

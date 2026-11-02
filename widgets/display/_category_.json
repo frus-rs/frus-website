@@ -1,0 +1,9 @@
+{
+  "label": "Display",
+  "position": 5,
+  "link": {
+    "type": "generated-index",
+    "description": "Cards, chips, avatars, icons, images, tables and charts.",
+    "slug": "/display"
+  }
+}

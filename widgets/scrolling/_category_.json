@@ -1,0 +1,9 @@
+{
+  "label": "Lists & scrolling",
+  "position": 8,
+  "link": {
+    "type": "generated-index",
+    "description": "Lists, grids, pages, reordering and expansion.",
+    "slug": "/scrolling"
+  }
+}

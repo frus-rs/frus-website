@@ -34,11 +34,38 @@ A checkout's working tree is read as it is, uncommitted edits included.
 which belongs to the site. A new page needs an entry in the script and in `sidebars.ts`. The
 copied pages' "Edit this page" links open the original in the frus repository.
 
+## The widget catalog
+
+`widgets/` holds one page per demo of frus's widget gallery, with Purpose, Signature, Example,
+Properties, Behaviour, See also and Source. Each page is written from the source at a pinned
+frus revision, and the pages are committed. To bring them to a newer frus, from a `../frus`
+checkout that sits on the commit you want (pushed, since the Source links point at it):
+
+```sh
+# 1. The gallery's catalog, and a PNG of every demo (needs a GPU).
+cargo run --release --manifest-path tools/widget-shots/Cargo.toml -- static/preview tools/widget-shots/catalog.json
+
+# 2. rustdoc JSON for the three crates whose types the pages name.
+cd ../frus
+for c in frus-widgets frus-core frus-shell; do
+  cargo +nightly rustdoc -p $c --all-features -- -Z unstable-options --output-format json
+done
+cd -
+
+# 3. The pages.
+RUSTDOC_JSON=../frus/target/doc node scripts/gen-widgets.mjs
+```
+
+The generator drops every doc-comment sentence that speaks of where a design comes from
+(`reference`, `.dart`, ...). Public pages describe what a widget does, not its pedigree. A demo
+whose name matches no single type, such as `hooks`, gets a page without Signature or
+Properties.
+
+## The rest
+
 The rest is the site's own:
 
 - `src/pages/index.tsx`: the home page.
-- `src/pages/widgets.tsx`: the widget catalog. It mirrors frus's
-  `frus-examples/widgets/src/common/catalog.rs` by hand, so keep the two in step.
 - `blog/`: the posts.
 - `src/css/custom.css`: the palette, taken from the frus mark.
 

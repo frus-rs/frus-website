@@ -50,9 +50,23 @@ const config: Config = {
         hashed: true,
         indexBlog: true,
         indexPages: true,
-        docsRouteBasePath: '/docs',
+        docsRouteBasePath: ['/docs', '/widgets'],
+        docsPluginIdForPreferredVersion: 'default',
         highlightSearchTermsOnTargetPage: true,
         explicitSearchResultPath: true,
+      },
+    ],
+  ],
+
+  plugins: [
+    [
+      // The widget catalog: one page per widget, written by scripts/gen-widgets.mjs.
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'widgets',
+        path: 'widgets',
+        routeBasePath: 'widgets',
+        sidebarPath: './sidebars-widgets.ts',
       },
     ],
   ],

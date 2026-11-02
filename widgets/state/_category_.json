@@ -1,0 +1,9 @@
+{
+  "label": "State & async",
+  "position": 12,
+  "link": {
+    "type": "generated-index",
+    "description": "Hooks, notifiers, futures, streams, theme and screen size.",
+    "slug": "/state"
+  }
+}

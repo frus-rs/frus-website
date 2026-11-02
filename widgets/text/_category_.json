@@ -1,0 +1,9 @@
+{
+  "label": "Text",
+  "position": 2,
+  "link": {
+    "type": "generated-index",
+    "description": "Text, styles, rich and selectable text.",
+    "slug": "/text"
+  }
+}
