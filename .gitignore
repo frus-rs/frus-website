@@ -29,3 +29,8 @@ yarn-error.log*
 
 # The widget-shots tool's build, when CARGO_TARGET_DIR is not set.
 /tools/widget-shots/target
+
+# The playground: built by scripts/build-playground.mjs, copied by scripts/sync-docs.mjs.
+/static/playground-app/pkg
+/static/playground-app/examples
+/playground/target

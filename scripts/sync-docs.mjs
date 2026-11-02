@@ -90,3 +90,10 @@ for (const file of media) {
 }
 
 console.log(`synced ${Object.keys(pages).length} pages and ${media.length} pictures from ${repo}`);
+
+// The playground's examples, which its tests compile: the page loads them from here.
+const examplesOut = path.join(site, 'static/playground-app/examples');
+fs.mkdirSync(examplesOut, {recursive: true});
+for (const file of fs.readdirSync(path.join(site, 'playground/examples-src'))) {
+  fs.copyFileSync(path.join(site, 'playground/examples-src', file), path.join(examplesOut, file));
+}

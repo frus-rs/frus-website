@@ -1,0 +1,31 @@
+[package]
+name = "frus-playground"
+version = "0.0.0"
+edition = "2021"
+publish = false
+
+# The playground's preview: frus, built for the browser, with an interpreter for a subset of
+# Rust in front of it. Expects the frus repository beside this one (`../frus`).
+# `scripts/build-playground.mjs` builds it into `static/playground-app/pkg`.
+
+[workspace]
+
+[lib]
+crate-type = ["rlib", "cdylib"]
+
+[dependencies]
+frus = { path = "../../frus/crates/frus" }
+syn = { version = "2", features = ["full", "extra-traits"] }
+proc-macro2 = { version = "1", features = ["span-locations"] }
+quote = "1"
+
+[target.'cfg(target_arch = "wasm32")'.dependencies]
+wasm-bindgen = "=0.2.129"
+
+[profile.web-release]
+inherits = "release"
+opt-level = "z"
+lto = true
+codegen-units = 1
+panic = "abort"
+strip = true

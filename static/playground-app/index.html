@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>frus playground preview</title>
+    <style>
+      html, body { margin: 0; height: 100%; background: #121418; overflow: hidden; }
+      /* winit appends its canvas to <body>; it fills the frame. */
+      canvas { display: block; width: 100vw; height: 100vh; }
+      #status {
+        position: fixed; inset: 0; display: flex; align-items: center; justify-content: center;
+        padding: 24px; text-align: center; color: #e6e6ef; font: 15px/1.5 system-ui, sans-serif;
+      }
+      #status[hidden] { display: none; }
+    </style>
+  </head>
+  <body>
+    <div id="status" role="status" aria-live="polite">Loading frus…</div>
+
+    <!-- Talks to the page around it: receives { type: 'hello' | 'source', code }, and answers with
+         { type: 'ready' | 'result' | 'late-error' | 'crashed' | 'unsupported' }. -->
+    <script type="module">
+      const status = document.getElementById('status');
+      const say = (message) => parent.postMessage(message, location.origin);
+      // What this frame has last told the page, repeated if the page was not listening yet.
+      let state = null;
+      const announce = (message) => {
+        state = message;
+        say(message);
+      };
+      addEventListener('message', (event) => {
+        if (event.source === parent && event.data?.type === 'hello' && state) say(state);
+      });
+      const fail = (text, type) => {
+        status.hidden = false;
+        status.textContent = text;
+        announce({type, message: text});
+      };
+      // The folder of this page, whichever way the server spells its address.
+      const folder = location.pathname.replace(/index\.html$/, '').replace(/\/?$/, '/');
+      const decode = (encoded) => {
+        const [line, column, ...message] = encoded.split(':');
+        return {line: +line, column: +column, message: message.join(':')};
+      };
+
+      window.playgroundPanicked = (message) => say({type: 'crashed', message});
+
+      if (!('gpu' in navigator)) {
+        fail('The preview draws through WebGPU, which this browser does not offer. ' +
+             'Try a recent Chrome or Edge.', 'unsupported');
+      } else {
+        try {
+          const app = await import(`${folder}pkg/frus_playground.js`);
+          await app.default();
+          app.install_panic_report();
+          status.hidden = true;
+
+          addEventListener('message', (event) => {
+            if (event.source !== parent || event.data?.type !== 'source') return;
+            const start = performance.now();
+            const answer = app.set_source(event.data.code);
+            // The time to the frame that shows it: this frame's callback, then the next.
+            requestAnimationFrame(() => requestAnimationFrame(() => {
+              say({
+                type: 'result',
+                id: event.data.id,
+                error: answer ? decode(answer) : null,
+                ms: performance.now() - start,
+              });
+            }));
+          });
+          setInterval(() => {
+            const late = app.take_late_error();
+            if (late) say({type: 'late-error', error: decode(late)});
+          }, 200);
+          announce({type: 'ready'});
+        } catch (err) {
+          fail('The preview could not start: ' + err, 'unsupported');
+        }
+      }
+    </script>
+  </body>
+</html>

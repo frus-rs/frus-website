@@ -61,6 +61,24 @@ The generator drops every doc-comment sentence that speaks of where a design com
 whose name matches no single type, such as `hooks`, gets a page without Signature or
 Properties.
 
+## The playground
+
+`/playground` lets a visitor write frus code and see it rendered as they type, with no compiler
+and no server. `playground/` is a frus application, built for the browser, that parses the source
+with `syn` and interprets a subset of Rust against a table of real widgets (`src/widgets.rs`).
+`static/playground-app/index.html` hosts it in a frame, and `src/pages/playground.tsx` is the
+page around it.
+
+```sh
+npm run build:playground    # needs ../frus, the wasm32 target and wasm-bindgen 0.2.129
+cargo test --manifest-path playground/Cargo.toml
+```
+
+The wasm in `static/playground-app/pkg` is not committed, so a deployment must build it; CI does
+not. The tests compile each example in `playground/examples-src` with rustc and run the same file
+through the interpreter, so an example always works in a real project too. A new widget or method
+is one line in `src/widgets.rs`.
+
 ## The rest
 
 The rest is the site's own:

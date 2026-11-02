@@ -127,6 +127,7 @@ const config: Config = {
         {type: 'docSidebar', sidebarId: 'docs', position: 'left', label: 'Docs'},
         {to: '/docs/guide', label: 'Guide', position: 'left'},
         {to: '/widgets', label: 'Widgets', position: 'left'},
+        {to: '/playground', label: 'Playground', position: 'left'},
         {to: '/blog', label: 'Blog', position: 'left'},
         {href: 'https://docs.rs/frus', label: 'API', position: 'right'},
         {href: repo, label: 'GitHub', position: 'right'},

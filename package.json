@@ -12,7 +12,8 @@
     "clear": "docusaurus clear",
     "swizzle": "docusaurus swizzle",
     "docusaurus": "docusaurus",
-    "typecheck": "tsc"
+    "typecheck": "tsc",
+    "build:playground": "node scripts/build-playground.mjs"
   },
   "dependencies": {
     "@docusaurus/core": "3.9.2",
