@@ -34,7 +34,7 @@ impl ScaffoldMessenger {
 
 ![Rendered preview of the SnackBar & ScaffoldMessenger demo](/preview/snack-bar.light.png)
 
-From [`frus-examples/widgets/src/features/feedback/widgets/snack_bar.rs`](https://github.com/KalybosPro/frus/blob/d7214f545435ddea2e71dc3e1eb021605d3fc7a9/frus-examples/widgets/src/features/feedback/widgets/snack_bar.rs):
+From [`frus-examples/widgets/src/features/feedback/widgets/snack_bar.rs`](https://github.com/KalybosPro/frus/blob/4b802dae875c8f88f633392874660d9351b15664/frus-examples/widgets/src/features/feedback/widgets/snack_bar.rs):
 
 ```rust
 //! `SnackBar`, `SnackBarQueue` and `ScaffoldMessenger` — a short message at the bottom
@@ -335,4 +335,4 @@ A notification layer anchored in a corner.
 - API reference: [`SnackBar`](https://docs.rs/frus/latest/frus/struct.SnackBar.html)
 - API reference: [`ScaffoldMessenger`](https://docs.rs/frus/latest/frus/struct.ScaffoldMessenger.html)
 
-Source: [crates/frus-widgets/src/toast.rs](https://github.com/KalybosPro/frus/blob/d7214f545435ddea2e71dc3e1eb021605d3fc7a9/crates/frus-widgets/src/toast.rs#L115-L144), [crates/frus-widgets/src/toasthost.rs](https://github.com/KalybosPro/frus/blob/d7214f545435ddea2e71dc3e1eb021605d3fc7a9/crates/frus-widgets/src/toasthost.rs#L74-L78) @ `d7214f545435`
+Source: [crates/frus-widgets/src/toast.rs](https://github.com/KalybosPro/frus/blob/4b802dae875c8f88f633392874660d9351b15664/crates/frus-widgets/src/toast.rs#L115-L144), [crates/frus-widgets/src/toasthost.rs](https://github.com/KalybosPro/frus/blob/4b802dae875c8f88f633392874660d9351b15664/crates/frus-widgets/src/toasthost.rs#L74-L78) @ `4b802dae875c`

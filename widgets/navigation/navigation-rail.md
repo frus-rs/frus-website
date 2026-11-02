@@ -1,7 +1,7 @@
 ---
 title: "NavigationRail"
 sidebar_label: "NavigationRail"
-sidebar_position: 5
+sidebar_position: 6
 description: "The main destinations down the side of a tablet or desktop window."
 custom_edit_url: null
 ---
@@ -29,7 +29,7 @@ impl NavigationRail {
 
 ![Rendered preview of the NavigationRail demo](/preview/navigation-rail.light.png)
 
-From [`frus-examples/widgets/src/features/navigation/widgets/navrail.rs`](https://github.com/KalybosPro/frus/blob/d7214f545435ddea2e71dc3e1eb021605d3fc7a9/frus-examples/widgets/src/features/navigation/widgets/navrail.rs):
+From [`frus-examples/widgets/src/features/navigation/widgets/navrail.rs`](https://github.com/KalybosPro/frus/blob/4b802dae875c8f88f633392874660d9351b15664/frus-examples/widgets/src/features/navigation/widgets/navrail.rs):
 
 ```rust
 //! `NavigationRail` — the main destinations down the side of a tablet or desktop
@@ -167,12 +167,12 @@ A **vertical** navigation rail (tablet / desktop).
 
 ## See also
 
-- [TabBar](./tab-bar.md): tabs and the panel of the selected one: primary, secondary, icons, scrolling, swiping.
 - [BottomBar](./bottom-bar.md): the main destinations along the bottom of a phone screen.
+- [BottomNavigationBar](./bottom-navigation-bar.md): the classic bottom bar: fixed, or shifting with the selected item's colour.
 - [NavScaffold](./nav-scaffold.md): navigation that becomes a bar, a rail or an extended rail with the size class.
 - [Drawer & drawer headers](./drawer.md): a side panel that slides over the page or sits docked beside it.
 - [NavigationDrawer](./navigation-drawer.md): a side panel's list of destinations, with a header, badges and a footer.
 - The guide: [Screens, navigation and dialogs](/docs/guide/navigation)
 - API reference: [`NavigationRail`](https://docs.rs/frus/latest/frus/struct.NavigationRail.html)
 
-Source: [crates/frus-widgets/src/navrail.rs](https://github.com/KalybosPro/frus/blob/d7214f545435ddea2e71dc3e1eb021605d3fc7a9/crates/frus-widgets/src/navrail.rs#L799-L826) @ `d7214f545435`
+Source: [crates/frus-widgets/src/navrail.rs](https://github.com/KalybosPro/frus/blob/4b802dae875c8f88f633392874660d9351b15664/crates/frus-widgets/src/navrail.rs#L799-L826) @ `4b802dae875c`

@@ -40,7 +40,7 @@ impl FractionalTranslation {
 
 ![Rendered preview of the Transform & FractionalTranslation demo](/preview/transform.light.png)
 
-From [`frus-examples/widgets/src/features/painting/widgets/transform.rs`](https://github.com/KalybosPro/frus/blob/d7214f545435ddea2e71dc3e1eb021605d3fc7a9/frus-examples/widgets/src/features/painting/widgets/transform.rs):
+From [`frus-examples/widgets/src/features/painting/widgets/transform.rs`](https://github.com/KalybosPro/frus/blob/4b802dae875c8f88f633392874660d9351b15664/frus-examples/widgets/src/features/painting/widgets/transform.rs):
 
 ```rust
 //! `Transform` and `FractionalTranslation` — move, scale or rotate a child's painting
@@ -183,4 +183,4 @@ In a right-to-left script the horizontal fraction follows the reading direction,
 - API reference: [`Transform`](https://docs.rs/frus/latest/frus/struct.Transform.html)
 - API reference: [`FractionalTranslation`](https://docs.rs/frus/latest/frus/struct.FractionalTranslation.html)
 
-Source: [crates/frus-widgets/src/transform.rs](https://github.com/KalybosPro/frus/blob/d7214f545435ddea2e71dc3e1eb021605d3fc7a9/crates/frus-widgets/src/transform.rs#L35-L46), [crates/frus-widgets/src/transform.rs](https://github.com/KalybosPro/frus/blob/d7214f545435ddea2e71dc3e1eb021605d3fc7a9/crates/frus-widgets/src/transform.rs#L249-L255) @ `d7214f545435`
+Source: [crates/frus-widgets/src/transform.rs](https://github.com/KalybosPro/frus/blob/4b802dae875c8f88f633392874660d9351b15664/crates/frus-widgets/src/transform.rs#L35-L46), [crates/frus-widgets/src/transform.rs](https://github.com/KalybosPro/frus/blob/4b802dae875c8f88f633392874660d9351b15664/crates/frus-widgets/src/transform.rs#L249-L255) @ `4b802dae875c`

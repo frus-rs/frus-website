@@ -26,7 +26,7 @@ impl StickyHeader {
 
 ![Rendered preview of the StickyHeader demo](/preview/sticky-header.light.png)
 
-From [`frus-examples/widgets/src/features/scrolling/widgets/sticky.rs`](https://github.com/KalybosPro/frus/blob/d7214f545435ddea2e71dc3e1eb021605d3fc7a9/frus-examples/widgets/src/features/scrolling/widgets/sticky.rs):
+From [`frus-examples/widgets/src/features/scrolling/widgets/sticky.rs`](https://github.com/KalybosPro/frus/blob/4b802dae875c8f88f633392874660d9351b15664/frus-examples/widgets/src/features/scrolling/widgets/sticky.rs):
 
 ```rust
 //! `StickyHeader` — a section header that stays at the top of a scroll view while its
@@ -111,4 +111,4 @@ The header is laid out where a column would put it, above its section, and takes
 - The guide: [Lists and grids](/docs/guide/lists)
 - API reference: [`StickyHeader`](https://docs.rs/frus/latest/frus/struct.StickyHeader.html)
 
-Source: [crates/frus-widgets/src/sticky.rs](https://github.com/KalybosPro/frus/blob/d7214f545435ddea2e71dc3e1eb021605d3fc7a9/crates/frus-widgets/src/sticky.rs#L32-L34) @ `d7214f545435`
+Source: [crates/frus-widgets/src/sticky.rs](https://github.com/KalybosPro/frus/blob/4b802dae875c8f88f633392874660d9351b15664/crates/frus-widgets/src/sticky.rs#L32-L34) @ `4b802dae875c`

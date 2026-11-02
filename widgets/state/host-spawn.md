@@ -20,7 +20,7 @@ This demo shows a pattern rather than one type. The names it uses are in the exa
 
 ![Rendered preview of the host::spawn & host::after demo](/preview/host-spawn.light.png)
 
-From [`frus-examples/widgets/src/features/state/widgets/host_tasks.rs`](https://github.com/KalybosPro/frus/blob/d7214f545435ddea2e71dc3e1eb021605d3fc7a9/frus-examples/widgets/src/features/state/widgets/host_tasks.rs):
+From [`frus-examples/widgets/src/features/state/widgets/host_tasks.rs`](https://github.com/KalybosPro/frus/blob/4b802dae875c8f88f633392874660d9351b15664/frus-examples/widgets/src/features/state/widgets/host_tasks.rs):
 
 ```rust
 //! `host::spawn` and `host::after` — run slow work on another thread and get its result
@@ -124,4 +124,4 @@ The example shows it at work; the API reference has every method.
 - [Themed & ThemeBuilder](./themed.md): a different theme, or part of one, for one part of the screen.
 - The guide: [Starting a frus application](/docs/getting-started)
 
-Source: [frus-examples/widgets/src/features/state/widgets/host_tasks.rs](https://github.com/KalybosPro/frus/blob/d7214f545435ddea2e71dc3e1eb021605d3fc7a9/frus-examples/widgets/src/features/state/widgets/host_tasks.rs) @ `d7214f545435`
+Source: [frus-examples/widgets/src/features/state/widgets/host_tasks.rs](https://github.com/KalybosPro/frus/blob/4b802dae875c8f88f633392874660d9351b15664/frus-examples/widgets/src/features/state/widgets/host_tasks.rs) @ `4b802dae875c`

@@ -31,7 +31,7 @@ pub struct AnimatedIcons;
 
 ![Rendered preview of the Icon::animated & AnimatedIcons demo](/preview/animated-icon.light.png)
 
-From [`frus-examples/widgets/src/features/animation/widgets/animated_icon.rs`](https://github.com/KalybosPro/frus/blob/d7214f545435ddea2e71dc3e1eb021605d3fc7a9/frus-examples/widgets/src/features/animation/widgets/animated_icon.rs):
+From [`frus-examples/widgets/src/features/animation/widgets/animated_icon.rs`](https://github.com/KalybosPro/frus/blob/4b802dae875c8f88f633392874660d9351b15664/frus-examples/widgets/src/features/animation/widgets/animated_icon.rs):
 
 ```rust
 //! `Icon::animated` with `AnimatedIcons` — an icon that morphs between two marks: a menu
@@ -132,4 +132,4 @@ These are the ones this framework needs itself. An application that needs anothe
 - API reference: [`Icon`](https://docs.rs/frus/latest/frus/struct.Icon.html)
 - API reference: [`AnimatedIcons`](https://docs.rs/frus/latest/frus/struct.AnimatedIcons.html)
 
-Source: [crates/frus-widgets/src/icon.rs](https://github.com/KalybosPro/frus/blob/d7214f545435ddea2e71dc3e1eb021605d3fc7a9/crates/frus-widgets/src/icon.rs#L18-L26), [crates/frus-widgets/src/icons/animated.rs](https://github.com/KalybosPro/frus/blob/d7214f545435ddea2e71dc3e1eb021605d3fc7a9/crates/frus-widgets/src/icons/animated.rs#L270-L270) @ `d7214f545435`
+Source: [crates/frus-widgets/src/icon.rs](https://github.com/KalybosPro/frus/blob/4b802dae875c8f88f633392874660d9351b15664/crates/frus-widgets/src/icon.rs#L18-L26), [crates/frus-widgets/src/icons/animated.rs](https://github.com/KalybosPro/frus/blob/4b802dae875c8f88f633392874660d9351b15664/crates/frus-widgets/src/icons/animated.rs#L270-L270) @ `4b802dae875c`

@@ -67,7 +67,7 @@ impl AnimatedSlide {
 
 ![Rendered preview of the AnimatedScale, AnimatedRotation & AnimatedSlide demo](/preview/animated-scale.light.png)
 
-From [`frus-examples/widgets/src/features/animation/widgets/animated_transform.rs`](https://github.com/KalybosPro/frus/blob/d7214f545435ddea2e71dc3e1eb021605d3fc7a9/frus-examples/widgets/src/features/animation/widgets/animated_transform.rs):
+From [`frus-examples/widgets/src/features/animation/widgets/animated_transform.rs`](https://github.com/KalybosPro/frus/blob/4b802dae875c8f88f633392874660d9351b15664/frus-examples/widgets/src/features/animation/widgets/animated_transform.rs):
 
 ```rust
 //! `AnimatedScale`, `AnimatedRotation` and `AnimatedSlide` — grow, turn or shift a child to
@@ -242,4 +242,4 @@ Layout is untouched: the box stays where it was put and the neighbours do not mo
 - API reference: [`AnimatedRotation`](https://docs.rs/frus/latest/frus/struct.AnimatedRotation.html)
 - API reference: [`AnimatedSlide`](https://docs.rs/frus/latest/frus/struct.AnimatedSlide.html)
 
-Source: [crates/frus-widgets/src/animated.rs](https://github.com/KalybosPro/frus/blob/d7214f545435ddea2e71dc3e1eb021605d3fc7a9/crates/frus-widgets/src/animated.rs#L527-L529), [crates/frus-widgets/src/animated.rs](https://github.com/KalybosPro/frus/blob/d7214f545435ddea2e71dc3e1eb021605d3fc7a9/crates/frus-widgets/src/animated.rs#L625-L627), [crates/frus-widgets/src/animated.rs](https://github.com/KalybosPro/frus/blob/d7214f545435ddea2e71dc3e1eb021605d3fc7a9/crates/frus-widgets/src/animated.rs#L386-L388) @ `d7214f545435`
+Source: [crates/frus-widgets/src/animated.rs](https://github.com/KalybosPro/frus/blob/4b802dae875c8f88f633392874660d9351b15664/crates/frus-widgets/src/animated.rs#L527-L529), [crates/frus-widgets/src/animated.rs](https://github.com/KalybosPro/frus/blob/4b802dae875c8f88f633392874660d9351b15664/crates/frus-widgets/src/animated.rs#L625-L627), [crates/frus-widgets/src/animated.rs](https://github.com/KalybosPro/frus/blob/4b802dae875c8f88f633392874660d9351b15664/crates/frus-widgets/src/animated.rs#L386-L388) @ `4b802dae875c`

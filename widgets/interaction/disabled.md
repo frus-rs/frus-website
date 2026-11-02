@@ -20,7 +20,7 @@ This demo shows a pattern rather than one type. The names it uses are in the exa
 
 ![Rendered preview of the Disabled state demo](/preview/disabled.light.png)
 
-From [`frus-examples/widgets/src/features/interaction/widgets/disabled.rs`](https://github.com/KalybosPro/frus/blob/d7214f545435ddea2e71dc3e1eb021605d3fc7a9/frus-examples/widgets/src/features/interaction/widgets/disabled.rs):
+From [`frus-examples/widgets/src/features/interaction/widgets/disabled.rs`](https://github.com/KalybosPro/frus/blob/4b802dae875c8f88f633392874660d9351b15664/frus-examples/widgets/src/features/interaction/widgets/disabled.rs):
 
 ```rust
 //! The disabled state — one contract every control shares: `enabled(false)` greys it out
@@ -136,4 +136,4 @@ The example shows it at work; the API reference has every method.
 - [Permission](./permissions.md): asking for the camera, the microphone, the location and notifications.
 - The guide: [Taking input](/docs/guide/input)
 
-Source: [frus-examples/widgets/src/features/interaction/widgets/disabled.rs](https://github.com/KalybosPro/frus/blob/d7214f545435ddea2e71dc3e1eb021605d3fc7a9/frus-examples/widgets/src/features/interaction/widgets/disabled.rs) @ `d7214f545435`
+Source: [frus-examples/widgets/src/features/interaction/widgets/disabled.rs](https://github.com/KalybosPro/frus/blob/4b802dae875c8f88f633392874660d9351b15664/frus-examples/widgets/src/features/interaction/widgets/disabled.rs) @ `4b802dae875c`

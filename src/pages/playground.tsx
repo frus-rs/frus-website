@@ -1,7 +1,11 @@
 import {useCallback, useEffect, useRef, useState, type ReactNode} from 'react';
-import clsx from 'clsx';
+import BrowserOnly from '@docusaurus/BrowserOnly';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 import Layout from '@theme/Layout';
+
+import type {EditorHandle, Failure} from '@site/src/components/Playground/Editor';
+
+import api from '@site/src/data/playground-api.json';
 
 import styles from './playground.module.css';
 
@@ -10,9 +14,9 @@ const examples = [
   {id: 'profile', label: 'Profile card'},
   {id: 'form', label: 'Form'},
   {id: 'list', label: 'A list from a loop'},
+  {id: 'shop', label: 'Shop: grid, tabs and navigation'},
 ];
 
-type Failure = {line: number; column: number; message: string};
 type Status =
   | {kind: 'loading'}
   | {kind: 'ok'; ms: number}
@@ -21,11 +25,11 @@ type Status =
   | {kind: 'unsupported'; message: string};
 
 const DEBOUNCE_MS = 120;
+const widgetNames = Object.keys(api.types).filter((name) => !['Color', 'Insets', 'BottomNavigationBarItem'].includes(name));
 
 export default function Playground(): ReactNode {
   const frame = useRef<HTMLIFrameElement>(null);
-  const editor = useRef<HTMLTextAreaElement>(null);
-  const gutter = useRef<HTMLDivElement>(null);
+  const editor = useRef<EditorHandle>(null);
   const ready = useRef(false);
   const lastGood = useRef('');
   const sentId = useRef(0);
@@ -114,26 +118,7 @@ export default function Playground(): ReactNode {
     return () => removeEventListener('message', listen);
   }, [send]);
 
-  const lines = code.split('\n').length;
   const failure = status.kind === 'error' ? status.failure : null;
-
-  const goToFailure = () => {
-    const area = editor.current;
-    if (!area || !failure) return;
-    const before = code.split('\n').slice(0, failure.line - 1).join('\n').length;
-    const at = (failure.line > 1 ? before + 1 : 0) + failure.column;
-    area.focus();
-    area.setSelectionRange(at, at);
-  };
-
-  const onKeyDown = (event: React.KeyboardEvent<HTMLTextAreaElement>) => {
-    if (event.key !== 'Tab' || event.shiftKey) return;
-    event.preventDefault();
-    const area = event.currentTarget;
-    const {selectionStart: start, selectionEnd: end} = area;
-    setCode(`${code.slice(0, start)}    ${code.slice(end)}`);
-    requestAnimationFrame(() => area.setSelectionRange(start + 4, start + 4));
-  };
 
   const copy = async () => {
     await navigator.clipboard.writeText(`${code}\nfrus::main!(frus::FrusApp::from_fn(app));\n`);
@@ -178,31 +163,16 @@ export default function Playground(): ReactNode {
         <div className={styles.panes}>
           <div className={styles.left}>
             <div className={styles.editor}>
-              <div className={styles.gutter} ref={gutter} aria-hidden>
-                {Array.from({length: lines}, (_, i) => (
-                  <div key={i} className={clsx(failure?.line === i + 1 && styles.gutterError)}>
-                    {i + 1}
-                  </div>
-                ))}
-              </div>
-              <textarea
-                ref={editor}
-                className={styles.code}
-                value={code}
-                aria-label="Rust code"
-                spellCheck={false}
-                autoCapitalize="off"
-                autoCorrect="off"
-                wrap="off"
-                onChange={(event) => setCode(event.target.value)}
-                onKeyDown={onKeyDown}
-                onScroll={(event) => {
-                  if (gutter.current) gutter.current.scrollTop = event.currentTarget.scrollTop;
+              <BrowserOnly>
+                {() => {
+                  // CodeMirror reads the page as it loads, so it only exists in the browser.
+                  const Editor = require('@site/src/components/Playground/Editor').default;
+                  return <Editor ref={editor} value={code} failure={failure} onChange={setCode} />;
                 }}
-              />
+              </BrowserOnly>
             </div>
             {failure && (
-              <button type="button" className={styles.error} onClick={goToFailure}>
+              <button type="button" className={styles.error} onClick={() => editor.current?.goTo(failure)}>
                 <strong>Line {failure.line}.</strong> {failure.message}
               </button>
             )}
@@ -236,10 +206,9 @@ export default function Playground(): ReactNode {
             traits, crates and the other hooks are not supported yet.
           </p>
           <p>
-            <strong>Widgets:</strong> Text, Row, Column, Wrap, Container, Padding, Center, SizedBox, Spacer,
-            Expanded, Stack, Card, Divider, Button, IconButton, Icon, Checkbox, Switch, Slider, TextField,
-            Chip, CircleAvatar, ListTile, LinearProgressIndicator, CircularProgressIndicator, Scaffold and
-            AppBar, with their most common methods. An unknown method’s error lists the ones available.
+            <strong>Widgets:</strong> {widgetNames.join(', ')}, with their most common methods. The editor
+            completes from the same list (Ctrl+Space, or after a dot), and an unknown method’s error names the
+            ones available.
           </p>
         </details>
       </main>

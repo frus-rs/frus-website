@@ -66,46 +66,6 @@
   background: var(--frus-surface);
 }
 
-.gutter,
-.code {
-  font-family: var(--ifm-font-family-monospace);
-  font-size: 13px;
-  line-height: 20px;
-  padding-top: 12px;
-  padding-bottom: 12px;
-}
-
-.gutter {
-  flex: none;
-  min-width: 3rem;
-  padding-left: 0.5rem;
-  padding-right: 0.75rem;
-  text-align: right;
-  color: var(--frus-muted);
-  opacity: 0.7;
-  overflow: hidden;
-  user-select: none;
-}
-
-.gutterError {
-  color: #ff6b6b;
-  font-weight: 700;
-}
-
-.code {
-  flex: 1;
-  min-width: 0;
-  padding-right: 12px;
-  border: none;
-  outline: none;
-  resize: none;
-  background: transparent;
-  color: var(--ifm-font-color-base);
-  white-space: pre;
-  overflow: auto;
-  tab-size: 4;
-}
-
 .error {
   display: block;
   width: 100%;

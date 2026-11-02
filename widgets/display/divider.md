@@ -34,7 +34,7 @@ impl VerticalDivider {
 
 ![Rendered preview of the Divider & VerticalDivider demo](/preview/divider.light.png)
 
-From [`frus-examples/widgets/src/features/display/widgets/divider.rs`](https://github.com/KalybosPro/frus/blob/d7214f545435ddea2e71dc3e1eb021605d3fc7a9/frus-examples/widgets/src/features/display/widgets/divider.rs):
+From [`frus-examples/widgets/src/features/display/widgets/divider.rs`](https://github.com/KalybosPro/frus/blob/4b802dae875c8f88f633392874660d9351b15664/frus-examples/widgets/src/features/display/widgets/divider.rs):
 
 ```rust
 //! `Divider` and `VerticalDivider` — a thin rule in the theme's colours, across a column
@@ -160,4 +160,4 @@ It still needs a height to fill: a row is as tall as its tallest child, so a rul
 - API reference: [`Divider`](https://docs.rs/frus/latest/frus/struct.Divider.html)
 - API reference: [`VerticalDivider`](https://docs.rs/frus/latest/frus/struct.VerticalDivider.html)
 
-Source: [crates/frus-widgets/src/divider.rs](https://github.com/KalybosPro/frus/blob/d7214f545435ddea2e71dc3e1eb021605d3fc7a9/crates/frus-widgets/src/divider.rs#L34-L47), [crates/frus-widgets/src/divider.rs](https://github.com/KalybosPro/frus/blob/d7214f545435ddea2e71dc3e1eb021605d3fc7a9/crates/frus-widgets/src/divider.rs#L213-L226) @ `d7214f545435`
+Source: [crates/frus-widgets/src/divider.rs](https://github.com/KalybosPro/frus/blob/4b802dae875c8f88f633392874660d9351b15664/crates/frus-widgets/src/divider.rs#L34-L47), [crates/frus-widgets/src/divider.rs](https://github.com/KalybosPro/frus/blob/4b802dae875c8f88f633392874660d9351b15664/crates/frus-widgets/src/divider.rs#L213-L226) @ `4b802dae875c`

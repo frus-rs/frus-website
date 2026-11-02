@@ -1,7 +1,7 @@
 ---
 title: "NavScaffold"
 sidebar_label: "NavScaffold"
-sidebar_position: 6
+sidebar_position: 7
 description: "Navigation that becomes a bar, a rail or an extended rail with the size class."
 custom_edit_url: null
 ---
@@ -30,7 +30,7 @@ impl NavScaffold {
 
 ![Rendered preview of the NavScaffold demo](/preview/nav-scaffold.light.png)
 
-From [`frus-examples/widgets/src/features/navigation/widgets/navscaffold.rs`](https://github.com/KalybosPro/frus/blob/d7214f545435ddea2e71dc3e1eb021605d3fc7a9/frus-examples/widgets/src/features/navigation/widgets/navscaffold.rs):
+From [`frus-examples/widgets/src/features/navigation/widgets/navscaffold.rs`](https://github.com/KalybosPro/frus/blob/4b802dae875c8f88f633392874660d9351b15664/frus-examples/widgets/src/features/navigation/widgets/navscaffold.rs):
 
 ```rust
 //! `NavScaffold` — navigation that adapts to the screen's size class: a bottom bar on a
@@ -135,7 +135,7 @@ Adaptive navigation shell: a bottom bar, a rail, or an extended rail, by size.
 
 ## See also
 
-- [BottomBar](./bottom-bar.md): the main destinations along the bottom of a phone screen.
+- [BottomNavigationBar](./bottom-navigation-bar.md): the classic bottom bar: fixed, or shifting with the selected item's colour.
 - [NavigationRail](./navigation-rail.md): the main destinations down the side of a tablet or desktop window.
 - [Drawer & drawer headers](./drawer.md): a side panel that slides over the page or sits docked beside it.
 - [NavigationDrawer](./navigation-drawer.md): a side panel's list of destinations, with a header, badges and a footer.
@@ -143,4 +143,4 @@ Adaptive navigation shell: a bottom bar, a rail, or an extended rail, by size.
 - The guide: [Screens, navigation and dialogs](/docs/guide/navigation)
 - API reference: [`NavScaffold`](https://docs.rs/frus/latest/frus/struct.NavScaffold.html)
 
-Source: [crates/frus-widgets/src/navscaffold.rs](https://github.com/KalybosPro/frus/blob/d7214f545435ddea2e71dc3e1eb021605d3fc7a9/crates/frus-widgets/src/navscaffold.rs#L42-L53) @ `d7214f545435`
+Source: [crates/frus-widgets/src/navscaffold.rs](https://github.com/KalybosPro/frus/blob/4b802dae875c8f88f633392874660d9351b15664/crates/frus-widgets/src/navscaffold.rs#L42-L53) @ `4b802dae875c`

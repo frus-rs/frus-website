@@ -27,7 +27,7 @@ impl TextEditingController {
 
 ![Rendered preview of the TextEditingController demo](/preview/text-editing-controller.light.png)
 
-From [`frus-examples/widgets/src/features/inputs/widgets/text_editing_controller.rs`](https://github.com/KalybosPro/frus/blob/d7214f545435ddea2e71dc3e1eb021605d3fc7a9/frus-examples/widgets/src/features/inputs/widgets/text_editing_controller.rs):
+From [`frus-examples/widgets/src/features/inputs/widgets/text_editing_controller.rs`](https://github.com/KalybosPro/frus/blob/4b802dae875c8f88f633392874660d9351b15664/frus-examples/widgets/src/features/inputs/widgets/text_editing_controller.rs):
 
 ```rust
 //! `TextEditingController` — a field's text held outside the field, so the program can
@@ -109,4 +109,4 @@ Cloning gives another handle to the same text.
 - The guide: [Taking input](/docs/guide/input)
 - API reference: [`TextEditingController`](https://docs.rs/frus/latest/frus/struct.TextEditingController.html)
 
-Source: [crates/frus-widgets/src/editing.rs](https://github.com/KalybosPro/frus/blob/d7214f545435ddea2e71dc3e1eb021605d3fc7a9/crates/frus-widgets/src/editing.rs#L51-L53) @ `d7214f545435`
+Source: [crates/frus-widgets/src/editing.rs](https://github.com/KalybosPro/frus/blob/4b802dae875c8f88f633392874660d9351b15664/crates/frus-widgets/src/editing.rs#L51-L53) @ `4b802dae875c`

@@ -40,7 +40,7 @@ impl DateTimeRange {
 
 ![Rendered preview of the DateTimeRange demo](/preview/date-time-range.light.png)
 
-From [`frus-examples/widgets/src/features/inputs/widgets/date_time_range.rs`](https://github.com/KalybosPro/frus/blob/d7214f545435ddea2e71dc3e1eb021605d3fc7a9/frus-examples/widgets/src/features/inputs/widgets/date_time_range.rs):
+From [`frus-examples/widgets/src/features/inputs/widgets/date_time_range.rs`](https://github.com/KalybosPro/frus/blob/4b802dae875c8f88f633392874660d9351b15664/frus-examples/widgets/src/features/inputs/widgets/date_time_range.rs):
 
 ```rust
 //! `DateTimeRange` — two months side by side for a date range, a start and an end time
@@ -172,4 +172,4 @@ A date-and-time range picker.
 - The guide: [Taking input](/docs/guide/input)
 - API reference: [`DateTimeRange`](https://docs.rs/frus/latest/frus/struct.DateTimeRange.html)
 
-Source: [crates/frus-widgets/src/datetimerange.rs](https://github.com/KalybosPro/frus/blob/d7214f545435ddea2e71dc3e1eb021605d3fc7a9/crates/frus-widgets/src/datetimerange.rs#L24-L26) @ `d7214f545435`
+Source: [crates/frus-widgets/src/datetimerange.rs](https://github.com/KalybosPro/frus/blob/4b802dae875c8f88f633392874660d9351b15664/crates/frus-widgets/src/datetimerange.rs#L24-L26) @ `4b802dae875c`

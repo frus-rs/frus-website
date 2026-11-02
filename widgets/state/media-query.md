@@ -38,7 +38,7 @@ impl MediaScope {
 
 ![Rendered preview of the MediaQuery & MediaScope demo](/preview/media-query.light.png)
 
-From [`frus-examples/widgets/src/features/state/widgets/media_query.rs`](https://github.com/KalybosPro/frus/blob/d7214f545435ddea2e71dc3e1eb021605d3fc7a9/frus-examples/widgets/src/features/state/widgets/media_query.rs):
+From [`frus-examples/widgets/src/features/state/widgets/media_query.rs`](https://github.com/KalybosPro/frus/blob/4b802dae875c8f88f633392874660d9351b15664/frus-examples/widgets/src/features/state/widgets/media_query.rs):
 
 ```rust
 //! `MediaQuery` — what the screen is like: its size, density, the system's insets (status
@@ -160,4 +160,4 @@ Describes the surface for its child and everything under it.
 - API reference: [`MediaQuery`](https://docs.rs/frus/latest/frus/struct.MediaQuery.html)
 - API reference: [`MediaScope`](https://docs.rs/frus/latest/frus/struct.MediaScope.html)
 
-Source: [crates/frus-widgets/src/media.rs](https://github.com/KalybosPro/frus/blob/d7214f545435ddea2e71dc3e1eb021605d3fc7a9/crates/frus-widgets/src/media.rs#L326-L393), [crates/frus-widgets/src/mediascope.rs](https://github.com/KalybosPro/frus/blob/d7214f545435ddea2e71dc3e1eb021605d3fc7a9/crates/frus-widgets/src/mediascope.rs#L50-L53) @ `d7214f545435`
+Source: [crates/frus-widgets/src/media.rs](https://github.com/KalybosPro/frus/blob/4b802dae875c8f88f633392874660d9351b15664/crates/frus-widgets/src/media.rs#L326-L393), [crates/frus-widgets/src/mediascope.rs](https://github.com/KalybosPro/frus/blob/4b802dae875c8f88f633392874660d9351b15664/crates/frus-widgets/src/mediascope.rs#L50-L53) @ `4b802dae875c`

@@ -1,0 +1,2977 @@
+{
+ "types": {
+  "Text": {
+   "constructors": [
+    {
+     "name": "new",
+     "args": [
+      "\"text\""
+     ],
+     "doc": "Creates a text that has chosen nothing: it takes its size, weight and colour from whatever subtree it is put in, and the framework's own where nothing says otherwise (16 px, regular, the theme's on_surface)."
+    }
+   ],
+   "methods": [
+    {
+     "name": "size",
+     "args": [
+      "1.0"
+     ],
+     "doc": "Sets the font size, in pixels."
+    },
+    {
+     "name": "color",
+     "args": [
+      "Colors::RED"
+     ],
+     "doc": "Sets the text color (otherwise the theme's)."
+    },
+    {
+     "name": "align",
+     "args": [
+      "TextAlign::Center"
+     ],
+     "doc": "Where the lines sit inside the box the text was given."
+    },
+    {
+     "name": "max_lines",
+     "args": [
+      "usize"
+     ],
+     "doc": "At most max_lines lines; what is past them is dropped, and Text::overflow decides how the last one ends."
+    },
+    {
+     "name": "heading",
+     "args": [],
+     "doc": "Wraps at the width the parent offers."
+    },
+    {
+     "name": "wrap",
+     "args": [],
+     "doc": "Wraps the text at the width it is given: soft_wrap(true)."
+    },
+    {
+     "name": "no_wrap",
+     "args": [],
+     "doc": "Keeps the text on one line, explicit newlines aside."
+    },
+    {
+     "name": "ellipsis",
+     "args": []
+    },
+    {
+     "name": "italic",
+     "args": [],
+     "doc": "Switches to italic."
+    },
+    {
+     "name": "underline",
+     "args": [],
+     "doc": "Underlines the text."
+    },
+    {
+     "name": "strikethrough",
+     "args": [],
+     "doc": "Strikes the text through."
+    },
+    {
+     "name": "selectable",
+     "args": [],
+     "doc": "Makes this text selectable: a press, a drag, a double click or a long press selects words in it, and Ctrl+C, or the bar that opens over the selection, copies them."
+    }
+   ]
+  },
+  "Flex": {
+   "constructors": [
+    {
+     "name": "row",
+     "args": [],
+     "doc": "A container laying its children out horizontally."
+    },
+    {
+     "name": "column",
+     "args": [],
+     "doc": "A container laying its children out vertically."
+    }
+   ],
+   "methods": [
+    {
+     "name": "child",
+     "args": [
+      "child"
+     ],
+     "doc": "Adds a child."
+    },
+    {
+     "name": "gap",
+     "args": [
+      "1.0"
+     ],
+     "doc": "Spacing between children, in logical pixels."
+    },
+    {
+     "name": "run_gap",
+     "args": [
+      "1.0"
+     ]
+    },
+    {
+     "name": "padding",
+     "args": [
+      "1.0"
+     ],
+     "doc": "Uniform padding, in logical pixels."
+    },
+    {
+     "name": "width",
+     "args": [
+      "1.0"
+     ],
+     "doc": "Sets the width, in logical pixels."
+    },
+    {
+     "name": "height",
+     "args": [
+      "1.0"
+     ],
+     "doc": "Sets the height, in logical pixels."
+    },
+    {
+     "name": "flex",
+     "args": [
+      "1.0"
+     ],
+     "doc": "The flex grow factor along the parent's main axis."
+    },
+    {
+     "name": "justify",
+     "args": [
+      "Justify::Center"
+     ],
+     "doc": "How the children are distributed along the main axis."
+    },
+    {
+     "name": "align",
+     "args": [
+      "Align::Center"
+     ],
+     "doc": "How the children are aligned on the cross axis."
+    },
+    {
+     "name": "wrap",
+     "args": [],
+     "doc": "Turns wrapping on: children that overflow the main axis move to a new line, a responsive reflow."
+    },
+    {
+     "name": "reverse",
+     "args": [],
+     "doc": "Lays the children out from the far end of the axis: a column from the bottom up, a row from the end of the line back."
+    }
+   ]
+  },
+  "Row": {
+   "constructors": [
+    {
+     "name": "new",
+     "args": []
+    }
+   ],
+   "methods": [
+    {
+     "name": "child",
+     "args": [
+      "child"
+     ],
+     "doc": "Adds a child."
+    },
+    {
+     "name": "spacing",
+     "args": [
+      "1.0"
+     ],
+     "doc": "Space between adjacent children, in logical pixels."
+    },
+    {
+     "name": "main_axis_alignment",
+     "args": [
+      "Justify::Center"
+     ],
+     "doc": "How the children are distributed along the main axis."
+    },
+    {
+     "name": "cross_axis_alignment",
+     "args": [
+      "Align::Center"
+     ],
+     "doc": "How the children are aligned across the main axis."
+    },
+    {
+     "name": "shrink_wrap",
+     "args": [],
+     "doc": "Shrink-wraps the main axis: MainAxisSize::Min, named."
+    }
+   ]
+  },
+  "Column": {
+   "constructors": [
+    {
+     "name": "new",
+     "args": []
+    }
+   ],
+   "methods": [
+    {
+     "name": "child",
+     "args": [
+      "child"
+     ],
+     "doc": "Adds a child."
+    },
+    {
+     "name": "spacing",
+     "args": [
+      "1.0"
+     ],
+     "doc": "Space between adjacent children, in logical pixels."
+    },
+    {
+     "name": "main_axis_alignment",
+     "args": [
+      "Justify::Center"
+     ],
+     "doc": "How the children are distributed along the main axis."
+    },
+    {
+     "name": "cross_axis_alignment",
+     "args": [
+      "Align::Center"
+     ],
+     "doc": "How the children are aligned across the main axis."
+    },
+    {
+     "name": "shrink_wrap",
+     "args": [],
+     "doc": "Shrink-wraps the main axis: MainAxisSize::Min, named."
+    }
+   ]
+  },
+  "Container": {
+   "constructors": [
+    {
+     "name": "new",
+     "args": [],
+     "doc": "Creates an empty container (automatic size, no decoration)."
+    }
+   ],
+   "methods": [
+    {
+     "name": "child",
+     "args": [
+      "child"
+     ],
+     "doc": "Sets the container's child."
+    },
+    {
+     "name": "width",
+     "args": [
+      "1.0"
+     ],
+     "doc": "Sets the width, in logical pixels."
+    },
+    {
+     "name": "height",
+     "args": [
+      "1.0"
+     ],
+     "doc": "Sets the height, in logical pixels."
+    },
+    {
+     "name": "min_width",
+     "args": [
+      "1.0"
+     ]
+    },
+    {
+     "name": "max_width",
+     "args": [
+      "1.0"
+     ],
+     "doc": "At most width wide."
+    },
+    {
+     "name": "min_height",
+     "args": [
+      "1.0"
+     ],
+     "doc": "At least height tall."
+    },
+    {
+     "name": "max_height",
+     "args": [
+      "1.0"
+     ],
+     "doc": "At most height tall."
+    },
+    {
+     "name": "padding",
+     "args": [
+      "1.0"
+     ],
+     "doc": "Uniform inner padding, in logical pixels."
+    },
+    {
+     "name": "margin",
+     "args": [
+      "1.0"
+     ],
+     "doc": "A uniform outer margin: space reserved around the box — outside the decoration, it pushes the siblings away without growing the background or the border."
+    },
+    {
+     "name": "radius",
+     "args": [
+      "1.0"
+     ],
+     "doc": "The rounded corner radii: uniform via f32 (.radius(10.0)) or per corner via BorderRadius (.radius(BorderRadius::top(12.0)))."
+    },
+    {
+     "name": "color",
+     "args": [
+      "Colors::RED"
+     ],
+     "doc": "The background color at rest."
+    },
+    {
+     "name": "border",
+     "args": [
+      "1.0",
+      "Colors::RED"
+     ],
+     "doc": "The border: width (in px) and color, the same on all four sides."
+    },
+    {
+     "name": "shadow",
+     "args": [
+      "1.0",
+      "1.0",
+      "1.0",
+      "Colors::RED"
+     ],
+     "doc": "A drop shadow: the (dx, dy) offset, the blur radius and the color."
+    },
+    {
+     "name": "opacity",
+     "args": [
+      "1.0"
+     ],
+     "doc": "Applies a group opacity [0,1] to the whole subtree, as one block: the rendering goes through a composited layer, so overlaps are not double-blended."
+    },
+    {
+     "name": "rotated",
+     "args": [
+      "1.0"
+     ],
+     "doc": "Turned by radians when painted, about the transform_alignment."
+    },
+    {
+     "name": "flex",
+     "args": [
+      "1.0"
+     ],
+     "doc": "Flex growth factor along the parent's main axis."
+    },
+    {
+     "name": "on_click",
+     "args": [
+      "move || {}"
+     ],
+     "doc": "The message emitted when the container is clicked."
+    }
+   ]
+  },
+  "Padding": {
+   "constructors": [
+    {
+     "name": "new",
+     "args": [
+      "Insets::uniform(16.0)",
+      "child"
+     ],
+     "doc": "Insets child by padding."
+    }
+   ],
+   "methods": []
+  },
+  "Center": {
+   "constructors": [
+    {
+     "name": "new",
+     "args": [
+      "child"
+     ],
+     "doc": "Centres child."
+    }
+   ],
+   "methods": [
+    {
+     "name": "width_factor",
+     "args": [
+      "1.0"
+     ],
+     "doc": "The box is factor times as wide as its child."
+    },
+    {
+     "name": "height_factor",
+     "args": [
+      "1.0"
+     ],
+     "doc": "The box is factor times as tall as its child."
+    }
+   ]
+  },
+  "SizedBox": {
+   "constructors": [
+    {
+     "name": "empty",
+     "args": [],
+     "doc": "An empty box, Auto on both axes until a size is set."
+    },
+    {
+     "name": "new",
+     "args": [
+      "child"
+     ],
+     "doc": "A box holding child, its size still to be chosen."
+    },
+    {
+     "name": "square",
+     "args": [
+      "1.0",
+      "child"
+     ],
+     "doc": "A side×side box holding child."
+    },
+    {
+     "name": "expand",
+     "args": [
+      "child"
+     ],
+     "doc": "A box that fills the space on offer, on both axes, and hands it to child."
+    }
+   ],
+   "methods": [
+    {
+     "name": "width",
+     "args": [
+      "1.0"
+     ],
+     "doc": "Sets the width, in logical pixels."
+    },
+    {
+     "name": "height",
+     "args": [
+      "1.0"
+     ],
+     "doc": "Sets the height, in logical pixels."
+    },
+    {
+     "name": "child",
+     "args": [
+      "child"
+     ],
+     "doc": "Sets the child, replacing any already there."
+    }
+   ]
+  },
+  "Spacer": {
+   "constructors": [
+    {
+     "name": "new",
+     "args": [],
+     "doc": "A gap that takes the whole of what is left (a flex factor of 1)."
+    }
+   ],
+   "methods": [
+    {
+     "name": "flex",
+     "args": [
+      "1.0"
+     ]
+    }
+   ]
+  },
+  "Expanded": {
+   "constructors": [
+    {
+     "name": "new",
+     "args": [
+      "child"
+     ],
+     "doc": "Wraps inner, which then takes all the spare room (a flex factor of 1)."
+    }
+   ],
+   "methods": [
+    {
+     "name": "flex",
+     "args": [
+      "1.0"
+     ],
+     "doc": "The share of the spare room, when several children expand: two children at flex(2.0) and flex(1.0) split it two to one."
+    },
+    {
+     "name": "loose",
+     "args": []
+    }
+   ]
+  },
+  "Stack": {
+   "constructors": [
+    {
+     "name": "new",
+     "args": [],
+     "doc": "Creates an empty stack."
+    }
+   ],
+   "methods": [
+    {
+     "name": "layer",
+     "args": [
+      "child"
+     ],
+     "doc": "Adds a layer, on top of the previous ones."
+    },
+    {
+     "name": "width",
+     "args": [
+      "1.0"
+     ],
+     "doc": "Sets the width, in logical pixels."
+    },
+    {
+     "name": "height",
+     "args": [
+      "1.0"
+     ],
+     "doc": "Sets the height, in logical pixels."
+    },
+    {
+     "name": "flex",
+     "args": [
+      "1.0"
+     ],
+     "doc": "Flex growth factor along the parent's main axis."
+    }
+   ]
+  },
+  "Positioned": {
+   "constructors": [
+    {
+     "name": "new",
+     "args": [
+      "child"
+     ],
+     "doc": "Wraps a layer, pinned nowhere yet — which on its own is the stack's alignment at the child's natural size."
+    },
+    {
+     "name": "fill",
+     "args": [
+      "child"
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "name": "left",
+     "args": [
+      "1.0"
+     ],
+     "doc": "Distance from the stack's left edge — the left in either reading direction; see start for one that follows the script."
+    },
+    {
+     "name": "top",
+     "args": [
+      "1.0"
+     ],
+     "doc": "Distance from the stack's top edge."
+    },
+    {
+     "name": "right",
+     "args": [
+      "1.0"
+     ],
+     "doc": "Distance from the stack's right edge."
+    },
+    {
+     "name": "bottom",
+     "args": [
+      "1.0"
+     ],
+     "doc": "Distance from the stack's bottom edge."
+    },
+    {
+     "name": "width",
+     "args": [
+      "1.0"
+     ],
+     "doc": "An explicit width, used when only one horizontal edge is pinned."
+    },
+    {
+     "name": "height",
+     "args": [
+      "1.0"
+     ],
+     "doc": "An explicit height, used when only one vertical edge is pinned."
+    },
+    {
+     "name": "inset",
+     "args": [
+      "1.0"
+     ],
+     "doc": "Pins all four edges: the layer fills the stack inset by px on every side."
+    }
+   ]
+  },
+  "AspectRatio": {
+   "constructors": [
+    {
+     "name": "new",
+     "args": [
+      "1.0"
+     ],
+     "doc": "Creates a box at the given width / height ratio, clamped to > 0."
+    }
+   ],
+   "methods": [
+    {
+     "name": "child",
+     "args": [
+      "child"
+     ],
+     "doc": "Sets the child constrained to the ratio."
+    }
+   ]
+  },
+  "Opacity": {
+   "constructors": [
+    {
+     "name": "new",
+     "args": [
+      "1.0",
+      "child"
+     ],
+     "doc": "Wraps child in a group opacity of opacity."
+    }
+   ],
+   "methods": []
+  },
+  "ClipRRect": {
+   "constructors": [
+    {
+     "name": "new",
+     "args": [
+      "1.0"
+     ],
+     "doc": "Clips the child to a rounded rectangle of radius logical pixels, uniform across all four corners."
+    }
+   ],
+   "methods": [
+    {
+     "name": "child",
+     "args": [
+      "child"
+     ],
+     "doc": "Sets the clipped child."
+    }
+   ]
+  },
+  "Visibility": {
+   "constructors": [
+    {
+     "name": "new",
+     "args": [
+      "child"
+     ],
+     "doc": "Shows child."
+    }
+   ],
+   "methods": [
+    {
+     "name": "visible",
+     "args": [
+      "bool"
+     ],
+     "doc": "Whether the child is shown."
+    },
+    {
+     "name": "maintain_size",
+     "args": [],
+     "doc": "Keeps the child's box while hidden: it is laid out and measured as usual, but not drawn, not clickable and not read out."
+    },
+    {
+     "name": "replacement",
+     "args": [
+      "child"
+     ],
+     "doc": "What to show in the child's place when it is hidden and its box is not maintained."
+    }
+   ]
+  },
+  "SingleChildScrollView": {
+   "constructors": [
+    {
+     "name": "new",
+     "args": [],
+     "doc": "Creates a scrollable area."
+    }
+   ],
+   "methods": [
+    {
+     "name": "child",
+     "args": [
+      "child"
+     ],
+     "doc": "Sets the scrollable content."
+    },
+    {
+     "name": "reverse",
+     "args": [],
+     "doc": "Scrolls from the far end: the content is anchored to the bottom of a vertical viewport (the right of a horizontal one) and the area starts there."
+    },
+    {
+     "name": "width",
+     "args": [
+      "1.0"
+     ],
+     "doc": "Sets the viewport width, in logical pixels."
+    },
+    {
+     "name": "height",
+     "args": [
+      "1.0"
+     ],
+     "doc": "Sets the viewport height, in logical pixels."
+    },
+    {
+     "name": "flex",
+     "args": [
+      "1.0"
+     ],
+     "doc": "Flex growth factor along the parent's main axis."
+    },
+    {
+     "name": "padding",
+     "args": [
+      "1.0"
+     ],
+     "doc": "Insets the content, inside the viewport: the padding scrolls with what it surrounds rather than shrinking the window onto it."
+    }
+   ]
+  },
+  "ListView": {
+   "constructors": [
+    {
+     "name": "new",
+     "args": [
+      "usize",
+      "1.0",
+      "|index| Text::new(\"row\")"
+     ],
+     "doc": "Creates a list of count items of extent item_extent, each item being built on demand by build(index)."
+    },
+    {
+     "name": "builder",
+     "args": [
+      "usize",
+      "|index| Text::new(\"row\")"
+     ],
+     "doc": "A virtualised list of count items of any extent, built on demand by build(index) — a feed of posts of different lengths, a chat, search results with and without a picture."
+    }
+   ],
+   "methods": [
+    {
+     "name": "estimated_extent",
+     "args": [
+      "1.0"
+     ],
+     "doc": "The extent to count an item at before any has been measured, for a list made by ListView::builder."
+    },
+    {
+     "name": "reverse",
+     "args": [],
+     "doc": "Builds from the far end: item 0 sits at the end the axis finishes at — the bottom of a vertical list, the trailing edge of a horizontal one — item 1 before it, and the list starts resting there."
+    },
+    {
+     "name": "padding",
+     "args": [
+      "1.0"
+     ],
+     "doc": "Insets the content, inside the viewport: the padding scrolls with what it surrounds rather than shrinking the window onto it."
+    },
+    {
+     "name": "width",
+     "args": [
+      "1.0"
+     ],
+     "doc": "Sets the viewport width, in logical pixels."
+    },
+    {
+     "name": "height",
+     "args": [
+      "1.0"
+     ],
+     "doc": "Sets the viewport height, in logical pixels."
+    },
+    {
+     "name": "flex",
+     "args": [
+      "1.0"
+     ],
+     "doc": "Flex growth factor along the parent's main axis."
+    }
+   ]
+  },
+  "GridView": {
+   "constructors": [
+    {
+     "name": "new",
+     "args": [
+      "usize"
+     ],
+     "doc": "Creates a grid of columns columns, at least one."
+    },
+    {
+     "name": "extent",
+     "args": [
+      "1.0",
+      "usize",
+      "|index| Text::new(\"row\")"
+     ]
+    },
+    {
+     "name": "builder",
+     "args": [
+      "usize",
+      "usize",
+      "|index| Text::new(\"row\")"
+     ],
+     "doc": "A grid of count tiles in columns columns, of which only the visible rows are built, laid out and painted."
+    }
+   ],
+   "methods": [
+    {
+     "name": "cell",
+     "args": [
+      "child"
+     ],
+     "doc": "Adds a cell, placed automatically in the grid."
+    },
+    {
+     "name": "gap",
+     "args": [
+      "1.0"
+     ],
+     "doc": "Spacing between cells (rows and columns), in logical pixels."
+    },
+    {
+     "name": "row_gap",
+     "args": [
+      "1.0"
+     ],
+     "doc": "Spacing between rows only, in logical pixels."
+    },
+    {
+     "name": "column_gap",
+     "args": [
+      "1.0"
+     ],
+     "doc": "Spacing between columns only, in logical pixels."
+    },
+    {
+     "name": "aspect",
+     "args": [
+      "1.0"
+     ],
+     "doc": "Gives every cell the same shape: a width / height ratio, so 1.0 is a square tile, 1.5 a landscape one and 0.75 a portrait one."
+    },
+    {
+     "name": "tile_height",
+     "args": [
+      "1.0"
+     ]
+    },
+    {
+     "name": "width",
+     "args": [
+      "1.0"
+     ],
+     "doc": "Sets the width, in logical pixels."
+    },
+    {
+     "name": "height",
+     "args": [
+      "1.0"
+     ],
+     "doc": "Sets the height, in logical pixels."
+    },
+    {
+     "name": "flex",
+     "args": [
+      "1.0"
+     ],
+     "doc": "Flex growth factor along the parent's main axis."
+    }
+   ]
+  },
+  "Card": {
+   "constructors": [
+    {
+     "name": "new",
+     "args": [],
+     "doc": "Creates an elevated card, with a default padding of 16."
+    }
+   ],
+   "methods": [
+    {
+     "name": "child",
+     "args": [
+      "child"
+     ],
+     "doc": "Sets the card's content."
+    },
+    {
+     "name": "filled",
+     "args": [],
+     "doc": "A flat tonal card: no shadow, no outline."
+    },
+    {
+     "name": "outlined",
+     "args": [],
+     "doc": "An outlined card: a hairline, no shadow."
+    },
+    {
+     "name": "padding",
+     "args": [
+      "1.0"
+     ],
+     "doc": "Uniform padding inside the card."
+    },
+    {
+     "name": "margin",
+     "args": [
+      "1.0"
+     ],
+     "doc": "Uniform room outside the card."
+    },
+    {
+     "name": "elevation",
+     "args": [
+      "1.0"
+     ],
+     "doc": "How far off the surface the card sits."
+    },
+    {
+     "name": "color",
+     "args": [
+      "Colors::RED"
+     ],
+     "doc": "Overrides the background colour."
+    },
+    {
+     "name": "radius",
+     "args": [
+      "1.0"
+     ],
+     "doc": "Rounds the card's corners with radius."
+    }
+   ]
+  },
+  "Divider": {
+   "constructors": [
+    {
+     "name": "new",
+     "args": [],
+     "doc": "Creates a separator with the theme's colour and the default spacing."
+    }
+   ],
+   "methods": [
+    {
+     "name": "height",
+     "args": [
+      "1.0"
+     ],
+     "doc": "The room the separator takes in the layout, line and air together."
+    },
+    {
+     "name": "thickness",
+     "args": [
+      "1.0"
+     ],
+     "doc": "The thickness of the line itself."
+    },
+    {
+     "name": "indent",
+     "args": [
+      "1.0"
+     ],
+     "doc": "Insets the line from the leading edge, leaving the box where it is — how a list separates rows without cutting through their leading icons."
+    },
+    {
+     "name": "end_indent",
+     "args": [
+      "1.0"
+     ],
+     "doc": "Insets the line from the trailing edge."
+    },
+    {
+     "name": "color",
+     "args": [
+      "Colors::RED"
+     ],
+     "doc": "Overrides the line's colour."
+    }
+   ]
+  },
+  "Button": {
+   "constructors": [
+    {
+     "name": "new",
+     "args": [
+      "\"text\""
+     ],
+     "doc": "A button reading label."
+    },
+    {
+     "name": "with_child",
+     "args": [
+      "child"
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "name": "on_press",
+     "args": [
+      "move || {}"
+     ],
+     "doc": "Message emitted on a press."
+    },
+    {
+     "name": "on_long_press",
+     "args": [
+      "move || {}"
+     ],
+     "doc": "Message emitted on a long press, which takes the place of the press."
+    },
+    {
+     "name": "variant",
+     "args": [
+      "Variant::Filled"
+     ]
+    },
+    {
+     "name": "enabled",
+     "args": [
+      "bool"
+     ],
+     "doc": "Enables or disables the button."
+    },
+    {
+     "name": "icon",
+     "args": [
+      "child"
+     ]
+    },
+    {
+     "name": "color",
+     "args": [
+      "Colors::RED"
+     ],
+     "doc": "The surface while enabled."
+    },
+    {
+     "name": "label_color",
+     "args": [
+      "Colors::RED"
+     ],
+     "doc": "The label's colour while enabled."
+    },
+    {
+     "name": "radius",
+     "args": [
+      "1.0"
+     ],
+     "doc": "The corner radii (uniform via f32, per corner via BorderRadius)."
+    },
+    {
+     "name": "height",
+     "args": [
+      "1.0"
+     ]
+    },
+    {
+     "name": "padding",
+     "args": [
+      "1.0"
+     ],
+     "doc": "The room either side of the content."
+    },
+    {
+     "name": "min_width",
+     "args": [
+      "1.0"
+     ],
+     "doc": "The narrowest it will be, before the visual density."
+    },
+    {
+     "name": "elevation",
+     "args": [
+      "1.0"
+     ],
+     "doc": "How far it sits off the surface in every state while enabled."
+    },
+    {
+     "name": "size",
+     "args": [
+      "1.0"
+     ],
+     "doc": "Font size — sugar for Button::label_style with the label step resized."
+    }
+   ]
+  },
+  "IconButton": {
+   "constructors": [
+    {
+     "name": "new",
+     "args": [
+      "Icons::STAR"
+     ],
+     "doc": "A button showing one of the bundled icons."
+    }
+   ],
+   "methods": [
+    {
+     "name": "on_press",
+     "args": [
+      "move || {}"
+     ],
+     "doc": "The message emitted on click."
+    },
+    {
+     "name": "label",
+     "args": [
+      "\"text\""
+     ],
+     "doc": "What a screen reader announces."
+    },
+    {
+     "name": "selected",
+     "args": [
+      "bool"
+     ],
+     "doc": "Makes it a toggle, on or off; on, the glyph takes the accent."
+    },
+    {
+     "name": "enabled",
+     "args": [
+      "bool"
+     ],
+     "doc": "Enables or disables it."
+    },
+    {
+     "name": "size",
+     "args": [
+      "1.0"
+     ],
+     "doc": "The box's side."
+    },
+    {
+     "name": "icon_size",
+     "args": [
+      "1.0"
+     ],
+     "doc": "The glyph's size inside it."
+    },
+    {
+     "name": "color",
+     "args": [
+      "Colors::RED"
+     ],
+     "doc": "The surface under the glyph."
+    },
+    {
+     "name": "icon_color",
+     "args": [
+      "Colors::RED"
+     ],
+     "doc": "The glyph's colour."
+    },
+    {
+     "name": "radius",
+     "args": [
+      "1.0"
+     ],
+     "doc": "The corner radii."
+    }
+   ]
+  },
+  "FloatingActionButton": {
+   "constructors": [
+    {
+     "name": "new",
+     "args": [
+      "Icons::STAR"
+     ],
+     "doc": "A button carrying a glyph."
+    },
+    {
+     "name": "extended",
+     "args": [
+      "\"text\""
+     ],
+     "doc": "An extended button: words, and optionally a glyph before them through icon."
+    }
+   ],
+   "methods": [
+    {
+     "name": "icon",
+     "args": [
+      "Icons::STAR"
+     ],
+     "doc": "The glyph, over whatever was there."
+    },
+    {
+     "name": "small",
+     "args": [],
+     "doc": "The smaller box: 40 across, cornered at 12, with the same glyph."
+    },
+    {
+     "name": "large",
+     "args": [],
+     "doc": "The larger box: 96 across, cornered at 28, with a 36 glyph."
+    },
+    {
+     "name": "on_press",
+     "args": [
+      "move || {}"
+     ],
+     "doc": "What it does."
+    },
+    {
+     "name": "enabled",
+     "args": [
+      "bool"
+     ],
+     "doc": "Whether it can be pressed."
+    },
+    {
+     "name": "background",
+     "args": [
+      "Colors::RED"
+     ],
+     "doc": "The surface, over the theme's and primary_container."
+    },
+    {
+     "name": "foreground",
+     "args": [
+      "Colors::RED"
+     ],
+     "doc": "What is drawn on it, over the theme's and on_primary_container."
+    },
+    {
+     "name": "elevation",
+     "args": [
+      "1.0"
+     ],
+     "doc": "How far off the page it sits at rest, in pixels."
+    },
+    {
+     "name": "radius",
+     "args": [
+      "1.0"
+     ],
+     "doc": "The shorthand for a rounded rectangle."
+    },
+    {
+     "name": "icon_size",
+     "args": [
+      "1.0"
+     ],
+     "doc": "How big the glyph is, over the theme's and the size's own."
+    }
+   ]
+  },
+  "SegmentedButton": {
+   "constructors": [
+    {
+     "name": "new",
+     "args": [
+      "usize",
+      "move |index: usize| {}"
+     ],
+     "doc": "Creates a control: selected is the active index, on_select(i) fires on click."
+    }
+   ],
+   "methods": [
+    {
+     "name": "segment",
+     "args": [
+      "\"text\""
+     ],
+     "doc": "Adds a segment."
+    },
+    {
+     "name": "radius",
+     "args": [
+      "1.0"
+     ],
+     "doc": "The radius of the group's outer corners."
+    },
+    {
+     "name": "selected_color",
+     "args": [
+      "Colors::RED"
+     ],
+     "doc": "The fill under the chosen segment."
+    },
+    {
+     "name": "label_color",
+     "args": [
+      "Colors::RED"
+     ],
+     "doc": "The labels' colour."
+    },
+    {
+     "name": "selected_label_color",
+     "args": [
+      "Colors::RED"
+     ],
+     "doc": "The chosen segment's label colour, and its checkmark's."
+    },
+    {
+     "name": "border_color",
+     "args": [
+      "Colors::RED"
+     ],
+     "doc": "The outline's colour, which is also the hairlines' between segments."
+    },
+    {
+     "name": "height",
+     "args": [
+      "1.0"
+     ],
+     "doc": "The control's height."
+    },
+    {
+     "name": "padding",
+     "args": [
+      "1.0"
+     ],
+     "doc": "The room either side of a label."
+    },
+    {
+     "name": "enabled",
+     "args": [
+      "bool"
+     ],
+     "doc": "Greys the whole control out and makes it inert: no press, no ink, out of the tab order, and announced as disabled."
+    },
+    {
+     "name": "show_selected_icon",
+     "args": [
+      "bool"
+     ],
+     "doc": "Whether the chosen segment carries a checkmark."
+    }
+   ]
+  },
+  "Icon": {
+   "constructors": [
+    {
+     "name": "new",
+     "args": [
+      "Icons::STAR"
+     ],
+     "doc": "An icon in the theme's colour and at the theme's size — 24 px unless a theme says otherwise."
+    }
+   ],
+   "methods": [
+    {
+     "name": "size",
+     "args": [
+      "1.0"
+     ],
+     "doc": "Sets the size, that is, the square's side, in logical pixels."
+    },
+    {
+     "name": "color",
+     "args": [
+      "Colors::RED"
+     ],
+     "doc": "Forces the colour; the theme's otherwise, and on_surface if it says nothing."
+    }
+   ]
+  },
+  "Checkbox": {
+   "constructors": [
+    {
+     "name": "new",
+     "args": [
+      "bool"
+     ],
+     "doc": "Creates a checkbox whose checked state is supplied."
+    },
+    {
+     "name": "maybe",
+     "args": [
+      "Some(true)"
+     ],
+     "doc": "A checkbox with three answers: on, off, and partly on."
+    }
+   ],
+   "methods": [
+    {
+     "name": "label",
+     "args": [
+      "\"text\""
+     ],
+     "doc": "Adds a label after it."
+    },
+    {
+     "name": "enabled",
+     "args": [
+      "bool"
+     ],
+     "doc": "Whether the box can be ticked."
+    },
+    {
+     "name": "error",
+     "args": [
+      "bool"
+     ]
+    },
+    {
+     "name": "on_toggle",
+     "args": [
+      "move |on: bool| {}"
+     ],
+     "doc": "A closure producing a message from the new state, checked or not."
+    },
+    {
+     "name": "fill_color",
+     "args": [
+      "Colors::RED"
+     ],
+     "doc": "The box's fill when it is ticked; the theme's, then primary."
+    },
+    {
+     "name": "check_color",
+     "args": [
+      "Colors::RED"
+     ],
+     "doc": "The tick drawn on that fill; the theme's, then on_primary."
+    },
+    {
+     "name": "radius",
+     "args": [
+      "1.0"
+     ],
+     "doc": "The box's corner radius."
+    }
+   ]
+  },
+  "Radio": {
+   "constructors": [
+    {
+     "name": "new",
+     "args": [
+      "bool"
+     ],
+     "doc": "A radio, chosen or not."
+    }
+   ],
+   "methods": [
+    {
+     "name": "label",
+     "args": [
+      "\"text\""
+     ],
+     "doc": "The words beside it."
+    },
+    {
+     "name": "label_size",
+     "args": [
+      "1.0"
+     ],
+     "doc": "The label's size, in pixels."
+    },
+    {
+     "name": "on_select",
+     "args": [
+      "move || {}"
+     ],
+     "doc": "What to say when it is pressed."
+    },
+    {
+     "name": "enabled",
+     "args": [
+      "bool"
+     ],
+     "doc": "Whether it can be pressed."
+    },
+    {
+     "name": "selected_color",
+     "args": [
+      "Colors::RED"
+     ],
+     "doc": "The ring and the dot while it is the chosen one, over the theme's and primary."
+    },
+    {
+     "name": "border_color",
+     "args": [
+      "Colors::RED"
+     ],
+     "doc": "The ring while it is not, at rest."
+    },
+    {
+     "name": "label_color",
+     "args": [
+      "Colors::RED"
+     ],
+     "doc": "The label's colour."
+    }
+   ]
+  },
+  "Switch": {
+   "constructors": [
+    {
+     "name": "new",
+     "args": [
+      "bool"
+     ],
+     "doc": "Creates a switch whose state is supplied."
+    }
+   ],
+   "methods": [
+    {
+     "name": "on_toggle",
+     "args": [
+      "move |on: bool| {}"
+     ],
+     "doc": "A closure producing a message from the new state."
+    },
+    {
+     "name": "enabled",
+     "args": [
+      "bool"
+     ],
+     "doc": "Whether the switch can be flipped."
+    },
+    {
+     "name": "track_color",
+     "args": [
+      "Colors::RED"
+     ],
+     "doc": "The track's colour when the switch is on, in every state; the theme's primary otherwise."
+    },
+    {
+     "name": "thumb_color",
+     "args": [
+      "Colors::RED"
+     ]
+    }
+   ]
+  },
+  "Slider": {
+   "constructors": [
+    {
+     "name": "new",
+     "args": [
+      "1.0"
+     ],
+     "doc": "Creates a slider at the given value, over 0.0..=1.0 until range says otherwise."
+    }
+   ],
+   "methods": [
+    {
+     "name": "on_change",
+     "args": [
+      "move |value: f32| {}"
+     ],
+     "doc": "A closure producing a message from the new value, in the slider's units."
+    },
+    {
+     "name": "range",
+     "args": [
+      "1.0",
+      "1.0"
+     ],
+     "doc": "The travel this slider covers; 0.0..=1.0 by default."
+    },
+    {
+     "name": "divisions",
+     "args": [
+      "usize"
+     ],
+     "doc": "Splits the travel into n steps: the value snaps to min + k·(max−min)/n, a tick marks each, and an arrow key moves by one of them."
+    },
+    {
+     "name": "width",
+     "args": [
+      "1.0"
+     ],
+     "doc": "The width, in logical pixels."
+    },
+    {
+     "name": "enabled",
+     "args": [
+      "bool"
+     ],
+     "doc": "Whether the slider can be moved."
+    },
+    {
+     "name": "active_color",
+     "args": [
+      "Colors::RED"
+     ],
+     "doc": "The travelled part of the track, and the thumb unless thumb_color names it; the scheme's primary otherwise."
+    },
+    {
+     "name": "inactive_color",
+     "args": [
+      "Colors::RED"
+     ],
+     "doc": "The part of the track still to travel; the scheme's surface_container_highest otherwise."
+    },
+    {
+     "name": "thumb_color",
+     "args": [
+      "Colors::RED"
+     ],
+     "doc": "The thumb's fill; the active colour otherwise."
+    }
+   ]
+  },
+  "Rating": {
+   "constructors": [
+    {
+     "name": "new",
+     "args": [
+      "u32",
+      "u32",
+      "move |value: u32| {}"
+     ],
+     "doc": "Creates a rating: value filled stars out of max."
+    }
+   ],
+   "methods": [
+    {
+     "name": "enabled",
+     "args": [
+      "bool"
+     ],
+     "doc": "Whether the rating can be changed."
+    }
+   ]
+  },
+  "Stepper": {
+   "constructors": [
+    {
+     "name": "new",
+     "args": [
+      "i32",
+      "move |value: i32| {}"
+     ],
+     "doc": "Creates a picker: the current value plus a message for each new value."
+    }
+   ],
+   "methods": [
+    {
+     "name": "range",
+     "args": [
+      "i32",
+      "i32"
+     ],
+     "doc": "Clamps the value to [min, max]."
+    },
+    {
+     "name": "enabled",
+     "args": [
+      "bool"
+     ],
+     "doc": "Whether the value can be changed."
+    },
+    {
+     "name": "step",
+     "args": [
+      "i32"
+     ],
+     "doc": "Sets the increment step, at least 1."
+    }
+   ]
+  },
+  "TextField": {
+   "constructors": [
+    {
+     "name": "new",
+     "args": [
+      "\"text\""
+     ],
+     "doc": "Creates a field displaying value."
+    }
+   ],
+   "methods": [
+    {
+     "name": "on_input",
+     "args": [
+      "move |value: String| {}"
+     ],
+     "doc": "Closure producing a message from the field's new value."
+    },
+    {
+     "name": "label",
+     "args": [
+      "\"text\""
+     ],
+     "doc": "Label displayed above the field."
+    },
+    {
+     "name": "placeholder",
+     "args": [
+      "\"text\""
+     ],
+     "doc": "Hint displayed inside the field while it is empty — and, for a field with no label, the name a screen reader gives it."
+    },
+    {
+     "name": "helper",
+     "args": [
+      "\"text\""
+     ],
+     "doc": "Helper text below the field (replaced by the error, if present)."
+    },
+    {
+     "name": "error",
+     "args": [
+      "\"text\""
+     ],
+     "doc": "Marks the field in error: red border and label, message displayed below the field."
+    },
+    {
+     "name": "width",
+     "args": [
+      "1.0"
+     ],
+     "doc": "Sets the width, in logical pixels."
+    },
+    {
+     "name": "outlined",
+     "args": [],
+     "doc": "Outlined: a box the caller can see all the way round, the floating label notching its top border."
+    },
+    {
+     "name": "filled",
+     "args": [],
+     "doc": "The filled variant: a tinted container with a single line under it, the label floating inside."
+    },
+    {
+     "name": "borderless",
+     "args": [],
+     "doc": "Filled: a tinted container with a single line under it, the label floating inside the box rather than on its edge."
+    },
+    {
+     "name": "multiline",
+     "args": [],
+     "doc": "Switches the field to multi-line: Enter inserts a line break (instead of submitting), and the box shows rows lines (see rows)."
+    },
+    {
+     "name": "obscure",
+     "args": [
+      "bool"
+     ],
+     "doc": "Masks the value (a password field): every character becomes a dot."
+    },
+    {
+     "name": "enabled",
+     "args": [
+      "bool"
+     ],
+     "doc": "Greys the field out and makes it inert."
+    },
+    {
+     "name": "prefix_icon",
+     "args": [
+      "Icons::STAR"
+     ],
+     "doc": "Decorative icon on the left inside the field."
+    },
+    {
+     "name": "suffix_icon",
+     "args": [
+      "Icons::STAR"
+     ],
+     "doc": "Decorative icon on the right inside the field."
+    },
+    {
+     "name": "read_only",
+     "args": [],
+     "doc": "A field whose value can be read, selected and copied — but not changed."
+    }
+   ]
+  },
+  "Chip": {
+   "constructors": [
+    {
+     "name": "new",
+     "args": [
+      "\"text\""
+     ],
+     "doc": "Creates a chip with the given label."
+    }
+   ],
+   "methods": [
+    {
+     "name": "selected",
+     "args": [
+      "bool"
+     ],
+     "doc": "Marks the chip selected: it fills, its label takes the colour that goes with the fill, and a checkmark appears in the leading slot unless there is an icon there already (or Chip::show_checkmark says otherwise)."
+    },
+    {
+     "name": "leading",
+     "args": [
+      "Icons::STAR"
+     ],
+     "doc": "A leading icon — the avatar or glyph an entry chip carries."
+    },
+    {
+     "name": "enabled",
+     "args": [
+      "bool"
+     ],
+     "doc": "Greys the chip out and makes it inert: no press, no ink, out of the tab order, and announced to a reader as disabled rather than simply going quiet."
+    },
+    {
+     "name": "on_press",
+     "args": [
+      "move || {}"
+     ],
+     "doc": "The message the chip emits when pressed."
+    },
+    {
+     "name": "on_remove",
+     "args": [
+      "move || {}"
+     ],
+     "doc": "Adds a delete cross that emits message."
+    },
+    {
+     "name": "color",
+     "args": [
+      "Colors::RED"
+     ],
+     "doc": "The surface under an unselected chip."
+    },
+    {
+     "name": "selected_color",
+     "args": [
+      "Colors::RED"
+     ],
+     "doc": "The surface under a selected one."
+    },
+    {
+     "name": "label_color",
+     "args": [
+      "Colors::RED"
+     ],
+     "doc": "The label's colour when unselected."
+    }
+   ]
+  },
+  "CircleAvatar": {
+   "constructors": [
+    {
+     "name": "new",
+     "args": [],
+     "doc": "An empty avatar: the colour alone, at the default radius."
+    },
+    {
+     "name": "initials",
+     "args": [
+      "\"text\""
+     ],
+     "doc": "An avatar showing the initials of name: the first letters of its first two words, upper-cased, or its first two letters when it is one word."
+    }
+   ],
+   "methods": [
+    {
+     "name": "child",
+     "args": [
+      "child"
+     ],
+     "doc": "What is shown in the circle, centred: usually a text, or an icon."
+    },
+    {
+     "name": "background_color",
+     "args": [
+      "Colors::RED"
+     ],
+     "doc": "The colour the circle is filled with; the scheme's primary_container otherwise."
+    },
+    {
+     "name": "foreground_color",
+     "args": [
+      "Colors::RED"
+     ],
+     "doc": "The colour of the child's text and icons; the scheme's on_primary_container otherwise."
+    },
+    {
+     "name": "radius",
+     "args": [
+      "1.0"
+     ],
+     "doc": "The radius, in logical pixels: the avatar is this big, whatever it holds."
+    },
+    {
+     "name": "size",
+     "args": [
+      "1.0"
+     ],
+     "doc": "The size as a diameter: Self::radius of half of it."
+    }
+   ]
+  },
+  "Badge": {
+   "constructors": [
+    {
+     "name": "new",
+     "args": [
+      "\"text\""
+     ],
+     "doc": "A badge carrying text."
+    },
+    {
+     "name": "count",
+     "args": [
+      "u32"
+     ],
+     "doc": "A badge carrying a count: the number, or 999+ past max_count."
+    },
+    {
+     "name": "dot",
+     "args": [],
+     "doc": "A badge with no label: a small dot."
+    }
+   ],
+   "methods": [
+    {
+     "name": "max_count",
+     "args": [
+      "u32"
+     ],
+     "doc": "The largest count written out; past it the badge reads max+."
+    },
+    {
+     "name": "label_visible",
+     "args": [
+      "bool"
+     ],
+     "doc": "Whether the badge is shown."
+    },
+    {
+     "name": "background_color",
+     "args": [
+      "Colors::RED"
+     ]
+    },
+    {
+     "name": "text_color",
+     "args": [
+      "Colors::RED"
+     ],
+     "doc": "The label's colour on that fill; the theme's on_error otherwise."
+    },
+    {
+     "name": "padding",
+     "args": [
+      "1.0"
+     ],
+     "doc": "The label's room either side."
+    },
+    {
+     "name": "on",
+     "args": [
+      "child"
+     ],
+     "returns": "Badged",
+     "doc": "Pins this badge to child: drawn over it, at its top-end corner unless alignment says otherwise."
+    }
+   ]
+  },
+  "Kbd": {
+   "constructors": [
+    {
+     "name": "new",
+     "args": [
+      "\"text\""
+     ],
+     "doc": "Creates a key cap with the given label."
+    }
+   ],
+   "methods": []
+  },
+  "Tooltip": {
+   "constructors": [
+    {
+     "name": "new",
+     "args": [
+      "\"text\""
+     ],
+     "doc": "Creates a tooltip carrying message."
+    }
+   ],
+   "methods": [
+    {
+     "name": "child",
+     "args": [
+      "child"
+     ],
+     "doc": "The widget the tooltip describes."
+    },
+    {
+     "name": "enabled",
+     "args": [
+      "bool"
+     ],
+     "doc": "Whether the tooltip shows at all."
+    },
+    {
+     "name": "background",
+     "args": [
+      "Colors::RED"
+     ],
+     "doc": "The bubble's surface, over the theme's and inverse_surface."
+    },
+    {
+     "name": "text_color",
+     "args": [
+      "Colors::RED"
+     ],
+     "doc": "The label's colour, over the theme's and on_inverse_surface."
+    },
+    {
+     "name": "text_align",
+     "args": [
+      "TextAlign::Center"
+     ],
+     "doc": "How the label sits in the bubble when it has wrapped onto more than one line."
+    },
+    {
+     "name": "max_width",
+     "args": [
+      "1.0"
+     ],
+     "doc": "How wide the bubble may get before the label wraps."
+    },
+    {
+     "name": "radius",
+     "args": [
+      "1.0"
+     ],
+     "doc": "The shorthand for a rounded rectangle."
+    }
+   ]
+  },
+  "Alert": {
+   "constructors": [
+    {
+     "name": "new",
+     "args": [
+      "\"text\""
+     ],
+     "doc": "Creates an informational box."
+    }
+   ],
+   "methods": [
+    {
+     "name": "title",
+     "args": [
+      "\"text\""
+     ],
+     "doc": "Adds a title."
+    },
+    {
+     "name": "success",
+     "args": [],
+     "doc": "The success variant."
+    },
+    {
+     "name": "warning",
+     "args": [],
+     "doc": "Variante avertissement."
+    },
+    {
+     "name": "error",
+     "args": [],
+     "doc": "Variante erreur."
+    }
+   ]
+  },
+  "Skeleton": {
+   "constructors": [
+    {
+     "name": "new",
+     "args": [],
+     "doc": "Creates a placeholder: full width, and 16 tall by default."
+    }
+   ],
+   "methods": [
+    {
+     "name": "width",
+     "args": [
+      "1.0"
+     ],
+     "doc": "Sets the width, in logical pixels."
+    },
+    {
+     "name": "height",
+     "args": [
+      "1.0"
+     ],
+     "doc": "Sets the height, in logical pixels."
+    },
+    {
+     "name": "radius",
+     "args": [
+      "1.0"
+     ],
+     "doc": "Sets the corner radius."
+    }
+   ]
+  },
+  "Image": {
+   "constructors": [
+    {
+     "name": "network",
+     "args": [
+      "\"text\""
+     ],
+     "doc": "An image fetched over the network, decoded and shown when it arrives."
+    }
+   ],
+   "methods": [
+    {
+     "name": "width",
+     "args": [
+      "1.0"
+     ],
+     "doc": "Sets the width, in logical pixels."
+    },
+    {
+     "name": "height",
+     "args": [
+      "1.0"
+     ],
+     "doc": "Sets the height, in logical pixels."
+    },
+    {
+     "name": "size",
+     "args": [
+      "1.0",
+      "1.0"
+     ],
+     "doc": "Both at once."
+    },
+    {
+     "name": "tint",
+     "args": [
+      "Colors::RED"
+     ],
+     "doc": "A multiplied tint, white leaving it unchanged — for bitmap icons, say."
+    },
+    {
+     "name": "opacity",
+     "args": [
+      "1.0"
+     ],
+     "doc": "Draws the image at a fraction of its opacity, 1.0 being fully opaque."
+    },
+    {
+     "name": "semantic_label",
+     "args": [
+      "\"text\""
+     ],
+     "doc": "What a screen reader says instead of the picture."
+    }
+   ]
+  },
+  "ListTile": {
+   "constructors": [
+    {
+     "name": "new",
+     "args": [],
+     "doc": "An empty tile."
+    }
+   ],
+   "methods": [
+    {
+     "name": "title",
+     "args": [
+      "\"text\""
+     ],
+     "doc": "The first line, styled by the tile (body_large on on_surface)."
+    },
+    {
+     "name": "subtitle",
+     "args": [
+      "\"text\""
+     ],
+     "doc": "The second line, styled by the tile (body_medium on on_surface_variant)."
+    },
+    {
+     "name": "leading",
+     "args": [
+      "child"
+     ],
+     "doc": "What goes in front: an icon, an avatar, a checkbox."
+    },
+    {
+     "name": "trailing",
+     "args": [
+      "child"
+     ],
+     "doc": "What goes behind: a chevron, a switch, a timestamp."
+    },
+    {
+     "name": "on_tap",
+     "args": [
+      "move || {}"
+     ],
+     "doc": "The message a tap sends."
+    },
+    {
+     "name": "selected",
+     "args": [
+      "bool"
+     ],
+     "doc": "Marks the tile as the chosen one: its text and its two slots take the primary colour."
+    },
+    {
+     "name": "enabled",
+     "args": [
+      "bool"
+     ],
+     "doc": "Available or not."
+    },
+    {
+     "name": "dense",
+     "args": [],
+     "doc": "The compact height, for a dense list."
+    },
+    {
+     "name": "three_line",
+     "args": [],
+     "doc": "Room for three lines rather than two, for a subtitle that wraps."
+    },
+    {
+     "name": "tile_color",
+     "args": [
+      "Colors::RED"
+     ],
+     "doc": "The tile's own background."
+    }
+   ]
+  },
+  "ExpansionTile": {
+   "constructors": [
+    {
+     "name": "new",
+     "args": [
+      "\"text\"",
+      "bool",
+      "move || {}"
+     ],
+     "doc": "A tile with a title, whether it is open, and the message that asks to change that."
+    }
+   ],
+   "methods": [
+    {
+     "name": "content",
+     "args": [
+      "child"
+     ],
+     "doc": "The body, shown only while the tile is open."
+    },
+    {
+     "name": "subtitle",
+     "args": [
+      "\"text\""
+     ],
+     "doc": "A second line under the title."
+    },
+    {
+     "name": "leading",
+     "args": [
+      "child"
+     ],
+     "doc": "What goes in front of the title: an icon, an avatar, a checkbox."
+    },
+    {
+     "name": "trailing",
+     "args": [
+      "child"
+     ],
+     "doc": "A widget of your own at the end of the row, in place of the chevron: a badge, a count, a switch."
+    },
+    {
+     "name": "dense",
+     "args": [],
+     "doc": "A dense tile: the same shape, less room around it."
+    },
+    {
+     "name": "background_color",
+     "args": [
+      "Colors::RED"
+     ],
+     "doc": "The row's background while open."
+    },
+    {
+     "name": "text_color",
+     "args": [
+      "Colors::RED"
+     ],
+     "doc": "The title's colour while open."
+    },
+    {
+     "name": "icon_color",
+     "args": [
+      "Colors::RED"
+     ],
+     "doc": "The chevron's colour while open."
+    },
+    {
+     "name": "radius",
+     "args": [
+      "1.0"
+     ],
+     "doc": "The shorthand for a rounded rectangle on both states, which is what an application usually means."
+    }
+   ]
+  },
+  "Dismissible": {
+   "constructors": [
+    {
+     "name": "new",
+     "args": [
+      "child"
+     ],
+     "doc": "Makes child swipeable."
+    }
+   ],
+   "methods": [
+    {
+     "name": "on_dismiss",
+     "args": [
+      "move || {}"
+     ],
+     "doc": "The message dispatched once the item has flown out and its gap has closed, whichever way it went."
+    },
+    {
+     "name": "on_dismiss_to_start",
+     "args": [
+      "move || {}"
+     ],
+     "doc": "The message for a swipe towards the reading start, overriding on_dismiss for that direction."
+    },
+    {
+     "name": "on_dismiss_to_end",
+     "args": [
+      "move || {}"
+     ],
+     "doc": "The message for a swipe towards the reading end."
+    },
+    {
+     "name": "threshold",
+     "args": [
+      "1.0"
+     ],
+     "doc": "Fraction of the extent a drag must cover to dismiss on release."
+    },
+    {
+     "name": "background",
+     "args": [
+      "child"
+     ],
+     "doc": "What shows behind the item as it slides away."
+    },
+    {
+     "name": "secondary_background",
+     "args": [
+      "child"
+     ],
+     "doc": "What shows behind the item when it goes the other way."
+    },
+    {
+     "name": "width",
+     "args": [
+      "1.0"
+     ],
+     "doc": "Sets the width, in logical pixels."
+    },
+    {
+     "name": "height",
+     "args": [
+      "1.0"
+     ],
+     "doc": "Sets the height, in logical pixels."
+    },
+    {
+     "name": "flex",
+     "args": [
+      "1.0"
+     ],
+     "doc": "Flex growth factor along the parent's main axis."
+    }
+   ]
+  },
+  "LinearProgressIndicator": {
+   "constructors": [
+    {
+     "name": "new",
+     "args": [
+      "1.0"
+     ],
+     "doc": "A determinate bar, filled to value, clamped to 0.0..=1.0."
+    },
+    {
+     "name": "indeterminate",
+     "args": [],
+     "doc": "An indeterminate bar: the work is under way and how long it will take is not known, so two lines run along the track for as long as it is shown."
+    }
+   ],
+   "methods": [
+    {
+     "name": "width",
+     "args": [
+      "1.0"
+     ],
+     "doc": "Sets the width, in logical pixels."
+    },
+    {
+     "name": "color",
+     "args": [
+      "Colors::RED"
+     ],
+     "doc": "The colour of the fill, over the theme's and primary."
+    },
+    {
+     "name": "track_color",
+     "args": [
+      "Colors::RED"
+     ]
+    },
+    {
+     "name": "min_height",
+     "args": [
+      "1.0"
+     ]
+    },
+    {
+     "name": "radius",
+     "args": [
+      "1.0"
+     ],
+     "doc": "The corners of the fill, the lines and the track. Unset, square in the 2023 look and 2 px in the newer one."
+    }
+   ]
+  },
+  "CircularProgressIndicator": {
+   "constructors": [
+    {
+     "name": "new",
+     "args": []
+    },
+    {
+     "name": "determinate",
+     "args": [
+      "1.0"
+     ],
+     "doc": "A determinate indicator, its arc swept to value, clamped to 0.0..=1.0."
+    }
+   ],
+   "methods": [
+    {
+     "name": "size",
+     "args": [
+      "1.0"
+     ]
+    },
+    {
+     "name": "color",
+     "args": [
+      "Colors::RED"
+     ],
+     "doc": "The colour of the arc, over the theme's and primary."
+    },
+    {
+     "name": "track_color",
+     "args": [
+      "Colors::RED"
+     ]
+    },
+    {
+     "name": "stroke_width",
+     "args": [
+      "1.0"
+     ],
+     "doc": "How thick the arc is. Unset, the theme's, then four."
+    }
+   ]
+  },
+  "TabBar": {
+   "constructors": [
+    {
+     "name": "new",
+     "args": [
+      "usize",
+      "move |index: usize| {}"
+     ],
+     "doc": "Creates tabs: selected is the active index, on_select(i) the message on click."
+    }
+   ],
+   "methods": [
+    {
+     "name": "tab",
+     "args": [
+      "\"text\"",
+      "child"
+     ],
+     "doc": "Adds a tab, a label plus content."
+    },
+    {
+     "name": "icon_tab",
+     "args": [
+      "Icons::STAR",
+      "\"text\"",
+      "child"
+     ],
+     "doc": "Adds a tab with an icon over its label."
+    },
+    {
+     "name": "icon_only_tab",
+     "args": [
+      "Icons::STAR",
+      "\"text\"",
+      "child"
+     ],
+     "doc": "Adds a tab showing only an icon, in a row of the ordinary height."
+    },
+    {
+     "name": "swipeable",
+     "args": [
+      "bool"
+     ],
+     "doc": "Whether a drag across the panel changes tab."
+    },
+    {
+     "name": "scrollable",
+     "args": [
+      "bool"
+     ],
+     "doc": "Lets the bar scroll rather than sharing its width between the tabs."
+    },
+    {
+     "name": "enabled",
+     "args": [
+      "bool"
+     ],
+     "doc": "Whether the bar can be switched."
+    },
+    {
+     "name": "indicator_color",
+     "args": [
+      "Colors::RED"
+     ],
+     "doc": "The indicator's colour."
+    },
+    {
+     "name": "label_color",
+     "args": [
+      "Colors::RED"
+     ],
+     "doc": "The selected label's colour."
+    },
+    {
+     "name": "unselected_label_color",
+     "args": [
+      "Colors::RED"
+     ],
+     "doc": "The colour of every label but the selected one."
+    },
+    {
+     "name": "divider_color",
+     "args": [
+      "Colors::RED"
+     ],
+     "doc": "The hairline's colour."
+    }
+   ]
+  },
+  "BottomNavigationBar": {
+   "constructors": [
+    {
+     "name": "new",
+     "args": [
+      "usize",
+      "move |index: usize| {}"
+     ],
+     "doc": "A bar whose item current_index is selected, calling on_tap with the index of an item tapped."
+    }
+   ],
+   "methods": [
+    {
+     "name": "item",
+     "args": [
+      "BottomNavigationBarItem::new(Icons::HOME, \"Home\")"
+     ],
+     "doc": "Adds a destination."
+    },
+    {
+     "name": "elevation",
+     "args": [
+      "1.0"
+     ],
+     "doc": "How far the bar sits off the page."
+    },
+    {
+     "name": "background_color",
+     "args": [
+      "Colors::RED"
+     ],
+     "doc": "The bar's colour, for a fixed bar."
+    },
+    {
+     "name": "icon_size",
+     "args": [
+      "1.0"
+     ],
+     "doc": "The icons' size."
+    },
+    {
+     "name": "selected_item_color",
+     "args": [
+      "Colors::RED"
+     ],
+     "doc": "The selected item's colour, icon and label."
+    },
+    {
+     "name": "unselected_item_color",
+     "args": [
+      "Colors::RED"
+     ],
+     "doc": "The other items' colour."
+    },
+    {
+     "name": "show_selected_labels",
+     "args": [
+      "bool"
+     ],
+     "doc": "Whether the selected item's label shows."
+    },
+    {
+     "name": "show_unselected_labels",
+     "args": [
+      "bool"
+     ],
+     "doc": "Whether the other items' labels show."
+    }
+   ]
+  },
+  "Scaffold": {
+   "constructors": [
+    {
+     "name": "new",
+     "args": [],
+     "doc": "Creates a shell for the surface it is being built for."
+    }
+   ],
+   "methods": [
+    {
+     "name": "app_bar",
+     "args": [
+      "child"
+     ],
+     "doc": "The application bar, pinned at the top."
+    },
+    {
+     "name": "body",
+     "args": [
+      "child"
+     ]
+    },
+    {
+     "name": "fab",
+     "args": [
+      "child"
+     ],
+     "doc": "A floating action button, anchored bottom-right, above the bottom bar."
+    },
+    {
+     "name": "background",
+     "args": [
+      "Colors::RED"
+     ],
+     "doc": "Background color, spread edge to edge, including under the system bars."
+    }
+   ]
+  },
+  "AppBar": {
+   "constructors": [
+    {
+     "name": "new",
+     "args": [],
+     "doc": "Creates a bar with no title, as wide as the surface it is being built for — which is what decides how many actions fit on the line and how many fold into the overflow menu."
+    }
+   ],
+   "methods": [
+    {
+     "name": "title",
+     "args": [
+      "child"
+     ],
+     "doc": "The title, as any widget — a text, a logo, a composed row."
+    },
+    {
+     "name": "leading",
+     "args": [
+      "child"
+     ],
+     "doc": "The leading element (a menu or back button…), optional."
+    },
+    {
+     "name": "action",
+     "args": [
+      "child"
+     ],
+     "doc": "Adds an action: any widget, at the bar's trailing end, after those already added."
+    },
+    {
+     "name": "center_title",
+     "args": [
+      "bool"
+     ],
+     "doc": "Centres the title in the space left between the leading and the actions, rather than starting it flush after the leading."
+    },
+    {
+     "name": "background",
+     "args": [
+      "Colors::RED"
+     ],
+     "doc": "The bar's background color (transparent by default: the parent decides)."
+    },
+    {
+     "name": "foreground",
+     "args": [
+      "Colors::RED"
+     ],
+     "doc": "The colour of the bar's own text — the title, and the labelled actions."
+    },
+    {
+     "name": "elevation",
+     "args": [
+      "1.0"
+     ],
+     "doc": "How far off the page the bar sits."
+    },
+    {
+     "name": "height",
+     "args": [
+      "1.0"
+     ],
+     "doc": "An imposed bar height (by default, the content's natural height)."
+    }
+   ]
+  },
+  "Wrap": {
+   "constructors": [
+    {
+     "name": "new",
+     "args": [],
+     "returns": "Flex",
+     "doc": "A row with wrapping turned on."
+    }
+   ],
+   "methods": []
+  },
+  "Color": {
+   "constructors": [
+    {
+     "name": "hex",
+     "args": [
+      "\"text\""
+     ],
+     "returns": "Color",
+     "doc": "Builds a colour from a CSS hex code (see Color::try_hex)."
+    }
+   ],
+   "methods": []
+  },
+  "Insets": {
+   "constructors": [
+    {
+     "name": "uniform",
+     "args": [
+      "1.0"
+     ],
+     "returns": "Insets",
+     "doc": "The same inset on all four sides."
+    },
+    {
+     "name": "symmetric",
+     "args": [
+      "1.0",
+      "1.0"
+     ],
+     "returns": "Insets",
+     "doc": "horizontal on the left and the right, vertical on the top and the bottom."
+    }
+   ],
+   "methods": []
+  },
+  "BottomNavigationBarItem": {
+   "constructors": [
+    {
+     "name": "new",
+     "args": [
+      "Icons::STAR",
+      "\"text\""
+     ],
+     "returns": "BottomNavigationBarItem",
+     "doc": "An item with icon — one of the bundled icons, or a glyph — and label."
+    }
+   ],
+   "methods": []
+  }
+ },
+ "functions": [
+  {
+   "name": "text",
+   "args": [
+    "\"text\""
+   ],
+   "returns": "Text"
+  },
+  {
+   "name": "button",
+   "args": [
+    "\"text\"",
+    "move || {}"
+   ],
+   "returns": "Button"
+  },
+  {
+   "name": "center",
+   "args": [
+    "child"
+   ],
+   "returns": "Center"
+  },
+  {
+   "name": "expanded",
+   "args": [
+    "child"
+   ],
+   "returns": "Expanded"
+  },
+  {
+   "name": "spacer",
+   "args": [],
+   "returns": "Flex"
+  }
+ ],
+ "macros": [
+  {
+   "name": "row",
+   "args": [],
+   "returns": "Flex"
+  },
+  {
+   "name": "column",
+   "args": [],
+   "returns": "Flex"
+  }
+ ],
+ "constants": {
+  "Colors": [
+   "WHITE",
+   "BLACK",
+   "RED",
+   "PINK",
+   "PURPLE",
+   "INDIGO",
+   "BLUE",
+   "CYAN",
+   "TEAL",
+   "GREEN",
+   "LIME",
+   "YELLOW",
+   "AMBER",
+   "ORANGE",
+   "BROWN",
+   "GREY",
+   "TRANSPARENT"
+  ],
+  "Icons": [
+   "ADD",
+   "REMOVE",
+   "CLOSE",
+   "CHECK",
+   "MENU",
+   "SEARCH",
+   "HOME",
+   "SETTINGS",
+   "STAR",
+   "FAVORITE",
+   "DELETE",
+   "EDIT",
+   "PERSON",
+   "EMAIL",
+   "PHONE",
+   "SHARE",
+   "INFO",
+   "WARNING",
+   "ERROR",
+   "ARROW_BACK",
+   "ARROW_FORWARD",
+   "MORE_VERT",
+   "NOTIFICATIONS",
+   "CAMERA_ALT",
+   "MAP",
+   "SEND",
+   "LOCK",
+   "VISIBILITY",
+   "THUMB_UP",
+   "SHOPPING_CART"
+  ],
+  "Justify": [
+   "Start",
+   "Center",
+   "End",
+   "SpaceBetween",
+   "SpaceAround"
+  ],
+  "Align": [
+   "Start",
+   "Center",
+   "End",
+   "Stretch"
+  ],
+  "Variant": [
+   "Filled",
+   "Tonal",
+   "Elevated",
+   "Outlined"
+  ],
+  "TextAlign": [
+   "Start",
+   "End",
+   "Center"
+  ]
+ }
+}

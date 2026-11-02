@@ -31,7 +31,7 @@ impl AnimatedPadding {
 
 ![Rendered preview of the AnimatedPadding demo](/preview/animated-padding.light.png)
 
-From [`frus-examples/widgets/src/features/animation/widgets/animated_padding.rs`](https://github.com/KalybosPro/frus/blob/d7214f545435ddea2e71dc3e1eb021605d3fc7a9/frus-examples/widgets/src/features/animation/widgets/animated_padding.rs):
+From [`frus-examples/widgets/src/features/animation/widgets/animated_padding.rs`](https://github.com/KalybosPro/frus/blob/4b802dae875c8f88f633392874660d9351b15664/frus-examples/widgets/src/features/animation/widgets/animated_padding.rs):
 
 ```rust
 //! `AnimatedPadding` — insets its child by an amount that moves to each new value, so a
@@ -128,4 +128,4 @@ let _row: AnimatedPadding<()> = AnimatedPadding::new(
 - The guide: [Animation](/docs/guide/animation)
 - API reference: [`AnimatedPadding`](https://docs.rs/frus/latest/frus/struct.AnimatedPadding.html)
 
-Source: [crates/frus-widgets/src/animated.rs](https://github.com/KalybosPro/frus/blob/d7214f545435ddea2e71dc3e1eb021605d3fc7a9/crates/frus-widgets/src/animated.rs#L730-L732) @ `d7214f545435`
+Source: [crates/frus-widgets/src/animated.rs](https://github.com/KalybosPro/frus/blob/4b802dae875c8f88f633392874660d9351b15664/crates/frus-widgets/src/animated.rs#L730-L732) @ `4b802dae875c`

@@ -26,7 +26,7 @@ pub trait State: Sized + 'static { .. }
 
 ![Rendered preview of the StatefulWidget & State demo](/preview/stateful-widget.light.png)
 
-From [`frus-examples/widgets/src/features/state/widgets/stateful_widget.rs`](https://github.com/KalybosPro/frus/blob/d7214f545435ddea2e71dc3e1eb021605d3fc7a9/frus-examples/widgets/src/features/state/widgets/stateful_widget.rs):
+From [`frus-examples/widgets/src/features/state/widgets/stateful_widget.rs`](https://github.com/KalybosPro/frus/blob/4b802dae875c8f88f633392874660d9351b15664/frus-examples/widgets/src/features/state/widgets/stateful_widget.rs):
 
 ```rust
 //! `StatefulWidget` and its `State` — the lifecycle: `create_state` and `init_state` once,
@@ -213,4 +213,4 @@ What a `StatefulWidget` keeps, and how it draws itself from it.
 - API reference: [`StatefulWidget`](https://docs.rs/frus/latest/frus/trait.StatefulWidget.html)
 - API reference: [`State`](https://docs.rs/frus/latest/frus/trait.State.html)
 
-Source: [crates/frus-widgets/src/component.rs](https://github.com/KalybosPro/frus/blob/d7214f545435ddea2e71dc3e1eb021605d3fc7a9/crates/frus-widgets/src/component.rs#L1029-L1043), [crates/frus-widgets/src/component.rs](https://github.com/KalybosPro/frus/blob/d7214f545435ddea2e71dc3e1eb021605d3fc7a9/crates/frus-widgets/src/component.rs#L1046-L1095) @ `d7214f545435`
+Source: [crates/frus-widgets/src/component.rs](https://github.com/KalybosPro/frus/blob/4b802dae875c8f88f633392874660d9351b15664/crates/frus-widgets/src/component.rs#L1029-L1043), [crates/frus-widgets/src/component.rs](https://github.com/KalybosPro/frus/blob/4b802dae875c8f88f633392874660d9351b15664/crates/frus-widgets/src/component.rs#L1046-L1095) @ `4b802dae875c`

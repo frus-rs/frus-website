@@ -46,6 +46,18 @@
 
       window.playgroundPanicked = (message) => say({type: 'crashed', message});
 
+      // frus keeps the browser's focus on the field being edited, and takes it back when it finds
+      // it nowhere in particular. Seen from this frame, that is also what the page around it taking
+      // the focus looks like, so a field here would keep the keyboard from the editor. So it may
+      // not, while something else in that page holds the focus. A press in this frame takes it,
+      // explicitly: the canvas's own handling of a press keeps the browser from doing so.
+      addEventListener('pointerdown', () => frameElement.focus(), true);
+      const focus = HTMLElement.prototype.focus;
+      HTMLElement.prototype.focus = function (...args) {
+        const held = parent.document.activeElement;
+        if (!held || held === frameElement || held === parent.document.body) focus.apply(this, args);
+      };
+
       if (!('gpu' in navigator)) {
         fail('The preview draws through WebGPU, which this browser does not offer. ' +
              'Try a recent Chrome or Edge.', 'unsupported');

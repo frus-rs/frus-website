@@ -26,7 +26,7 @@ impl Scaffold {
 
 ![Rendered preview of the Scaffold demo](/preview/scaffold.light.png)
 
-From [`frus-examples/widgets/src/features/navigation/widgets/scaffold.rs`](https://github.com/KalybosPro/frus/blob/d7214f545435ddea2e71dc3e1eb021605d3fc7a9/frus-examples/widgets/src/features/navigation/widgets/scaffold.rs):
+From [`frus-examples/widgets/src/features/navigation/widgets/scaffold.rs`](https://github.com/KalybosPro/frus/blob/4b802dae875c8f88f633392874660d9351b15664/frus-examples/widgets/src/features/navigation/widgets/scaffold.rs):
 
 ```rust
 //! `Scaffold` — the shell of a screen. You fill its slots (app bar, body, navigation,
@@ -196,6 +196,7 @@ impl State for ScaffoldDemoState {
 | `.end_drawer()` | `panel: impl Widget<Msg> + 'static, open: bool, toggle: Msg` | A modal side drawer (right edge): `panel` = the content, `open` = expanded, `toggle` = the toggle message (the button, and a click on the scrim). |
 | `.fab()` | `widget: impl Widget<Msg> + 'static` | A floating action button, anchored bottom-right, above the bottom bar. |
 | `.bottom_app_bar()` | `bar: BottomAppBar<Msg>` | A **bottom app bar** in place of the navigation one: the actions belonging to the screen you are on, rather than a choice of screen. |
+| `.bottom_navigation_bar()` | `bar: impl Widget<Msg> + 'static` | A **bottom navigation bar** — a `BottomNavigationBar`, or any bar of that height — along the bottom edge, told about the room the system's bars take there so that its colour runs behind them (milestone 731). |
 | `.fab_location()` | `location: FabLocation` | Where the FAB sits: which end of the row, and whether it floats clear of the bottom bar or docks astride its top edge. `FabLocation::EndFloat` by default. |
 | `.fab_size()` | `size: f32` | The height the FAB is taken to have when it is **docked**, since that placement puts its centre on the bar's edge and so has to know how tall it is. 56 px — the conventional diameter — unless said otherwise. |
 | `.persistent_footer()` | `widget: impl Widget<Msg> + 'static` | A strip pinned **between the body and the bottom bar**, always visible: the screen's committing actions (Save, Cancel), which must not be scrolled away. |
@@ -216,8 +217,8 @@ The screen shell. A fluent builder finished by `Scaffold::build`.
 - [AppBar](./app-bar.md): the bar at the top of a screen: leading button, title, actions and a bottom.
 - [TabBar](./tab-bar.md): tabs and the panel of the selected one: primary, secondary, icons, scrolling, swiping.
 - [BottomBar](./bottom-bar.md): the main destinations along the bottom of a phone screen.
-- [NavigationRail](./navigation-rail.md): the main destinations down the side of a tablet or desktop window.
+- [BottomNavigationBar](./bottom-navigation-bar.md): the classic bottom bar: fixed, or shifting with the selected item's colour.
 - The guide: [Screens, navigation and dialogs](/docs/guide/navigation)
 - API reference: [`Scaffold`](https://docs.rs/frus/latest/frus/struct.Scaffold.html)
 
-Source: [crates/frus-widgets/src/scaffold.rs](https://github.com/KalybosPro/frus/blob/d7214f545435ddea2e71dc3e1eb021605d3fc7a9/crates/frus-widgets/src/scaffold.rs#L162-L164) @ `d7214f545435`
+Source: [crates/frus-widgets/src/scaffold.rs](https://github.com/KalybosPro/frus/blob/4b802dae875c8f88f633392874660d9351b15664/crates/frus-widgets/src/scaffold.rs#L162-L164) @ `4b802dae875c`

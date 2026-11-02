@@ -37,7 +37,7 @@ impl KeyboardListener {
 
 ![Rendered preview of the FocusableActionDetector & KeyboardListener demo](/preview/focusable-action-detector.light.png)
 
-From [`frus-examples/widgets/src/features/interaction/widgets/keyboard.rs`](https://github.com/KalybosPro/frus/blob/d7214f545435ddea2e71dc3e1eb021605d3fc7a9/frus-examples/widgets/src/features/interaction/widgets/keyboard.rs):
+From [`frus-examples/widgets/src/features/interaction/widgets/keyboard.rs`](https://github.com/KalybosPro/frus/blob/4b802dae875c8f88f633392874660d9351b15664/frus-examples/widgets/src/features/interaction/widgets/keyboard.rs):
 
 ```rust
 //! `FocusableActionDetector` and `KeyboardListener` — a custom control that answers the
@@ -207,4 +207,4 @@ It is the composition, given one name because the three are always wanted togeth
 - API reference: [`FocusableActionDetector`](https://docs.rs/frus/latest/frus/struct.FocusableActionDetector.html)
 - API reference: [`KeyboardListener`](https://docs.rs/frus/latest/frus/struct.KeyboardListener.html)
 
-Source: [crates/frus-widgets/src/shortcuts.rs](https://github.com/KalybosPro/frus/blob/d7214f545435ddea2e71dc3e1eb021605d3fc7a9/crates/frus-widgets/src/shortcuts.rs#L330-L330), [crates/frus-widgets/src/shortcuts.rs](https://github.com/KalybosPro/frus/blob/d7214f545435ddea2e71dc3e1eb021605d3fc7a9/crates/frus-widgets/src/shortcuts.rs#L370-L376) @ `d7214f545435`
+Source: [crates/frus-widgets/src/shortcuts.rs](https://github.com/KalybosPro/frus/blob/4b802dae875c8f88f633392874660d9351b15664/crates/frus-widgets/src/shortcuts.rs#L330-L330), [crates/frus-widgets/src/shortcuts.rs](https://github.com/KalybosPro/frus/blob/4b802dae875c8f88f633392874660d9351b15664/crates/frus-widgets/src/shortcuts.rs#L370-L376) @ `4b802dae875c`

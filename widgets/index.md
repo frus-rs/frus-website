@@ -9,8 +9,8 @@ custom_edit_url: null
 # Widget catalog
 
 frus ships one widget library, `frus-widgets`. Its defaults come from the theme, and an
-application can override every one of them. This catalog has **174 pages as of
-`d7214f545435`**, one for each demo of frus's widget gallery, in twelve families.
+application can override every one of them. This catalog has **175 pages as of
+`4b802dae875c`**, one for each demo of frus's widget gallery, in twelve families.
 
 Every page is written from the widget's own source and from the gallery's demo, at the revision
 its source line names. The gallery also runs in the browser, at
@@ -26,7 +26,7 @@ its source line names. The gallery also runs in the browser, at
 | [Inputs & forms](./inputs) | 20 | Text fields, choices, sliders, pickers and validation |
 | [Display](./display) | 15 | Cards, chips, avatars, icons, images, tables and charts |
 | [Feedback](./feedback) | 12 | Dialogs, snack bars, sheets, banners and progress |
-| [Navigation](./navigation) | 14 | App bars, tabs, navigation bars, rails and drawers |
+| [Navigation](./navigation) | 15 | App bars, tabs, navigation bars, rails and drawers |
 | [Lists & scrolling](./scrolling) | 16 | Lists, grids, pages, reordering and expansion |
 | [Animation](./animation) | 16 | Implicit animations, transitions and heroes |
 | [Painting & effects](./painting) | 11 | Decoration, clipping, transforms, custom painting and filters |

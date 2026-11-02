@@ -1,7 +1,7 @@
 ---
 title: "Steps"
 sidebar_label: "Steps"
-sidebar_position: 12
+sidebar_position: 13
 description: "The numbered step indicator of a wizard or multi-step form."
 custom_edit_url: null
 ---
@@ -26,7 +26,7 @@ impl Steps {
 
 ![Rendered preview of the Steps demo](/preview/steps.light.png)
 
-From [`frus-examples/widgets/src/features/navigation/widgets/steps.rs`](https://github.com/KalybosPro/frus/blob/d7214f545435ddea2e71dc3e1eb021605d3fc7a9/frus-examples/widgets/src/features/navigation/widgets/steps.rs):
+From [`frus-examples/widgets/src/features/navigation/widgets/steps.rs`](https://github.com/KalybosPro/frus/blob/4b802dae875c8f88f633392874660d9351b15664/frus-examples/widgets/src/features/navigation/widgets/steps.rs):
 
 ```rust
 //! `Steps` — the numbered indicator of a multi-step form or wizard: done steps show a
@@ -215,4 +215,4 @@ let steps: Steps<()> = Steps::new(["Account", "Profile", "Review"]).current(1);
 - The guide: [Screens, navigation and dialogs](/docs/guide/navigation)
 - API reference: [`Steps`](https://docs.rs/frus/latest/frus/struct.Steps.html)
 
-Source: [crates/frus-widgets/src/steps.rs](https://github.com/KalybosPro/frus/blob/d7214f545435ddea2e71dc3e1eb021605d3fc7a9/crates/frus-widgets/src/steps.rs#L81-L94) @ `d7214f545435`
+Source: [crates/frus-widgets/src/steps.rs](https://github.com/KalybosPro/frus/blob/4b802dae875c8f88f633392874660d9351b15664/crates/frus-widgets/src/steps.rs#L81-L94) @ `4b802dae875c`

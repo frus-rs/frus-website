@@ -34,7 +34,7 @@ impl Aligned {
 
 ![Rendered preview of the Center & Aligned demo](/preview/center.light.png)
 
-From [`frus-examples/widgets/src/features/layout/widgets/align.rs`](https://github.com/KalybosPro/frus/blob/d7214f545435ddea2e71dc3e1eb021605d3fc7a9/frus-examples/widgets/src/features/layout/widgets/align.rs):
+From [`frus-examples/widgets/src/features/layout/widgets/align.rs`](https://github.com/KalybosPro/frus/blob/4b802dae875c8f88f633392874660d9351b15664/frus-examples/widgets/src/features/layout/widgets/align.rs):
 
 ```rust
 //! `Center` and `Aligned` — place one child somewhere inside the room it is given.
@@ -160,4 +160,4 @@ To animate a change of anchor, use `AnimatedAlign`.
 - API reference: [`Center`](https://docs.rs/frus/latest/frus/struct.Center.html)
 - API reference: [`Aligned`](https://docs.rs/frus/latest/frus/struct.Aligned.html)
 
-Source: [crates/frus-widgets/src/align.rs](https://github.com/KalybosPro/frus/blob/d7214f545435ddea2e71dc3e1eb021605d3fc7a9/crates/frus-widgets/src/align.rs#L123-L125), [crates/frus-widgets/src/align.rs](https://github.com/KalybosPro/frus/blob/d7214f545435ddea2e71dc3e1eb021605d3fc7a9/crates/frus-widgets/src/align.rs#L44-L55) @ `d7214f545435`
+Source: [crates/frus-widgets/src/align.rs](https://github.com/KalybosPro/frus/blob/4b802dae875c8f88f633392874660d9351b15664/crates/frus-widgets/src/align.rs#L123-L125), [crates/frus-widgets/src/align.rs](https://github.com/KalybosPro/frus/blob/4b802dae875c8f88f633392874660d9351b15664/crates/frus-widgets/src/align.rs#L44-L55) @ `4b802dae875c`

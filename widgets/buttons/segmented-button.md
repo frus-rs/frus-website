@@ -29,7 +29,7 @@ impl SegmentedButton {
 
 ![Rendered preview of the SegmentedButton demo](/preview/segmented-button.light.png)
 
-From [`frus-examples/widgets/src/features/buttons/widgets/segmented_button.rs`](https://github.com/KalybosPro/frus/blob/d7214f545435ddea2e71dc3e1eb021605d3fc7a9/frus-examples/widgets/src/features/buttons/widgets/segmented_button.rs):
+From [`frus-examples/widgets/src/features/buttons/widgets/segmented_button.rs`](https://github.com/KalybosPro/frus/blob/4b802dae875c8f88f633392874660d9351b15664/frus-examples/widgets/src/features/buttons/widgets/segmented_button.rs):
 
 ```rust
 //! `SegmentedButton` — one outlined control with a few segments, exactly one of them
@@ -140,4 +140,4 @@ A single-selection segmented control.
 - The guide: [Taking input](/docs/guide/input)
 - API reference: [`SegmentedButton`](https://docs.rs/frus/latest/frus/struct.SegmentedButton.html)
 
-Source: [crates/frus-widgets/src/segmented.rs](https://github.com/KalybosPro/frus/blob/d7214f545435ddea2e71dc3e1eb021605d3fc7a9/crates/frus-widgets/src/segmented.rs#L326-L335) @ `d7214f545435`
+Source: [crates/frus-widgets/src/segmented.rs](https://github.com/KalybosPro/frus/blob/4b802dae875c8f88f633392874660d9351b15664/crates/frus-widgets/src/segmented.rs#L326-L335) @ `4b802dae875c`

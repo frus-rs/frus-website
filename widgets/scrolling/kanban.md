@@ -28,7 +28,7 @@ impl Kanban {
 
 ![Rendered preview of the Kanban demo](/preview/kanban.light.png)
 
-From [`frus-examples/widgets/src/features/scrolling/widgets/kanban.rs`](https://github.com/KalybosPro/frus/blob/d7214f545435ddea2e71dc3e1eb021605d3fc7a9/frus-examples/widgets/src/features/scrolling/widgets/kanban.rs):
+From [`frus-examples/widgets/src/features/scrolling/widgets/kanban.rs`](https://github.com/KalybosPro/frus/blob/4b802dae875c8f88f633392874660d9351b15664/frus-examples/widgets/src/features/scrolling/widgets/kanban.rs):
 
 ```rust
 //! `Kanban` — a board of columns and cards, with drag and drop between columns. The
@@ -151,4 +151,4 @@ It is controlled: the application holds the columns and their cards, and the boa
 - The guide: [Lists and grids](/docs/guide/lists)
 - API reference: [`Kanban`](https://docs.rs/frus/latest/frus/struct.Kanban.html)
 
-Source: [crates/frus-widgets/src/kanban.rs](https://github.com/KalybosPro/frus/blob/d7214f545435ddea2e71dc3e1eb021605d3fc7a9/crates/frus-widgets/src/kanban.rs#L303-L321) @ `d7214f545435`
+Source: [crates/frus-widgets/src/kanban.rs](https://github.com/KalybosPro/frus/blob/4b802dae875c8f88f633392874660d9351b15664/crates/frus-widgets/src/kanban.rs#L303-L321) @ `4b802dae875c`

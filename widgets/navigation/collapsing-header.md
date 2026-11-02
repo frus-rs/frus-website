@@ -1,7 +1,7 @@
 ---
 title: "CollapsingHeader"
 sidebar_label: "CollapsingHeader"
-sidebar_position: 11
+sidebar_position: 12
 description: "A tall header that shrinks to a toolbar as the page under it scrolls."
 custom_edit_url: null
 ---
@@ -29,7 +29,7 @@ impl CollapsingHeader {
 
 ![Rendered preview of the CollapsingHeader demo](/preview/collapsing-header.light.png)
 
-From [`frus-examples/widgets/src/features/navigation/widgets/collapsingheader.rs`](https://github.com/KalybosPro/frus/blob/d7214f545435ddea2e71dc3e1eb021605d3fc7a9/frus-examples/widgets/src/features/navigation/widgets/collapsingheader.rs):
+From [`frus-examples/widgets/src/features/navigation/widgets/collapsingheader.rs`](https://github.com/KalybosPro/frus/blob/4b802dae875c8f88f633392874660d9351b15664/frus-examples/widgets/src/features/navigation/widgets/collapsingheader.rs):
 
 ```rust
 //! `CollapsingHeader` — a tall header at the top of a scrolling page that shrinks to a
@@ -128,4 +128,4 @@ A header over a scroll region, interpolated between two heights by the region's 
 - The guide: [Screens, navigation and dialogs](/docs/guide/navigation)
 - API reference: [`CollapsingHeader`](https://docs.rs/frus/latest/frus/struct.CollapsingHeader.html)
 
-Source: [crates/frus-widgets/src/collapsingheader.rs](https://github.com/KalybosPro/frus/blob/d7214f545435ddea2e71dc3e1eb021605d3fc7a9/crates/frus-widgets/src/collapsingheader.rs#L75-L81) @ `d7214f545435`
+Source: [crates/frus-widgets/src/collapsingheader.rs](https://github.com/KalybosPro/frus/blob/4b802dae875c8f88f633392874660d9351b15664/crates/frus-widgets/src/collapsingheader.rs#L75-L81) @ `4b802dae875c`

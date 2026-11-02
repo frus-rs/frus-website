@@ -26,7 +26,7 @@ impl DraggableScrollableSheet {
 
 ![Rendered preview of the DraggableScrollableSheet demo](/preview/draggable-scrollable-sheet.light.png)
 
-From [`frus-examples/widgets/src/features/feedback/widgets/draggable_sheet.rs`](https://github.com/KalybosPro/frus/blob/d7214f545435ddea2e71dc3e1eb021605d3fc7a9/frus-examples/widgets/src/features/feedback/widgets/draggable_sheet.rs):
+From [`frus-examples/widgets/src/features/feedback/widgets/draggable_sheet.rs`](https://github.com/KalybosPro/frus/blob/4b802dae875c8f88f633392874660d9351b15664/frus-examples/widgets/src/features/feedback/widgets/draggable_sheet.rs):
 
 ```rust
 //! `DraggableScrollableSheet` — a panel along the bottom that follows the finger between
@@ -190,4 +190,4 @@ The retained height is keyed by identity, and forgotten on the first frame the s
 - The guide: [Screens, navigation and dialogs](/docs/guide/navigation)
 - API reference: [`DraggableScrollableSheet`](https://docs.rs/frus/latest/frus/struct.DraggableScrollableSheet.html)
 
-Source: [crates/frus-widgets/src/sheet.rs](https://github.com/KalybosPro/frus/blob/d7214f545435ddea2e71dc3e1eb021605d3fc7a9/crates/frus-widgets/src/sheet.rs#L640-L646) @ `d7214f545435`
+Source: [crates/frus-widgets/src/sheet.rs](https://github.com/KalybosPro/frus/blob/4b802dae875c8f88f633392874660d9351b15664/crates/frus-widgets/src/sheet.rs#L640-L646) @ `4b802dae875c`

@@ -30,7 +30,7 @@ impl SizedBox {
 
 ![Rendered preview of the SizedBox demo](/preview/sized-box.light.png)
 
-From [`frus-examples/widgets/src/features/layout/widgets/sized_box.rs`](https://github.com/KalybosPro/frus/blob/d7214f545435ddea2e71dc3e1eb021605d3fc7a9/frus-examples/widgets/src/features/layout/widgets/sized_box.rs):
+From [`frus-examples/widgets/src/features/layout/widgets/sized_box.rs`](https://github.com/KalybosPro/frus/blob/4b802dae875c8f88f633392874660d9351b15664/frus-examples/widgets/src/features/layout/widgets/sized_box.rs):
 
 ```rust
 //! `SizedBox` — a box of a given size: to size its child, or, empty, as a fixed gap.
@@ -131,4 +131,4 @@ A box of a given size — or one that fills what it is given, or one that takes 
 - The guide: [Laying out a screen](/docs/guide/layout)
 - API reference: [`SizedBox`](https://docs.rs/frus/latest/frus/struct.SizedBox.html)
 
-Source: [crates/frus-widgets/src/constraints.rs](https://github.com/KalybosPro/frus/blob/d7214f545435ddea2e71dc3e1eb021605d3fc7a9/crates/frus-widgets/src/constraints.rs#L104-L110) @ `d7214f545435`
+Source: [crates/frus-widgets/src/constraints.rs](https://github.com/KalybosPro/frus/blob/4b802dae875c8f88f633392874660d9351b15664/crates/frus-widgets/src/constraints.rs#L104-L110) @ `4b802dae875c`

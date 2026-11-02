@@ -29,7 +29,7 @@ impl PageView {
 
 ![Rendered preview of the PageView demo](/preview/page-view.light.png)
 
-From [`frus-examples/widgets/src/features/scrolling/widgets/pageview.rs`](https://github.com/KalybosPro/frus/blob/d7214f545435ddea2e71dc3e1eb021605d3fc7a9/frus-examples/widgets/src/features/scrolling/widgets/pageview.rs):
+From [`frus-examples/widgets/src/features/scrolling/widgets/pageview.rs`](https://github.com/KalybosPro/frus/blob/4b802dae875c8f88f633392874660d9351b15664/frus-examples/widgets/src/features/scrolling/widgets/pageview.rs):
 
 ```rust
 //! `PageView` — a scrollable that always comes to rest on a page: onboarding screens, a
@@ -129,4 +129,4 @@ A scrollable that rests only on page boundaries.
 - The guide: [Lists and grids](/docs/guide/lists)
 - API reference: [`PageView`](https://docs.rs/frus/latest/frus/struct.PageView.html)
 
-Source: [crates/frus-widgets/src/pageview.rs](https://github.com/KalybosPro/frus/blob/d7214f545435ddea2e71dc3e1eb021605d3fc7a9/crates/frus-widgets/src/pageview.rs#L134-L156) @ `d7214f545435`
+Source: [crates/frus-widgets/src/pageview.rs](https://github.com/KalybosPro/frus/blob/4b802dae875c8f88f633392874660d9351b15664/crates/frus-widgets/src/pageview.rs#L134-L156) @ `4b802dae875c`

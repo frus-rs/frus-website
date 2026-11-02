@@ -15,6 +15,9 @@ mod compiled {
     pub mod list {
         include!("../examples-src/list.rs");
     }
+    pub mod shop {
+        include!("../examples-src/shop.rs");
+    }
 }
 
 use frus_playground::examples::EXAMPLES;
@@ -80,4 +83,47 @@ fn a_struct_is_refused_with_a_reason() {
 #[test]
 fn a_bare_expression_is_accepted() {
     assert!(Program::parse("Text::new(\"a\").size(20.0)").and_then(|p| p.build()).is_ok());
+}
+
+#[test]
+fn the_list_the_editor_completes_from_is_current() {
+    let path = concat!(env!("CARGO_MANIFEST_DIR"), "/api.json");
+    let written = std::fs::read_to_string(path).unwrap_or_default().replace("\r\n", "\n");
+    assert_eq!(
+        written,
+        frus_playground::widgets::api_json(),
+        "run `cargo run --example dump_api > api.json`, then `node ../scripts/gen-playground-api.mjs`"
+    );
+}
+
+#[test]
+fn every_new_kind_of_argument_is_converted() {
+    let source = r#"fn app(cx: &BuildContext) -> Box<dyn Widget> {
+        let page = cx.use_state(|| 0);
+        let go = page.clone();
+        Scaffold::new()
+            .body(
+                Column::new()
+                    .child(Checkbox::maybe(None))
+                    .child(Checkbox::maybe(Some(true)))
+                    .child(Stepper::new(1, move |v: i32| {}).range(0, 9))
+                    .child(Rating::new(3, 5, move |v: u32| {}))
+                    .child(Badge::count(3).on(Icon::new(Icons::EMAIL)))
+                    .child(ListView::new(100, 40.0, |i| Text::new(format!("Row {i}"))).flex(1.0))
+                    .child(
+                        BottomNavigationBar::new(page.get(), move |i: usize| go.set(i))
+                            .item(BottomNavigationBarItem::new(Icons::HOME, "Home"))
+                            .item(BottomNavigationBarItem::new(Icons::STAR, "Stars")),
+                    ),
+            )
+    }"#;
+    Program::parse(source).and_then(|p| p.build().map(|_| ())).unwrap();
+}
+
+#[test]
+fn a_bad_colour_is_an_error_not_a_panic() {
+    assert!(failure("fn app() {
+  Text::new(\"a\").color(Color::hex(\"nonsense\"))
+}
+").message.contains("not a colour"));
 }

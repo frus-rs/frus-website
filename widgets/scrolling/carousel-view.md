@@ -31,7 +31,7 @@ impl CarouselView {
 
 ![Rendered preview of the CarouselView demo](/preview/carousel-view.light.png)
 
-From [`frus-examples/widgets/src/features/scrolling/widgets/carousel.rs`](https://github.com/KalybosPro/frus/blob/d7214f545435ddea2e71dc3e1eb021605d3fc7a9/frus-examples/widgets/src/features/scrolling/widgets/carousel.rs):
+From [`frus-examples/widgets/src/features/scrolling/widgets/carousel.rs`](https://github.com/KalybosPro/frus/blob/4b802dae875c8f88f633392874660d9351b15664/frus-examples/widgets/src/features/scrolling/widgets/carousel.rs):
 
 ```rust
 //! `CarouselView` — one slide at a time between ‹ and › arrows. It is controlled: the
@@ -103,4 +103,4 @@ A controlled carousel.
 - The guide: [Lists and grids](/docs/guide/lists)
 - API reference: [`CarouselView`](https://docs.rs/frus/latest/frus/struct.CarouselView.html)
 
-Source: [crates/frus-widgets/src/carousel.rs](https://github.com/KalybosPro/frus/blob/d7214f545435ddea2e71dc3e1eb021605d3fc7a9/crates/frus-widgets/src/carousel.rs#L26-L28) @ `d7214f545435`
+Source: [crates/frus-widgets/src/carousel.rs](https://github.com/KalybosPro/frus/blob/4b802dae875c8f88f633392874660d9351b15664/crates/frus-widgets/src/carousel.rs#L26-L28) @ `4b802dae875c`

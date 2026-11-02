@@ -27,7 +27,7 @@ impl Button {
 
 ![Rendered preview of the Button demo](/preview/button.light.png)
 
-From [`frus-examples/widgets/src/features/buttons/widgets/button.rs`](https://github.com/KalybosPro/frus/blob/d7214f545435ddea2e71dc3e1eb021605d3fc7a9/frus-examples/widgets/src/features/buttons/widgets/button.rs):
+From [`frus-examples/widgets/src/features/buttons/widgets/button.rs`](https://github.com/KalybosPro/frus/blob/4b802dae875c8f88f633392874660d9351b15664/frus-examples/widgets/src/features/buttons/widgets/button.rs):
 
 ```rust
 //! `Button` — the labelled button, in its five variants: filled, tonal, elevated,
@@ -256,4 +256,4 @@ The example shows it at work; the API reference has every method.
 - The guide: [Taking input](/docs/guide/input)
 - API reference: [`Button`](https://docs.rs/frus/latest/frus/struct.Button.html)
 
-Source: [crates/frus-widgets/src/button.rs](https://github.com/KalybosPro/frus/blob/d7214f545435ddea2e71dc3e1eb021605d3fc7a9/crates/frus-widgets/src/button.rs#L459-L474) @ `d7214f545435`
+Source: [crates/frus-widgets/src/button.rs](https://github.com/KalybosPro/frus/blob/4b802dae875c8f88f633392874660d9351b15664/crates/frus-widgets/src/button.rs#L459-L474) @ `4b802dae875c`

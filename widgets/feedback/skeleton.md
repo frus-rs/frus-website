@@ -26,7 +26,7 @@ impl Skeleton {
 
 ![Rendered preview of the Skeleton demo](/preview/skeleton.light.png)
 
-From [`frus-examples/widgets/src/features/feedback/widgets/skeleton.rs`](https://github.com/KalybosPro/frus/blob/d7214f545435ddea2e71dc3e1eb021605d3fc7a9/frus-examples/widgets/src/features/feedback/widgets/skeleton.rs):
+From [`frus-examples/widgets/src/features/feedback/widgets/skeleton.rs`](https://github.com/KalybosPro/frus/blob/4b802dae875c8f88f633392874660d9351b15664/frus-examples/widgets/src/features/feedback/widgets/skeleton.rs):
 
 ```rust
 //! `Skeleton` — a pulsing grey placeholder in the shape of content that is still loading.
@@ -170,4 +170,4 @@ An animated loading block.
 - The guide: [Screens, navigation and dialogs](/docs/guide/navigation)
 - API reference: [`Skeleton`](https://docs.rs/frus/latest/frus/struct.Skeleton.html)
 
-Source: [crates/frus-widgets/src/skeleton.rs](https://github.com/KalybosPro/frus/blob/d7214f545435ddea2e71dc3e1eb021605d3fc7a9/crates/frus-widgets/src/skeleton.rs#L18-L22) @ `d7214f545435`
+Source: [crates/frus-widgets/src/skeleton.rs](https://github.com/KalybosPro/frus/blob/4b802dae875c8f88f633392874660d9351b15664/crates/frus-widgets/src/skeleton.rs#L18-L22) @ `4b802dae875c`

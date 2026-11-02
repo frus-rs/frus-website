@@ -28,7 +28,7 @@ impl ColorFiltered {
 
 ![Rendered preview of the ColorFiltered demo](/preview/color-filtered.light.png)
 
-From [`frus-examples/widgets/src/features/painting/widgets/color_filtered.rs`](https://github.com/KalybosPro/frus/blob/d7214f545435ddea2e71dc3e1eb021605d3fc7a9/frus-examples/widgets/src/features/painting/widgets/color_filtered.rs):
+From [`frus-examples/widgets/src/features/painting/widgets/color_filtered.rs`](https://github.com/KalybosPro/frus/blob/4b802dae875c8f88f633392874660d9351b15664/frus-examples/widgets/src/features/painting/widgets/color_filtered.rs):
 
 ```rust
 //! `ColorFiltered` — changes the colours of everything a child paints: greyscale,
@@ -165,4 +165,4 @@ ColorFiltered::new(ColorFilter::Mode(theme.primary, BlendMode::SrcIn))
 - The guide: [Text, colour and the theme](/docs/guide/style)
 - API reference: [`ColorFiltered`](https://docs.rs/frus/latest/frus/struct.ColorFiltered.html)
 
-Source: [crates/frus-widgets/src/filters.rs](https://github.com/KalybosPro/frus/blob/d7214f545435ddea2e71dc3e1eb021605d3fc7a9/crates/frus-widgets/src/filters.rs#L45-L49) @ `d7214f545435`
+Source: [crates/frus-widgets/src/filters.rs](https://github.com/KalybosPro/frus/blob/4b802dae875c8f88f633392874660d9351b15664/crates/frus-widgets/src/filters.rs#L45-L49) @ `4b802dae875c`

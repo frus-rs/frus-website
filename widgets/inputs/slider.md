@@ -26,7 +26,7 @@ impl Slider {
 
 ![Rendered preview of the Slider demo](/preview/slider.light.png)
 
-From [`frus-examples/widgets/src/features/inputs/widgets/slider.rs`](https://github.com/KalybosPro/frus/blob/d7214f545435ddea2e71dc3e1eb021605d3fc7a9/frus-examples/widgets/src/features/inputs/widgets/slider.rs):
+From [`frus-examples/widgets/src/features/inputs/widgets/slider.rs`](https://github.com/KalybosPro/frus/blob/4b802dae875c8f88f633392874660d9351b15664/frus-examples/widgets/src/features/inputs/widgets/slider.rs):
 
 ```rust
 //! `Slider` — a value picked by dragging along a track: continuous, or in steps with
@@ -169,4 +169,4 @@ The track is inset by the halo's radius at each end, so the thumb reaches both e
 - The guide: [Taking input](/docs/guide/input)
 - API reference: [`Slider`](https://docs.rs/frus/latest/frus/struct.Slider.html)
 
-Source: [crates/frus-widgets/src/slider.rs](https://github.com/KalybosPro/frus/blob/d7214f545435ddea2e71dc3e1eb021605d3fc7a9/crates/frus-widgets/src/slider.rs#L103-L130) @ `d7214f545435`
+Source: [crates/frus-widgets/src/slider.rs](https://github.com/KalybosPro/frus/blob/4b802dae875c8f88f633392874660d9351b15664/crates/frus-widgets/src/slider.rs#L103-L130) @ `4b802dae875c`

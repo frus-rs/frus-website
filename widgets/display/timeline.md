@@ -26,7 +26,7 @@ impl Timeline {
 
 ![Rendered preview of the Timeline demo](/preview/timeline.light.png)
 
-From [`frus-examples/widgets/src/features/display/widgets/timeline.rs`](https://github.com/KalybosPro/frus/blob/d7214f545435ddea2e71dc3e1eb021605d3fc7a9/frus-examples/widgets/src/features/display/widgets/timeline.rs):
+From [`frus-examples/widgets/src/features/display/widgets/timeline.rs`](https://github.com/KalybosPro/frus/blob/4b802dae875c8f88f633392874660d9351b15664/frus-examples/widgets/src/features/display/widgets/timeline.rs):
 
 ```rust
 //! `Timeline` — a vertical chronology: events joined by a line, each marked with a dot.
@@ -81,4 +81,4 @@ A vertical chronology.
 - The guide: [Text, colour and the theme](/docs/guide/style)
 - API reference: [`Timeline`](https://docs.rs/frus/latest/frus/struct.Timeline.html)
 
-Source: [crates/frus-widgets/src/timeline.rs](https://github.com/KalybosPro/frus/blob/d7214f545435ddea2e71dc3e1eb021605d3fc7a9/crates/frus-widgets/src/timeline.rs#L127-L132) @ `d7214f545435`
+Source: [crates/frus-widgets/src/timeline.rs](https://github.com/KalybosPro/frus/blob/4b802dae875c8f88f633392874660d9351b15664/crates/frus-widgets/src/timeline.rs#L127-L132) @ `4b802dae875c`

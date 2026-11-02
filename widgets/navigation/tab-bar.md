@@ -29,7 +29,7 @@ impl TabBar {
 
 ![Rendered preview of the TabBar demo](/preview/tab-bar.light.png)
 
-From [`frus-examples/widgets/src/features/navigation/widgets/tabs.rs`](https://github.com/KalybosPro/frus/blob/d7214f545435ddea2e71dc3e1eb021605d3fc7a9/frus-examples/widgets/src/features/navigation/widgets/tabs.rs):
+From [`frus-examples/widgets/src/features/navigation/widgets/tabs.rs`](https://github.com/KalybosPro/frus/blob/4b802dae875c8f88f633392874660d9351b15664/frus-examples/widgets/src/features/navigation/widgets/tabs.rs):
 
 ```rust
 //! `TabBar` — a row of tabs and the panel of the selected one. Primary for the top
@@ -173,9 +173,9 @@ A tabbed view: the bar, and the selected tab's panel under it.
 - [AppBar](./app-bar.md): the bar at the top of a screen: leading button, title, actions and a bottom.
 - [Scaffold](./scaffold.md): the shell of a screen: app bar, body, navigation, drawer, FAB and footer slots.
 - [BottomBar](./bottom-bar.md): the main destinations along the bottom of a phone screen.
+- [BottomNavigationBar](./bottom-navigation-bar.md): the classic bottom bar: fixed, or shifting with the selected item's colour.
 - [NavigationRail](./navigation-rail.md): the main destinations down the side of a tablet or desktop window.
-- [NavScaffold](./nav-scaffold.md): navigation that becomes a bar, a rail or an extended rail with the size class.
 - The guide: [Screens, navigation and dialogs](/docs/guide/navigation)
 - API reference: [`TabBar`](https://docs.rs/frus/latest/frus/struct.TabBar.html)
 
-Source: [crates/frus-widgets/src/tabs.rs](https://github.com/KalybosPro/frus/blob/d7214f545435ddea2e71dc3e1eb021605d3fc7a9/crates/frus-widgets/src/tabs.rs#L802-L819) @ `d7214f545435`
+Source: [crates/frus-widgets/src/tabs.rs](https://github.com/KalybosPro/frus/blob/4b802dae875c8f88f633392874660d9351b15664/crates/frus-widgets/src/tabs.rs#L802-L819) @ `4b802dae875c`

@@ -31,7 +31,7 @@ impl OverflowBox {
 
 ![Rendered preview of the UnconstrainedBox & OverflowBox demo](/preview/overflow-box.light.png)
 
-From [`frus-examples/widgets/src/features/layout/widgets/overflow_box.rs`](https://github.com/KalybosPro/frus/blob/d7214f545435ddea2e71dc3e1eb021605d3fc7a9/frus-examples/widgets/src/features/layout/widgets/overflow_box.rs):
+From [`frus-examples/widgets/src/features/layout/widgets/overflow_box.rs`](https://github.com/KalybosPro/frus/blob/4b802dae875c8f88f633392874660d9351b15664/frus-examples/widgets/src/features/layout/widgets/overflow_box.rs):
 
 ```rust
 //! `UnconstrainedBox`, `OverflowBox`, `SizedOverflowBox` and `ConstraintsTransformBox` —
@@ -177,4 +177,4 @@ This is the escape hatch for a background that should bleed past its slot, or a 
 - API reference: [`UnconstrainedBox`](https://docs.rs/frus/latest/frus/struct.UnconstrainedBox.html)
 - API reference: [`OverflowBox`](https://docs.rs/frus/latest/frus/struct.OverflowBox.html)
 
-Source: [crates/frus-widgets/src/constraints.rs](https://github.com/KalybosPro/frus/blob/d7214f545435ddea2e71dc3e1eb021605d3fc7a9/crates/frus-widgets/src/constraints.rs#L907-L907), [crates/frus-widgets/src/constraints.rs](https://github.com/KalybosPro/frus/blob/d7214f545435ddea2e71dc3e1eb021605d3fc7a9/crates/frus-widgets/src/constraints.rs#L455-L458) @ `d7214f545435`
+Source: [crates/frus-widgets/src/constraints.rs](https://github.com/KalybosPro/frus/blob/4b802dae875c8f88f633392874660d9351b15664/crates/frus-widgets/src/constraints.rs#L907-L907), [crates/frus-widgets/src/constraints.rs](https://github.com/KalybosPro/frus/blob/4b802dae875c8f88f633392874660d9351b15664/crates/frus-widgets/src/constraints.rs#L455-L458) @ `4b802dae875c`

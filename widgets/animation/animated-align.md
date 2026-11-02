@@ -31,7 +31,7 @@ impl AnimatedAlign {
 
 ![Rendered preview of the AnimatedAlign demo](/preview/animated-align.light.png)
 
-From [`frus-examples/widgets/src/features/animation/widgets/animated_align.rs`](https://github.com/KalybosPro/frus/blob/d7214f545435ddea2e71dc3e1eb021605d3fc7a9/frus-examples/widgets/src/features/animation/widgets/animated_align.rs):
+From [`frus-examples/widgets/src/features/animation/widgets/animated_align.rs`](https://github.com/KalybosPro/frus/blob/4b802dae875c8f88f633392874660d9351b15664/frus-examples/widgets/src/features/animation/widgets/animated_align.rs):
 
 ```rust
 //! `AnimatedAlign` — moves a child to a new anchor inside its box instead of letting it
@@ -187,4 +187,4 @@ Unlike a scale's pivot, an anchor **is** the quantity here — it says where the
 - The guide: [Animation](/docs/guide/animation)
 - API reference: [`AnimatedAlign`](https://docs.rs/frus/latest/frus/struct.AnimatedAlign.html)
 
-Source: [crates/frus-widgets/src/animated.rs](https://github.com/KalybosPro/frus/blob/d7214f545435ddea2e71dc3e1eb021605d3fc7a9/crates/frus-widgets/src/animated.rs#L275-L277) @ `d7214f545435`
+Source: [crates/frus-widgets/src/animated.rs](https://github.com/KalybosPro/frus/blob/4b802dae875c8f88f633392874660d9351b15664/crates/frus-widgets/src/animated.rs#L275-L277) @ `4b802dae875c`

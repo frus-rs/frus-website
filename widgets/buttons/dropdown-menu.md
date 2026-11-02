@@ -31,7 +31,7 @@ impl DropdownMenu {
 
 ![Rendered preview of the DropdownMenu demo](/preview/dropdown-menu.light.png)
 
-From [`frus-examples/widgets/src/features/buttons/widgets/dropdown_menu.rs`](https://github.com/KalybosPro/frus/blob/d7214f545435ddea2e71dc3e1eb021605d3fc7a9/frus-examples/widgets/src/features/buttons/widgets/dropdown_menu.rs):
+From [`frus-examples/widgets/src/features/buttons/widgets/dropdown_menu.rs`](https://github.com/KalybosPro/frus/blob/4b802dae875c8f88f633392874660d9351b15664/frus-examples/widgets/src/features/buttons/widgets/dropdown_menu.rs):
 
 ```rust
 //! `DropdownMenu` — a dropdown that looks like a text field and filters its choices as
@@ -162,4 +162,4 @@ let field = DropdownMenu::new(&query, open, Msg::Query, Msg::Toggle)
 - The guide: [Taking input](/docs/guide/input)
 - API reference: [`DropdownMenu`](https://docs.rs/frus/latest/frus/struct.DropdownMenu.html)
 
-Source: [crates/frus-widgets/src/dropdownmenu.rs](https://github.com/KalybosPro/frus/blob/d7214f545435ddea2e71dc3e1eb021605d3fc7a9/crates/frus-widgets/src/dropdownmenu.rs#L79-L98) @ `d7214f545435`
+Source: [crates/frus-widgets/src/dropdownmenu.rs](https://github.com/KalybosPro/frus/blob/4b802dae875c8f88f633392874660d9351b15664/crates/frus-widgets/src/dropdownmenu.rs#L79-L98) @ `4b802dae875c`

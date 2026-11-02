@@ -43,7 +43,7 @@ impl TimeRange {
 
 ![Rendered preview of the TimePicker & TimeRange demo](/preview/time-picker.light.png)
 
-From [`frus-examples/widgets/src/features/inputs/widgets/time_picker.rs`](https://github.com/KalybosPro/frus/blob/d7214f545435ddea2e71dc3e1eb021605d3fc7a9/frus-examples/widgets/src/features/inputs/widgets/time_picker.rs):
+From [`frus-examples/widgets/src/features/inputs/widgets/time_picker.rs`](https://github.com/KalybosPro/frus/blob/4b802dae875c8f88f633392874660d9351b15664/frus-examples/widgets/src/features/inputs/widgets/time_picker.rs):
 
 ```rust
 //! `TimePicker` and `TimeRange` — a time of day picked from an hour grid and a minute
@@ -191,4 +191,4 @@ A **time range** (a start → end slot), the temporal counterpart of the dual ca
 - API reference: [`TimePicker`](https://docs.rs/frus/latest/frus/struct.TimePicker.html)
 - API reference: [`TimeRange`](https://docs.rs/frus/latest/frus/struct.TimeRange.html)
 
-Source: [crates/frus-widgets/src/timepicker.rs](https://github.com/KalybosPro/frus/blob/d7214f545435ddea2e71dc3e1eb021605d3fc7a9/crates/frus-widgets/src/timepicker.rs#L151-L162), [crates/frus-widgets/src/timepicker.rs](https://github.com/KalybosPro/frus/blob/d7214f545435ddea2e71dc3e1eb021605d3fc7a9/crates/frus-widgets/src/timepicker.rs#L404-L412) @ `d7214f545435`
+Source: [crates/frus-widgets/src/timepicker.rs](https://github.com/KalybosPro/frus/blob/4b802dae875c8f88f633392874660d9351b15664/crates/frus-widgets/src/timepicker.rs#L151-L162), [crates/frus-widgets/src/timepicker.rs](https://github.com/KalybosPro/frus/blob/4b802dae875c8f88f633392874660d9351b15664/crates/frus-widgets/src/timepicker.rs#L404-L412) @ `4b802dae875c`

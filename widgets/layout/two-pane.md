@@ -30,7 +30,7 @@ pub fn responsive<Msg>(width: f32) -> Responsive<Msg>
 
 ![Rendered preview of the TwoPane & responsive demo](/preview/two-pane.light.png)
 
-From [`frus-examples/widgets/src/features/layout/widgets/two_pane.rs`](https://github.com/KalybosPro/frus/blob/d7214f545435ddea2e71dc3e1eb021605d3fc7a9/frus-examples/widgets/src/features/layout/widgets/two_pane.rs):
+From [`frus-examples/widgets/src/features/layout/widgets/two_pane.rs`](https://github.com/KalybosPro/frus/blob/4b802dae875c8f88f633392874660d9351b15664/frus-examples/widgets/src/features/layout/widgets/two_pane.rs):
 
 ```rust
 //! `TwoPane` and `responsive` — adapt a screen to its size class: a list and its detail
@@ -210,4 +210,4 @@ A responsive selector for a given width, in logical px.
 - API reference: [`TwoPane`](https://docs.rs/frus/latest/frus/struct.TwoPane.html)
 - API reference: [`responsive`](https://docs.rs/frus/latest/frus/fn.responsive.html)
 
-Source: [crates/frus-widgets/src/twopane.rs](https://github.com/KalybosPro/frus/blob/d7214f545435ddea2e71dc3e1eb021605d3fc7a9/crates/frus-widgets/src/twopane.rs#L17-L24), [crates/frus-widgets/src/responsive.rs](https://github.com/KalybosPro/frus/blob/d7214f545435ddea2e71dc3e1eb021605d3fc7a9/crates/frus-widgets/src/responsive.rs#L77-L79) @ `d7214f545435`
+Source: [crates/frus-widgets/src/twopane.rs](https://github.com/KalybosPro/frus/blob/4b802dae875c8f88f633392874660d9351b15664/crates/frus-widgets/src/twopane.rs#L17-L24), [crates/frus-widgets/src/responsive.rs](https://github.com/KalybosPro/frus/blob/4b802dae875c8f88f633392874660d9351b15664/crates/frus-widgets/src/responsive.rs#L77-L79) @ `4b802dae875c`

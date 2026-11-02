@@ -26,7 +26,7 @@ impl FractionallySizedBox {
 
 ![Rendered preview of the FractionallySizedBox demo](/preview/fractionally-sized-box.light.png)
 
-From [`frus-examples/widgets/src/features/layout/widgets/fractionally_sized_box.rs`](https://github.com/KalybosPro/frus/blob/d7214f545435ddea2e71dc3e1eb021605d3fc7a9/frus-examples/widgets/src/features/layout/widgets/fractionally_sized_box.rs):
+From [`frus-examples/widgets/src/features/layout/widgets/fractionally_sized_box.rs`](https://github.com/KalybosPro/frus/blob/4b802dae875c8f88f633392874660d9351b15664/frus-examples/widgets/src/features/layout/widgets/fractionally_sized_box.rs):
 
 ```rust
 //! `FractionallySizedBox` — a box sized as a fraction of the room its parent offers.
@@ -127,4 +127,4 @@ Rather than constraining the child, the box **sizes itself** as a percentage of 
 - The guide: [Laying out a screen](/docs/guide/layout)
 - API reference: [`FractionallySizedBox`](https://docs.rs/frus/latest/frus/struct.FractionallySizedBox.html)
 
-Source: [crates/frus-widgets/src/fractional.rs](https://github.com/KalybosPro/frus/blob/d7214f545435ddea2e71dc3e1eb021605d3fc7a9/crates/frus-widgets/src/fractional.rs#L25-L30) @ `d7214f545435`
+Source: [crates/frus-widgets/src/fractional.rs](https://github.com/KalybosPro/frus/blob/4b802dae875c8f88f633392874660d9351b15664/crates/frus-widgets/src/fractional.rs#L25-L30) @ `4b802dae875c`

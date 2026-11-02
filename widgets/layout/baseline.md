@@ -26,7 +26,7 @@ impl Baseline {
 
 ![Rendered preview of the Baseline demo](/preview/baseline.light.png)
 
-From [`frus-examples/widgets/src/features/layout/widgets/baseline.rs`](https://github.com/KalybosPro/frus/blob/d7214f545435ddea2e71dc3e1eb021605d3fc7a9/frus-examples/widgets/src/features/layout/widgets/baseline.rs):
+From [`frus-examples/widgets/src/features/layout/widgets/baseline.rs`](https://github.com/KalybosPro/frus/blob/4b802dae875c8f88f633392874660d9351b15664/frus-examples/widgets/src/features/layout/widgets/baseline.rs):
 
 ```rust
 //! `Baseline`, `IgnoreBaseline` and `Align::Baseline` — line text up on the line its
@@ -127,4 +127,4 @@ There is no choice of baseline *kind*. The measurement here is the alphabetic ba
 - The guide: [Laying out a screen](/docs/guide/layout)
 - API reference: [`Baseline`](https://docs.rs/frus/latest/frus/struct.Baseline.html)
 
-Source: [crates/frus-widgets/src/baseline.rs](https://github.com/KalybosPro/frus/blob/d7214f545435ddea2e71dc3e1eb021605d3fc7a9/crates/frus-widgets/src/baseline.rs#L43-L46) @ `d7214f545435`
+Source: [crates/frus-widgets/src/baseline.rs](https://github.com/KalybosPro/frus/blob/4b802dae875c8f88f633392874660d9351b15664/crates/frus-widgets/src/baseline.rs#L43-L46) @ `4b802dae875c`

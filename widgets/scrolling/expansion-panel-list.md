@@ -33,7 +33,7 @@ impl ExpansionPanelList {
 
 ![Rendered preview of the ExpansionPanelList demo](/preview/expansion-panel-list.light.png)
 
-From [`frus-examples/widgets/src/features/scrolling/widgets/expansionpanel.rs`](https://github.com/KalybosPro/frus/blob/d7214f545435ddea2e71dc3e1eb021605d3fc7a9/frus-examples/widgets/src/features/scrolling/widgets/expansionpanel.rs):
+From [`frus-examples/widgets/src/features/scrolling/widgets/expansionpanel.rs`](https://github.com/KalybosPro/frus/blob/4b802dae875c8f88f633392874660d9351b15664/frus-examples/widgets/src/features/scrolling/widgets/expansionpanel.rs):
 
 ```rust
 //! `ExpansionPanelList` — a column of panels drawn as one surface that splits apart as a
@@ -137,4 +137,4 @@ Two modes, and they say two different things because they want two different sta
 - The guide: [Lists and grids](/docs/guide/lists)
 - API reference: [`ExpansionPanelList`](https://docs.rs/frus/latest/frus/struct.ExpansionPanelList.html)
 
-Source: [crates/frus-widgets/src/expansionpanel.rs](https://github.com/KalybosPro/frus/blob/d7214f545435ddea2e71dc3e1eb021605d3fc7a9/crates/frus-widgets/src/expansionpanel.rs#L135-L146) @ `d7214f545435`
+Source: [crates/frus-widgets/src/expansionpanel.rs](https://github.com/KalybosPro/frus/blob/4b802dae875c8f88f633392874660d9351b15664/crates/frus-widgets/src/expansionpanel.rs#L135-L146) @ `4b802dae875c`

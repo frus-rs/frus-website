@@ -22,7 +22,7 @@ pub struct StreamBuilder;
 
 ![Rendered preview of the use_stream & StreamBuilder demo](/preview/stream-builder.light.png)
 
-From [`frus-examples/widgets/src/features/state/widgets/stream_builder.rs`](https://github.com/KalybosPro/frus/blob/d7214f545435ddea2e71dc3e1eb021605d3fc7a9/frus-examples/widgets/src/features/state/widgets/stream_builder.rs):
+From [`frus-examples/widgets/src/features/state/widgets/stream_builder.rs`](https://github.com/KalybosPro/frus/blob/4b802dae875c8f88f633392874660d9351b15664/frus-examples/widgets/src/features/state/widgets/stream_builder.rs):
 
 ```rust
 //! `use_stream` and `StreamBuilder` — work that gives **several** values as it goes: a
@@ -158,4 +158,4 @@ The example shows it at work; the API reference has every method.
 - The guide: [Starting a frus application](/docs/getting-started)
 - API reference: [`StreamBuilder`](https://docs.rs/frus/latest/frus/struct.StreamBuilder.html)
 
-Source: [crates/frus-widgets/src/asyncbuild.rs](https://github.com/KalybosPro/frus/blob/d7214f545435ddea2e71dc3e1eb021605d3fc7a9/crates/frus-widgets/src/asyncbuild.rs#L321-L321) @ `d7214f545435`
+Source: [crates/frus-widgets/src/asyncbuild.rs](https://github.com/KalybosPro/frus/blob/4b802dae875c8f88f633392874660d9351b15664/crates/frus-widgets/src/asyncbuild.rs#L321-L321) @ `4b802dae875c`

@@ -20,7 +20,7 @@ This demo shows a pattern rather than one type. The names it uses are in the exa
 
 ![Rendered preview of the use_effect demo](/preview/use-effect.light.png)
 
-From [`frus-examples/widgets/src/features/state/widgets/use_effect.rs`](https://github.com/KalybosPro/frus/blob/d7214f545435ddea2e71dc3e1eb021605d3fc7a9/frus-examples/widgets/src/features/state/widgets/use_effect.rs):
+From [`frus-examples/widgets/src/features/state/widgets/use_effect.rs`](https://github.com/KalybosPro/frus/blob/4b802dae875c8f88f633392874660d9351b15664/frus-examples/widgets/src/features/state/widgets/use_effect.rs):
 
 ```rust
 //! `use_effect` — work to do **after** a build: subscribe, start something, write a log.
@@ -137,4 +137,4 @@ The example shows it at work; the API reference has every method.
 - [use_future & FutureBuilder](./future-builder.md): work that finishes later: waiting, then the result.
 - The guide: [Starting a frus application](/docs/getting-started)
 
-Source: [frus-examples/widgets/src/features/state/widgets/use_effect.rs](https://github.com/KalybosPro/frus/blob/d7214f545435ddea2e71dc3e1eb021605d3fc7a9/frus-examples/widgets/src/features/state/widgets/use_effect.rs) @ `d7214f545435`
+Source: [frus-examples/widgets/src/features/state/widgets/use_effect.rs](https://github.com/KalybosPro/frus/blob/4b802dae875c8f88f633392874660d9351b15664/frus-examples/widgets/src/features/state/widgets/use_effect.rs) @ `4b802dae875c`

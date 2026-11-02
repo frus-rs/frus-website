@@ -29,7 +29,7 @@ impl BottomBar {
 
 ![Rendered preview of the BottomBar demo](/preview/bottom-bar.light.png)
 
-From [`frus-examples/widgets/src/features/navigation/widgets/bottombar.rs`](https://github.com/KalybosPro/frus/blob/d7214f545435ddea2e71dc3e1eb021605d3fc7a9/frus-examples/widgets/src/features/navigation/widgets/bottombar.rs):
+From [`frus-examples/widgets/src/features/navigation/widgets/bottombar.rs`](https://github.com/KalybosPro/frus/blob/4b802dae875c8f88f633392874660d9351b15664/frus-examples/widgets/src/features/navigation/widgets/bottombar.rs):
 
 ```rust
 //! `BottomBar` — the bar of three to five main destinations along the bottom of a phone
@@ -153,10 +153,10 @@ A **horizontal** navigation bar at the bottom (phone).
 
 - [Scaffold](./scaffold.md): the shell of a screen: app bar, body, navigation, drawer, FAB and footer slots.
 - [TabBar](./tab-bar.md): tabs and the panel of the selected one: primary, secondary, icons, scrolling, swiping.
+- [BottomNavigationBar](./bottom-navigation-bar.md): the classic bottom bar: fixed, or shifting with the selected item's colour.
 - [NavigationRail](./navigation-rail.md): the main destinations down the side of a tablet or desktop window.
 - [NavScaffold](./nav-scaffold.md): navigation that becomes a bar, a rail or an extended rail with the size class.
-- [Drawer & drawer headers](./drawer.md): a side panel that slides over the page or sits docked beside it.
 - The guide: [Screens, navigation and dialogs](/docs/guide/navigation)
 - API reference: [`BottomBar`](https://docs.rs/frus/latest/frus/struct.BottomBar.html)
 
-Source: [crates/frus-widgets/src/navrail.rs](https://github.com/KalybosPro/frus/blob/d7214f545435ddea2e71dc3e1eb021605d3fc7a9/crates/frus-widgets/src/navrail.rs#L1358-L1367) @ `d7214f545435`
+Source: [crates/frus-widgets/src/navrail.rs](https://github.com/KalybosPro/frus/blob/4b802dae875c8f88f633392874660d9351b15664/crates/frus-widgets/src/navrail.rs#L1358-L1367) @ `4b802dae875c`

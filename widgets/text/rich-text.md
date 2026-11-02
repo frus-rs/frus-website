@@ -34,7 +34,7 @@ impl TextSpan {
 
 ![Rendered preview of the RichText & TextSpan demo](/preview/rich-text.light.png)
 
-From [`frus-examples/widgets/src/features/text/widgets/rich_text.rs`](https://github.com/KalybosPro/frus/blob/d7214f545435ddea2e71dc3e1eb021605d3fc7a9/frus-examples/widgets/src/features/text/widgets/rich_text.rs):
+From [`frus-examples/widgets/src/features/text/widgets/rich_text.rs`](https://github.com/KalybosPro/frus/blob/4b802dae875c8f88f633392874660d9351b15664/frus-examples/widgets/src/features/text/widgets/rich_text.rs):
 
 ```rust
 //! `RichText` and `TextSpan` — one paragraph in several styles: a bold word, a link-
@@ -185,4 +185,4 @@ assert_eq!(runs[1].1.size, 20.0); // the bold child inherits the size
 - API reference: [`RichText`](https://docs.rs/frus/latest/frus/struct.RichText.html)
 - API reference: [`TextSpan`](https://docs.rs/frus/latest/frus/struct.TextSpan.html)
 
-Source: [crates/frus-widgets/src/richtext.rs](https://github.com/KalybosPro/frus/blob/d7214f545435ddea2e71dc3e1eb021605d3fc7a9/crates/frus-widgets/src/richtext.rs#L33-L49), [crates/frus-core/src/text_style.rs](https://github.com/KalybosPro/frus/blob/d7214f545435ddea2e71dc3e1eb021605d3fc7a9/crates/frus-core/src/text_style.rs#L664-L668) @ `d7214f545435`
+Source: [crates/frus-widgets/src/richtext.rs](https://github.com/KalybosPro/frus/blob/4b802dae875c8f88f633392874660d9351b15664/crates/frus-widgets/src/richtext.rs#L33-L49), [crates/frus-core/src/text_style.rs](https://github.com/KalybosPro/frus/blob/4b802dae875c8f88f633392874660d9351b15664/crates/frus-core/src/text_style.rs#L664-L668) @ `4b802dae875c`

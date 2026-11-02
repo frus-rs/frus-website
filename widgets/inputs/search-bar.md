@@ -26,7 +26,7 @@ impl SearchBar {
 
 ![Rendered preview of the SearchBar demo](/preview/search-bar.light.png)
 
-From [`frus-examples/widgets/src/features/inputs/widgets/search_bar.rs`](https://github.com/KalybosPro/frus/blob/d7214f545435ddea2e71dc3e1eb021605d3fc7a9/frus-examples/widgets/src/features/inputs/widgets/search_bar.rs):
+From [`frus-examples/widgets/src/features/inputs/widgets/search_bar.rs`](https://github.com/KalybosPro/frus/blob/4b802dae875c8f88f633392874660d9351b15664/frus-examples/widgets/src/features/inputs/widgets/search_bar.rs):
 
 ```rust
 //! `SearchBar` — the raised pill an application searches from: a borderless field with
@@ -157,4 +157,4 @@ A raised pill holding a search field, with a slot before it and any number after
 - The guide: [Taking input](/docs/guide/input)
 - API reference: [`SearchBar`](https://docs.rs/frus/latest/frus/struct.SearchBar.html)
 
-Source: [crates/frus-widgets/src/searchbar.rs](https://github.com/KalybosPro/frus/blob/d7214f545435ddea2e71dc3e1eb021605d3fc7a9/crates/frus-widgets/src/searchbar.rs#L65-L88) @ `d7214f545435`
+Source: [crates/frus-widgets/src/searchbar.rs](https://github.com/KalybosPro/frus/blob/4b802dae875c8f88f633392874660d9351b15664/crates/frus-widgets/src/searchbar.rs#L65-L88) @ `4b802dae875c`

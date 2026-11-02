@@ -34,7 +34,7 @@ impl Actions {
 
 ![Rendered preview of the Shortcuts & Actions demo](/preview/shortcuts.light.png)
 
-From [`frus-examples/widgets/src/features/interaction/widgets/shortcuts.rs`](https://github.com/KalybosPro/frus/blob/d7214f545435ddea2e71dc3e1eb021605d3fc7a9/frus-examples/widgets/src/features/interaction/widgets/shortcuts.rs):
+From [`frus-examples/widgets/src/features/interaction/widgets/shortcuts.rs`](https://github.com/KalybosPro/frus/blob/4b802dae875c8f88f633392874660d9351b15664/frus-examples/widgets/src/features/interaction/widgets/shortcuts.rs):
 
 ```rust
 //! `Shortcuts`, `Actions`, `ActionListener` and `CallbackShortcuts` — keyboard shortcuts.
@@ -168,4 +168,4 @@ Answers **intents** for its subtree: the innermost `Actions` that has the intent
 - API reference: [`Shortcuts`](https://docs.rs/frus/latest/frus/struct.Shortcuts.html)
 - API reference: [`Actions`](https://docs.rs/frus/latest/frus/struct.Actions.html)
 
-Source: [crates/frus-widgets/src/shortcuts.rs](https://github.com/KalybosPro/frus/blob/d7214f545435ddea2e71dc3e1eb021605d3fc7a9/crates/frus-widgets/src/shortcuts.rs#L251-L251), [crates/frus-widgets/src/shortcuts.rs](https://github.com/KalybosPro/frus/blob/d7214f545435ddea2e71dc3e1eb021605d3fc7a9/crates/frus-widgets/src/shortcuts.rs#L288-L288) @ `d7214f545435`
+Source: [crates/frus-widgets/src/shortcuts.rs](https://github.com/KalybosPro/frus/blob/4b802dae875c8f88f633392874660d9351b15664/crates/frus-widgets/src/shortcuts.rs#L251-L251), [crates/frus-widgets/src/shortcuts.rs](https://github.com/KalybosPro/frus/blob/4b802dae875c8f88f633392874660d9351b15664/crates/frus-widgets/src/shortcuts.rs#L288-L288) @ `4b802dae875c`

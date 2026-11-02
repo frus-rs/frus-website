@@ -26,7 +26,7 @@ impl AnimatedFractionallySizedBox {
 
 ![Rendered preview of the AnimatedFractionallySizedBox demo](/preview/animated-fractionally-sized-box.light.png)
 
-From [`frus-examples/widgets/src/features/animation/widgets/animated_fractionally_sized_box.rs`](https://github.com/KalybosPro/frus/blob/d7214f545435ddea2e71dc3e1eb021605d3fc7a9/frus-examples/widgets/src/features/animation/widgets/animated_fractionally_sized_box.rs):
+From [`frus-examples/widgets/src/features/animation/widgets/animated_fractionally_sized_box.rs`](https://github.com/KalybosPro/frus/blob/4b802dae875c8f88f633392874660d9351b15664/frus-examples/widgets/src/features/animation/widgets/animated_fractionally_sized_box.rs):
 
 ```rust
 //! `AnimatedFractionallySizedBox` — a box sized as a fraction of the room it is given,
@@ -133,4 +133,4 @@ An axis whose factor is **unset** follows its content, and does not travel to or
 - The guide: [Animation](/docs/guide/animation)
 - API reference: [`AnimatedFractionallySizedBox`](https://docs.rs/frus/latest/frus/struct.AnimatedFractionallySizedBox.html)
 
-Source: [crates/frus-widgets/src/animated.rs](https://github.com/KalybosPro/frus/blob/d7214f545435ddea2e71dc3e1eb021605d3fc7a9/crates/frus-widgets/src/animated.rs#L1086-L1088) @ `d7214f545435`
+Source: [crates/frus-widgets/src/animated.rs](https://github.com/KalybosPro/frus/blob/4b802dae875c8f88f633392874660d9351b15664/crates/frus-widgets/src/animated.rs#L1086-L1088) @ `4b802dae875c`

@@ -26,7 +26,7 @@ impl DropdownButton {
 
 ![Rendered preview of the DropdownButton demo](/preview/dropdown-button.light.png)
 
-From [`frus-examples/widgets/src/features/buttons/widgets/dropdown_button.rs`](https://github.com/KalybosPro/frus/blob/d7214f545435ddea2e71dc3e1eb021605d3fc7a9/frus-examples/widgets/src/features/buttons/widgets/dropdown_button.rs):
+From [`frus-examples/widgets/src/features/buttons/widgets/dropdown_button.rs`](https://github.com/KalybosPro/frus/blob/4b802dae875c8f88f633392874660d9351b15664/frus-examples/widgets/src/features/buttons/widgets/dropdown_button.rs):
 
 ```rust
 //! `DropdownButton` and `DropdownOption` — a button showing the current choice, whose
@@ -173,4 +173,4 @@ A single-selection dropdown list (a floating menu).
 - The guide: [Taking input](/docs/guide/input)
 - API reference: [`DropdownButton`](https://docs.rs/frus/latest/frus/struct.DropdownButton.html)
 
-Source: [crates/frus-widgets/src/dropdown.rs](https://github.com/KalybosPro/frus/blob/d7214f545435ddea2e71dc3e1eb021605d3fc7a9/crates/frus-widgets/src/dropdown.rs#L360-L373) @ `d7214f545435`
+Source: [crates/frus-widgets/src/dropdown.rs](https://github.com/KalybosPro/frus/blob/4b802dae875c8f88f633392874660d9351b15664/crates/frus-widgets/src/dropdown.rs#L360-L373) @ `4b802dae875c`

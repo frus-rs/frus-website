@@ -38,7 +38,7 @@ pub struct OrientationBuilder;
 
 ![Rendered preview of the Responsive, LayoutBuilder & OrientationBuilder demo](/preview/responsive.light.png)
 
-From [`frus-examples/widgets/src/features/state/widgets/responsive.rs`](https://github.com/KalybosPro/frus/blob/d7214f545435ddea2e71dc3e1eb021605d3fc7a9/frus-examples/widgets/src/features/state/widgets/responsive.rs):
+From [`frus-examples/widgets/src/features/state/widgets/responsive.rs`](https://github.com/KalybosPro/frus/blob/4b802dae875c8f88f633392874660d9351b15664/frus-examples/widgets/src/features/state/widgets/responsive.rs):
 
 ```rust
 //! `Responsive`, `LayoutBuilder` and `OrientationBuilder` — one interface, several
@@ -200,4 +200,4 @@ let _gallery: frus_widgets::LayoutBuilder<()> = OrientationBuilder::new(|orienta
 - API reference: [`LayoutBuilder`](https://docs.rs/frus/latest/frus/struct.LayoutBuilder.html)
 - API reference: [`OrientationBuilder`](https://docs.rs/frus/latest/frus/struct.OrientationBuilder.html)
 
-Source: [crates/frus-widgets/src/responsive.rs](https://github.com/KalybosPro/frus/blob/d7214f545435ddea2e71dc3e1eb021605d3fc7a9/crates/frus-widgets/src/responsive.rs#L24-L28), [crates/frus-widgets/src/layoutbuilder.rs](https://github.com/KalybosPro/frus/blob/d7214f545435ddea2e71dc3e1eb021605d3fc7a9/crates/frus-widgets/src/layoutbuilder.rs#L43-L51), [crates/frus-widgets/src/listener.rs](https://github.com/KalybosPro/frus/blob/d7214f545435ddea2e71dc3e1eb021605d3fc7a9/crates/frus-widgets/src/listener.rs#L158-L158) @ `d7214f545435`
+Source: [crates/frus-widgets/src/responsive.rs](https://github.com/KalybosPro/frus/blob/4b802dae875c8f88f633392874660d9351b15664/crates/frus-widgets/src/responsive.rs#L24-L28), [crates/frus-widgets/src/layoutbuilder.rs](https://github.com/KalybosPro/frus/blob/4b802dae875c8f88f633392874660d9351b15664/crates/frus-widgets/src/layoutbuilder.rs#L43-L51), [crates/frus-widgets/src/listener.rs](https://github.com/KalybosPro/frus/blob/4b802dae875c8f88f633392874660d9351b15664/crates/frus-widgets/src/listener.rs#L158-L158) @ `4b802dae875c`

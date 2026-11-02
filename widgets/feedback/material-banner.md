@@ -27,7 +27,7 @@ impl MaterialBanner {
 
 ![Rendered preview of the MaterialBanner demo](/preview/material-banner.light.png)
 
-From [`frus-examples/widgets/src/features/feedback/widgets/material_banner.rs`](https://github.com/KalybosPro/frus/blob/d7214f545435ddea2e71dc3e1eb021605d3fc7a9/frus-examples/widgets/src/features/feedback/widgets/material_banner.rs):
+From [`frus-examples/widgets/src/features/feedback/widgets/material_banner.rs`](https://github.com/KalybosPro/frus/blob/4b802dae875c8f88f633392874660d9351b15664/frus-examples/widgets/src/features/feedback/widgets/material_banner.rs):
 
 ```rust
 //! `MaterialBanner` — a message across the top of the content that stays until one of its
@@ -164,4 +164,4 @@ It sits **in the flow**, not over it: a banner is put above the content it is ab
 - The guide: [Screens, navigation and dialogs](/docs/guide/navigation)
 - API reference: [`MaterialBanner`](https://docs.rs/frus/latest/frus/struct.MaterialBanner.html)
 
-Source: [crates/frus-widgets/src/banner.rs](https://github.com/KalybosPro/frus/blob/d7214f545435ddea2e71dc3e1eb021605d3fc7a9/crates/frus-widgets/src/banner.rs#L74-L89) @ `d7214f545435`
+Source: [crates/frus-widgets/src/banner.rs](https://github.com/KalybosPro/frus/blob/4b802dae875c8f88f633392874660d9351b15664/crates/frus-widgets/src/banner.rs#L74-L89) @ `4b802dae875c`

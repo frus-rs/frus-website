@@ -30,7 +30,7 @@ impl SelectionArea {
 
 ![Rendered preview of the Selectable text & SelectionArea demo](/preview/selection-area.light.png)
 
-From [`frus-examples/widgets/src/features/text/widgets/selectable_text.rs`](https://github.com/KalybosPro/frus/blob/d7214f545435ddea2e71dc3e1eb021605d3fc7a9/frus-examples/widgets/src/features/text/widgets/selectable_text.rs):
+From [`frus-examples/widgets/src/features/text/widgets/selectable_text.rs`](https://github.com/KalybosPro/frus/blob/4b802dae875c8f88f633392874660d9351b15664/frus-examples/widgets/src/features/text/widgets/selectable_text.rs):
 
 ```rust
 //! `Text::selectable` and `SelectionArea` — text the reader can select and copy: one
@@ -139,4 +139,4 @@ The area does not draw anything and does not change the layout: it is a wrapper 
 - API reference: [`text`](https://docs.rs/frus/latest/frus/fn.text.html)
 - API reference: [`SelectionArea`](https://docs.rs/frus/latest/frus/struct.SelectionArea.html)
 
-Source: [crates/frus-widgets/src/dsl.rs](https://github.com/KalybosPro/frus/blob/d7214f545435ddea2e71dc3e1eb021605d3fc7a9/crates/frus-widgets/src/dsl.rs#L19-L21), [crates/frus-widgets/src/region.rs](https://github.com/KalybosPro/frus/blob/d7214f545435ddea2e71dc3e1eb021605d3fc7a9/crates/frus-widgets/src/region.rs#L212-L221) @ `d7214f545435`
+Source: [crates/frus-widgets/src/dsl.rs](https://github.com/KalybosPro/frus/blob/4b802dae875c8f88f633392874660d9351b15664/crates/frus-widgets/src/dsl.rs#L19-L21), [crates/frus-widgets/src/region.rs](https://github.com/KalybosPro/frus/blob/4b802dae875c8f88f633392874660d9351b15664/crates/frus-widgets/src/region.rs#L212-L221) @ `4b802dae875c`

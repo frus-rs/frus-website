@@ -26,7 +26,7 @@ impl AlertDialog {
 
 ![Rendered preview of the AlertDialog demo](/preview/alert-dialog.light.png)
 
-From [`frus-examples/widgets/src/features/feedback/widgets/alert_dialog.rs`](https://github.com/KalybosPro/frus/blob/d7214f545435ddea2e71dc3e1eb021605d3fc7a9/frus-examples/widgets/src/features/feedback/widgets/alert_dialog.rs):
+From [`frus-examples/widgets/src/features/feedback/widgets/alert_dialog.rs`](https://github.com/KalybosPro/frus/blob/4b802dae875c8f88f633392874660d9351b15664/frus-examples/widgets/src/features/feedback/widgets/alert_dialog.rs):
 
 ```rust
 //! `AlertDialog` — a modal box that asks a question and waits for the answer: an
@@ -189,4 +189,4 @@ A dialog that **asks something**: an optional icon, an optional title, some cont
 - The guide: [Screens, navigation and dialogs](/docs/guide/navigation)
 - API reference: [`AlertDialog`](https://docs.rs/frus/latest/frus/struct.AlertDialog.html)
 
-Source: [crates/frus-widgets/src/dialog.rs](https://github.com/KalybosPro/frus/blob/d7214f545435ddea2e71dc3e1eb021605d3fc7a9/crates/frus-widgets/src/dialog.rs#L398-L411) @ `d7214f545435`
+Source: [crates/frus-widgets/src/dialog.rs](https://github.com/KalybosPro/frus/blob/4b802dae875c8f88f633392874660d9351b15664/crates/frus-widgets/src/dialog.rs#L398-L411) @ `4b802dae875c`

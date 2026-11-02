@@ -27,7 +27,7 @@ impl Text {
 
 ![Rendered preview of the Text demo](/preview/text.light.png)
 
-From [`frus-examples/widgets/src/features/text/widgets/text.rs`](https://github.com/KalybosPro/frus/blob/d7214f545435ddea2e71dc3e1eb021605d3fc7a9/frus-examples/widgets/src/features/text/widgets/text.rs):
+From [`frus-examples/widgets/src/features/text/widgets/text.rs`](https://github.com/KalybosPro/frus/blob/4b802dae875c8f88f633392874660d9351b15664/frus-examples/widgets/src/features/text/widgets/text.rs):
 
 ```rust
 //! `Text` — a run of text in one style: size, weight, colour, slant, decoration,
@@ -192,4 +192,4 @@ Its layout size comes from a **styled** measurement (`frus-text`, weight and ita
 - The guide: [Text, colour and the theme](/docs/guide/style)
 - API reference: [`Text`](https://docs.rs/frus/latest/frus/struct.Text.html)
 
-Source: [crates/frus-widgets/src/text.rs](https://github.com/KalybosPro/frus/blob/d7214f545435ddea2e71dc3e1eb021605d3fc7a9/crates/frus-widgets/src/text.rs#L32-L77) @ `d7214f545435`
+Source: [crates/frus-widgets/src/text.rs](https://github.com/KalybosPro/frus/blob/4b802dae875c8f88f633392874660d9351b15664/crates/frus-widgets/src/text.rs#L32-L77) @ `4b802dae875c`

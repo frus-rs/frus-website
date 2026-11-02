@@ -29,7 +29,7 @@ impl IconButton {
 
 ![Rendered preview of the IconButton demo](/preview/icon-button.light.png)
 
-From [`frus-examples/widgets/src/features/buttons/widgets/icon_button.rs`](https://github.com/KalybosPro/frus/blob/d7214f545435ddea2e71dc3e1eb021605d3fc7a9/frus-examples/widgets/src/features/buttons/widgets/icon_button.rs):
+From [`frus-examples/widgets/src/features/buttons/widgets/icon_button.rs`](https://github.com/KalybosPro/frus/blob/4b802dae875c8f88f633392874660d9351b15664/frus-examples/widgets/src/features/buttons/widgets/icon_button.rs):
 
 ```rust
 //! `IconButton` — a square button holding one icon, for compact actions in toolbars,
@@ -208,4 +208,4 @@ A button holding one glyph.
 - The guide: [Taking input](/docs/guide/input)
 - API reference: [`IconButton`](https://docs.rs/frus/latest/frus/struct.IconButton.html)
 
-Source: [crates/frus-widgets/src/iconbutton.rs](https://github.com/KalybosPro/frus/blob/d7214f545435ddea2e71dc3e1eb021605d3fc7a9/crates/frus-widgets/src/iconbutton.rs#L69-L85) @ `d7214f545435`
+Source: [crates/frus-widgets/src/iconbutton.rs](https://github.com/KalybosPro/frus/blob/4b802dae875c8f88f633392874660d9351b15664/crates/frus-widgets/src/iconbutton.rs#L69-L85) @ `4b802dae875c`

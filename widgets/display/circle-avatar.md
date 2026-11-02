@@ -29,7 +29,7 @@ impl CircleAvatar {
 
 ![Rendered preview of the CircleAvatar demo](/preview/circle-avatar.light.png)
 
-From [`frus-examples/widgets/src/features/display/widgets/avatar.rs`](https://github.com/KalybosPro/frus/blob/d7214f545435ddea2e71dc3e1eb021605d3fc7a9/frus-examples/widgets/src/features/display/widgets/avatar.rs):
+From [`frus-examples/widgets/src/features/display/widgets/avatar.rs`](https://github.com/KalybosPro/frus/blob/4b802dae875c8f88f633392874660d9351b15664/frus-examples/widgets/src/features/display/widgets/avatar.rs):
 
 ```rust
 //! `CircleAvatar` — a circle that stands for a person: their picture, or failing that
@@ -135,4 +135,4 @@ The **foreground** picture is painted over the child and the **background** one 
 - The guide: [Text, colour and the theme](/docs/guide/style)
 - API reference: [`CircleAvatar`](https://docs.rs/frus/latest/frus/struct.CircleAvatar.html)
 
-Source: [crates/frus-widgets/src/avatar.rs](https://github.com/KalybosPro/frus/blob/d7214f545435ddea2e71dc3e1eb021605d3fc7a9/crates/frus-widgets/src/avatar.rs#L42-L51) @ `d7214f545435`
+Source: [crates/frus-widgets/src/avatar.rs](https://github.com/KalybosPro/frus/blob/4b802dae875c8f88f633392874660d9351b15664/crates/frus-widgets/src/avatar.rs#L42-L51) @ `4b802dae875c`

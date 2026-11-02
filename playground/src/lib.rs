@@ -83,7 +83,16 @@ mod web {
     /// A panic ends a wasm program: tell the page, which starts it again.
     #[wasm_bindgen]
     pub fn install_panic_report() {
-        std::panic::set_hook(Box::new(|info| panicked(&info.to_string())));
+        // The message alone: the location would publish the paths of the machine that built this.
+        std::panic::set_hook(Box::new(|info| {
+            let payload = info.payload();
+            let message = payload
+                .downcast_ref::<&str>()
+                .copied()
+                .or_else(|| payload.downcast_ref::<String>().map(String::as_str))
+                .unwrap_or("frus stopped on an internal error.");
+            panicked(message);
+        }));
     }
 
     /// `""` when the source was accepted; otherwise `line:column:message`.

@@ -29,7 +29,7 @@ impl Theme {
 
 ![Rendered preview of the Theme demo](/preview/theme.light.png)
 
-From [`frus-examples/widgets/src/features/state/widgets/theme.rs`](https://github.com/KalybosPro/frus/blob/d7214f545435ddea2e71dc3e1eb021605d3fc7a9/frus-examples/widgets/src/features/state/widgets/theme.rs):
+From [`frus-examples/widgets/src/features/state/widgets/theme.rs`](https://github.com/KalybosPro/frus/blob/4b802dae875c8f88f633392874660d9351b15664/frus-examples/widgets/src/features/state/widgets/theme.rs):
 
 ```rust
 //! `Theme` — reading the colours and type every widget is dressed in (`cx.theme()`), and
@@ -168,4 +168,4 @@ The `ColorScheme` (`theme.scheme`) is the **source of truth** for the colors; th
 - The guide: [Starting a frus application](/docs/getting-started)
 - API reference: [`Theme`](https://docs.rs/frus/latest/frus/struct.Theme.html)
 
-Source: [crates/frus-widgets/src/theme.rs](https://github.com/KalybosPro/frus/blob/d7214f545435ddea2e71dc3e1eb021605d3fc7a9/crates/frus-widgets/src/theme.rs#L732-L813) @ `d7214f545435`
+Source: [crates/frus-widgets/src/theme.rs](https://github.com/KalybosPro/frus/blob/4b802dae875c8f88f633392874660d9351b15664/crates/frus-widgets/src/theme.rs#L732-L813) @ `4b802dae875c`

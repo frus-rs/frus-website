@@ -6,4 +6,5 @@ pub const EXAMPLES: &[(&str, &str)] = &[
     ("profile", include_str!("../examples-src/profile.rs")),
     ("form", include_str!("../examples-src/form.rs")),
     ("list", include_str!("../examples-src/list.rs")),
+    ("shop", include_str!("../examples-src/shop.rs")),
 ];

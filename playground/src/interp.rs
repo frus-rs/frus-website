@@ -53,6 +53,10 @@ pub enum Value {
     Variant(Variant),
     TextAlign(TextAlign),
     Insets(frus::Insets),
+    /// A `BottomNavigationBarItem`: its icon and label, since the real one cannot be copied.
+    NavItem(IconData, Rc<str>),
+    /// `Some(..)` or `None`, for the few places that take one.
+    Option(Option<Rc<Value>>),
     /// What `cx.theme()` gives back; `theme.scheme` is the same value here.
     Theme(Rc<frus::Theme>),
     /// `cx`: only asks for hooks.
@@ -88,6 +92,8 @@ impl Value {
             Value::TextAlign(_) => "a TextAlign",
             Value::Insets(_) => "an Insets",
             Value::Theme(_) => "a theme",
+            Value::NavItem(..) => "a navigation item",
+            Value::Option(_) => "an Option",
             Value::Context => "the build context",
             Value::State(_) => "a state",
             Value::Reference(_) => "a reference",
@@ -124,6 +130,11 @@ pub struct Closure {
 }
 
 impl Closure {
+    /// Runs it for its value, from a widget that asks for one.
+    fn value(self: &Rc<Self>, args: Vec<Value>, span: Span) -> Res<Value> {
+        Run::new().call(self, args, span)
+    }
+
     /// Runs it from a widget's handler. An error goes to the page, not to the widget.
     pub fn fire(self: &Rc<Self>, args: Vec<Value>, span: Span) {
         let mut run = Run::new();
@@ -421,6 +432,9 @@ impl Run {
     fn path(&mut self, path: &syn::ExprPath, scope: &Scope) -> Res<Value> {
         if let Some(ident) = path.path.get_ident() {
             let name = ident.to_string();
+            if name == "None" {
+                return Ok(Value::Option(None));
+            }
             return scope
                 .get(&name)
                 .map(|cell| cell.borrow().clone())
@@ -609,6 +623,9 @@ impl Run {
                 if let Value::Closure(closure) = held {
                     return self.call(&closure, args.into_iter().map(|a| a.0).collect(), call.span());
                 }
+            }
+            if name == "Some" {
+                return Ok(Value::Option(args.into_iter().next().map(|a| Rc::new(a.0.resolved()))));
             }
             return widgets::function(&name, Args::new(args, call.span()));
         }
@@ -1015,6 +1032,57 @@ impl Args {
         }
     }
 
+    pub fn u32(&mut self) -> Res<u32> {
+        match self.next("an integer")? {
+            (Value::Int(i), span) => u32::try_from(i).map_err(|_| Failure::at(span, "This does not fit a u32.")),
+            (other, span) => Err(Failure::at(span, format!("Expected an integer, found {}.", other.kind()))),
+        }
+    }
+
+    pub fn i32(&mut self) -> Res<i32> {
+        match self.next("an integer")? {
+            (Value::Int(i), span) => i32::try_from(i).map_err(|_| Failure::at(span, "This does not fit an i32.")),
+            (other, span) => Err(Failure::at(span, format!("Expected an integer, found {}.", other.kind()))),
+        }
+    }
+
+    pub fn maybe_bool(&mut self) -> Res<Option<bool>> {
+        match self.next("`Some(true)`, `Some(false)` or `None`")? {
+            (Value::Option(None), _) => Ok(None),
+            (Value::Option(Some(v)), span) => match &*v {
+                Value::Bool(b) => Ok(Some(*b)),
+                other => Err(Failure::at(span, format!("Expected a bool inside, found {}.", other.kind()))),
+            },
+            (other, span) => Err(Failure::at(span, format!("Expected an Option, found {}.", other.kind()))),
+        }
+    }
+
+    pub fn nav_item(&mut self) -> Res<frus::BottomNavigationBarItem> {
+        match self.next("a `BottomNavigationBarItem`")? {
+            (Value::NavItem(icon, label), _) => Ok(widgets::nav_item(icon, &label)),
+            (other, span) => Err(Failure::at(span, format!("Expected a navigation item, found {}.", other.kind()))),
+        }
+    }
+
+    /// `|index| widget`, as a list asks for its rows. An error shows in the page, and the row is empty.
+    pub fn builder(&mut self) -> Res<impl Fn(usize) -> Box<dyn Widget> + 'static> {
+        let (closure, span) = self.closure()?;
+        Ok(move |index: usize| {
+            let built = closure.value(vec![Value::Int(index as i64)], span).and_then(|value| match value {
+                Value::Widget(cell) => cell
+                    .borrow_mut()
+                    .take()
+                    .map(Node::into_widget)
+                    .ok_or_else(|| Failure::at(span, "This widget has already been used.")),
+                other => Err(Failure::at(span, format!("A row must be a widget, not {}.", other.kind()))),
+            });
+            built.unwrap_or_else(|failure| {
+                crate::report_late(failure);
+                Box::new(frus::SizedBox::empty())
+            })
+        })
+    }
+
     /// A handler with no argument: `move || ...`.
     pub fn callback(&mut self) -> Res<frus::Callback> {
         let (closure, span) = self.closure()?;
@@ -1034,6 +1102,31 @@ impl Args {
         Ok(move |v: f32| {
             let closure = closure.clone();
             frus::Callback::new(move || closure.fire(vec![Value::Float(v as f64)], span))
+        })
+    }
+
+    pub fn on_usize(&mut self) -> Res<impl Fn(usize) -> frus::Callback + 'static> {
+        let (closure, span) = self.closure()?;
+        Ok(move |v: usize| {
+            let closure = closure.clone();
+            frus::Callback::new(move || closure.fire(vec![Value::Int(v as i64)], span))
+        })
+    }
+
+    pub fn on_u32(&mut self) -> Res<impl Fn(u32) -> frus::Callback + 'static> {
+        self.on_int()
+    }
+
+    pub fn on_i32(&mut self) -> Res<impl Fn(i32) -> frus::Callback + 'static> {
+        self.on_int()
+    }
+
+    fn on_int<N: Into<i64> + Copy + 'static>(&mut self) -> Res<impl Fn(N) -> frus::Callback + 'static> {
+        let (closure, span) = self.closure()?;
+        Ok(move |v: N| {
+            let closure = closure.clone();
+            let v: i64 = v.into();
+            frus::Callback::new(move || closure.fire(vec![Value::Int(v)], span))
         })
     }
 

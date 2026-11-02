@@ -39,7 +39,7 @@ impl AnimatedOpacity {
 
 ![Rendered preview of the Opacity & AnimatedOpacity demo](/preview/animated-opacity.light.png)
 
-From [`frus-examples/widgets/src/features/animation/widgets/animated_opacity.rs`](https://github.com/KalybosPro/frus/blob/d7214f545435ddea2e71dc3e1eb021605d3fc7a9/frus-examples/widgets/src/features/animation/widgets/animated_opacity.rs):
+From [`frus-examples/widgets/src/features/animation/widgets/animated_opacity.rs`](https://github.com/KalybosPro/frus/blob/4b802dae875c8f88f633392874660d9351b15664/frus-examples/widgets/src/features/animation/widgets/animated_opacity.rs):
 
 ```rust
 //! `Opacity` and `AnimatedOpacity` — see-through by a fixed amount, or fading to each new
@@ -162,4 +162,4 @@ Applies a fixed **group opacity** `[0,1]` to its child, as one block. See `Conta
 - API reference: [`Opacity`](https://docs.rs/frus/latest/frus/struct.Opacity.html)
 - API reference: [`AnimatedOpacity`](https://docs.rs/frus/latest/frus/struct.AnimatedOpacity.html)
 
-Source: [crates/frus-widgets/src/animated.rs](https://github.com/KalybosPro/frus/blob/d7214f545435ddea2e71dc3e1eb021605d3fc7a9/crates/frus-widgets/src/animated.rs#L134-L136), [crates/frus-widgets/src/animated.rs](https://github.com/KalybosPro/frus/blob/d7214f545435ddea2e71dc3e1eb021605d3fc7a9/crates/frus-widgets/src/animated.rs#L151-L153) @ `d7214f545435`
+Source: [crates/frus-widgets/src/animated.rs](https://github.com/KalybosPro/frus/blob/4b802dae875c8f88f633392874660d9351b15664/crates/frus-widgets/src/animated.rs#L134-L136), [crates/frus-widgets/src/animated.rs](https://github.com/KalybosPro/frus/blob/4b802dae875c8f88f633392874660d9351b15664/crates/frus-widgets/src/animated.rs#L151-L153) @ `4b802dae875c`

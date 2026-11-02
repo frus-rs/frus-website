@@ -31,7 +31,7 @@ impl Keyed {
 
 ![Rendered preview of the keyed & Keyed demo](/preview/keyed.light.png)
 
-From [`frus-examples/widgets/src/features/state/widgets/keyed.rs`](https://github.com/KalybosPro/frus/blob/d7214f545435ddea2e71dc3e1eb021605d3fc7a9/frus-examples/widgets/src/features/state/widgets/keyed.rs):
+From [`frus-examples/widgets/src/features/state/widgets/keyed.rs`](https://github.com/KalybosPro/frus/blob/4b802dae875c8f88f633392874660d9351b15664/frus-examples/widgets/src/features/state/widgets/keyed.rs):
 
 ```rust
 //! `keyed` / `Keyed` — give a widget a stable identity, so its state follows it when its
@@ -148,4 +148,4 @@ Wraps a widget in a stable identity key, delegating everything else.
 - API reference: [`keyed`](https://docs.rs/frus/latest/frus/fn.keyed.html)
 - API reference: [`Keyed`](https://docs.rs/frus/latest/frus/struct.Keyed.html)
 
-Source: [crates/frus-widgets/src/dsl.rs](https://github.com/KalybosPro/frus/blob/d7214f545435ddea2e71dc3e1eb021605d3fc7a9/crates/frus-widgets/src/dsl.rs#L57-L59), [crates/frus-widgets/src/keyed.rs](https://github.com/KalybosPro/frus/blob/d7214f545435ddea2e71dc3e1eb021605d3fc7a9/crates/frus-widgets/src/keyed.rs#L21-L24) @ `d7214f545435`
+Source: [crates/frus-widgets/src/dsl.rs](https://github.com/KalybosPro/frus/blob/4b802dae875c8f88f633392874660d9351b15664/crates/frus-widgets/src/dsl.rs#L57-L59), [crates/frus-widgets/src/keyed.rs](https://github.com/KalybosPro/frus/blob/4b802dae875c8f88f633392874660d9351b15664/crates/frus-widgets/src/keyed.rs#L21-L24) @ `4b802dae875c`

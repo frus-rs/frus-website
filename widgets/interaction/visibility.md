@@ -34,7 +34,7 @@ impl Offstage {
 
 ![Rendered preview of the Visibility & Offstage demo](/preview/visibility.light.png)
 
-From [`frus-examples/widgets/src/features/interaction/widgets/visibility.rs`](https://github.com/KalybosPro/frus/blob/d7214f545435ddea2e71dc3e1eb021605d3fc7a9/frus-examples/widgets/src/features/interaction/widgets/visibility.rs):
+From [`frus-examples/widgets/src/features/interaction/widgets/visibility.rs`](https://github.com/KalybosPro/frus/blob/4b802dae875c8f88f633392874660d9351b15664/frus-examples/widgets/src/features/interaction/widgets/visibility.rs):
 
 ```rust
 //! `Visibility` and `Offstage` — hide a child, and choose how much of it survives being
@@ -166,4 +166,4 @@ The child is not built into the tree while offstage, so it holds no retained sta
 - API reference: [`Visibility`](https://docs.rs/frus/latest/frus/struct.Visibility.html)
 - API reference: [`Offstage`](https://docs.rs/frus/latest/frus/struct.Offstage.html)
 
-Source: [crates/frus-widgets/src/barrier.rs](https://github.com/KalybosPro/frus/blob/d7214f545435ddea2e71dc3e1eb021605d3fc7a9/crates/frus-widgets/src/barrier.rs#L326-L335), [crates/frus-widgets/src/barrier.rs](https://github.com/KalybosPro/frus/blob/d7214f545435ddea2e71dc3e1eb021605d3fc7a9/crates/frus-widgets/src/barrier.rs#L262-L265) @ `d7214f545435`
+Source: [crates/frus-widgets/src/barrier.rs](https://github.com/KalybosPro/frus/blob/4b802dae875c8f88f633392874660d9351b15664/crates/frus-widgets/src/barrier.rs#L326-L335), [crates/frus-widgets/src/barrier.rs](https://github.com/KalybosPro/frus/blob/4b802dae875c8f88f633392874660d9351b15664/crates/frus-widgets/src/barrier.rs#L262-L265) @ `4b802dae875c`

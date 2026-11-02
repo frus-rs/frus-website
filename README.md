@@ -76,8 +76,21 @@ cargo test --manifest-path playground/Cargo.toml
 
 The wasm in `static/playground-app/pkg` is not committed, so a deployment must build it; CI does
 not. The tests compile each example in `playground/examples-src` with rustc and run the same file
-through the interpreter, so an example always works in a real project too. A new widget or method
-is one line in `src/widgets.rs`.
+through the interpreter, so an example always works in a real project too.
+
+The editor is CodeMirror. It completes from `src/data/playground-api.json`, which the interpreter's
+own table writes, so it never offers what the preview would refuse. A new widget or method is one
+line in `playground/src/widgets.rs`, and then:
+
+```sh
+cd playground && cargo run --example dump_api > api.json && cd ..
+RUSTDOC_JSON=../frus/target/doc node scripts/gen-playground-api.mjs   # adds each one's doc comment
+```
+
+A test fails if `api.json` is out of step with the table.
+
+frus keeps the browser's focus on a field being edited, and takes it back from the page around a
+frame. `static/playground-app/index.html` holds it off while the editor has the focus.
 
 ## The rest
 

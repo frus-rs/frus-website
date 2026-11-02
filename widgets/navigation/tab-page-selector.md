@@ -1,7 +1,7 @@
 ---
 title: "TabPageSelector"
 sidebar_label: "TabPageSelector"
-sidebar_position: 14
+sidebar_position: 15
 description: "Dots that say which of several pages you are on."
 custom_edit_url: null
 ---
@@ -26,7 +26,7 @@ impl TabPageSelector {
 
 ![Rendered preview of the TabPageSelector demo](/preview/tab-page-selector.light.png)
 
-From [`frus-examples/widgets/src/features/navigation/widgets/pageselector.rs`](https://github.com/KalybosPro/frus/blob/d7214f545435ddea2e71dc3e1eb021605d3fc7a9/frus-examples/widgets/src/features/navigation/widgets/pageselector.rs):
+From [`frus-examples/widgets/src/features/navigation/widgets/pageselector.rs`](https://github.com/KalybosPro/frus/blob/4b802dae875c8f88f633392874660d9351b15664/frus-examples/widgets/src/features/navigation/widgets/pageselector.rs):
 
 ```rust
 //! `TabPageSelector` — the row of dots that says which of several pages you are on:
@@ -143,4 +143,4 @@ let dots = TabPageSelector::<()>::new(4, 1);
 - The guide: [Screens, navigation and dialogs](/docs/guide/navigation)
 - API reference: [`TabPageSelector`](https://docs.rs/frus/latest/frus/struct.TabPageSelector.html)
 
-Source: [crates/frus-widgets/src/pageselector.rs](https://github.com/KalybosPro/frus/blob/d7214f545435ddea2e71dc3e1eb021605d3fc7a9/crates/frus-widgets/src/pageselector.rs#L40-L48) @ `d7214f545435`
+Source: [crates/frus-widgets/src/pageselector.rs](https://github.com/KalybosPro/frus/blob/4b802dae875c8f88f633392874660d9351b15664/crates/frus-widgets/src/pageselector.rs#L40-L48) @ `4b802dae875c`

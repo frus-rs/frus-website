@@ -38,7 +38,7 @@ impl MenuItem {
 
 ![Rendered preview of the PopupMenuButton & MenuItem demo](/preview/popup-menu-button.light.png)
 
-From [`frus-examples/widgets/src/features/buttons/widgets/popup_menu_button.rs`](https://github.com/KalybosPro/frus/blob/d7214f545435ddea2e71dc3e1eb021605d3fc7a9/frus-examples/widgets/src/features/buttons/widgets/popup_menu_button.rs):
+From [`frus-examples/widgets/src/features/buttons/widgets/popup_menu_button.rs`](https://github.com/KalybosPro/frus/blob/4b802dae875c8f88f633392874660d9351b15664/frus-examples/widgets/src/features/buttons/widgets/popup_menu_button.rs):
 
 ```rust
 //! `PopupMenuButton` and `MenuItem` — a list of actions that floats over a button and
@@ -224,4 +224,4 @@ let menu = PopupMenuButton::new(Container::<Msg>::new(), true, Msg::Close)
 - API reference: [`PopupMenuButton`](https://docs.rs/frus/latest/frus/struct.PopupMenuButton.html)
 - API reference: [`MenuItem`](https://docs.rs/frus/latest/frus/struct.MenuItem.html)
 
-Source: [crates/frus-widgets/src/menu.rs](https://github.com/KalybosPro/frus/blob/d7214f545435ddea2e71dc3e1eb021605d3fc7a9/crates/frus-widgets/src/menu.rs#L945-L961), [crates/frus-widgets/src/menu.rs](https://github.com/KalybosPro/frus/blob/d7214f545435ddea2e71dc3e1eb021605d3fc7a9/crates/frus-widgets/src/menu.rs#L806-L822) @ `d7214f545435`
+Source: [crates/frus-widgets/src/menu.rs](https://github.com/KalybosPro/frus/blob/4b802dae875c8f88f633392874660d9351b15664/crates/frus-widgets/src/menu.rs#L945-L961), [crates/frus-widgets/src/menu.rs](https://github.com/KalybosPro/frus/blob/4b802dae875c8f88f633392874660d9351b15664/crates/frus-widgets/src/menu.rs#L806-L822) @ `4b802dae875c`
