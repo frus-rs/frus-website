@@ -1,6 +1,6 @@
 use frus::{
-    center, Align, BuildContext, Button, Card, Chip, CircleAvatar, Colors, Column, Container, Icon, Icons, Row,
-    Scaffold, Text, Variant, Widget,
+    center, Align, BuildContext, Button, Card, Chip, CircleAvatar, Colors, Column, Container, Icon, Icons, MediaQuery,
+    Row, Scaffold, SingleChildScrollView, Text, Variant, Widget,
 };
 
 pub fn app(cx: &BuildContext) -> Box<dyn Widget> {
@@ -47,7 +47,9 @@ pub fn app(cx: &BuildContext) -> Box<dyn Widget> {
                 ),
         );
 
-    Box::new(Scaffold::new().background(cx.theme().background).body(center(
+    // Centred while it fits, and it scrolls when it does not.
+    let screen = MediaQuery::of().size;
+    Box::new(Scaffold::new().background(cx.theme().background).body(SingleChildScrollView::new().child(Container::new().min_height(screen.height).child(center(
         Container::new().max_width(460.0).child(Card::new().margin(24.0).padding(24.0).child(about)),
-    )))
+    )))))
 }

@@ -1,10 +1,15 @@
-use frus::{button, center, column, row, text, Align, BuildContext, Scaffold, Variant, Widget};
+use frus::{
+    button, center, column, row, text, Align, BuildContext, Container, MediaQuery, Scaffold, SingleChildScrollView,
+    Variant, Widget,
+};
 
 pub fn app(cx: &BuildContext) -> Box<dyn Widget> {
     let count = cx.use_state(|| 0);
     let (up, down) = (count.clone(), count.clone());
 
-    Box::new(Scaffold::new().background(cx.theme().background).body(center(
+    // Centred while it fits, and it scrolls when it does not.
+    let screen = MediaQuery::of().size;
+    Box::new(Scaffold::new().background(cx.theme().background).body(SingleChildScrollView::new().child(Container::new().min_height(screen.height).child(center(
         column![
             text(format!("{}", count.get())).size(48.0),
             row![
@@ -15,5 +20,5 @@ pub fn app(cx: &BuildContext) -> Box<dyn Widget> {
         ]
         .gap(16.0)
         .align(Align::Center),
-    )))
+    )))))
 }

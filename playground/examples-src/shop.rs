@@ -10,7 +10,8 @@ pub fn app(cx: &BuildContext) -> Box<dyn Widget> {
 
     let content: Box<dyn Widget> = if page.get() == 0 {
         Box::new(
-            GridView::extent(180.0, 12, |index| {
+            // `builder` is the form that scrolls: `new` and `extent` are plain containers.
+            GridView::builder(3, 60, |index| {
                 Card::new().padding(16.0).child(Text::new(format!("Product {}", index + 1)))
             })
             .gap(12.0)

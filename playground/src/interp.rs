@@ -57,6 +57,8 @@ pub enum Value {
     NavItem(IconData, Rc<str>),
     /// `Some(..)` or `None`, for the few places that take one.
     Option(Option<Rc<Value>>),
+    /// `MediaQuery::of()`, and its `size`: the width and height of the screen.
+    Screen(f32, f32),
     /// What `cx.theme()` gives back; `theme.scheme` is the same value here.
     Theme(Rc<frus::Theme>),
     /// `cx`: only asks for hooks.
@@ -92,6 +94,7 @@ impl Value {
             Value::TextAlign(_) => "a TextAlign",
             Value::Insets(_) => "an Insets",
             Value::Theme(_) => "a theme",
+            Value::Screen(..) => "a screen",
             Value::NavItem(..) => "a navigation item",
             Value::Option(_) => "an Option",
             Value::Context => "the build context",
@@ -279,11 +282,17 @@ impl Program {
 }
 
 /// What the preview shows, always on the theme's background. Code with its own `Scaffold` decides
-/// the layout; anything else is shown centred.
+/// the layout; anything else is centred while it fits, and scrolls when it does not.
 fn presented(node: Node) -> Box<dyn Widget> {
     let inner: Box<dyn Widget> = match node {
         Node::Scaffold(_) => node.into_widget(),
-        other => Box::new(frus::Center::new(other.into_widget())),
+        other => Box::new(
+            frus::SingleChildScrollView::new().child(
+                frus::Container::new()
+                    .min_height(frus::MediaQuery::of().size.height)
+                    .child(frus::Center::new(other.into_widget())),
+            ),
+        ),
     };
     Box::new(frus::Scaffold::new().background(theme().background).body(inner))
 }
@@ -451,6 +460,14 @@ impl Run {
             syn::Member::Named(ident) => ident.to_string(),
             syn::Member::Unnamed(index) => index.index.to_string(),
         };
+        if let Value::Screen(width, height) = value {
+            return match name.as_str() {
+                "size" => Ok(value.clone()),
+                "width" => Ok(Value::Float(width as f64)),
+                "height" => Ok(Value::Float(height as f64)),
+                _ => Err(Failure::at(f.span(), format!("The playground offers the screen's `size`, `width` and `height`, not `{name}`, yet."))),
+            };
+        }
         let Value::Theme(theme) = &value else {
             return Err(Failure::at(f.span(), format!("{} has no field `{name}` here.", value.kind())));
         };

@@ -210,6 +210,10 @@ pub fn constructor(ty: &str, name: &str, mut a: Args) -> Res<Value> {
                 .map(Value::Color)
                 .ok_or_else(|| Failure::at(span, format!("`{code}` is not a colour: write one like \"#3B82F6\".")));
         }
+        ("MediaQuery", "of") => {
+            let size = frus::MediaQuery::of().size;
+            return Ok(Value::Screen(size.width, size.height));
+        }
         ("Insets", "uniform") => return Ok(Value::Insets(frus::Insets::uniform(a.f32()?))),
         ("Insets", "symmetric") => {
             let horizontal = a.f32()?;
@@ -364,6 +368,10 @@ pub fn api_json() -> String {
     types.push(format!(
         "\"Wrap\":{{\"constructors\":[{}],\"methods\":[]}}",
         member("new", &[], Some("Flex"))
+    ));
+    types.push(format!(
+        "\"MediaQuery\":{{\"constructors\":[{}],\"methods\":[]}}",
+        member("of", &[], Some("MediaQuery"))
     ));
     types.push(format!(
         "\"Color\":{{\"constructors\":[{}],\"methods\":[]}}",

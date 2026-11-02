@@ -202,7 +202,7 @@ export default function Playground(): ReactNode {
             <code>fn app(cx: &amp;BuildContext) -&gt; Box&lt;dyn Widget&gt;</code>, with <code>let</code>,{' '}
             <code>if</code>, <code>for</code>, <code>while</code>, arithmetic, <code>format!</code>,
             closures, <code>cx.use_state</code> and <code>cx.theme()</code>. The examples also compile as ordinary Rust. Code without its own{' '}
-            <code>Scaffold</code> is shown centred on the theme’s surface; in a real project, write them yourself. Structs,
+            <code>Scaffold</code> is centred on the theme’s surface while it fits, and scrolls when it does not; in a real project, write that yourself, as the examples do. Structs,
             traits, crates and the other hooks are not supported yet.
           </p>
           <p>

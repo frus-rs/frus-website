@@ -2799,6 +2799,17 @@
    ],
    "methods": []
   },
+  "MediaQuery": {
+   "constructors": [
+    {
+     "name": "of",
+     "args": [],
+     "returns": "MediaQuery",
+     "doc": "The description currently in force, or UNSET outside any scope."
+    }
+   ],
+   "methods": []
+  },
   "Color": {
    "constructors": [
     {

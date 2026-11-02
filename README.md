@@ -103,8 +103,7 @@ The rest is the site's own:
 Search is built at build time by `@easyops-cn/docusaurus-search-local`: no account and no
 outside service.
 
-webpack is pinned to 5.99.9 (`overrides` in `package.json`), because 5.112 rejects
-webpackbar's options under Docusaurus 3.9.
+Docusaurus builds with `@docusaurus/faster`, which `future.v4` requires since 3.10.
 
 ## Deployment
 

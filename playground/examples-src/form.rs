@@ -1,5 +1,6 @@
 use frus::{
-    center, BuildContext, Button, Checkbox, Column, Container, Scaffold, Slider, Switch, Text, TextField, Widget,
+    center, BuildContext, Button, Checkbox, Column, Container, MediaQuery, Scaffold, SingleChildScrollView, Slider,
+    Switch, Text, TextField, Widget,
 };
 
 pub fn app(cx: &BuildContext) -> Box<dyn Widget> {
@@ -16,7 +17,9 @@ pub fn app(cx: &BuildContext) -> Box<dyn Widget> {
         format!("Hello, {}", name.get())
     };
 
-    Box::new(Scaffold::new().background(cx.theme().background).body(center(
+    // Centred while it fits, and it scrolls when it does not.
+    let screen = MediaQuery::of().size;
+    Box::new(Scaffold::new().background(cx.theme().background).body(SingleChildScrollView::new().child(Container::new().min_height(screen.height).child(center(
         Container::new().max_width(420.0).padding(24.0).child(
             Column::new()
                 .shrink_wrap()
@@ -37,5 +40,5 @@ pub fn app(cx: &BuildContext) -> Box<dyn Widget> {
                 .child(Slider::new(volume.get()).on_change(move |value: f32| set_volume.set(value)))
                 .child(Button::new("Send").enabled(terms.get())),
         ),
-    )))
+    )))))
 }

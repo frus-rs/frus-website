@@ -121,6 +121,12 @@ fn every_new_kind_of_argument_is_converted() {
 }
 
 #[test]
+fn the_screen_can_be_read() {
+    let source = "fn app() {\n  let screen = MediaQuery::of().size;\n  Container::new().min_height(screen.height).width(screen.width)\n}\n";
+    Program::parse(source).and_then(|p| p.build().map(|_| ())).unwrap();
+}
+
+#[test]
 fn a_bad_colour_is_an_error_not_a_panic() {
     assert!(failure("fn app() {
   Text::new(\"a\").color(Color::hex(\"nonsense\"))
