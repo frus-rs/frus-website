@@ -89,8 +89,6 @@ RUSTDOC_JSON=../frus/target/doc node scripts/gen-playground-api.mjs   # adds eac
 
 A test fails if `api.json` is out of step with the table.
 
-frus keeps the browser's focus on a field being edited, and takes it back from the page around a
-frame. `static/playground-app/index.html` holds it off while the editor has the focus.
 
 ## The rest
 

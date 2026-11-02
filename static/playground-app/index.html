@@ -6,8 +6,9 @@
     <title>frus playground preview</title>
     <style>
       html, body { margin: 0; height: 100%; background: #121418; overflow: hidden; }
-      /* winit appends its canvas to <body>; it fills the frame. */
-      canvas { display: block; width: 100vw; height: 100vh; }
+      /* winit appends its canvas to <body>; it fills the frame. The minimum size frus asks of a
+         window would otherwise hold it wider than a phone's frame, and cut its edge off. */
+      canvas { display: block; width: 100vw; height: 100vh; min-width: 0 !important; min-height: 0 !important; }
       #status {
         position: fixed; inset: 0; display: flex; align-items: center; justify-content: center;
         padding: 24px; text-align: center; color: #e6e6ef; font: 15px/1.5 system-ui, sans-serif;
@@ -46,21 +47,12 @@
 
       window.playgroundPanicked = (message) => say({type: 'crashed', message});
 
-      // frus keeps the browser's focus on the field being edited, and takes it back when it finds
-      // it nowhere in particular. Seen from this frame, that is also what the page around it taking
-      // the focus looks like, so a field here would keep the keyboard from the editor. So it may
-      // not, while something else in that page holds the focus. A press in this frame takes it,
-      // explicitly: the canvas's own handling of a press keeps the browser from doing so.
-      addEventListener('pointerdown', () => frameElement.focus(), true);
-      const focus = HTMLElement.prototype.focus;
-      HTMLElement.prototype.focus = function (...args) {
-        const held = parent.document.activeElement;
-        if (!held || held === frameElement || held === parent.document.body) focus.apply(this, args);
-      };
-
-      if (!('gpu' in navigator)) {
-        fail('The preview draws through WebGPU, which this browser does not offer. ' +
-             'Try a recent Chrome or Edge.', 'unsupported');
+      // `navigator.gpu` alone promises nothing: a browser can have it, and no adapter behind it.
+      // frus would then log an error and leave the frame blank.
+      const adapter = 'gpu' in navigator ? await navigator.gpu.requestAdapter().catch(() => null) : null;
+      if (!adapter) {
+        fail('The preview draws through WebGPU, which is not available here. ' +
+             'Try a recent Chrome, Edge or Firefox, with hardware acceleration on.', 'unsupported');
       } else {
         try {
           const app = await import(`${folder}pkg/frus_playground.js`);

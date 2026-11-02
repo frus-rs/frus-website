@@ -157,6 +157,7 @@ export default function Playground(): ReactNode {
             {status.kind === 'ok' && `Rendered in ${Math.round(status.ms)} ms`}
             {status.kind === 'error' && 'Showing the last version that worked'}
             {status.kind === 'crashed' && 'Restarted'}
+            {status.kind === 'unsupported' && 'No preview in this browser'}
           </span>
         </div>
 
