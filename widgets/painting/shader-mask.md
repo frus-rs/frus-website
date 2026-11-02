@@ -29,7 +29,7 @@ impl ShaderMask {
 
 ![Rendered preview of the ShaderMask demo](/preview/shader-mask.light.png)
 
-From [`frus-examples/widgets/src/features/painting/widgets/shader_mask.rs`](https://github.com/KalybosPro/frus/blob/4b802dae875c8f88f633392874660d9351b15664/frus-examples/widgets/src/features/painting/widgets/shader_mask.rs):
+From [`frus-examples/widgets/src/features/painting/widgets/shader_mask.rs`](https://github.com/KalybosPro/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/painting/widgets/shader_mask.rs):
 
 ```rust
 //! `ShaderMask` — lays a gradient over a child's own pixels: a headline painted in a
@@ -133,4 +133,4 @@ ShaderMask::linear((0.0, 0.0), (1.0, 0.0), theme.primary, theme.tertiary)
 - The guide: [Text, colour and the theme](/docs/guide/style)
 - API reference: [`ShaderMask`](https://docs.rs/frus/latest/frus/struct.ShaderMask.html)
 
-Source: [crates/frus-widgets/src/filters.rs](https://github.com/KalybosPro/frus/blob/4b802dae875c8f88f633392874660d9351b15664/crates/frus-widgets/src/filters.rs#L202-L207) @ `4b802dae875c`
+Source: [crates/frus-widgets/src/filters.rs](https://github.com/KalybosPro/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/crates/frus-widgets/src/filters.rs#L202-L207) @ `e6fba33f5b42`

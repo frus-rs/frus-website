@@ -26,7 +26,7 @@ impl Hero {
 
 ![Rendered preview of the Hero & page transitions demo](/preview/hero.light.png)
 
-From [`frus-examples/widgets/src/features/animation/widgets/hero.rs`](https://github.com/KalybosPro/frus/blob/4b802dae875c8f88f633392874660d9351b15664/frus-examples/widgets/src/features/animation/widgets/hero.rs):
+From [`frus-examples/widgets/src/features/animation/widgets/hero.rs`](https://github.com/KalybosPro/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/animation/widgets/hero.rs):
 
 ```rust
 //! `Hero` — a shared element between two pages: during the transition it flies from where
@@ -262,4 +262,4 @@ Marks its child as **the same element** as the hero carrying the same tag on the
 - The guide: [Animation](/docs/guide/animation)
 - API reference: [`Hero`](https://docs.rs/frus/latest/frus/struct.Hero.html)
 
-Source: [crates/frus-widgets/src/hero.rs](https://github.com/KalybosPro/frus/blob/4b802dae875c8f88f633392874660d9351b15664/crates/frus-widgets/src/hero.rs#L71-L74) @ `4b802dae875c`
+Source: [crates/frus-widgets/src/hero.rs](https://github.com/KalybosPro/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/crates/frus-widgets/src/hero.rs#L71-L74) @ `e6fba33f5b42`

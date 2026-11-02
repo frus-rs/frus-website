@@ -46,7 +46,7 @@ impl Intrinsic {
 
 ![Rendered preview of the ConstrainedBox, LimitedBox & Intrinsic demo](/preview/constrained-box.light.png)
 
-From [`frus-examples/widgets/src/features/layout/widgets/constrained_box.rs`](https://github.com/KalybosPro/frus/blob/4b802dae875c8f88f633392874660d9351b15664/frus-examples/widgets/src/features/layout/widgets/constrained_box.rs):
+From [`frus-examples/widgets/src/features/layout/widgets/constrained_box.rs`](https://github.com/KalybosPro/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/layout/widgets/constrained_box.rs):
 
 ```rust
 //! `ConstrainedBox`, `LimitedBox`, `IntrinsicWidth` and `IntrinsicHeight` — change how
@@ -207,4 +207,4 @@ It is not free. The content is measured **once more**, unconstrained, before it 
 - API reference: [`LimitedBox`](https://docs.rs/frus/latest/frus/struct.LimitedBox.html)
 - API reference: [`Intrinsic`](https://docs.rs/frus/latest/frus/struct.Intrinsic.html)
 
-Source: [crates/frus-widgets/src/constraints.rs](https://github.com/KalybosPro/frus/blob/4b802dae875c8f88f633392874660d9351b15664/crates/frus-widgets/src/constraints.rs#L238-L244), [crates/frus-widgets/src/constraints.rs](https://github.com/KalybosPro/frus/blob/4b802dae875c8f88f633392874660d9351b15664/crates/frus-widgets/src/constraints.rs#L39-L42), [crates/frus-widgets/src/constraints.rs](https://github.com/KalybosPro/frus/blob/4b802dae875c8f88f633392874660d9351b15664/crates/frus-widgets/src/constraints.rs#L350-L354) @ `4b802dae875c`
+Source: [crates/frus-widgets/src/constraints.rs](https://github.com/KalybosPro/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/crates/frus-widgets/src/constraints.rs#L238-L244), [crates/frus-widgets/src/constraints.rs](https://github.com/KalybosPro/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/crates/frus-widgets/src/constraints.rs#L39-L42), [crates/frus-widgets/src/constraints.rs](https://github.com/KalybosPro/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/crates/frus-widgets/src/constraints.rs#L350-L354) @ `e6fba33f5b42`

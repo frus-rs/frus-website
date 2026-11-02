@@ -35,7 +35,7 @@ impl ColoredBox {
 
 ![Rendered preview of the DecoratedBox & ColoredBox demo](/preview/decorated-box.light.png)
 
-From [`frus-examples/widgets/src/features/painting/widgets/decorated_box.rs`](https://github.com/KalybosPro/frus/blob/4b802dae875c8f88f633392874660d9351b15664/frus-examples/widgets/src/features/painting/widgets/decorated_box.rs):
+From [`frus-examples/widgets/src/features/painting/widgets/decorated_box.rs`](https://github.com/KalybosPro/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/painting/widgets/decorated_box.rs):
 
 ```rust
 //! `DecoratedBox`, `ColoredBox` and `BoxDecoration` — paint a box behind (or in front
@@ -216,4 +216,4 @@ let _band: ColoredBox<()> = ColoredBox::new(Color::rgb(0.95, 0.95, 0.9), Text::n
 - API reference: [`DecoratedBox`](https://docs.rs/frus/latest/frus/struct.DecoratedBox.html)
 - API reference: [`ColoredBox`](https://docs.rs/frus/latest/frus/struct.ColoredBox.html)
 
-Source: [crates/frus-widgets/src/boxes.rs](https://github.com/KalybosPro/frus/blob/4b802dae875c8f88f633392874660d9351b15664/crates/frus-widgets/src/boxes.rs#L130-L132), [crates/frus-widgets/src/boxes.rs](https://github.com/KalybosPro/frus/blob/4b802dae875c8f88f633392874660d9351b15664/crates/frus-widgets/src/boxes.rs#L103-L105) @ `4b802dae875c`
+Source: [crates/frus-widgets/src/boxes.rs](https://github.com/KalybosPro/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/crates/frus-widgets/src/boxes.rs#L130-L132), [crates/frus-widgets/src/boxes.rs](https://github.com/KalybosPro/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/crates/frus-widgets/src/boxes.rs#L103-L105) @ `e6fba33f5b42`

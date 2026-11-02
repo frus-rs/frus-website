@@ -26,7 +26,7 @@ impl OverflowBar {
 
 ![Rendered preview of the OverflowBar demo](/preview/overflow-bar.light.png)
 
-From [`frus-examples/widgets/src/features/layout/widgets/overflow_bar.rs`](https://github.com/KalybosPro/frus/blob/4b802dae875c8f88f633392874660d9351b15664/frus-examples/widgets/src/features/layout/widgets/overflow_bar.rs):
+From [`frus-examples/widgets/src/features/layout/widgets/overflow_bar.rs`](https://github.com/KalybosPro/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/layout/widgets/overflow_bar.rs):
 
 ```rust
 //! `OverflowBar` — a row of buttons that becomes a column when they stop fitting.
@@ -121,4 +121,4 @@ No child is ever wider than the bar: one that would be is capped, and ellipsises
 - The guide: [Laying out a screen](/docs/guide/layout)
 - API reference: [`OverflowBar`](https://docs.rs/frus/latest/frus/struct.OverflowBar.html)
 
-Source: [crates/frus-widgets/src/overflowbar.rs](https://github.com/KalybosPro/frus/blob/4b802dae875c8f88f633392874660d9351b15664/crates/frus-widgets/src/overflowbar.rs#L88-L97) @ `4b802dae875c`
+Source: [crates/frus-widgets/src/overflowbar.rs](https://github.com/KalybosPro/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/crates/frus-widgets/src/overflowbar.rs#L88-L97) @ `e6fba33f5b42`

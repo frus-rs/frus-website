@@ -30,7 +30,7 @@ impl Pagination {
 
 ![Rendered preview of the Pagination demo](/preview/pagination.light.png)
 
-From [`frus-examples/widgets/src/features/navigation/widgets/pagination.rs`](https://github.com/KalybosPro/frus/blob/4b802dae875c8f88f633392874660d9351b15664/frus-examples/widgets/src/features/navigation/widgets/pagination.rs):
+From [`frus-examples/widgets/src/features/navigation/widgets/pagination.rs`](https://github.com/KalybosPro/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/navigation/widgets/pagination.rs):
 
 ```rust
 //! `Pagination` — a page picker: previous, a window of page numbers, next. Pages are
@@ -102,4 +102,4 @@ A controlled page picker; pages are **1-indexed**.
 - The guide: [Screens, navigation and dialogs](/docs/guide/navigation)
 - API reference: [`Pagination`](https://docs.rs/frus/latest/frus/struct.Pagination.html)
 
-Source: [crates/frus-widgets/src/pagination.rs](https://github.com/KalybosPro/frus/blob/4b802dae875c8f88f633392874660d9351b15664/crates/frus-widgets/src/pagination.rs#L52-L58) @ `4b802dae875c`
+Source: [crates/frus-widgets/src/pagination.rs](https://github.com/KalybosPro/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/crates/frus-widgets/src/pagination.rs#L52-L58) @ `e6fba33f5b42`

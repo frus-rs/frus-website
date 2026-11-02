@@ -26,7 +26,7 @@ impl MenuAnchor {
 
 ![Rendered preview of the MenuAnchor demo](/preview/menu-anchor.light.png)
 
-From [`frus-examples/widgets/src/features/buttons/widgets/menu_anchor.rs`](https://github.com/KalybosPro/frus/blob/4b802dae875c8f88f633392874660d9351b15664/frus-examples/widgets/src/features/buttons/widgets/menu_anchor.rs):
+From [`frus-examples/widgets/src/features/buttons/widgets/menu_anchor.rs`](https://github.com/KalybosPro/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/buttons/widgets/menu_anchor.rs):
 
 ```rust
 //! `MenuAnchor` — a floating panel with **any content**, anchored to a widget and closed
@@ -126,4 +126,4 @@ Each of those answers to the builders below, then to `MenuTheme`. Content that b
 - The guide: [Taking input](/docs/guide/input)
 - API reference: [`MenuAnchor`](https://docs.rs/frus/latest/frus/struct.MenuAnchor.html)
 
-Source: [crates/frus-widgets/src/popover.rs](https://github.com/KalybosPro/frus/blob/4b802dae875c8f88f633392874660d9351b15664/crates/frus-widgets/src/popover.rs#L28-L37) @ `4b802dae875c`
+Source: [crates/frus-widgets/src/popover.rs](https://github.com/KalybosPro/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/crates/frus-widgets/src/popover.rs#L28-L37) @ `e6fba33f5b42`

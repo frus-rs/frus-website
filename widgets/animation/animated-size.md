@@ -26,7 +26,7 @@ impl AnimatedSize {
 
 ![Rendered preview of the AnimatedSize demo](/preview/animated-size.light.png)
 
-From [`frus-examples/widgets/src/features/animation/widgets/animated_size.rs`](https://github.com/KalybosPro/frus/blob/4b802dae875c8f88f633392874660d9351b15664/frus-examples/widgets/src/features/animation/widgets/animated_size.rs):
+From [`frus-examples/widgets/src/features/animation/widgets/animated_size.rs`](https://github.com/KalybosPro/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/animation/widgets/animated_size.rs):
 
 ```rust
 //! `AnimatedSize` — a box that follows its child's size over time: when the content grows
@@ -128,4 +128,4 @@ let section = AnimatedSize::new(0.2, body);
 - The guide: [Animation](/docs/guide/animation)
 - API reference: [`AnimatedSize`](https://docs.rs/frus/latest/frus/struct.AnimatedSize.html)
 
-Source: [crates/frus-widgets/src/animatedsize.rs](https://github.com/KalybosPro/frus/blob/4b802dae875c8f88f633392874660d9351b15664/crates/frus-widgets/src/animatedsize.rs#L227-L231) @ `4b802dae875c`
+Source: [crates/frus-widgets/src/animatedsize.rs](https://github.com/KalybosPro/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/crates/frus-widgets/src/animatedsize.rs#L227-L231) @ `e6fba33f5b42`

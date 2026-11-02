@@ -26,7 +26,7 @@ impl Alert {
 
 ![Rendered preview of the Alert demo](/preview/alert.light.png)
 
-From [`frus-examples/widgets/src/features/feedback/widgets/alert.rs`](https://github.com/KalybosPro/frus/blob/4b802dae875c8f88f633392874660d9351b15664/frus-examples/widgets/src/features/feedback/widgets/alert.rs):
+From [`frus-examples/widgets/src/features/feedback/widgets/alert.rs`](https://github.com/KalybosPro/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/feedback/widgets/alert.rs):
 
 ```rust
 //! `Alert` — a message box that sits **in the flow** of the page and stays: info,
@@ -94,4 +94,4 @@ A message box.
 - The guide: [Screens, navigation and dialogs](/docs/guide/navigation)
 - API reference: [`Alert`](https://docs.rs/frus/latest/frus/struct.Alert.html)
 
-Source: [crates/frus-widgets/src/alert.rs](https://github.com/KalybosPro/frus/blob/4b802dae875c8f88f633392874660d9351b15664/crates/frus-widgets/src/alert.rs#L64-L70) @ `4b802dae875c`
+Source: [crates/frus-widgets/src/alert.rs](https://github.com/KalybosPro/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/crates/frus-widgets/src/alert.rs#L64-L70) @ `e6fba33f5b42`

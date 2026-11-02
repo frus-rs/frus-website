@@ -35,7 +35,7 @@ impl GridTileBar {
 
 ![Rendered preview of the GridTile & GridTileBar demo](/preview/grid-tile.light.png)
 
-From [`frus-examples/widgets/src/features/display/widgets/gridtile.rs`](https://github.com/KalybosPro/frus/blob/4b802dae875c8f88f633392874660d9351b15664/frus-examples/widgets/src/features/display/widgets/gridtile.rs):
+From [`frus-examples/widgets/src/features/display/widgets/gridtile.rs`](https://github.com/KalybosPro/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/display/widgets/gridtile.rs):
 
 ```rust
 //! `GridTile` and `GridTileBar` — a cell of an image grid, with a strip of text laid
@@ -161,4 +161,4 @@ The strip of words laid over a `GridTile`: up to two lines, with a slot at each 
 - API reference: [`GridTile`](https://docs.rs/frus/latest/frus/struct.GridTile.html)
 - API reference: [`GridTileBar`](https://docs.rs/frus/latest/frus/struct.GridTileBar.html)
 
-Source: [crates/frus-widgets/src/gridtile.rs](https://github.com/KalybosPro/frus/blob/4b802dae875c8f88f633392874660d9351b15664/crates/frus-widgets/src/gridtile.rs#L59-L64), [crates/frus-widgets/src/gridtile.rs](https://github.com/KalybosPro/frus/blob/4b802dae875c8f88f633392874660d9351b15664/crates/frus-widgets/src/gridtile.rs#L177-L192) @ `4b802dae875c`
+Source: [crates/frus-widgets/src/gridtile.rs](https://github.com/KalybosPro/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/crates/frus-widgets/src/gridtile.rs#L59-L64), [crates/frus-widgets/src/gridtile.rs](https://github.com/KalybosPro/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/crates/frus-widgets/src/gridtile.rs#L177-L192) @ `e6fba33f5b42`

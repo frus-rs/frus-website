@@ -10,7 +10,7 @@ custom_edit_url: null
 
 frus ships one widget library, `frus-widgets`. Its defaults come from the theme, and an
 application can override every one of them. This catalog has **175 pages as of
-`4b802dae875c`**, one for each demo of frus's widget gallery, in twelve families.
+`e6fba33f5b42`**, one for each demo of frus's widget gallery, in twelve families.
 
 Every page is written from the widget's own source and from the gallery's demo, at the revision
 its source line names. The gallery also runs in the browser, at

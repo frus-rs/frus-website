@@ -29,7 +29,7 @@ impl ToggleButtons {
 
 ![Rendered preview of the ToggleButtons demo](/preview/toggle-buttons.light.png)
 
-From [`frus-examples/widgets/src/features/buttons/widgets/toggle_buttons.rs`](https://github.com/KalybosPro/frus/blob/4b802dae875c8f88f633392874660d9351b15664/frus-examples/widgets/src/features/buttons/widgets/toggle_buttons.rs):
+From [`frus-examples/widgets/src/features/buttons/widgets/toggle_buttons.rs`](https://github.com/KalybosPro/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/buttons/widgets/toggle_buttons.rs):
 
 ```rust
 //! `ToggleButtons` — a bank of buttons sharing their edges, each one on or off on its
@@ -166,4 +166,4 @@ A bank of buttons sharing their edges, any number of which may be on.
 - The guide: [Taking input](/docs/guide/input)
 - API reference: [`ToggleButtons`](https://docs.rs/frus/latest/frus/struct.ToggleButtons.html)
 
-Source: [crates/frus-widgets/src/togglebuttons.rs](https://github.com/KalybosPro/frus/blob/4b802dae875c8f88f633392874660d9351b15664/crates/frus-widgets/src/togglebuttons.rs#L275-L285) @ `4b802dae875c`
+Source: [crates/frus-widgets/src/togglebuttons.rs](https://github.com/KalybosPro/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/crates/frus-widgets/src/togglebuttons.rs#L275-L285) @ `e6fba33f5b42`

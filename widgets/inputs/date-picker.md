@@ -75,7 +75,7 @@ impl DatePicker {
 
 ![Rendered preview of the DatePicker demo](/preview/date-picker.light.png)
 
-From [`frus-examples/widgets/src/features/inputs/widgets/date_picker.rs`](https://github.com/KalybosPro/frus/blob/4b802dae875c8f88f633392874660d9351b15664/frus-examples/widgets/src/features/inputs/widgets/date_picker.rs):
+From [`frus-examples/widgets/src/features/inputs/widgets/date_picker.rs`](https://github.com/KalybosPro/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/inputs/widgets/date_picker.rs):
 
 ```rust
 //! `DatePicker` — a month calendar. It is controlled: the application keeps the month on
@@ -245,4 +245,4 @@ A month calendar (or a pair of months in `range_dual` mode).
 - The guide: [Taking input](/docs/guide/input)
 - API reference: [`DatePicker`](https://docs.rs/frus/latest/frus/struct.DatePicker.html)
 
-Source: [crates/frus-widgets/src/datepicker.rs](https://github.com/KalybosPro/frus/blob/4b802dae875c8f88f633392874660d9351b15664/crates/frus-widgets/src/datepicker.rs#L213-L219) @ `4b802dae875c`
+Source: [crates/frus-widgets/src/datepicker.rs](https://github.com/KalybosPro/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/crates/frus-widgets/src/datepicker.rs#L213-L219) @ `e6fba33f5b42`

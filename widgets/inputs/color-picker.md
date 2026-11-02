@@ -30,7 +30,7 @@ impl ColorPicker {
 
 ![Rendered preview of the ColorPicker demo](/preview/color-picker.light.png)
 
-From [`frus-examples/widgets/src/features/inputs/widgets/color_picker.rs`](https://github.com/KalybosPro/frus/blob/4b802dae875c8f88f633392874660d9351b15664/frus-examples/widgets/src/features/inputs/widgets/color_picker.rs):
+From [`frus-examples/widgets/src/features/inputs/widgets/color_picker.rs`](https://github.com/KalybosPro/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/inputs/widgets/color_picker.rs):
 
 ```rust
 //! `ColorPicker` — a grid of colour swatches; the chosen one wears a ring.
@@ -119,4 +119,4 @@ A controlled colour picker, laid out as a grid of swatches.
 - The guide: [Taking input](/docs/guide/input)
 - API reference: [`ColorPicker`](https://docs.rs/frus/latest/frus/struct.ColorPicker.html)
 
-Source: [crates/frus-widgets/src/colorpicker.rs](https://github.com/KalybosPro/frus/blob/4b802dae875c8f88f633392874660d9351b15664/crates/frus-widgets/src/colorpicker.rs#L62-L66) @ `4b802dae875c`
+Source: [crates/frus-widgets/src/colorpicker.rs](https://github.com/KalybosPro/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/crates/frus-widgets/src/colorpicker.rs#L62-L66) @ `e6fba33f5b42`

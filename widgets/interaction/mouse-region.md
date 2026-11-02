@@ -26,7 +26,7 @@ impl MouseRegion {
 
 ![Rendered preview of the MouseRegion demo](/preview/mouse-region.light.png)
 
-From [`frus-examples/widgets/src/features/interaction/widgets/mouse_region.rs`](https://github.com/KalybosPro/frus/blob/4b802dae875c8f88f633392874660d9351b15664/frus-examples/widgets/src/features/interaction/widgets/mouse_region.rs):
+From [`frus-examples/widgets/src/features/interaction/widgets/mouse_region.rs`](https://github.com/KalybosPro/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/interaction/widgets/mouse_region.rs):
 
 ```rust
 //! `MouseRegion` — hears the mouse entering, moving over and leaving a widget, and sets
@@ -173,4 +173,4 @@ A finger is over a region **while it touches** and not after: there is no hover 
 - The guide: [Taking input](/docs/guide/input)
 - API reference: [`MouseRegion`](https://docs.rs/frus/latest/frus/struct.MouseRegion.html)
 
-Source: [crates/frus-widgets/src/mouseregion.rs](https://github.com/KalybosPro/frus/blob/4b802dae875c8f88f633392874660d9351b15664/crates/frus-widgets/src/mouseregion.rs#L72-L78) @ `4b802dae875c`
+Source: [crates/frus-widgets/src/mouseregion.rs](https://github.com/KalybosPro/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/crates/frus-widgets/src/mouseregion.rs#L72-L78) @ `e6fba33f5b42`

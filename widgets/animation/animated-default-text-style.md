@@ -31,7 +31,7 @@ impl AnimatedDefaultTextStyle {
 
 ![Rendered preview of the AnimatedDefaultTextStyle demo](/preview/animated-default-text-style.light.png)
 
-From [`frus-examples/widgets/src/features/animation/widgets/animated_text_style.rs`](https://github.com/KalybosPro/frus/blob/4b802dae875c8f88f633392874660d9351b15664/frus-examples/widgets/src/features/animation/widgets/animated_text_style.rs):
+From [`frus-examples/widgets/src/features/animation/widgets/animated_text_style.rs`](https://github.com/KalybosPro/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/animation/widgets/animated_text_style.rs):
 
 ```rust
 //! `AnimatedDefaultTextStyle` — the text style handed down to a subtree, moving to each new
@@ -142,4 +142,4 @@ Like `AnimatedPositioned`, and unlike the transparent `Themed` it is built on th
 - The guide: [Animation](/docs/guide/animation)
 - API reference: [`AnimatedDefaultTextStyle`](https://docs.rs/frus/latest/frus/struct.AnimatedDefaultTextStyle.html)
 
-Source: [crates/frus-widgets/src/animated.rs](https://github.com/KalybosPro/frus/blob/4b802dae875c8f88f633392874660d9351b15664/crates/frus-widgets/src/animated.rs#L945-L954) @ `4b802dae875c`
+Source: [crates/frus-widgets/src/animated.rs](https://github.com/KalybosPro/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/crates/frus-widgets/src/animated.rs#L945-L954) @ `e6fba33f5b42`

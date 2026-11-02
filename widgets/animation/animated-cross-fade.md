@@ -31,7 +31,7 @@ impl AnimatedCrossFade {
 
 ![Rendered preview of the AnimatedCrossFade demo](/preview/animated-cross-fade.light.png)
 
-From [`frus-examples/widgets/src/features/animation/widgets/animated_cross_fade.rs`](https://github.com/KalybosPro/frus/blob/4b802dae875c8f88f633392874660d9351b15664/frus-examples/widgets/src/features/animation/widgets/animated_cross_fade.rs):
+From [`frus-examples/widgets/src/features/animation/widgets/animated_cross_fade.rs`](https://github.com/KalybosPro/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/animation/widgets/animated_cross_fade.rs):
 
 ```rust
 //! `AnimatedCrossFade` — shows one of two children and cross-fades to the other when told
@@ -134,4 +134,4 @@ The child that is not shown takes no taps and is not read out, and neither is th
 - The guide: [Animation](/docs/guide/animation)
 - API reference: [`AnimatedCrossFade`](https://docs.rs/frus/latest/frus/struct.AnimatedCrossFade.html)
 
-Source: [crates/frus-widgets/src/crossfade.rs](https://github.com/KalybosPro/frus/blob/4b802dae875c8f88f633392874660d9351b15664/crates/frus-widgets/src/crossfade.rs#L44-L56) @ `4b802dae875c`
+Source: [crates/frus-widgets/src/crossfade.rs](https://github.com/KalybosPro/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/crates/frus-widgets/src/crossfade.rs#L44-L56) @ `e6fba33f5b42`

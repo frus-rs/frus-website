@@ -22,7 +22,7 @@ pub struct FutureBuilder;
 
 ![Rendered preview of the use_future & FutureBuilder demo](/preview/future-builder.light.png)
 
-From [`frus-examples/widgets/src/features/state/widgets/future_builder.rs`](https://github.com/KalybosPro/frus/blob/4b802dae875c8f88f633392874660d9351b15664/frus-examples/widgets/src/features/state/widgets/future_builder.rs):
+From [`frus-examples/widgets/src/features/state/widgets/future_builder.rs`](https://github.com/KalybosPro/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/state/widgets/future_builder.rs):
 
 ```rust
 //! `use_future` and `FutureBuilder` — work that finishes later: start it once, show
@@ -165,4 +165,4 @@ The future starts once, and again only when `key` changes.
 - The guide: [Starting a frus application](/docs/getting-started)
 - API reference: [`FutureBuilder`](https://docs.rs/frus/latest/frus/struct.FutureBuilder.html)
 
-Source: [crates/frus-widgets/src/asyncbuild.rs](https://github.com/KalybosPro/frus/blob/4b802dae875c8f88f633392874660d9351b15664/crates/frus-widgets/src/asyncbuild.rs#L297-L297) @ `4b802dae875c`
+Source: [crates/frus-widgets/src/asyncbuild.rs](https://github.com/KalybosPro/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/crates/frus-widgets/src/asyncbuild.rs#L297-L297) @ `e6fba33f5b42`

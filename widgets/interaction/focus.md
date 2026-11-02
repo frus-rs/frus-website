@@ -26,7 +26,7 @@ impl Focus {
 
 ![Rendered preview of the Focus & traversal demo](/preview/focus.light.png)
 
-From [`frus-examples/widgets/src/features/interaction/widgets/focus.rs`](https://github.com/KalybosPro/frus/blob/4b802dae875c8f88f633392874660d9351b15664/frus-examples/widgets/src/features/interaction/widgets/focus.rs):
+From [`frus-examples/widgets/src/features/interaction/widgets/focus.rs`](https://github.com/KalybosPro/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/interaction/widgets/focus.rs):
 
 ```rust
 //! Focus — which widgets the keyboard can reach and in what order: `Focus`,
@@ -152,4 +152,4 @@ Makes its child a **focus stop**: somewhere Tab can land and a click can focus, 
 - The guide: [Taking input](/docs/guide/input)
 - API reference: [`Focus`](https://docs.rs/frus/latest/frus/struct.Focus.html)
 
-Source: [crates/frus-widgets/src/focus.rs](https://github.com/KalybosPro/frus/blob/4b802dae875c8f88f633392874660d9351b15664/crates/frus-widgets/src/focus.rs#L118-L118) @ `4b802dae875c`
+Source: [crates/frus-widgets/src/focus.rs](https://github.com/KalybosPro/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/crates/frus-widgets/src/focus.rs#L118-L118) @ `e6fba33f5b42`

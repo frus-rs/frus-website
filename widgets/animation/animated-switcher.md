@@ -29,7 +29,7 @@ impl AnimatedSwitcher {
 
 ![Rendered preview of the AnimatedSwitcher demo](/preview/animated-switcher.light.png)
 
-From [`frus-examples/widgets/src/features/animation/widgets/animated_switcher.rs`](https://github.com/KalybosPro/frus/blob/4b802dae875c8f88f633392874660d9351b15664/frus-examples/widgets/src/features/animation/widgets/animated_switcher.rs):
+From [`frus-examples/widgets/src/features/animation/widgets/animated_switcher.rs`](https://github.com/KalybosPro/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/animation/widgets/animated_switcher.rs):
 
 ```rust
 //! `AnimatedSwitcher` — when the value it shows changes, the old child leaves as the new
@@ -162,4 +162,4 @@ An absent child is a value like any other: switch over an `Option` and build an 
 - The guide: [Animation](/docs/guide/animation)
 - API reference: [`AnimatedSwitcher`](https://docs.rs/frus/latest/frus/struct.AnimatedSwitcher.html)
 
-Source: [crates/frus-widgets/src/switcher.rs](https://github.com/KalybosPro/frus/blob/4b802dae875c8f88f633392874660d9351b15664/crates/frus-widgets/src/switcher.rs#L91-L101) @ `4b802dae875c`
+Source: [crates/frus-widgets/src/switcher.rs](https://github.com/KalybosPro/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/crates/frus-widgets/src/switcher.rs#L91-L101) @ `e6fba33f5b42`

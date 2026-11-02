@@ -29,7 +29,7 @@ impl BottomNavigationBar {
 
 ![Rendered preview of the BottomNavigationBar demo](/preview/bottom-navigation-bar.light.png)
 
-From [`frus-examples/widgets/src/features/navigation/widgets/bottomnavbar.rs`](https://github.com/KalybosPro/frus/blob/4b802dae875c8f88f633392874660d9351b15664/frus-examples/widgets/src/features/navigation/widgets/bottomnavbar.rs):
+From [`frus-examples/widgets/src/features/navigation/widgets/bottomnavbar.rs`](https://github.com/KalybosPro/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/navigation/widgets/bottomnavbar.rs):
 
 ```rust
 //! `BottomNavigationBar` — the classic bar of three to five destinations along the bottom
@@ -177,4 +177,4 @@ let bar: BottomNavigationBar = BottomNavigationBar::new(0, |index| {
 - The guide: [Screens, navigation and dialogs](/docs/guide/navigation)
 - API reference: [`BottomNavigationBar`](https://docs.rs/frus/latest/frus/struct.BottomNavigationBar.html)
 
-Source: [crates/frus-widgets/src/bottomnavbar.rs](https://github.com/KalybosPro/frus/blob/4b802dae875c8f88f633392874660d9351b15664/crates/frus-widgets/src/bottomnavbar.rs#L192-L194) @ `4b802dae875c`
+Source: [crates/frus-widgets/src/bottomnavbar.rs](https://github.com/KalybosPro/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/crates/frus-widgets/src/bottomnavbar.rs#L192-L194) @ `e6fba33f5b42`

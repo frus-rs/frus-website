@@ -26,7 +26,7 @@ impl RangeSlider {
 
 ![Rendered preview of the RangeSlider demo](/preview/range-slider.light.png)
 
-From [`frus-examples/widgets/src/features/inputs/widgets/range_slider.rs`](https://github.com/KalybosPro/frus/blob/4b802dae875c8f88f633392874660d9351b15664/frus-examples/widgets/src/features/inputs/widgets/range_slider.rs):
+From [`frus-examples/widgets/src/features/inputs/widgets/range_slider.rs`](https://github.com/KalybosPro/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/inputs/widgets/range_slider.rs):
 
 ```rust
 //! `RangeSlider` — two thumbs on one track, for picking an interval (a price range, a
@@ -144,4 +144,4 @@ A press on both, where they meet, waits for the first movement: leftwards takes 
 - The guide: [Taking input](/docs/guide/input)
 - API reference: [`RangeSlider`](https://docs.rs/frus/latest/frus/struct.RangeSlider.html)
 
-Source: [crates/frus-widgets/src/slider.rs](https://github.com/KalybosPro/frus/blob/4b802dae875c8f88f633392874660d9351b15664/crates/frus-widgets/src/slider.rs#L1213-L1218) @ `4b802dae875c`
+Source: [crates/frus-widgets/src/slider.rs](https://github.com/KalybosPro/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/crates/frus-widgets/src/slider.rs#L1213-L1218) @ `e6fba33f5b42`

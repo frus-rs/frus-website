@@ -34,7 +34,7 @@ impl DefaultTextStyle {
 
 ![Rendered preview of the TextStyle & DefaultTextStyle demo](/preview/text-style.light.png)
 
-From [`frus-examples/widgets/src/features/text/widgets/text_style.rs`](https://github.com/KalybosPro/frus/blob/4b802dae875c8f88f633392874660d9351b15664/frus-examples/widgets/src/features/text/widgets/text_style.rs):
+From [`frus-examples/widgets/src/features/text/widgets/text_style.rs`](https://github.com/KalybosPro/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/text/widgets/text_style.rs):
 
 ```rust
 //! `TextStyle` — a style as a value: define it once, share it, merge it, and hand it to
@@ -161,4 +161,4 @@ A `Text` resolves `what the caller said ?? what this says ?? what the framework 
 - API reference: [`TextStyle`](https://docs.rs/frus/latest/frus/struct.TextStyle.html)
 - API reference: [`DefaultTextStyle`](https://docs.rs/frus/latest/frus/struct.DefaultTextStyle.html)
 
-Source: [crates/frus-core/src/text_style.rs](https://github.com/KalybosPro/frus/blob/4b802dae875c8f88f633392874660d9351b15664/crates/frus-core/src/text_style.rs#L220-L261), [crates/frus-widgets/src/widgettheme.rs](https://github.com/KalybosPro/frus/blob/4b802dae875c8f88f633392874660d9351b15664/crates/frus-widgets/src/widgettheme.rs#L424-L440) @ `4b802dae875c`
+Source: [crates/frus-core/src/text_style.rs](https://github.com/KalybosPro/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/crates/frus-core/src/text_style.rs#L220-L261), [crates/frus-widgets/src/widgettheme.rs](https://github.com/KalybosPro/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/crates/frus-widgets/src/widgettheme.rs#L424-L440) @ `e6fba33f5b42`

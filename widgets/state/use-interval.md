@@ -20,7 +20,7 @@ This demo shows a pattern rather than one type. The names it uses are in the exa
 
 ![Rendered preview of the use_interval demo](/preview/use-interval.light.png)
 
-From [`frus-examples/widgets/src/features/state/widgets/use_interval.rs`](https://github.com/KalybosPro/frus/blob/4b802dae875c8f88f633392874660d9351b15664/frus-examples/widgets/src/features/state/widgets/use_interval.rs):
+From [`frus-examples/widgets/src/features/state/widgets/use_interval.rs`](https://github.com/KalybosPro/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/state/widgets/use_interval.rs):
 
 ```rust
 //! `use_interval` — a timer owned by a component: it ticks for as long as builds keep
@@ -99,4 +99,4 @@ The example shows it at work; the API reference has every method.
 - [use_stream & StreamBuilder](./stream-builder.md): work that gives several values as it goes, then finishes.
 - The guide: [Starting a frus application](/docs/getting-started)
 
-Source: [frus-examples/widgets/src/features/state/widgets/use_interval.rs](https://github.com/KalybosPro/frus/blob/4b802dae875c8f88f633392874660d9351b15664/frus-examples/widgets/src/features/state/widgets/use_interval.rs) @ `4b802dae875c`
+Source: [frus-examples/widgets/src/features/state/widgets/use_interval.rs](https://github.com/KalybosPro/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/state/widgets/use_interval.rs) @ `e6fba33f5b42`

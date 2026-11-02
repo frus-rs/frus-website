@@ -26,7 +26,7 @@ impl BottomAppBar {
 
 ![Rendered preview of the BottomAppBar demo](/preview/bottom-app-bar.light.png)
 
-From [`frus-examples/widgets/src/features/navigation/widgets/bottomappbar.rs`](https://github.com/KalybosPro/frus/blob/4b802dae875c8f88f633392874660d9351b15664/frus-examples/widgets/src/features/navigation/widgets/bottomappbar.rs):
+From [`frus-examples/widgets/src/features/navigation/widgets/bottomappbar.rs`](https://github.com/KalybosPro/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/navigation/widgets/bottomappbar.rs):
 
 ```rust
 //! `BottomAppBar` — a bar of actions along the bottom of a screen, for the screen you
@@ -159,4 +159,4 @@ A bottom bar of actions, optionally notched for a docked floating action button.
 - The guide: [Screens, navigation and dialogs](/docs/guide/navigation)
 - API reference: [`BottomAppBar`](https://docs.rs/frus/latest/frus/struct.BottomAppBar.html)
 
-Source: [crates/frus-widgets/src/bottomappbar.rs](https://github.com/KalybosPro/frus/blob/4b802dae875c8f88f633392874660d9351b15664/crates/frus-widgets/src/bottomappbar.rs#L46-L55) @ `4b802dae875c`
+Source: [crates/frus-widgets/src/bottomappbar.rs](https://github.com/KalybosPro/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/crates/frus-widgets/src/bottomappbar.rs#L46-L55) @ `e6fba33f5b42`

@@ -27,7 +27,7 @@ impl Flex {
 
 ![Rendered preview of the Flex demo](/preview/flex.light.png)
 
-From [`frus-examples/widgets/src/features/layout/widgets/flex.rs`](https://github.com/KalybosPro/frus/blob/4b802dae875c8f88f633392874660d9351b15664/frus-examples/widgets/src/features/layout/widgets/flex.rs):
+From [`frus-examples/widgets/src/features/layout/widgets/flex.rs`](https://github.com/KalybosPro/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/layout/widgets/flex.rs):
 
 ```rust
 //! `Flex` — the flexbox container under `Row` and `Column`: a line of children that
@@ -180,4 +180,4 @@ A flex container, row or column. It paints no decoration of its own.
 - The guide: [Laying out a screen](/docs/guide/layout)
 - API reference: [`Flex`](https://docs.rs/frus/latest/frus/struct.Flex.html)
 
-Source: [crates/frus-widgets/src/flex.rs](https://github.com/KalybosPro/frus/blob/4b802dae875c8f88f633392874660d9351b15664/crates/frus-widgets/src/flex.rs#L15-L31) @ `4b802dae875c`
+Source: [crates/frus-widgets/src/flex.rs](https://github.com/KalybosPro/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/crates/frus-widgets/src/flex.rs#L15-L31) @ `e6fba33f5b42`

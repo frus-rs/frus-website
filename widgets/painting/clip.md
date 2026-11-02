@@ -51,7 +51,7 @@ impl ClipPath {
 
 ![Rendered preview of the ClipRect, ClipRRect, ClipOval & ClipPath demo](/preview/clip.light.png)
 
-From [`frus-examples/widgets/src/features/painting/widgets/clip.rs`](https://github.com/KalybosPro/frus/blob/4b802dae875c8f88f633392874660d9351b15664/frus-examples/widgets/src/features/painting/widgets/clip.rs):
+From [`frus-examples/widgets/src/features/painting/widgets/clip.rs`](https://github.com/KalybosPro/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/painting/widgets/clip.rs):
 
 ```rust
 //! `ClipRect`, `ClipRRect`, `ClipOval` and `ClipPath` — cut a child's painting to a
@@ -224,4 +224,4 @@ ClipPath::new(diamond).child(Image::asset("photo.png"))
 - API reference: [`ClipOval`](https://docs.rs/frus/latest/frus/struct.ClipOval.html)
 - API reference: [`ClipPath`](https://docs.rs/frus/latest/frus/struct.ClipPath.html)
 
-Source: [crates/frus-widgets/src/boxes.rs](https://github.com/KalybosPro/frus/blob/4b802dae875c8f88f633392874660d9351b15664/crates/frus-widgets/src/boxes.rs#L163-L165), [crates/frus-widgets/src/clip.rs](https://github.com/KalybosPro/frus/blob/4b802dae875c8f88f633392874660d9351b15664/crates/frus-widgets/src/clip.rs#L28-L31), [crates/frus-widgets/src/clip.rs](https://github.com/KalybosPro/frus/blob/4b802dae875c8f88f633392874660d9351b15664/crates/frus-widgets/src/clip.rs#L88-L90), [crates/frus-widgets/src/clip.rs](https://github.com/KalybosPro/frus/blob/4b802dae875c8f88f633392874660d9351b15664/crates/frus-widgets/src/clip.rs#L152-L155) @ `4b802dae875c`
+Source: [crates/frus-widgets/src/boxes.rs](https://github.com/KalybosPro/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/crates/frus-widgets/src/boxes.rs#L163-L165), [crates/frus-widgets/src/clip.rs](https://github.com/KalybosPro/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/crates/frus-widgets/src/clip.rs#L28-L31), [crates/frus-widgets/src/clip.rs](https://github.com/KalybosPro/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/crates/frus-widgets/src/clip.rs#L88-L90), [crates/frus-widgets/src/clip.rs](https://github.com/KalybosPro/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/crates/frus-widgets/src/clip.rs#L152-L155) @ `e6fba33f5b42`

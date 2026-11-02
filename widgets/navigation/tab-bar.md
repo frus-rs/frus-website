@@ -29,7 +29,7 @@ impl TabBar {
 
 ![Rendered preview of the TabBar demo](/preview/tab-bar.light.png)
 
-From [`frus-examples/widgets/src/features/navigation/widgets/tabs.rs`](https://github.com/KalybosPro/frus/blob/4b802dae875c8f88f633392874660d9351b15664/frus-examples/widgets/src/features/navigation/widgets/tabs.rs):
+From [`frus-examples/widgets/src/features/navigation/widgets/tabs.rs`](https://github.com/KalybosPro/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/navigation/widgets/tabs.rs):
 
 ```rust
 //! `TabBar` — a row of tabs and the panel of the selected one. Primary for the top
@@ -178,4 +178,4 @@ A tabbed view: the bar, and the selected tab's panel under it.
 - The guide: [Screens, navigation and dialogs](/docs/guide/navigation)
 - API reference: [`TabBar`](https://docs.rs/frus/latest/frus/struct.TabBar.html)
 
-Source: [crates/frus-widgets/src/tabs.rs](https://github.com/KalybosPro/frus/blob/4b802dae875c8f88f633392874660d9351b15664/crates/frus-widgets/src/tabs.rs#L802-L819) @ `4b802dae875c`
+Source: [crates/frus-widgets/src/tabs.rs](https://github.com/KalybosPro/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/crates/frus-widgets/src/tabs.rs#L802-L819) @ `e6fba33f5b42`

@@ -30,7 +30,7 @@ impl ListWheel {
 
 ![Rendered preview of the ListWheel demo](/preview/list-wheel.light.png)
 
-From [`frus-examples/widgets/src/features/scrolling/widgets/listwheel.rs`](https://github.com/KalybosPro/frus/blob/4b802dae875c8f88f633392874660d9351b15664/frus-examples/widgets/src/features/scrolling/widgets/listwheel.rs):
+From [`frus-examples/widgets/src/features/scrolling/widgets/listwheel.rs`](https://github.com/KalybosPro/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/scrolling/widgets/listwheel.rs):
 
 ```rust
 //! `ListWheel` — the spinning cylinder of values you turn to pick one: the control
@@ -147,4 +147,4 @@ let _minutes: ListWheel<usize> = ListWheel::new(60, 34.0, |i| text(format!("{i:0
 - The guide: [Lists and grids](/docs/guide/lists)
 - API reference: [`ListWheel`](https://docs.rs/frus/latest/frus/struct.ListWheel.html)
 
-Source: [crates/frus-widgets/src/wheel.rs](https://github.com/KalybosPro/frus/blob/4b802dae875c8f88f633392874660d9351b15664/crates/frus-widgets/src/wheel.rs#L145-L160) @ `4b802dae875c`
+Source: [crates/frus-widgets/src/wheel.rs](https://github.com/KalybosPro/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/crates/frus-widgets/src/wheel.rs#L145-L160) @ `e6fba33f5b42`

@@ -34,7 +34,7 @@ impl AbsorbPointer {
 
 ![Rendered preview of the IgnorePointer & AbsorbPointer demo](/preview/ignore-pointer.light.png)
 
-From [`frus-examples/widgets/src/features/interaction/widgets/pointer_barriers.rs`](https://github.com/KalybosPro/frus/blob/4b802dae875c8f88f633392874660d9351b15664/frus-examples/widgets/src/features/interaction/widgets/pointer_barriers.rs):
+From [`frus-examples/widgets/src/features/interaction/widgets/pointer_barriers.rs`](https://github.com/KalybosPro/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/interaction/widgets/pointer_barriers.rs):
 
 ```rust
 //! `IgnorePointer` and `AbsorbPointer` — switch off the pointer for a subtree without
@@ -161,4 +161,4 @@ AbsorbPointer::new(screen).absorbing(loading)
 - API reference: [`IgnorePointer`](https://docs.rs/frus/latest/frus/struct.IgnorePointer.html)
 - API reference: [`AbsorbPointer`](https://docs.rs/frus/latest/frus/struct.AbsorbPointer.html)
 
-Source: [crates/frus-widgets/src/barrier.rs](https://github.com/KalybosPro/frus/blob/4b802dae875c8f88f633392874660d9351b15664/crates/frus-widgets/src/barrier.rs#L100-L103), [crates/frus-widgets/src/barrier.rs](https://github.com/KalybosPro/frus/blob/4b802dae875c8f88f633392874660d9351b15664/crates/frus-widgets/src/barrier.rs#L154-L157) @ `4b802dae875c`
+Source: [crates/frus-widgets/src/barrier.rs](https://github.com/KalybosPro/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/crates/frus-widgets/src/barrier.rs#L100-L103), [crates/frus-widgets/src/barrier.rs](https://github.com/KalybosPro/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/crates/frus-widgets/src/barrier.rs#L154-L157) @ `e6fba33f5b42`

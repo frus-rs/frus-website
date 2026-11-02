@@ -26,7 +26,7 @@ impl Switch {
 
 ![Rendered preview of the Switch demo](/preview/switch.light.png)
 
-From [`frus-examples/widgets/src/features/inputs/widgets/switch.rs`](https://github.com/KalybosPro/frus/blob/4b802dae875c8f88f633392874660d9351b15664/frus-examples/widgets/src/features/inputs/widgets/switch.rs):
+From [`frus-examples/widgets/src/features/inputs/widgets/switch.rs`](https://github.com/KalybosPro/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/inputs/widgets/switch.rs):
 
 ```rust
 //! `Switch` — an on/off toggle that takes effect at once (a setting), as opposed to a
@@ -156,4 +156,4 @@ An on/off switch.
 - The guide: [Taking input](/docs/guide/input)
 - API reference: [`Switch`](https://docs.rs/frus/latest/frus/struct.Switch.html)
 
-Source: [crates/frus-widgets/src/switch.rs](https://github.com/KalybosPro/frus/blob/4b802dae875c8f88f633392874660d9351b15664/crates/frus-widgets/src/switch.rs#L59-L77) @ `4b802dae875c`
+Source: [crates/frus-widgets/src/switch.rs](https://github.com/KalybosPro/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/crates/frus-widgets/src/switch.rs#L59-L77) @ `e6fba33f5b42`

@@ -30,7 +30,7 @@ impl CustomPaint {
 
 ![Rendered preview of the CustomPaint demo](/preview/custom-paint.light.png)
 
-From [`frus-examples/widgets/src/features/painting/widgets/custom_paint.rs`](https://github.com/KalybosPro/frus/blob/4b802dae875c8f88f633392874660d9351b15664/frus-examples/widgets/src/features/painting/widgets/custom_paint.rs):
+From [`frus-examples/widgets/src/features/painting/widgets/custom_paint.rs`](https://github.com/KalybosPro/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/painting/widgets/custom_paint.rs):
 
 ```rust
 //! `CustomPaint` — a fixed-size canvas you draw yourself: charts, gauges, signatures,
@@ -185,4 +185,4 @@ A fixed-size custom canvas, painted by a closure.
 - The guide: [Text, colour and the theme](/docs/guide/style)
 - API reference: [`CustomPaint`](https://docs.rs/frus/latest/frus/struct.CustomPaint.html)
 
-Source: [crates/frus-widgets/src/custompaint.rs](https://github.com/KalybosPro/frus/blob/4b802dae875c8f88f633392874660d9351b15664/crates/frus-widgets/src/custompaint.rs#L25-L31) @ `4b802dae875c`
+Source: [crates/frus-widgets/src/custompaint.rs](https://github.com/KalybosPro/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/crates/frus-widgets/src/custompaint.rs#L25-L31) @ `e6fba33f5b42`

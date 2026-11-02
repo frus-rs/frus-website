@@ -31,7 +31,7 @@ pub enum FontFamily {
 
 ![Rendered preview of the FontFamily demo](/preview/font-family.light.png)
 
-From [`frus-examples/widgets/src/features/text/widgets/font_family.rs`](https://github.com/KalybosPro/frus/blob/4b802dae875c8f88f633392874660d9351b15664/frus-examples/widgets/src/features/text/widgets/font_family.rs):
+From [`frus-examples/widgets/src/features/text/widgets/font_family.rs`](https://github.com/KalybosPro/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/text/widgets/font_family.rs):
 
 ```rust
 //! `FontFamily` — which typeface a text is set in: the default sans-serif, a serif, the
@@ -103,4 +103,4 @@ A **font family**, as a style names it.
 - The guide: [Text, colour and the theme](/docs/guide/style)
 - API reference: [`FontFamily`](https://docs.rs/frus/latest/frus/enum.FontFamily.html)
 
-Source: [crates/frus-core/src/text_style.rs](https://github.com/KalybosPro/frus/blob/4b802dae875c8f88f633392874660d9351b15664/crates/frus-core/src/text_style.rs#L190-L199) @ `4b802dae875c`
+Source: [crates/frus-core/src/text_style.rs](https://github.com/KalybosPro/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/crates/frus-core/src/text_style.rs#L190-L199) @ `e6fba33f5b42`

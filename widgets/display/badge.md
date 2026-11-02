@@ -28,7 +28,7 @@ impl Badge {
 
 ![Rendered preview of the Badge demo](/preview/badge.light.png)
 
-From [`frus-examples/widgets/src/features/display/widgets/badge.rs`](https://github.com/KalybosPro/frus/blob/4b802dae875c8f88f633392874660d9351b15664/frus-examples/widgets/src/features/display/widgets/badge.rs):
+From [`frus-examples/widgets/src/features/display/widgets/badge.rs`](https://github.com/KalybosPro/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/display/widgets/badge.rs):
 
 ```rust
 //! `Badge` — the small mark that says "there is something here": a count on an inbox,
@@ -168,4 +168,4 @@ A small mark: a counted pill, or a dot.
 - The guide: [Text, colour and the theme](/docs/guide/style)
 - API reference: [`Badge`](https://docs.rs/frus/latest/frus/struct.Badge.html)
 
-Source: [crates/frus-widgets/src/badge.rs](https://github.com/KalybosPro/frus/blob/4b802dae875c8f88f633392874660d9351b15664/crates/frus-widgets/src/badge.rs#L56-L73) @ `4b802dae875c`
+Source: [crates/frus-widgets/src/badge.rs](https://github.com/KalybosPro/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/crates/frus-widgets/src/badge.rs#L56-L73) @ `e6fba33f5b42`

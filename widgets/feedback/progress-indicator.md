@@ -38,7 +38,7 @@ impl CircularProgressIndicator {
 
 ![Rendered preview of the LinearProgressIndicator & CircularProgressIndicator demo](/preview/progress-indicator.light.png)
 
-From [`frus-examples/widgets/src/features/feedback/widgets/progress_indicator.rs`](https://github.com/KalybosPro/frus/blob/4b802dae875c8f88f633392874660d9351b15664/frus-examples/widgets/src/features/feedback/widgets/progress_indicator.rs):
+From [`frus-examples/widgets/src/features/feedback/widgets/progress_indicator.rs`](https://github.com/KalybosPro/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/feedback/widgets/progress_indicator.rs):
 
 ```rust
 //! `LinearProgressIndicator` and `CircularProgressIndicator` — how far along some work is.
@@ -239,4 +239,4 @@ Every piece of either is a builder.
 - API reference: [`LinearProgressIndicator`](https://docs.rs/frus/latest/frus/struct.LinearProgressIndicator.html)
 - API reference: [`CircularProgressIndicator`](https://docs.rs/frus/latest/frus/struct.CircularProgressIndicator.html)
 
-Source: [crates/frus-widgets/src/progressbar.rs](https://github.com/KalybosPro/frus/blob/4b802dae875c8f88f633392874660d9351b15664/crates/frus-widgets/src/progressbar.rs#L40-L56), [crates/frus-widgets/src/spinner.rs](https://github.com/KalybosPro/frus/blob/4b802dae875c8f88f633392874660d9351b15664/crates/frus-widgets/src/spinner.rs#L90-L103) @ `4b802dae875c`
+Source: [crates/frus-widgets/src/progressbar.rs](https://github.com/KalybosPro/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/crates/frus-widgets/src/progressbar.rs#L40-L56), [crates/frus-widgets/src/spinner.rs](https://github.com/KalybosPro/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/crates/frus-widgets/src/spinner.rs#L90-L103) @ `e6fba33f5b42`

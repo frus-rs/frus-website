@@ -36,7 +36,7 @@ impl ThemeBuilder {
 
 ![Rendered preview of the Themed & ThemeBuilder demo](/preview/themed.light.png)
 
-From [`frus-examples/widgets/src/features/state/widgets/themed.rs`](https://github.com/KalybosPro/frus/blob/4b802dae875c8f88f633392874660d9351b15664/frus-examples/widgets/src/features/state/widgets/themed.rs):
+From [`frus-examples/widgets/src/features/state/widgets/themed.rs`](https://github.com/KalybosPro/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/state/widgets/themed.rs):
 
 ```rust
 //! `Themed` and `ThemeBuilder` — a different theme for one part of the screen.
@@ -148,4 +148,4 @@ Transparent otherwise: it has no box, no paint and no identity of its own, so th
 - API reference: [`Themed`](https://docs.rs/frus/latest/frus/struct.Themed.html)
 - API reference: [`ThemeBuilder`](https://docs.rs/frus/latest/frus/struct.ThemeBuilder.html)
 
-Source: [crates/frus-widgets/src/themed.rs](https://github.com/KalybosPro/frus/blob/4b802dae875c8f88f633392874660d9351b15664/crates/frus-widgets/src/themed.rs#L46-L49), [crates/frus-widgets/src/themebuilder.rs](https://github.com/KalybosPro/frus/blob/4b802dae875c8f88f633392874660d9351b15664/crates/frus-widgets/src/themebuilder.rs#L57-L64) @ `4b802dae875c`
+Source: [crates/frus-widgets/src/themed.rs](https://github.com/KalybosPro/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/crates/frus-widgets/src/themed.rs#L46-L49), [crates/frus-widgets/src/themebuilder.rs](https://github.com/KalybosPro/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/crates/frus-widgets/src/themebuilder.rs#L57-L64) @ `e6fba33f5b42`

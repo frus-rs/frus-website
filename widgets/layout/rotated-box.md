@@ -26,7 +26,7 @@ impl RotatedBox {
 
 ![Rendered preview of the RotatedBox demo](/preview/rotated-box.light.png)
 
-From [`frus-examples/widgets/src/features/layout/widgets/rotated_box.rs`](https://github.com/KalybosPro/frus/blob/4b802dae875c8f88f633392874660d9351b15664/frus-examples/widgets/src/features/layout/widgets/rotated_box.rs):
+From [`frus-examples/widgets/src/features/layout/widgets/rotated_box.rs`](https://github.com/KalybosPro/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/layout/widgets/rotated_box.rs):
 
 ```rust
 //! `RotatedBox` — turns its child by whole quarter turns, and the layout turns with it.
@@ -106,4 +106,4 @@ The child is measured at its **natural** size, centred, then rotated about the c
 - The guide: [Laying out a screen](/docs/guide/layout)
 - API reference: [`RotatedBox`](https://docs.rs/frus/latest/frus/struct.RotatedBox.html)
 
-Source: [crates/frus-widgets/src/rotatedbox.rs](https://github.com/KalybosPro/frus/blob/4b802dae875c8f88f633392874660d9351b15664/crates/frus-widgets/src/rotatedbox.rs#L23-L26) @ `4b802dae875c`
+Source: [crates/frus-widgets/src/rotatedbox.rs](https://github.com/KalybosPro/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/crates/frus-widgets/src/rotatedbox.rs#L23-L26) @ `e6fba33f5b42`

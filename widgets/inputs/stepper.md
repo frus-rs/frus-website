@@ -29,7 +29,7 @@ impl Stepper {
 
 ![Rendered preview of the Stepper demo](/preview/stepper.light.png)
 
-From [`frus-examples/widgets/src/features/inputs/widgets/stepper.rs`](https://github.com/KalybosPro/frus/blob/4b802dae875c8f88f633392874660d9351b15664/frus-examples/widgets/src/features/inputs/widgets/stepper.rs):
+From [`frus-examples/widgets/src/features/inputs/widgets/stepper.rs`](https://github.com/KalybosPro/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/inputs/widgets/stepper.rs):
 
 ```rust
 //! `Stepper` — a whole number with − and + buttons on either side: a quantity in a
@@ -117,4 +117,4 @@ An incremental numeric picker.
 - The guide: [Taking input](/docs/guide/input)
 - API reference: [`Stepper`](https://docs.rs/frus/latest/frus/struct.Stepper.html)
 
-Source: [crates/frus-widgets/src/stepper.rs](https://github.com/KalybosPro/frus/blob/4b802dae875c8f88f633392874660d9351b15664/crates/frus-widgets/src/stepper.rs#L16-L25) @ `4b802dae875c`
+Source: [crates/frus-widgets/src/stepper.rs](https://github.com/KalybosPro/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/crates/frus-widgets/src/stepper.rs#L16-L25) @ `e6fba33f5b42`

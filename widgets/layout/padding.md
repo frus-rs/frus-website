@@ -26,7 +26,7 @@ impl Padding {
 
 ![Rendered preview of the Padding demo](/preview/padding.light.png)
 
-From [`frus-examples/widgets/src/features/layout/widgets/padding.rs`](https://github.com/KalybosPro/frus/blob/4b802dae875c8f88f633392874660d9351b15664/frus-examples/widgets/src/features/layout/widgets/padding.rs):
+From [`frus-examples/widgets/src/features/layout/widgets/padding.rs`](https://github.com/KalybosPro/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/layout/widgets/padding.rs):
 
 ```rust
 //! `Padding` — empty space around a child, and nothing else.
@@ -112,4 +112,4 @@ let _lead: Padding<()> = Padding::new(InsetsDirectional::only_start(72.0), Text:
 - The guide: [Laying out a screen](/docs/guide/layout)
 - API reference: [`Padding`](https://docs.rs/frus/latest/frus/struct.Padding.html)
 
-Source: [crates/frus-widgets/src/boxes.rs](https://github.com/KalybosPro/frus/blob/4b802dae875c8f88f633392874660d9351b15664/crates/frus-widgets/src/boxes.rs#L37-L40) @ `4b802dae875c`
+Source: [crates/frus-widgets/src/boxes.rs](https://github.com/KalybosPro/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/crates/frus-widgets/src/boxes.rs#L37-L40) @ `e6fba33f5b42`

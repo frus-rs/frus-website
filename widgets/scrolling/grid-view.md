@@ -36,7 +36,7 @@ impl GridView {
 
 ![Rendered preview of the GridView demo](/preview/grid-view.light.png)
 
-From [`frus-examples/widgets/src/features/scrolling/widgets/gridview.rs`](https://github.com/KalybosPro/frus/blob/4b802dae875c8f88f633392874660d9351b15664/frus-examples/widgets/src/features/scrolling/widgets/gridview.rs):
+From [`frus-examples/widgets/src/features/scrolling/widgets/gridview.rs`](https://github.com/KalybosPro/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/scrolling/widgets/gridview.rs):
 
 ```rust
 //! `GridView` — cells in equal columns, placed row by row: a fixed number of columns,
@@ -123,4 +123,4 @@ A grid of `columns` equal columns.
 - The guide: [Lists and grids](/docs/guide/lists)
 - API reference: [`GridView`](https://docs.rs/frus/latest/frus/struct.GridView.html)
 
-Source: [crates/frus-widgets/src/grid.rs](https://github.com/KalybosPro/frus/blob/4b802dae875c8f88f633392874660d9351b15664/crates/frus-widgets/src/grid.rs#L68-L94) @ `4b802dae875c`
+Source: [crates/frus-widgets/src/grid.rs](https://github.com/KalybosPro/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/crates/frus-widgets/src/grid.rs#L72-L98) @ `e6fba33f5b42`

@@ -20,7 +20,7 @@ This demo shows a pattern rather than one type. The names it uses are in the exa
 
 ![Rendered preview of the use_state, use_ref & use_memo demo](/preview/hooks.light.png)
 
-From [`frus-examples/widgets/src/features/state/widgets/hooks.rs`](https://github.com/KalybosPro/frus/blob/4b802dae875c8f88f633392874660d9351b15664/frus-examples/widgets/src/features/state/widgets/hooks.rs):
+From [`frus-examples/widgets/src/features/state/widgets/hooks.rs`](https://github.com/KalybosPro/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/state/widgets/hooks.rs):
 
 ```rust
 //! Hooks — `use_state`, `use_ref` and `use_memo`: state kept by a plain function
@@ -197,4 +197,4 @@ The example shows it at work; the API reference has every method.
 - [ValueNotifier, ChangeNotifier & their builders](./value-notifier.md): state outside the widgets that tells whoever cares when it changed.
 - The guide: [Starting a frus application](/docs/getting-started)
 
-Source: [frus-examples/widgets/src/features/state/widgets/hooks.rs](https://github.com/KalybosPro/frus/blob/4b802dae875c8f88f633392874660d9351b15664/frus-examples/widgets/src/features/state/widgets/hooks.rs) @ `4b802dae875c`
+Source: [frus-examples/widgets/src/features/state/widgets/hooks.rs](https://github.com/KalybosPro/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/state/widgets/hooks.rs) @ `e6fba33f5b42`

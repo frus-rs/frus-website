@@ -26,7 +26,7 @@ impl Opacity {
 
 ![Rendered preview of the Opacity demo](/preview/opacity.light.png)
 
-From [`frus-examples/widgets/src/features/painting/widgets/opacity.rs`](https://github.com/KalybosPro/frus/blob/4b802dae875c8f88f633392874660d9351b15664/frus-examples/widgets/src/features/painting/widgets/opacity.rs):
+From [`frus-examples/widgets/src/features/painting/widgets/opacity.rs`](https://github.com/KalybosPro/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/painting/widgets/opacity.rs):
 
 ```rust
 //! `Opacity` — paints a child partly transparent, the whole subtree as one layer.
@@ -127,4 +127,4 @@ Applies a fixed **group opacity** `[0,1]` to its child, as one block. See `Conta
 - The guide: [Text, colour and the theme](/docs/guide/style)
 - API reference: [`Opacity`](https://docs.rs/frus/latest/frus/struct.Opacity.html)
 
-Source: [crates/frus-widgets/src/animated.rs](https://github.com/KalybosPro/frus/blob/4b802dae875c8f88f633392874660d9351b15664/crates/frus-widgets/src/animated.rs#L134-L136) @ `4b802dae875c`
+Source: [crates/frus-widgets/src/animated.rs](https://github.com/KalybosPro/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/crates/frus-widgets/src/animated.rs#L134-L136) @ `e6fba33f5b42`

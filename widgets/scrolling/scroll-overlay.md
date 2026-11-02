@@ -29,7 +29,7 @@ impl ScrollOverlay {
 
 ![Rendered preview of the ScrollOverlay demo](/preview/scroll-overlay.light.png)
 
-From [`frus-examples/widgets/src/features/scrolling/widgets/scrolloverlay.rs`](https://github.com/KalybosPro/frus/blob/4b802dae875c8f88f633392874660d9351b15664/frus-examples/widgets/src/features/scrolling/widgets/scrolloverlay.rs):
+From [`frus-examples/widgets/src/features/scrolling/widgets/scrolloverlay.rs`](https://github.com/KalybosPro/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/scrolling/widgets/scrolloverlay.rs):
 
 ```rust
 //! `ScrollOverlay` — something drawn over a scroll region and rebuilt from its offset in
@@ -97,4 +97,4 @@ The region is the **child**, which is the whole of the identity design: the offs
 - The guide: [Lists and grids](/docs/guide/lists)
 - API reference: [`ScrollOverlay`](https://docs.rs/frus/latest/frus/struct.ScrollOverlay.html)
 
-Source: [crates/frus-widgets/src/scrolloverlay.rs](https://github.com/KalybosPro/frus/blob/4b802dae875c8f88f633392874660d9351b15664/crates/frus-widgets/src/scrolloverlay.rs#L77-L82) @ `4b802dae875c`
+Source: [crates/frus-widgets/src/scrolloverlay.rs](https://github.com/KalybosPro/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/crates/frus-widgets/src/scrolloverlay.rs#L77-L82) @ `e6fba33f5b42`

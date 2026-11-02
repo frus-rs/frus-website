@@ -31,7 +31,7 @@ pub enum Permission {
 
 ![Rendered preview of the Permission demo](/preview/permissions.light.png)
 
-From [`frus-examples/widgets/src/features/interaction/widgets/permissions.rs`](https://github.com/KalybosPro/frus/blob/4b802dae875c8f88f633392874660d9351b15664/frus-examples/widgets/src/features/interaction/widgets/permissions.rs):
+From [`frus-examples/widgets/src/features/interaction/widgets/permissions.rs`](https://github.com/KalybosPro/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/interaction/widgets/permissions.rs):
 
 ```rust
 //! `Permission` — asking the person for the camera, the microphone, the location and
@@ -146,4 +146,4 @@ Something an application asks the person's permission for.
 - The guide: [Taking input](/docs/guide/input)
 - API reference: [`Permission`](https://docs.rs/frus/latest/frus/enum.Permission.html)
 
-Source: [crates/frus-shell/src/permission.rs](https://github.com/KalybosPro/frus/blob/4b802dae875c8f88f633392874660d9351b15664/crates/frus-shell/src/permission.rs#L55-L64) @ `4b802dae875c`
+Source: [crates/frus-shell/src/permission.rs](https://github.com/KalybosPro/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/crates/frus-shell/src/permission.rs#L59-L68) @ `e6fba33f5b42`

@@ -26,7 +26,7 @@ impl Drawer {
 
 ![Rendered preview of the Drawer & drawer headers demo](/preview/drawer.light.png)
 
-From [`frus-examples/widgets/src/features/navigation/widgets/drawer.rs`](https://github.com/KalybosPro/frus/blob/4b802dae875c8f88f633392874660d9351b15664/frus-examples/widgets/src/features/navigation/widgets/drawer.rs):
+From [`frus-examples/widgets/src/features/navigation/widgets/drawer.rs`](https://github.com/KalybosPro/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/navigation/widgets/drawer.rs):
 
 ```rust
 //! `Drawer` — a side panel that slides over the page (modal) or sits docked beside it
@@ -207,4 +207,4 @@ A retractable side drawer: a background body + a panel, modal or docked.
 - The guide: [Screens, navigation and dialogs](/docs/guide/navigation)
 - API reference: [`Drawer`](https://docs.rs/frus/latest/frus/struct.Drawer.html)
 
-Source: [crates/frus-widgets/src/drawer.rs](https://github.com/KalybosPro/frus/blob/4b802dae875c8f88f633392874660d9351b15664/crates/frus-widgets/src/drawer.rs#L263-L280) @ `4b802dae875c`
+Source: [crates/frus-widgets/src/drawer.rs](https://github.com/KalybosPro/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/crates/frus-widgets/src/drawer.rs#L263-L280) @ `e6fba33f5b42`

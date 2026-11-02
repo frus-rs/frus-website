@@ -34,7 +34,7 @@ impl DataTable {
 
 ![Rendered preview of the DataTable demo](/preview/data-table.light.png)
 
-From [`frus-examples/widgets/src/features/display/widgets/datatable.rs`](https://github.com/KalybosPro/frus/blob/4b802dae875c8f88f633392874660d9351b15664/frus-examples/widgets/src/features/display/widgets/datatable.rs):
+From [`frus-examples/widgets/src/features/display/widgets/datatable.rs`](https://github.com/KalybosPro/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/display/widgets/datatable.rs):
 
 ```rust
 //! `DataTable` — a table of text rows that sorts, filters, paginates and selects for
@@ -219,4 +219,4 @@ let table: DataTable = DataTable::new(["Name", "Score"], rows).sorted(1, true);
 - The guide: [Text, colour and the theme](/docs/guide/style)
 - API reference: [`DataTable`](https://docs.rs/frus/latest/frus/struct.DataTable.html)
 
-Source: [crates/frus-widgets/src/datatable.rs](https://github.com/KalybosPro/frus/blob/4b802dae875c8f88f633392874660d9351b15664/crates/frus-widgets/src/datatable.rs#L116-L168) @ `4b802dae875c`
+Source: [crates/frus-widgets/src/datatable.rs](https://github.com/KalybosPro/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/crates/frus-widgets/src/datatable.rs#L116-L168) @ `e6fba33f5b42`

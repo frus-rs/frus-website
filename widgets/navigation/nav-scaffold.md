@@ -30,7 +30,7 @@ impl NavScaffold {
 
 ![Rendered preview of the NavScaffold demo](/preview/nav-scaffold.light.png)
 
-From [`frus-examples/widgets/src/features/navigation/widgets/navscaffold.rs`](https://github.com/KalybosPro/frus/blob/4b802dae875c8f88f633392874660d9351b15664/frus-examples/widgets/src/features/navigation/widgets/navscaffold.rs):
+From [`frus-examples/widgets/src/features/navigation/widgets/navscaffold.rs`](https://github.com/KalybosPro/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/navigation/widgets/navscaffold.rs):
 
 ```rust
 //! `NavScaffold` — navigation that adapts to the screen's size class: a bottom bar on a
@@ -143,4 +143,4 @@ Adaptive navigation shell: a bottom bar, a rail, or an extended rail, by size.
 - The guide: [Screens, navigation and dialogs](/docs/guide/navigation)
 - API reference: [`NavScaffold`](https://docs.rs/frus/latest/frus/struct.NavScaffold.html)
 
-Source: [crates/frus-widgets/src/navscaffold.rs](https://github.com/KalybosPro/frus/blob/4b802dae875c8f88f633392874660d9351b15664/crates/frus-widgets/src/navscaffold.rs#L42-L53) @ `4b802dae875c`
+Source: [crates/frus-widgets/src/navscaffold.rs](https://github.com/KalybosPro/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/crates/frus-widgets/src/navscaffold.rs#L42-L53) @ `e6fba33f5b42`

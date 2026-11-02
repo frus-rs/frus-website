@@ -29,7 +29,7 @@ impl NavigationDrawer {
 
 ![Rendered preview of the NavigationDrawer demo](/preview/navigation-drawer.light.png)
 
-From [`frus-examples/widgets/src/features/navigation/widgets/navdrawer.rs`](https://github.com/KalybosPro/frus/blob/4b802dae875c8f88f633392874660d9351b15664/frus-examples/widgets/src/features/navigation/widgets/navdrawer.rs):
+From [`frus-examples/widgets/src/features/navigation/widgets/navdrawer.rs`](https://github.com/KalybosPro/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/navigation/widgets/navdrawer.rs):
 
 ```rust
 //! `NavigationDrawer` — the content of a side panel for an app with many destinations:
@@ -165,4 +165,4 @@ A **panel of destinations**: the navigation's widest form.
 - The guide: [Screens, navigation and dialogs](/docs/guide/navigation)
 - API reference: [`NavigationDrawer`](https://docs.rs/frus/latest/frus/struct.NavigationDrawer.html)
 
-Source: [crates/frus-widgets/src/navdrawer.rs](https://github.com/KalybosPro/frus/blob/4b802dae875c8f88f633392874660d9351b15664/crates/frus-widgets/src/navdrawer.rs#L391-L411) @ `4b802dae875c`
+Source: [crates/frus-widgets/src/navdrawer.rs](https://github.com/KalybosPro/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/crates/frus-widgets/src/navdrawer.rs#L391-L411) @ `e6fba33f5b42`

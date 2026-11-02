@@ -26,7 +26,7 @@ impl Card {
 
 ![Rendered preview of the Card demo](/preview/card.light.png)
 
-From [`frus-examples/widgets/src/features/display/widgets/card.rs`](https://github.com/KalybosPro/frus/blob/4b802dae875c8f88f633392874660d9351b15664/frus-examples/widgets/src/features/display/widgets/card.rs):
+From [`frus-examples/widgets/src/features/display/widgets/card.rs`](https://github.com/KalybosPro/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/display/widgets/card.rs):
 
 ```rust
 //! `Card` — a themed surface that groups one piece of content: elevated, filled or
@@ -133,4 +133,4 @@ Everything here is a **default**, not a rule: the colour, the rounding, the dept
 - The guide: [Text, colour and the theme](/docs/guide/style)
 - API reference: [`Card`](https://docs.rs/frus/latest/frus/struct.Card.html)
 
-Source: [crates/frus-widgets/src/card.rs](https://github.com/KalybosPro/frus/blob/4b802dae875c8f88f633392874660d9351b15664/crates/frus-widgets/src/card.rs#L56-L70) @ `4b802dae875c`
+Source: [crates/frus-widgets/src/card.rs](https://github.com/KalybosPro/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/crates/frus-widgets/src/card.rs#L56-L70) @ `e6fba33f5b42`
