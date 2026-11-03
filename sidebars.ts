@@ -27,7 +27,7 @@ const sidebars: SidebarsConfig = {
     {
       type: 'category',
       label: 'Tooling',
-      items: ['tooling/cli'],
+      items: ['tooling/cli', 'tooling/vscode'],
     },
     {
       type: 'category',

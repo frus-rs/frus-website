@@ -28,6 +28,7 @@ next, and what is known to be missing.
 | [The guide](guide/README.md) | One topic per page — layout, style, input, lists, navigation, network, animation, testing, the system around the window |
 | [Structuring an application](app-structure.md) | Where each part of a growing application goes |
 | [The `frus` command](tooling/cli.md) | `create`, `doctor`, `devices`, `run`, `build`, hot reload, and the keys while it runs |
+| [The VS Code extension](tooling/vscode.md) | A device picker, F5 with the log in the Debug Console, reload on save, the inspector in the palette |
 | [Architecture](internals/architecture.md) | How the crates fit together, and where a given kind of code belongs |
 
 ## Platforms

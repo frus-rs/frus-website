@@ -155,6 +155,7 @@ const config: Config = {
           title: 'Reference',
           items: [
             {label: 'The frus command', to: '/docs/tooling/cli'},
+            {label: 'VS Code extension', to: '/docs/tooling/vscode'},
             {label: 'Architecture', to: '/docs/internals/architecture'},
             {label: 'API reference', href: 'https://docs.rs/frus'},
             {label: 'crates.io', href: 'https://crates.io/crates/frus'},

@@ -46,6 +46,7 @@ const pages = {
   'ARCHITECTURE.md': 'internals/architecture.md',
   'CONTRIBUTING.md': 'internals/contributing.md',
   'crates/frus-cli/README.md': 'tooling/cli.md',
+  'editors/vscode/README.md': 'tooling/vscode.md',
 };
 for (const file of fs.readdirSync(path.join(repo, 'docs/guide'))) {
   if (file.endsWith('.md')) pages[`docs/guide/${file}`] = `guide/${file}`;
@@ -76,8 +77,22 @@ function rewriteLinks(source, text) {
 }
 
 for (const [source, page] of Object.entries(pages)) {
-  const text = fs.readFileSync(path.join(repo, source), 'utf8');
-  const front = `---\ncustom_edit_url: ${github}/${source}\n---\n\n`;
+  let text = fs.readFileSync(path.join(repo, source), 'utf8');
+  // A page's own title for the sidebar, where its heading would read oddly there.
+  const label = {
+    'editors/vscode/README.md': 'VS Code extension',
+    'crates/frus-cli/README.md': 'The frus command',
+  }[source];
+  // What is for the people working on the page's subject, not with it, stays in the repository.
+  text = text.replace(/\r\n/g, '\n').replace(/\n## Developing the extension\n[\s\S]*$/, '\n');
+  // The Marketplace's badges are retired and draw "retired badge": say where to install instead.
+  if (source === 'editors/vscode/README.md') {
+    text = text.replace(
+      /\n(\[!\[[^\n]*\n)+/,
+      '\n**[Install from the Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=kalybospro.frus)**, or search for *frus* in the Extensions view.\n',
+    );
+  }
+  const front = `---\n${label ? `sidebar_label: ${label}\n` : ''}custom_edit_url: ${github}/${source}\n---\n\n`;
   const out = path.join(site, 'docs', page);
   fs.mkdirSync(path.dirname(out), {recursive: true});
   fs.writeFileSync(out, front + rewriteLinks(source, text));

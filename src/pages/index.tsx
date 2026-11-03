@@ -275,10 +275,17 @@ function HotReload(): ReactNode {
             ))}
           </ul>
           <p>
-            The VS Code extension adds a device picker, F5 with the log in the Debug Console, and
-            reload on save.
+            In VS Code, the frus extension does the same from the editor: a device picker in the
+            status bar, F5 with the log in the Debug Console, reload on save with the state kept,
+            and the inspector and the trees in the command palette.
           </p>
-          <Link to="/docs/tooling/cli">The frus command →</Link>
+          <div className={styles.links}>
+            <Link className="button button--primary" href="https://marketplace.visualstudio.com/items?itemName=kalybospro.frus">
+              Install for VS Code
+            </Link>
+            <Link to="/docs/tooling/vscode">The extension →</Link>
+            <Link to="/docs/tooling/cli">The frus command →</Link>
+          </div>
         </div>
         <div className={styles.splitMedia}>
           <img
