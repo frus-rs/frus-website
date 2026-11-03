@@ -26,7 +26,7 @@ pub trait Localizations { .. }
 
 ![Rendered preview of the Locale & Localizations demo](/preview/localizations.light.png)
 
-From [`frus-examples/widgets/src/features/state/widgets/localizations.rs`](https://github.com/KalybosPro/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/state/widgets/localizations.rs):
+From [`frus-examples/widgets/src/features/state/widgets/localizations.rs`](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/state/widgets/localizations.rs):
 
 ```rust
 //! `Locale` and `Localizations` — the language the interface is in, and the words the
@@ -139,4 +139,4 @@ Every method has an English body, so implementing this means writing down only w
 - API reference: [`Locale`](https://docs.rs/frus/latest/frus/struct.Locale.html)
 - API reference: [`Localizations`](https://docs.rs/frus/latest/frus/trait.Localizations.html)
 
-Source: [crates/frus-widgets/src/locale.rs](https://github.com/KalybosPro/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/crates/frus-widgets/src/locale.rs#L42-L46), [crates/frus-widgets/src/localizations.rs](https://github.com/KalybosPro/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/crates/frus-widgets/src/localizations.rs#L66-L317) @ `e6fba33f5b42`
+Source: [crates/frus-widgets/src/locale.rs](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/crates/frus-widgets/src/locale.rs#L42-L46), [crates/frus-widgets/src/localizations.rs](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/crates/frus-widgets/src/localizations.rs#L66-L317) @ `e6fba33f5b42`

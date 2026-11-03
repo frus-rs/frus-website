@@ -26,7 +26,7 @@ impl ListTile {
 
 ![Rendered preview of the ListTile demo](/preview/list-tile.light.png)
 
-From [`frus-examples/widgets/src/features/display/widgets/listtile.rs`](https://github.com/KalybosPro/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/display/widgets/listtile.rs):
+From [`frus-examples/widgets/src/features/display/widgets/listtile.rs`](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/display/widgets/listtile.rs):
 
 ```rust
 //! `ListTile` — one row of a list: something in front, one to three lines of text, and
@@ -188,4 +188,4 @@ A row of a list: leading, title, subtitle, trailing.
 - The guide: [Text, colour and the theme](/docs/guide/style)
 - API reference: [`ListTile`](https://docs.rs/frus/latest/frus/struct.ListTile.html)
 
-Source: [crates/frus-widgets/src/listtile.rs](https://github.com/KalybosPro/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/crates/frus-widgets/src/listtile.rs#L69-L100) @ `e6fba33f5b42`
+Source: [crates/frus-widgets/src/listtile.rs](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/crates/frus-widgets/src/listtile.rs#L69-L100) @ `e6fba33f5b42`

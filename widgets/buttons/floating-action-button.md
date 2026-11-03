@@ -28,7 +28,7 @@ impl FloatingActionButton {
 
 ![Rendered preview of the FloatingActionButton demo](/preview/floating-action-button.light.png)
 
-From [`frus-examples/widgets/src/features/buttons/widgets/fab.rs`](https://github.com/KalybosPro/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/buttons/widgets/fab.rs):
+From [`frus-examples/widgets/src/features/buttons/widgets/fab.rs`](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/buttons/widgets/fab.rs):
 
 ```rust
 //! `FloatingActionButton` — the one action a screen is for, floating above it. Put it in
@@ -159,4 +159,4 @@ This framework had no such widget. Two roles out, on the most prominent control 
 - The guide: [Taking input](/docs/guide/input)
 - API reference: [`FloatingActionButton`](https://docs.rs/frus/latest/frus/struct.FloatingActionButton.html)
 
-Source: [crates/frus-widgets/src/fab.rs](https://github.com/KalybosPro/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/crates/frus-widgets/src/fab.rs#L92-L105) @ `e6fba33f5b42`
+Source: [crates/frus-widgets/src/fab.rs](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/crates/frus-widgets/src/fab.rs#L92-L105) @ `e6fba33f5b42`

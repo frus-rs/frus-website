@@ -42,7 +42,7 @@ impl Spacer {
 
 ![Rendered preview of the Expanded, Flexible & Spacer demo](/preview/expanded.light.png)
 
-From [`frus-examples/widgets/src/features/layout/widgets/expanded.rs`](https://github.com/KalybosPro/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/layout/widgets/expanded.rs):
+From [`frus-examples/widgets/src/features/layout/widgets/expanded.rs`](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/layout/widgets/expanded.rs):
 
 ```rust
 //! `Expanded`, `Flexible` and `Spacer` — share the free room of a `Row` or a `Column`
@@ -177,4 +177,4 @@ Flexible empty space along a row's or a column's main axis.
 - API reference: [`Flexible`](https://docs.rs/frus/latest/frus/struct.Flexible.html)
 - API reference: [`Spacer`](https://docs.rs/frus/latest/frus/struct.Spacer.html)
 
-Source: [crates/frus-widgets/src/expanded.rs](https://github.com/KalybosPro/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/crates/frus-widgets/src/expanded.rs#L65-L71), [crates/frus-widgets/src/expanded.rs](https://github.com/KalybosPro/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/crates/frus-widgets/src/expanded.rs#L171-L175), [crates/frus-widgets/src/spacer.rs](https://github.com/KalybosPro/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/crates/frus-widgets/src/spacer.rs#L35-L37) @ `e6fba33f5b42`
+Source: [crates/frus-widgets/src/expanded.rs](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/crates/frus-widgets/src/expanded.rs#L65-L71), [crates/frus-widgets/src/expanded.rs](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/crates/frus-widgets/src/expanded.rs#L171-L175), [crates/frus-widgets/src/spacer.rs](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/crates/frus-widgets/src/spacer.rs#L35-L37) @ `e6fba33f5b42`

@@ -26,7 +26,7 @@ impl Kbd {
 
 ![Rendered preview of the Kbd demo](/preview/kbd.light.png)
 
-From [`frus-examples/widgets/src/features/text/widgets/kbd.rs`](https://github.com/KalybosPro/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/text/widgets/kbd.rs):
+From [`frus-examples/widgets/src/features/text/widgets/kbd.rs`](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/text/widgets/kbd.rs):
 
 ```rust
 //! `Kbd` — a keyboard key cap, for showing shortcuts in menus, tooltips and help pages.
@@ -100,4 +100,4 @@ A key cap showing a label, such as "Ctrl" or "Enter".
 - The guide: [Text, colour and the theme](/docs/guide/style)
 - API reference: [`Kbd`](https://docs.rs/frus/latest/frus/struct.Kbd.html)
 
-Source: [crates/frus-widgets/src/kbd.rs](https://github.com/KalybosPro/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/crates/frus-widgets/src/kbd.rs#L17-L20) @ `e6fba33f5b42`
+Source: [crates/frus-widgets/src/kbd.rs](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/crates/frus-widgets/src/kbd.rs#L17-L20) @ `e6fba33f5b42`

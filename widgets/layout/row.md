@@ -34,7 +34,7 @@ impl Column {
 
 ![Rendered preview of the Row & Column demo](/preview/row.light.png)
 
-From [`frus-examples/widgets/src/features/layout/widgets/row_column.rs`](https://github.com/KalybosPro/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/layout/widgets/row_column.rs):
+From [`frus-examples/widgets/src/features/layout/widgets/row_column.rs`](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/layout/widgets/row_column.rs):
 
 ```rust
 //! `Row` and `Column` — children in a line, across or down: the two containers most
@@ -253,4 +253,4 @@ A column does not scroll. More children than fit is an overflow, reported as one
 - API reference: [`Row`](https://docs.rs/frus/latest/frus/struct.Row.html)
 - API reference: [`Column`](https://docs.rs/frus/latest/frus/struct.Column.html)
 
-Source: [crates/frus-widgets/src/rowcolumn.rs](https://github.com/KalybosPro/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/crates/frus-widgets/src/rowcolumn.rs#L74-L76), [crates/frus-widgets/src/rowcolumn.rs](https://github.com/KalybosPro/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/crates/frus-widgets/src/rowcolumn.rs#L94-L96) @ `e6fba33f5b42`
+Source: [crates/frus-widgets/src/rowcolumn.rs](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/crates/frus-widgets/src/rowcolumn.rs#L74-L76), [crates/frus-widgets/src/rowcolumn.rs](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/crates/frus-widgets/src/rowcolumn.rs#L94-L96) @ `e6fba33f5b42`

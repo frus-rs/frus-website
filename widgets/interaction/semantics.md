@@ -28,7 +28,7 @@ impl Semantics {
 
 ![Rendered preview of the Semantics demo](/preview/semantics.light.png)
 
-From [`frus-examples/widgets/src/features/interaction/widgets/semantics.rs`](https://github.com/KalybosPro/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/interaction/widgets/semantics.rs):
+From [`frus-examples/widgets/src/features/interaction/widgets/semantics.rs`](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/interaction/widgets/semantics.rs):
 
 ```rust
 //! `Semantics`, `ExcludeSemantics` — what a screen reader is told about a widget, said
@@ -170,4 +170,4 @@ This framework's accessibility tree is **flat**: every annotated widget is a chi
 - The guide: [Taking input](/docs/guide/input)
 - API reference: [`Semantics`](https://docs.rs/frus/latest/frus/struct.Semantics.html)
 
-Source: [crates/frus-widgets/src/semantics.rs](https://github.com/KalybosPro/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/crates/frus-widgets/src/semantics.rs#L73-L77) @ `e6fba33f5b42`
+Source: [crates/frus-widgets/src/semantics.rs](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/crates/frus-widgets/src/semantics.rs#L73-L77) @ `e6fba33f5b42`

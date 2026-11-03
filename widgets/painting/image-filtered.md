@@ -27,7 +27,7 @@ impl ImageFiltered {
 
 ![Rendered preview of the ImageFiltered demo](/preview/image-filtered.light.png)
 
-From [`frus-examples/widgets/src/features/painting/widgets/image_filtered.rs`](https://github.com/KalybosPro/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/painting/widgets/image_filtered.rs):
+From [`frus-examples/widgets/src/features/painting/widgets/image_filtered.rs`](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/painting/widgets/image_filtered.rs):
 
 ```rust
 //! `ImageFiltered` — treats a child as an image and filters it: a blur, or shapes
@@ -164,4 +164,4 @@ ImageFiltered::new(ImageFilter::Dilate { radius_x: 2.0, radius_y: 2.0 }).child(l
 - The guide: [Text, colour and the theme](/docs/guide/style)
 - API reference: [`ImageFiltered`](https://docs.rs/frus/latest/frus/struct.ImageFiltered.html)
 
-Source: [crates/frus-widgets/src/filters.rs](https://github.com/KalybosPro/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/crates/frus-widgets/src/filters.rs#L124-L128) @ `e6fba33f5b42`
+Source: [crates/frus-widgets/src/filters.rs](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/crates/frus-widgets/src/filters.rs#L124-L128) @ `e6fba33f5b42`

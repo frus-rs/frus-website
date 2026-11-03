@@ -27,7 +27,7 @@ impl Text {
 
 ![Rendered preview of the Text theme demo](/preview/text-theme.light.png)
 
-From [`frus-examples/widgets/src/features/text/widgets/text_theme.rs`](https://github.com/KalybosPro/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/text/widgets/text_theme.rs):
+From [`frus-examples/widgets/src/features/text/widgets/text_theme.rs`](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/text/widgets/text_theme.rs):
 
 ```rust
 //! The text theme (`theme.text`) — the app's type scale: fifteen named styles from
@@ -140,4 +140,4 @@ Its layout size comes from a **styled** measurement (`frus-text`, weight and ita
 - The guide: [Text, colour and the theme](/docs/guide/style)
 - API reference: [`Text`](https://docs.rs/frus/latest/frus/struct.Text.html)
 
-Source: [crates/frus-widgets/src/text.rs](https://github.com/KalybosPro/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/crates/frus-widgets/src/text.rs#L32-L77) @ `e6fba33f5b42`
+Source: [crates/frus-widgets/src/text.rs](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/crates/frus-widgets/src/text.rs#L32-L77) @ `e6fba33f5b42`

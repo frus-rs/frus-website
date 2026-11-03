@@ -14,7 +14,7 @@ application can override every one of them. This catalog has **175 pages as of
 
 Every page is written from the widget's own source and from the gallery's demo, at the revision
 its source line names. The gallery also runs in the browser, at
-<https://kalybospro.github.io/frus/>, if yours has WebGPU.
+<https://frus-rs.github.io/frus/>, if yours has WebGPU.
 
 ## The families
 

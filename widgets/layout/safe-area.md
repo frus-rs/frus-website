@@ -33,7 +33,7 @@ impl SafeArea {
 
 ![Rendered preview of the SafeArea demo](/preview/safe-area.light.png)
 
-From [`frus-examples/widgets/src/features/layout/widgets/safe_area.rs`](https://github.com/KalybosPro/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/layout/widgets/safe_area.rs):
+From [`frus-examples/widgets/src/features/layout/widgets/safe_area.rs`](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/layout/widgets/safe_area.rs):
 
 ```rust
 //! `SafeArea` — keeps its child clear of the parts of the screen the system has taken:
@@ -126,4 +126,4 @@ That holds for both constructors. `SafeArea::build` still hands the consumed des
 - The guide: [Laying out a screen](/docs/guide/layout)
 - API reference: [`SafeArea`](https://docs.rs/frus/latest/frus/struct.SafeArea.html)
 
-Source: [crates/frus-widgets/src/safearea.rs](https://github.com/KalybosPro/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/crates/frus-widgets/src/safearea.rs#L45-L57) @ `e6fba33f5b42`
+Source: [crates/frus-widgets/src/safearea.rs](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/crates/frus-widgets/src/safearea.rs#L45-L57) @ `e6fba33f5b42`

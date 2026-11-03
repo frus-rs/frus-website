@@ -29,7 +29,7 @@ pub enum Gradient {
 
 ![Rendered preview of the Gradients demo](/preview/gradient.light.png)
 
-From [`frus-examples/widgets/src/features/painting/widgets/gradients.rs`](https://github.com/KalybosPro/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/painting/widgets/gradients.rs):
+From [`frus-examples/widgets/src/features/painting/widgets/gradients.rs`](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/painting/widgets/gradients.rs):
 
 ```rust
 //! Gradients — `LinearGradient`, `RadialGradient` and `SweepGradient`, painted by a
@@ -193,4 +193,4 @@ Any of the three.
 - The guide: [Text, colour and the theme](/docs/guide/style)
 - API reference: [`Gradient`](https://docs.rs/frus/latest/frus/enum.Gradient.html)
 
-Source: [crates/frus-core/src/gradient.rs](https://github.com/KalybosPro/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/crates/frus-core/src/gradient.rs#L96-L103) @ `e6fba33f5b42`
+Source: [crates/frus-core/src/gradient.rs](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/crates/frus-core/src/gradient.rs#L96-L103) @ `e6fba33f5b42`

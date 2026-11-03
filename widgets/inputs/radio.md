@@ -37,7 +37,7 @@ impl Radio {
 
 ![Rendered preview of the RadioGroup & Radio demo](/preview/radio.light.png)
 
-From [`frus-examples/widgets/src/features/inputs/widgets/radio.rs`](https://github.com/KalybosPro/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/inputs/widgets/radio.rs):
+From [`frus-examples/widgets/src/features/inputs/widgets/radio.rs`](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/inputs/widgets/radio.rs):
 
 ```rust
 //! `RadioGroup` and `Radio` — one choice out of a few, all visible at once. `RadioGroup`
@@ -167,4 +167,4 @@ So this reports one message when pressed and says nothing about what the answer 
 - API reference: [`RadioGroup`](https://docs.rs/frus/latest/frus/struct.RadioGroup.html)
 - API reference: [`Radio`](https://docs.rs/frus/latest/frus/struct.Radio.html)
 
-Source: [crates/frus-widgets/src/radio.rs](https://github.com/KalybosPro/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/crates/frus-widgets/src/radio.rs#L375-L388), [crates/frus-widgets/src/radio.rs](https://github.com/KalybosPro/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/crates/frus-widgets/src/radio.rs#L45-L61) @ `e6fba33f5b42`
+Source: [crates/frus-widgets/src/radio.rs](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/crates/frus-widgets/src/radio.rs#L375-L388), [crates/frus-widgets/src/radio.rs](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/crates/frus-widgets/src/radio.rs#L45-L61) @ `e6fba33f5b42`

@@ -28,7 +28,7 @@ impl ReorderableList {
 
 ![Rendered preview of the ReorderableList demo](/preview/reorderable-list.light.png)
 
-From [`frus-examples/widgets/src/features/scrolling/widgets/reorderable.rs`](https://github.com/KalybosPro/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/scrolling/widgets/reorderable.rs):
+From [`frus-examples/widgets/src/features/scrolling/widgets/reorderable.rs`](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/scrolling/widgets/reorderable.rs):
 
 ```rust
 //! `ReorderableList` — a list whose rows can be dragged into a new order: a playlist, a
@@ -165,4 +165,4 @@ ReorderableList::new(|from, to| Msg::MoveTrack(from, to))
 - The guide: [Lists and grids](/docs/guide/lists)
 - API reference: [`ReorderableList`](https://docs.rs/frus/latest/frus/struct.ReorderableList.html)
 
-Source: [crates/frus-widgets/src/reorderable.rs](https://github.com/KalybosPro/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/crates/frus-widgets/src/reorderable.rs#L425-L432) @ `e6fba33f5b42`
+Source: [crates/frus-widgets/src/reorderable.rs](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/crates/frus-widgets/src/reorderable.rs#L425-L432) @ `e6fba33f5b42`

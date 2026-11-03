@@ -26,7 +26,7 @@ impl AppBar {
 
 ![Rendered preview of the AppBar demo](/preview/app-bar.light.png)
 
-From [`frus-examples/widgets/src/features/navigation/widgets/appbar.rs`](https://github.com/KalybosPro/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/navigation/widgets/appbar.rs):
+From [`frus-examples/widgets/src/features/navigation/widgets/appbar.rs`](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/navigation/widgets/appbar.rs):
 
 ```rust
 //! `AppBar` — the bar at the top of a screen: a leading button, a title, actions, and
@@ -194,4 +194,4 @@ An adaptive application bar. A fluent builder finished by `AppBar::build`.
 - The guide: [Screens, navigation and dialogs](/docs/guide/navigation)
 - API reference: [`AppBar`](https://docs.rs/frus/latest/frus/struct.AppBar.html)
 
-Source: [crates/frus-widgets/src/appbar.rs](https://github.com/KalybosPro/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/crates/frus-widgets/src/appbar.rs#L129-L131) @ `e6fba33f5b42`
+Source: [crates/frus-widgets/src/appbar.rs](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/crates/frus-widgets/src/appbar.rs#L129-L131) @ `e6fba33f5b42`

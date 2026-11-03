@@ -4,7 +4,7 @@ import type * as Preset from '@docusaurus/preset-classic';
 
 // This runs in Node.js: no browser APIs or JSX here.
 
-const repo = 'https://github.com/KalybosPro/frus';
+const repo = 'https://github.com/frus-rs/frus';
 const baseUrl = process.env.BASE_URL ?? '/';
 
 const config: Config = {
@@ -147,7 +147,7 @@ const config: Config = {
           items: [
             {label: 'Get started', to: '/docs/getting-started'},
             {label: 'The guide', to: '/docs/guide'},
-            {label: 'Widget gallery', href: 'https://kalybospro.github.io/frus/'},
+            {label: 'Widget gallery', href: 'https://frus-rs.github.io/frus/'},
             {label: 'Example applications', href: `${repo}/tree/master/frus-examples`},
           ],
         },

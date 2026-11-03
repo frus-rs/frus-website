@@ -45,7 +45,7 @@ impl LicensePage {
 
 ![Rendered preview of the AboutDialog, AboutListTile & LicensePage demo](/preview/about-dialog.light.png)
 
-From [`frus-examples/widgets/src/features/feedback/widgets/about_dialog.rs`](https://github.com/KalybosPro/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/feedback/widgets/about_dialog.rs):
+From [`frus-examples/widgets/src/features/feedback/widgets/about_dialog.rs`](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/feedback/widgets/about_dialog.rs):
 
 ```rust
 //! `AboutDialog`, `AboutListTile` and `LicensePage` — the "about this app" box and the
@@ -227,4 +227,4 @@ LicensePage::new(app.licence_open, Msg::OpenLicence)
 - API reference: [`AboutListTile`](https://docs.rs/frus/latest/frus/struct.AboutListTile.html)
 - API reference: [`LicensePage`](https://docs.rs/frus/latest/frus/struct.LicensePage.html)
 
-Source: [crates/frus-widgets/src/licenses.rs](https://github.com/KalybosPro/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/crates/frus-widgets/src/licenses.rs#L516-L526), [crates/frus-widgets/src/licenses.rs](https://github.com/KalybosPro/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/crates/frus-widgets/src/licenses.rs#L651-L657), [crates/frus-widgets/src/licenses.rs](https://github.com/KalybosPro/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/crates/frus-widgets/src/licenses.rs#L283-L295) @ `e6fba33f5b42`
+Source: [crates/frus-widgets/src/licenses.rs](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/crates/frus-widgets/src/licenses.rs#L516-L526), [crates/frus-widgets/src/licenses.rs](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/crates/frus-widgets/src/licenses.rs#L651-L657), [crates/frus-widgets/src/licenses.rs](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/crates/frus-widgets/src/licenses.rs#L283-L295) @ `e6fba33f5b42`

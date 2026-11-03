@@ -43,7 +43,7 @@ impl SwitchListTile {
 
 ![Rendered preview of the CheckboxListTile, RadioListTile & SwitchListTile demo](/preview/control-list-tiles.light.png)
 
-From [`frus-examples/widgets/src/features/inputs/widgets/control_tiles.rs`](https://github.com/KalybosPro/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/inputs/widgets/control_tiles.rs):
+From [`frus-examples/widgets/src/features/inputs/widgets/control_tiles.rs`](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/inputs/widgets/control_tiles.rs):
 
 ```rust
 //! `CheckboxListTile`, `RadioListTile` and `SwitchListTile` — list rows whose **whole
@@ -257,4 +257,4 @@ It carries `selected` rather than a value and a group value: this framework's `R
 - API reference: [`RadioListTile`](https://docs.rs/frus/latest/frus/struct.RadioListTile.html)
 - API reference: [`SwitchListTile`](https://docs.rs/frus/latest/frus/struct.SwitchListTile.html)
 
-Source: [crates/frus-widgets/src/controltile.rs](https://github.com/KalybosPro/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/crates/frus-widgets/src/controltile.rs#L247-L255), [crates/frus-widgets/src/controltile.rs](https://github.com/KalybosPro/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/crates/frus-widgets/src/controltile.rs#L334-L340), [crates/frus-widgets/src/controltile.rs](https://github.com/KalybosPro/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/crates/frus-widgets/src/controltile.rs#L380-L387) @ `e6fba33f5b42`
+Source: [crates/frus-widgets/src/controltile.rs](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/crates/frus-widgets/src/controltile.rs#L247-L255), [crates/frus-widgets/src/controltile.rs](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/crates/frus-widgets/src/controltile.rs#L334-L340), [crates/frus-widgets/src/controltile.rs](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/crates/frus-widgets/src/controltile.rs#L380-L387) @ `e6fba33f5b42`

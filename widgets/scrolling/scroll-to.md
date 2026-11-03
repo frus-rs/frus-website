@@ -30,7 +30,7 @@ impl ScrollTo {
 
 ![Rendered preview of the Programmatic scrolling demo](/preview/scroll-to.light.png)
 
-From [`frus-examples/widgets/src/features/scrolling/widgets/scrollto.rs`](https://github.com/KalybosPro/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/scrolling/widgets/scrollto.rs):
+From [`frus-examples/widgets/src/features/scrolling/widgets/scrollto.rs`](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/scrolling/widgets/scrollto.rs):
 
 ```rust
 //! Programmatic scrolling — reading where a scroll area is (`on_scroll` and
@@ -147,4 +147,4 @@ Carried by a command, resolved against the frame that follows it, and **refused 
 - The guide: [Lists and grids](/docs/guide/lists)
 - API reference: [`ScrollTo`](https://docs.rs/frus/latest/frus/struct.ScrollTo.html)
 
-Source: [crates/frus-widgets/src/scrollposition.rs](https://github.com/KalybosPro/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/crates/frus-widgets/src/scrollposition.rs#L165-L172) @ `e6fba33f5b42`
+Source: [crates/frus-widgets/src/scrollposition.rs](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/crates/frus-widgets/src/scrollposition.rs#L165-L172) @ `e6fba33f5b42`

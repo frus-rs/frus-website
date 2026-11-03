@@ -26,7 +26,7 @@ impl Dismissible {
 
 ![Rendered preview of the Dismissible demo](/preview/dismissible.light.png)
 
-From [`frus-examples/widgets/src/features/scrolling/widgets/dismissible.rs`](https://github.com/KalybosPro/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/scrolling/widgets/dismissible.rs):
+From [`frus-examples/widgets/src/features/scrolling/widgets/dismissible.rs`](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/scrolling/widgets/dismissible.rs):
 
 ```rust
 //! `Dismissible` — swipe a row aside to remove it (or archive it). The row slides out,
@@ -153,4 +153,4 @@ Wrap each item in a `crate::Keyed` when the list can reorder: the retained dismi
 - The guide: [Lists and grids](/docs/guide/lists)
 - API reference: [`Dismissible`](https://docs.rs/frus/latest/frus/struct.Dismissible.html)
 
-Source: [crates/frus-widgets/src/dismiss.rs](https://github.com/KalybosPro/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/crates/frus-widgets/src/dismiss.rs#L366-L379) @ `e6fba33f5b42`
+Source: [crates/frus-widgets/src/dismiss.rs](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/crates/frus-widgets/src/dismiss.rs#L366-L379) @ `e6fba33f5b42`

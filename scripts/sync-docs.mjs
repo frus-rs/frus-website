@@ -17,7 +17,7 @@ import path from 'node:path';
 import {fileURLToPath} from 'node:url';
 
 const site = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
-const github = 'https://github.com/KalybosPro/frus/blob/master';
+const github = 'https://github.com/frus-rs/frus/blob/master';
 
 function findRepo() {
   const isFrus = (dir) => fs.existsSync(path.join(dir, 'docs/guide/README.md'));
@@ -30,7 +30,7 @@ function findRepo() {
   if (isFrus(sibling)) return sibling;
   const clone = path.join(site, '.frus');
   if (!isFrus(clone)) {
-    execFileSync('git', ['clone', '--depth', '1', 'https://github.com/KalybosPro/frus.git', clone], {stdio: 'inherit'});
+    execFileSync('git', ['clone', '--depth', '1', 'https://github.com/frus-rs/frus.git', clone], {stdio: 'inherit'});
   } else if (process.env.FRUS_UPDATE === '1') {
     execFileSync('git', ['-C', clone, 'pull', '--ff-only', '--depth', '1'], {stdio: 'inherit'});
   }

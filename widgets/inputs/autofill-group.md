@@ -30,7 +30,7 @@ pub enum AutofillHint { .. }
 
 ![Rendered preview of the AutofillGroup & AutofillHint demo](/preview/autofill-group.light.png)
 
-From [`frus-examples/widgets/src/features/inputs/widgets/autofill_group.rs`](https://github.com/KalybosPro/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/inputs/widgets/autofill_group.rs):
+From [`frus-examples/widgets/src/features/inputs/widgets/autofill_group.rs`](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/inputs/widgets/autofill_group.rs):
 
 ```rust
 //! `AutofillGroup` and `AutofillHint` — say what each field **holds** (a user name, a new
@@ -147,4 +147,4 @@ The catalogue is the useful part of the platform's, not all of it: what a sign-i
 - API reference: [`AutofillGroup`](https://docs.rs/frus/latest/frus/struct.AutofillGroup.html)
 - API reference: [`AutofillHint`](https://docs.rs/frus/latest/frus/enum.AutofillHint.html)
 
-Source: [crates/frus-widgets/src/autofill.rs](https://github.com/KalybosPro/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/crates/frus-widgets/src/autofill.rs#L147-L149), [crates/frus-widgets/src/autofill.rs](https://github.com/KalybosPro/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/crates/frus-widgets/src/autofill.rs#L54-L96) @ `e6fba33f5b42`
+Source: [crates/frus-widgets/src/autofill.rs](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/crates/frus-widgets/src/autofill.rs#L147-L149), [crates/frus-widgets/src/autofill.rs](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/crates/frus-widgets/src/autofill.rs#L54-L96) @ `e6fba33f5b42`

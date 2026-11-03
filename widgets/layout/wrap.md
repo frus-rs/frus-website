@@ -26,7 +26,7 @@ pub struct ListBody;
 
 ![Rendered preview of the Wrap & ListBody demo](/preview/wrap.light.png)
 
-From [`frus-examples/widgets/src/features/layout/widgets/wrap.rs`](https://github.com/KalybosPro/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/layout/widgets/wrap.rs):
+From [`frus-examples/widgets/src/features/layout/widgets/wrap.rs`](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/layout/widgets/wrap.rs):
 
 ```rust
 //! `Wrap` and `ListBody` â€” a row that flows onto new lines when it runs out of room,
@@ -148,4 +148,4 @@ Its `reverse` is `Flex::reverse`, which lays the children out from the far end â
 - API reference: [`Wrap`](https://docs.rs/frus/latest/frus/struct.Wrap.html)
 - API reference: [`ListBody`](https://docs.rs/frus/latest/frus/struct.ListBody.html)
 
-Source: [crates/frus-widgets/src/flex.rs](https://github.com/KalybosPro/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/crates/frus-widgets/src/flex.rs#L318-L318), [crates/frus-widgets/src/flex.rs](https://github.com/KalybosPro/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/crates/frus-widgets/src/flex.rs#L299-L299) @ `e6fba33f5b42`
+Source: [crates/frus-widgets/src/flex.rs](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/crates/frus-widgets/src/flex.rs#L318-L318), [crates/frus-widgets/src/flex.rs](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/crates/frus-widgets/src/flex.rs#L299-L299) @ `e6fba33f5b42`

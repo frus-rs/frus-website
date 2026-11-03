@@ -26,7 +26,7 @@ impl Tooltip {
 
 ![Rendered preview of the Tooltip demo](/preview/tooltip.light.png)
 
-From [`frus-examples/widgets/src/features/feedback/widgets/tooltip.rs`](https://github.com/KalybosPro/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/feedback/widgets/tooltip.rs):
+From [`frus-examples/widgets/src/features/feedback/widgets/tooltip.rs`](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/feedback/widgets/tooltip.rs):
 
 ```rust
 //! `Tooltip` — a short label that appears while the pointer rests on a widget (or on a
@@ -106,4 +106,4 @@ All four are about *time*: how long a pointer must rest before the bubble appear
 - The guide: [Screens, navigation and dialogs](/docs/guide/navigation)
 - API reference: [`Tooltip`](https://docs.rs/frus/latest/frus/struct.Tooltip.html)
 
-Source: [crates/frus-widgets/src/tooltip.rs](https://github.com/KalybosPro/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/crates/frus-widgets/src/tooltip.rs#L58-L70) @ `e6fba33f5b42`
+Source: [crates/frus-widgets/src/tooltip.rs](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/crates/frus-widgets/src/tooltip.rs#L58-L70) @ `e6fba33f5b42`

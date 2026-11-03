@@ -26,7 +26,7 @@ impl AnimatedContainer {
 
 ![Rendered preview of the AnimatedContainer demo](/preview/animated-container.light.png)
 
-From [`frus-examples/widgets/src/features/animation/widgets/animated_container.rs`](https://github.com/KalybosPro/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/animation/widgets/animated_container.rs):
+From [`frus-examples/widgets/src/features/animation/widgets/animated_container.rs`](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/animation/widgets/animated_container.rs):
 
 ```rust
 //! `AnimatedContainer` — a box whose colour, size, corners and opacity glide to each new
@@ -169,4 +169,4 @@ AnimatedContainer::new(0.3, Curve::ease_in_out())
 - The guide: [Animation](/docs/guide/animation)
 - API reference: [`AnimatedContainer`](https://docs.rs/frus/latest/frus/struct.AnimatedContainer.html)
 
-Source: [crates/frus-widgets/src/animated.rs](https://github.com/KalybosPro/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/crates/frus-widgets/src/animated.rs#L184-L188) @ `e6fba33f5b42`
+Source: [crates/frus-widgets/src/animated.rs](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/crates/frus-widgets/src/animated.rs#L184-L188) @ `e6fba33f5b42`

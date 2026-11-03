@@ -26,7 +26,7 @@ impl SearchAnchor {
 
 ![Rendered preview of the SearchAnchor demo](/preview/search-anchor.light.png)
 
-From [`frus-examples/widgets/src/features/inputs/widgets/search_anchor.rs`](https://github.com/KalybosPro/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/inputs/widgets/search_anchor.rs):
+From [`frus-examples/widgets/src/features/inputs/widgets/search_anchor.rs`](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/inputs/widgets/search_anchor.rs):
 
 ```rust
 //! `SearchAnchor` — a search bar that opens a **search view** when pressed: the same
@@ -158,4 +158,4 @@ A search bar and the view it opens.
 - The guide: [Taking input](/docs/guide/input)
 - API reference: [`SearchAnchor`](https://docs.rs/frus/latest/frus/struct.SearchAnchor.html)
 
-Source: [crates/frus-widgets/src/searchview.rs](https://github.com/KalybosPro/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/crates/frus-widgets/src/searchview.rs#L87-L116) @ `e6fba33f5b42`
+Source: [crates/frus-widgets/src/searchview.rs](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/crates/frus-widgets/src/searchview.rs#L87-L116) @ `e6fba33f5b42`

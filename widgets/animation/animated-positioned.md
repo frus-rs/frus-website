@@ -26,7 +26,7 @@ impl AnimatedPositioned {
 
 ![Rendered preview of the AnimatedPositioned demo](/preview/animated-positioned.light.png)
 
-From [`frus-examples/widgets/src/features/animation/widgets/animated_positioned.rs`](https://github.com/KalybosPro/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/animation/widgets/animated_positioned.rs):
+From [`frus-examples/widgets/src/features/animation/widgets/animated_positioned.rs`](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/animation/widgets/animated_positioned.rs):
 
 ```rust
 //! `AnimatedPositioned` — a `Stack` layer whose pins (left, top, right, bottom, width,
@@ -202,4 +202,4 @@ Unlike `crate::Positioned`, which is a transparent wrapper, this is a **node of 
 - The guide: [Animation](/docs/guide/animation)
 - API reference: [`AnimatedPositioned`](https://docs.rs/frus/latest/frus/struct.AnimatedPositioned.html)
 
-Source: [crates/frus-widgets/src/animated.rs](https://github.com/KalybosPro/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/crates/frus-widgets/src/animated.rs#L787-L792) @ `e6fba33f5b42`
+Source: [crates/frus-widgets/src/animated.rs](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/crates/frus-widgets/src/animated.rs#L787-L792) @ `e6fba33f5b42`

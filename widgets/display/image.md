@@ -36,7 +36,7 @@ impl ImageIcon {
 
 ![Rendered preview of the Image & ImageIcon demo](/preview/image.light.png)
 
-From [`frus-examples/widgets/src/features/display/widgets/image.rs`](https://github.com/KalybosPro/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/display/widgets/image.rs):
+From [`frus-examples/widgets/src/features/display/widgets/image.rs`](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/display/widgets/image.rs):
 
 ```rust
 //! `Image` — a bitmap fitted into a box: embedded with `asset!`, made from pixels, or
@@ -215,4 +215,4 @@ ImageIcon::new(Image::memory(include_bytes!("../assets/mark.png")))
 - API reference: [`Image`](https://docs.rs/frus/latest/frus/struct.Image.html)
 - API reference: [`ImageIcon`](https://docs.rs/frus/latest/frus/struct.ImageIcon.html)
 
-Source: [crates/frus-widgets/src/image.rs](https://github.com/KalybosPro/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/crates/frus-widgets/src/image.rs#L179-L208), [crates/frus-widgets/src/image.rs](https://github.com/KalybosPro/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/crates/frus-widgets/src/image.rs#L780-L784) @ `e6fba33f5b42`
+Source: [crates/frus-widgets/src/image.rs](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/crates/frus-widgets/src/image.rs#L179-L208), [crates/frus-widgets/src/image.rs](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/crates/frus-widgets/src/image.rs#L780-L784) @ `e6fba33f5b42`

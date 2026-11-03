@@ -34,7 +34,7 @@ impl DragTarget {
 
 ![Rendered preview of the Draggable & DragTarget demo](/preview/draggable.light.png)
 
-From [`frus-examples/widgets/src/features/interaction/widgets/drag_and_drop.rs`](https://github.com/KalybosPro/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/interaction/widgets/drag_and_drop.rs):
+From [`frus-examples/widgets/src/features/interaction/widgets/drag_and_drop.rs`](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/interaction/widgets/drag_and_drop.rs):
 
 ```rust
 //! `Draggable` and `DragTarget` — pick a thing up and drop it somewhere else.
@@ -218,4 +218,4 @@ DragTarget::new(drop_area)
 - API reference: [`Draggable`](https://docs.rs/frus/latest/frus/struct.Draggable.html)
 - API reference: [`DragTarget`](https://docs.rs/frus/latest/frus/struct.DragTarget.html)
 
-Source: [crates/frus-widgets/src/dragdrop.rs](https://github.com/KalybosPro/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/crates/frus-widgets/src/dragdrop.rs#L74-L80), [crates/frus-widgets/src/dragdrop.rs](https://github.com/KalybosPro/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/crates/frus-widgets/src/dragdrop.rs#L208-L215) @ `e6fba33f5b42`
+Source: [crates/frus-widgets/src/dragdrop.rs](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/crates/frus-widgets/src/dragdrop.rs#L74-L80), [crates/frus-widgets/src/dragdrop.rs](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/crates/frus-widgets/src/dragdrop.rs#L208-L215) @ `e6fba33f5b42`

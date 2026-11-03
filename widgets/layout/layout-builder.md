@@ -30,7 +30,7 @@ pub struct OrientationBuilder;
 
 ![Rendered preview of the LayoutBuilder & OrientationBuilder demo](/preview/layout-builder.light.png)
 
-From [`frus-examples/widgets/src/features/layout/widgets/layout_builder.rs`](https://github.com/KalybosPro/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/layout/widgets/layout_builder.rs):
+From [`frus-examples/widgets/src/features/layout/widgets/layout_builder.rs`](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/layout/widgets/layout_builder.rs):
 
 ```rust
 //! `LayoutBuilder` and `OrientationBuilder` — build from the room actually given, not
@@ -166,4 +166,4 @@ let _gallery: frus_widgets::LayoutBuilder<()> = OrientationBuilder::new(|orienta
 - API reference: [`LayoutBuilder`](https://docs.rs/frus/latest/frus/struct.LayoutBuilder.html)
 - API reference: [`OrientationBuilder`](https://docs.rs/frus/latest/frus/struct.OrientationBuilder.html)
 
-Source: [crates/frus-widgets/src/layoutbuilder.rs](https://github.com/KalybosPro/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/crates/frus-widgets/src/layoutbuilder.rs#L43-L51), [crates/frus-widgets/src/listener.rs](https://github.com/KalybosPro/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/crates/frus-widgets/src/listener.rs#L158-L158) @ `e6fba33f5b42`
+Source: [crates/frus-widgets/src/layoutbuilder.rs](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/crates/frus-widgets/src/layoutbuilder.rs#L43-L51), [crates/frus-widgets/src/listener.rs](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/crates/frus-widgets/src/listener.rs#L158-L158) @ `e6fba33f5b42`

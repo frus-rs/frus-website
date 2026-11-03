@@ -26,7 +26,7 @@ impl Size {
 
 ![Rendered preview of the Fade, Slide, Scale & Size transitions demo](/preview/transitions.light.png)
 
-From [`frus-examples/widgets/src/features/animation/widgets/transitions.rs`](https://github.com/KalybosPro/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/animation/widgets/transitions.rs):
+From [`frus-examples/widgets/src/features/animation/widgets/transitions.rs`](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/animation/widgets/transitions.rs):
 
 ```rust
 //! The explicit transitions — `FadeTransition`, `SlideTransition`, `ScaleTransition`,
@@ -222,4 +222,4 @@ A 2D size (width × height).
 - The guide: [Animation](/docs/guide/animation)
 - API reference: [`Size`](https://docs.rs/frus/latest/frus/struct.Size.html)
 
-Source: [crates/frus-core/src/geometry.rs](https://github.com/KalybosPro/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/crates/frus-core/src/geometry.rs#L333-L338) @ `e6fba33f5b42`
+Source: [crates/frus-core/src/geometry.rs](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/crates/frus-core/src/geometry.rs#L333-L338) @ `e6fba33f5b42`

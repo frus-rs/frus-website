@@ -37,7 +37,7 @@ impl Positioned {
 
 ![Rendered preview of the Stack & Positioned demo](/preview/stack.light.png)
 
-From [`frus-examples/widgets/src/features/layout/widgets/stack.rs`](https://github.com/KalybosPro/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/layout/widgets/stack.rs):
+From [`frus-examples/widgets/src/features/layout/widgets/stack.rs`](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/layout/widgets/stack.rs):
 
 ```rust
 //! `Stack` and `Positioned` — children layered in the same box, the last on top: a
@@ -197,4 +197,4 @@ A layer pinned against a `crate::Stack`'s edges. See the module documentation.
 - API reference: [`Stack`](https://docs.rs/frus/latest/frus/struct.Stack.html)
 - API reference: [`Positioned`](https://docs.rs/frus/latest/frus/struct.Positioned.html)
 
-Source: [crates/frus-widgets/src/stack.rs](https://github.com/KalybosPro/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/crates/frus-widgets/src/stack.rs#L79-L88), [crates/frus-widgets/src/positioned.rs](https://github.com/KalybosPro/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/crates/frus-widgets/src/positioned.rs#L114-L117) @ `e6fba33f5b42`
+Source: [crates/frus-widgets/src/stack.rs](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/crates/frus-widgets/src/stack.rs#L79-L88), [crates/frus-widgets/src/positioned.rs](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/crates/frus-widgets/src/positioned.rs#L114-L117) @ `e6fba33f5b42`

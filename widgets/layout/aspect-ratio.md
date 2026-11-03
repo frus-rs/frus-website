@@ -26,7 +26,7 @@ impl AspectRatio {
 
 ![Rendered preview of the AspectRatio demo](/preview/aspect-ratio.light.png)
 
-From [`frus-examples/widgets/src/features/layout/widgets/aspect_ratio.rs`](https://github.com/KalybosPro/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/layout/widgets/aspect_ratio.rs):
+From [`frus-examples/widgets/src/features/layout/widgets/aspect_ratio.rs`](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/layout/widgets/aspect_ratio.rs):
 
 ```rust
 //! `AspectRatio` — a box whose height follows from its width: a video frame, a photo
@@ -95,4 +95,4 @@ The child inherits the box: it stretches in height, along the cross axis, and fi
 - The guide: [Laying out a screen](/docs/guide/layout)
 - API reference: [`AspectRatio`](https://docs.rs/frus/latest/frus/struct.AspectRatio.html)
 
-Source: [crates/frus-widgets/src/aspectratio.rs](https://github.com/KalybosPro/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/crates/frus-widgets/src/aspectratio.rs#L23-L26) @ `e6fba33f5b42`
+Source: [crates/frus-widgets/src/aspectratio.rs](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/crates/frus-widgets/src/aspectratio.rs#L23-L26) @ `e6fba33f5b42`

@@ -26,7 +26,7 @@ impl Table {
 
 ![Rendered preview of the Table demo](/preview/table.light.png)
 
-From [`frus-examples/widgets/src/features/display/widgets/table.rs`](https://github.com/KalybosPro/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/display/widgets/table.rs):
+From [`frus-examples/widgets/src/features/display/widgets/table.rs`](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/display/widgets/table.rs):
 
 ```rust
 //! `Table` — a grid of rows and columns that only shows what it is handed: the app
@@ -179,4 +179,4 @@ A data grid with fixed or flexible columns (see the module).
 - The guide: [Text, colour and the theme](/docs/guide/style)
 - API reference: [`Table`](https://docs.rs/frus/latest/frus/struct.Table.html)
 
-Source: [crates/frus-widgets/src/table.rs](https://github.com/KalybosPro/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/crates/frus-widgets/src/table.rs#L640-L678) @ `e6fba33f5b42`
+Source: [crates/frus-widgets/src/table.rs](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/crates/frus-widgets/src/table.rs#L640-L678) @ `e6fba33f5b42`

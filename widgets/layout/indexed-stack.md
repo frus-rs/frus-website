@@ -26,7 +26,7 @@ impl IndexedStack {
 
 ![Rendered preview of the IndexedStack demo](/preview/indexed-stack.light.png)
 
-From [`frus-examples/widgets/src/features/layout/widgets/indexed_stack.rs`](https://github.com/KalybosPro/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/layout/widgets/indexed_stack.rs):
+From [`frus-examples/widgets/src/features/layout/widgets/indexed_stack.rs`](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/layout/widgets/indexed_stack.rs):
 
 ```rust
 //! `IndexedStack` — several children in one box, only one of them shown: the panels of
@@ -134,4 +134,4 @@ The price is exactly that: every page laid out on every frame, however many are 
 - The guide: [Laying out a screen](/docs/guide/layout)
 - API reference: [`IndexedStack`](https://docs.rs/frus/latest/frus/struct.IndexedStack.html)
 
-Source: [crates/frus-widgets/src/stack.rs](https://github.com/KalybosPro/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/crates/frus-widgets/src/stack.rs#L242-L252) @ `e6fba33f5b42`
+Source: [crates/frus-widgets/src/stack.rs](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/crates/frus-widgets/src/stack.rs#L242-L252) @ `e6fba33f5b42`

@@ -26,7 +26,7 @@ impl TextField {
 
 ![Rendered preview of the TextField demo](/preview/text-field.light.png)
 
-From [`frus-examples/widgets/src/features/inputs/widgets/text_field.rs`](https://github.com/KalybosPro/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/inputs/widgets/text_field.rs):
+From [`frus-examples/widgets/src/features/inputs/widgets/text_field.rs`](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/inputs/widgets/text_field.rs):
 
 ```rust
 //! `TextField` — a text input. It is **controlled**: the application holds the text, the
@@ -335,4 +335,4 @@ A single-line text input field, with optional **form decoration** (label, hint, 
 - The guide: [Taking input](/docs/guide/input)
 - API reference: [`TextField`](https://docs.rs/frus/latest/frus/struct.TextField.html)
 
-Source: [crates/frus-widgets/src/textinput.rs](https://github.com/KalybosPro/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/crates/frus-widgets/src/textinput.rs#L208-L310) @ `e6fba33f5b42`
+Source: [crates/frus-widgets/src/textinput.rs](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/crates/frus-widgets/src/textinput.rs#L208-L310) @ `e6fba33f5b42`

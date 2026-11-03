@@ -34,7 +34,7 @@ impl ChangeNotifier {
 
 ![Rendered preview of the ValueNotifier, ChangeNotifier & their builders demo](/preview/value-notifier.light.png)
 
-From [`frus-examples/widgets/src/features/state/widgets/notifiers.rs`](https://github.com/KalybosPro/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/state/widgets/notifiers.rs):
+From [`frus-examples/widgets/src/features/state/widgets/notifiers.rs`](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/state/widgets/notifiers.rs):
 
 ```rust
 //! `ValueNotifier`, `ChangeNotifier` and the builders that follow them —
@@ -206,4 +206,4 @@ Cloning gives another handle to the same notifier.
 - API reference: [`ValueNotifier`](https://docs.rs/frus/latest/frus/struct.ValueNotifier.html)
 - API reference: [`ChangeNotifier`](https://docs.rs/frus/latest/frus/struct.ChangeNotifier.html)
 
-Source: [crates/frus-widgets/src/notifier.rs](https://github.com/KalybosPro/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/crates/frus-widgets/src/notifier.rs#L148-L151), [crates/frus-widgets/src/notifier.rs](https://github.com/KalybosPro/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/crates/frus-widgets/src/notifier.rs#L90-L92) @ `e6fba33f5b42`
+Source: [crates/frus-widgets/src/notifier.rs](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/crates/frus-widgets/src/notifier.rs#L148-L151), [crates/frus-widgets/src/notifier.rs](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/crates/frus-widgets/src/notifier.rs#L90-L92) @ `e6fba33f5b42`

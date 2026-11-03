@@ -26,7 +26,7 @@ impl Placeholder {
 
 ![Rendered preview of the Placeholder demo](/preview/placeholder.light.png)
 
-From [`frus-examples/widgets/src/features/layout/widgets/placeholder.rs`](https://github.com/KalybosPro/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/layout/widgets/placeholder.rs):
+From [`frus-examples/widgets/src/features/layout/widgets/placeholder.rs`](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/layout/widgets/placeholder.rs):
 
 ```rust
 //! `Placeholder` — a crossed box standing in for a widget you have not written yet, so
@@ -92,4 +92,4 @@ A crossed box standing in for a widget not written yet.
 - The guide: [Laying out a screen](/docs/guide/layout)
 - API reference: [`Placeholder`](https://docs.rs/frus/latest/frus/struct.Placeholder.html)
 
-Source: [crates/frus-widgets/src/placeholder.rs](https://github.com/KalybosPro/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/crates/frus-widgets/src/placeholder.rs#L31-L36) @ `e6fba33f5b42`
+Source: [crates/frus-widgets/src/placeholder.rs](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/crates/frus-widgets/src/placeholder.rs#L31-L36) @ `e6fba33f5b42`

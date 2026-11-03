@@ -48,7 +48,7 @@ impl ErrorSummary {
 
 ![Rendered preview of the Form, Rule & ErrorSummary demo](/preview/form.light.png)
 
-From [`frus-examples/widgets/src/features/inputs/widgets/form.rs`](https://github.com/KalybosPro/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/inputs/widgets/form.rs):
+From [`frus-examples/widgets/src/features/inputs/widgets/form.rs`](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/inputs/widgets/form.rs):
 
 ```rust
 //! `form::Form`, `form::Rule` and `ErrorSummary` — validation as a plain function of the
@@ -265,4 +265,4 @@ The bullets are **inert** with `new`; with `links` each one carries an applicati
 - API reference: [`Rule`](https://docs.rs/frus/latest/frus/struct.Rule.html)
 - API reference: [`ErrorSummary`](https://docs.rs/frus/latest/frus/struct.ErrorSummary.html)
 
-Source: [crates/frus-widgets/src/form.rs](https://github.com/KalybosPro/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/crates/frus-widgets/src/form.rs#L113-L115), [crates/frus-widgets/src/form.rs](https://github.com/KalybosPro/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/crates/frus-widgets/src/form.rs#L50-L50), [crates/frus-widgets/src/form.rs](https://github.com/KalybosPro/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/crates/frus-widgets/src/form.rs#L212-L218) @ `e6fba33f5b42`
+Source: [crates/frus-widgets/src/form.rs](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/crates/frus-widgets/src/form.rs#L113-L115), [crates/frus-widgets/src/form.rs](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/crates/frus-widgets/src/form.rs#L50-L50), [crates/frus-widgets/src/form.rs](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/crates/frus-widgets/src/form.rs#L212-L218) @ `e6fba33f5b42`

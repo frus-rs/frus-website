@@ -8,8 +8,8 @@ import Heading from '@theme/Heading';
 
 import styles from './index.module.css';
 
-const repo = 'https://github.com/KalybosPro/frus';
-const gallery = 'https://kalybospro.github.io/frus/';
+const repo = 'https://github.com/frus-rs/frus';
+const gallery = 'https://frus-rs.github.io/frus/';
 
 function Hero(): ReactNode {
   return (

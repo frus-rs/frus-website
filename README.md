@@ -2,7 +2,7 @@
 
 The frus website: a home page, the documentation, the widget catalog and the blog, built with
 [Docusaurus](https://docusaurus.io/). This repository is private; frus itself is
-<https://github.com/KalybosPro/frus>.
+<https://github.com/frus-rs/frus>.
 
 ```sh
 npm install

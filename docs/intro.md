@@ -15,7 +15,7 @@ between your code and the pixels.
 :::warning[Pre-alpha]
 
 The crates are on [crates.io](https://crates.io/crates/frus), and any release may break the
-API. The [roadmap](https://github.com/KalybosPro/frus/blob/master/ROADMAP.md) says what is
+API. The [roadmap](https://github.com/frus-rs/frus/blob/master/ROADMAP.md) says what is
 next, and what is known to be missing.
 
 :::

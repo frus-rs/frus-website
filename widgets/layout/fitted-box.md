@@ -26,7 +26,7 @@ impl FittedBox {
 
 ![Rendered preview of the FittedBox demo](/preview/fitted-box.light.png)
 
-From [`frus-examples/widgets/src/features/layout/widgets/fitted_box.rs`](https://github.com/KalybosPro/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/layout/widgets/fitted_box.rs):
+From [`frus-examples/widgets/src/features/layout/widgets/fitted_box.rs`](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/layout/widgets/fitted_box.rs):
 
 ```rust
 //! `FittedBox` — scales its child to fit its box, following a `BoxFit` rule.
@@ -124,4 +124,4 @@ FittedBox::new(BoxFit::Contain).width(120.0).height(40.0).child(Text::new("Big")
 - The guide: [Laying out a screen](/docs/guide/layout)
 - API reference: [`FittedBox`](https://docs.rs/frus/latest/frus/struct.FittedBox.html)
 
-Source: [crates/frus-widgets/src/fittedbox.rs](https://github.com/KalybosPro/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/crates/frus-widgets/src/fittedbox.rs#L27-L33) @ `e6fba33f5b42`
+Source: [crates/frus-widgets/src/fittedbox.rs](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/crates/frus-widgets/src/fittedbox.rs#L27-L33) @ `e6fba33f5b42`

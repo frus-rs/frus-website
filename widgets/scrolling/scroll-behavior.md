@@ -27,7 +27,7 @@ impl ScrollBehavior {
 
 ![Rendered preview of the Scroll physics & scrollbars demo](/preview/scroll-behavior.light.png)
 
-From [`frus-examples/widgets/src/features/scrolling/widgets/scrollbehavior.rs`](https://github.com/KalybosPro/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/scrolling/widgets/scrollbehavior.rs):
+From [`frus-examples/widgets/src/features/scrolling/widgets/scrollbehavior.rs`](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/scrolling/widgets/scrollbehavior.rs):
 
 ```rust
 //! Scroll behaviour — how scrollables feel at their edges and whether they show
@@ -142,4 +142,4 @@ fn labelled(label: &str, list: impl Widget + 'static) -> Column {
 - The guide: [Lists and grids](/docs/guide/lists)
 - API reference: [`ScrollBehavior`](https://docs.rs/frus/latest/frus/struct.ScrollBehavior.html)
 
-Source: [crates/frus-widgets/src/scrollbehavior.rs](https://github.com/KalybosPro/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/crates/frus-widgets/src/scrollbehavior.rs#L60-L66) @ `e6fba33f5b42`
+Source: [crates/frus-widgets/src/scrollbehavior.rs](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/crates/frus-widgets/src/scrollbehavior.rs#L60-L66) @ `e6fba33f5b42`

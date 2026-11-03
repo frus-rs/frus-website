@@ -29,7 +29,7 @@ impl Listener {
 
 ![Rendered preview of the Listener demo](/preview/listener.light.png)
 
-From [`frus-examples/widgets/src/features/interaction/widgets/listener.rs`](https://github.com/KalybosPro/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/interaction/widgets/listener.rs):
+From [`frus-examples/widgets/src/features/interaction/widgets/listener.rs`](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/interaction/widgets/listener.rs):
 
 ```rust
 //! `Listener` — the pointer's raw events on a widget: down, move, up, cancel, and a mouse's
@@ -192,4 +192,4 @@ A transparent wrapper: it is its child, laid out and painted exactly as the chil
 - The guide: [Taking input](/docs/guide/input)
 - API reference: [`Listener`](https://docs.rs/frus/latest/frus/struct.Listener.html)
 
-Source: [crates/frus-widgets/src/listener.rs](https://github.com/KalybosPro/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/crates/frus-widgets/src/listener.rs#L67-L70) @ `e6fba33f5b42`
+Source: [crates/frus-widgets/src/listener.rs](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/crates/frus-widgets/src/listener.rs#L67-L70) @ `e6fba33f5b42`

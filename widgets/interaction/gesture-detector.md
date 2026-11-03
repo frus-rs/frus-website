@@ -26,7 +26,7 @@ impl GestureDetector {
 
 ![Rendered preview of the GestureDetector demo](/preview/gesture-detector.light.png)
 
-From [`frus-examples/widgets/src/features/interaction/widgets/gesture_detector.rs`](https://github.com/KalybosPro/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/interaction/widgets/gesture_detector.rs):
+From [`frus-examples/widgets/src/features/interaction/widgets/gesture_detector.rs`](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/interaction/widgets/gesture_detector.rs):
 
 ```rust
 //! `GestureDetector` — taps, double taps, long presses, secondary clicks and drags on any
@@ -224,4 +224,4 @@ let _photo: GestureDetector<Msg> = GestureDetector::new(Text::new("photo"))
 - The guide: [Taking input](/docs/guide/input)
 - API reference: [`GestureDetector`](https://docs.rs/frus/latest/frus/struct.GestureDetector.html)
 
-Source: [crates/frus-widgets/src/gesturedetector.rs](https://github.com/KalybosPro/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/crates/frus-widgets/src/gesturedetector.rs#L37-L47) @ `e6fba33f5b42`
+Source: [crates/frus-widgets/src/gesturedetector.rs](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/crates/frus-widgets/src/gesturedetector.rs#L37-L47) @ `e6fba33f5b42`

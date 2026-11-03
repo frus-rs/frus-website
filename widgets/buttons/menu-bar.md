@@ -37,7 +37,7 @@ impl SubmenuButton {
 
 ![Rendered preview of the MenuBar & SubmenuButton demo](/preview/menu-bar.light.png)
 
-From [`frus-examples/widgets/src/features/buttons/widgets/menu_bar.rs`](https://github.com/KalybosPro/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/buttons/widgets/menu_bar.rs):
+From [`frus-examples/widgets/src/features/buttons/widgets/menu_bar.rs`](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/buttons/widgets/menu_bar.rs):
 
 ```rust
 //! `MenuBar`, `SubmenuButton` and `MenuPath` — the File / Edit / View menus along the
@@ -219,4 +219,4 @@ let file: SubmenuButton<Msg> = SubmenuButton::new("File")
 - API reference: [`MenuBar`](https://docs.rs/frus/latest/frus/struct.MenuBar.html)
 - API reference: [`SubmenuButton`](https://docs.rs/frus/latest/frus/struct.SubmenuButton.html)
 
-Source: [crates/frus-widgets/src/menubar.rs](https://github.com/KalybosPro/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/crates/frus-widgets/src/menubar.rs#L262-L268), [crates/frus-widgets/src/menubar.rs](https://github.com/KalybosPro/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/crates/frus-widgets/src/menubar.rs#L190-L194) @ `e6fba33f5b42`
+Source: [crates/frus-widgets/src/menubar.rs](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/crates/frus-widgets/src/menubar.rs#L262-L268), [crates/frus-widgets/src/menubar.rs](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/crates/frus-widgets/src/menubar.rs#L190-L194) @ `e6fba33f5b42`

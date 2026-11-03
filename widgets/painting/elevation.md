@@ -20,7 +20,7 @@ This demo shows a pattern rather than one type. The names it uses are in the exa
 
 ![Rendered preview of the Elevation & shadows demo](/preview/elevation.light.png)
 
-From [`frus-examples/widgets/src/features/painting/widgets/elevation.rs`](https://github.com/KalybosPro/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/painting/widgets/elevation.rs):
+From [`frus-examples/widgets/src/features/painting/widgets/elevation.rs`](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/painting/widgets/elevation.rs):
 
 ```rust
 //! Elevation — the shadows a surface casts at a given height above the page, from the
@@ -131,4 +131,4 @@ The example shows it at work; the API reference has every method.
 - [Opacity](./opacity.md): paints a child partly transparent, as one layer.
 - The guide: [Text, colour and the theme](/docs/guide/style)
 
-Source: [frus-examples/widgets/src/features/painting/widgets/elevation.rs](https://github.com/KalybosPro/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/painting/widgets/elevation.rs) @ `e6fba33f5b42`
+Source: [frus-examples/widgets/src/features/painting/widgets/elevation.rs](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/painting/widgets/elevation.rs) @ `e6fba33f5b42`

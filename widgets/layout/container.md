@@ -26,7 +26,7 @@ impl Container {
 
 ![Rendered preview of the Container demo](/preview/container.light.png)
 
-From [`frus-examples/widgets/src/features/layout/widgets/container.rs`](https://github.com/KalybosPro/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/layout/widgets/container.rs):
+From [`frus-examples/widgets/src/features/layout/widgets/container.rs`](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/layout/widgets/container.rs):
 
 ```rust
 //! `Container` — one box that can size, pad, colour, round, border and shadow its child.
@@ -155,4 +155,4 @@ A decorated rectangular box.
 - The guide: [Laying out a screen](/docs/guide/layout)
 - API reference: [`Container`](https://docs.rs/frus/latest/frus/struct.Container.html)
 
-Source: [crates/frus-widgets/src/container.rs](https://github.com/KalybosPro/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/crates/frus-widgets/src/container.rs#L24-L98) @ `e6fba33f5b42`
+Source: [crates/frus-widgets/src/container.rs](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/crates/frus-widgets/src/container.rs#L24-L98) @ `e6fba33f5b42`

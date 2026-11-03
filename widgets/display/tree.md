@@ -26,7 +26,7 @@ impl Tree {
 
 ![Rendered preview of the Tree demo](/preview/tree.light.png)
 
-From [`frus-examples/widgets/src/features/display/widgets/tree.rs`](https://github.com/KalybosPro/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/display/widgets/tree.rs):
+From [`frus-examples/widgets/src/features/display/widgets/tree.rs`](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/display/widgets/tree.rs):
 
 ```rust
 //! `Tree` — a hierarchy (files, categories, an org chart) shown as indented rows that
@@ -132,4 +132,4 @@ A hierarchical tree (visible rows, flattened).
 - The guide: [Text, colour and the theme](/docs/guide/style)
 - API reference: [`Tree`](https://docs.rs/frus/latest/frus/struct.Tree.html)
 
-Source: [crates/frus-widgets/src/tree.rs](https://github.com/KalybosPro/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/crates/frus-widgets/src/tree.rs#L167-L174) @ `e6fba33f5b42`
+Source: [crates/frus-widgets/src/tree.rs](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/crates/frus-widgets/src/tree.rs#L167-L174) @ `e6fba33f5b42`

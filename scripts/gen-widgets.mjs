@@ -30,7 +30,7 @@ const short = rev.slice(0, 12);
 const dirty = execFileSync('git', ['-C', frus, 'status', '--porcelain', '--', 'crates', 'frus-examples/widgets'], {encoding: 'utf8'}).trim();
 if (dirty) console.warn(`warning: the frus checkout has uncommitted changes; the permalinks name ${short}:\n${dirty}`);
 
-const github = `https://github.com/KalybosPro/frus/blob/${rev}`;
+const github = `https://github.com/frus-rs/frus/blob/${rev}`;
 const out = path.join(site, 'widgets');
 
 // The guide's page for each family.
@@ -421,7 +421,7 @@ application can override every one of them. This catalog has **${count} pages as
 
 Every page is written from the widget's own source and from the gallery's demo, at the revision
 its source line names. The gallery also runs in the browser, at
-<https://kalybospro.github.io/frus/>, if yours has WebGPU.
+<https://frus-rs.github.io/frus/>, if yours has WebGPU.
 
 ## The families
 

@@ -67,7 +67,7 @@ impl AnimatedSlide {
 
 ![Rendered preview of the AnimatedScale, AnimatedRotation & AnimatedSlide demo](/preview/animated-scale.light.png)
 
-From [`frus-examples/widgets/src/features/animation/widgets/animated_transform.rs`](https://github.com/KalybosPro/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/animation/widgets/animated_transform.rs):
+From [`frus-examples/widgets/src/features/animation/widgets/animated_transform.rs`](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/animation/widgets/animated_transform.rs):
 
 ```rust
 //! `AnimatedScale`, `AnimatedRotation` and `AnimatedSlide` — grow, turn or shift a child to
@@ -242,4 +242,4 @@ Layout is untouched: the box stays where it was put and the neighbours do not mo
 - API reference: [`AnimatedRotation`](https://docs.rs/frus/latest/frus/struct.AnimatedRotation.html)
 - API reference: [`AnimatedSlide`](https://docs.rs/frus/latest/frus/struct.AnimatedSlide.html)
 
-Source: [crates/frus-widgets/src/animated.rs](https://github.com/KalybosPro/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/crates/frus-widgets/src/animated.rs#L527-L529), [crates/frus-widgets/src/animated.rs](https://github.com/KalybosPro/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/crates/frus-widgets/src/animated.rs#L625-L627), [crates/frus-widgets/src/animated.rs](https://github.com/KalybosPro/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/crates/frus-widgets/src/animated.rs#L386-L388) @ `e6fba33f5b42`
+Source: [crates/frus-widgets/src/animated.rs](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/crates/frus-widgets/src/animated.rs#L527-L529), [crates/frus-widgets/src/animated.rs](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/crates/frus-widgets/src/animated.rs#L625-L627), [crates/frus-widgets/src/animated.rs](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/crates/frus-widgets/src/animated.rs#L386-L388) @ `e6fba33f5b42`

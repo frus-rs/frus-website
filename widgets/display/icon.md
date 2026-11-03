@@ -27,7 +27,7 @@ impl Icon {
 
 ![Rendered preview of the Icon demo](/preview/icon.light.png)
 
-From [`frus-examples/widgets/src/features/display/widgets/icon.rs`](https://github.com/KalybosPro/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/display/widgets/icon.rs):
+From [`frus-examples/widgets/src/features/display/widgets/icon.rs`](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/display/widgets/icon.rs):
 
 ```rust
 //! `Icon` — a vector icon from the bundled set (`Icons::…`), or one of your own,
@@ -154,4 +154,4 @@ A vector icon. Size and colour can both be customised; they default to `24` px a
 - The guide: [Text, colour and the theme](/docs/guide/style)
 - API reference: [`Icon`](https://docs.rs/frus/latest/frus/struct.Icon.html)
 
-Source: [crates/frus-widgets/src/icon.rs](https://github.com/KalybosPro/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/crates/frus-widgets/src/icon.rs#L18-L26) @ `e6fba33f5b42`
+Source: [crates/frus-widgets/src/icon.rs](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/crates/frus-widgets/src/icon.rs#L18-L26) @ `e6fba33f5b42`

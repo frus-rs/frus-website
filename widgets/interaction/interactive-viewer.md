@@ -26,7 +26,7 @@ impl InteractiveViewer {
 
 ![Rendered preview of the InteractiveViewer demo](/preview/interactive-viewer.light.png)
 
-From [`frus-examples/widgets/src/features/interaction/widgets/interactive_viewer.rs`](https://github.com/KalybosPro/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/interaction/widgets/interactive_viewer.rs):
+From [`frus-examples/widgets/src/features/interaction/widgets/interactive_viewer.rs`](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/interaction/widgets/interactive_viewer.rs):
 
 ```rust
 //! `InteractiveViewer` — a viewport whose content can be panned (drag) and zoomed (mouse
@@ -147,4 +147,4 @@ Like `crate::SingleChildScrollView`, the viewport needs a **bounded size** (othe
 - The guide: [Taking input](/docs/guide/input)
 - API reference: [`InteractiveViewer`](https://docs.rs/frus/latest/frus/struct.InteractiveViewer.html)
 
-Source: [crates/frus-widgets/src/interactive.rs](https://github.com/KalybosPro/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/crates/frus-widgets/src/interactive.rs#L116-L126) @ `e6fba33f5b42`
+Source: [crates/frus-widgets/src/interactive.rs](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/crates/frus-widgets/src/interactive.rs#L116-L126) @ `e6fba33f5b42`
