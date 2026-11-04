@@ -1,0 +1,15 @@
+node_modules
+build
+.docusaurus
+.frus
+playground/target
+tools/widget-shots/target
+static/playground-app/pkg
+static/playground-app/examples
+static/media
+docs/getting-started.md
+docs/app-structure.md
+docs/guide
+docs/tooling
+docs/internals
+.git
