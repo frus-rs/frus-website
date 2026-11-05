@@ -45,7 +45,43 @@
         return {line: +line, column: +column, message: message.join(':')};
       };
 
-      window.playgroundPanicked = (message) => say({type: 'crashed', message});
+      // The wasm is several megabytes: on a slow line it takes a minute, so say how far it got.
+      // The server may send it compressed, and then its length says nothing of the bytes the
+      // stream yields: the build writes the real size on <body> (data-wasm-bytes) when it knows.
+      const download = async (url) => {
+        const response = await fetch(url);
+        if (!response.ok || !response.body) return response;
+        const total = +document.body.dataset.wasmBytes ||
+          (response.headers.get('content-encoding') ? 0 : +response.headers.get('content-length'));
+        const reader = response.body.getReader();
+        const chunks = [];
+        let received = 0;
+        let shown = 0;
+        const mb = (bytes) => (bytes / 1e6).toFixed(1);
+        for (;;) {
+          const {done, value} = await reader.read();
+          if (done) break;
+          chunks.push(value);
+          received += value.length;
+          const now = performance.now();
+          if (now - shown > 500) {
+            shown = now;
+            status.textContent = total
+              ? `Loading frus… ${Math.min(99, Math.floor((received / total) * 100))}%`
+              : `Loading frus… ${mb(received)} MB`;
+          }
+        }
+        status.textContent = 'Starting frus…';
+        const bytes = new Uint8Array(received);
+        let at = 0;
+        for (const chunk of chunks) {
+          bytes.set(chunk, at);
+          at += chunk.length;
+        }
+        return bytes;
+      };
+
+      window.playgroundPanicked =(message) => say({type: 'crashed', message});
 
       // `navigator.gpu` alone promises nothing: a browser can have it, and no adapter behind it.
       // frus would then log an error and leave the frame blank.
@@ -56,7 +92,7 @@
       } else {
         try {
           const app = await import(`${folder}pkg/frus_playground.js`);
-          await app.default();
+          await app.default({module_or_path: await download(`${folder}pkg/frus_playground_bg.wasm`)});
           app.install_panic_report();
           status.hidden = true;
 

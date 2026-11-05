@@ -25,8 +25,12 @@ RUN npm ci --no-audit --no-fund
 COPY . .
 COPY --from=playground /src/frus /src/frus
 COPY --from=playground /out/pkg static/playground-app/pkg
-# The docs sync reads the checkout above, not the network.
-RUN FRUS_REPO=/src/frus npm run build
+# The preview's progress needs the wasm's real size: the server sends it compressed.
+RUN size=$(stat -c %s static/playground-app/pkg/frus_playground_bg.wasm) \
+ && sed -i "s|^\( *\)<body>$|\1<body data-wasm-bytes=\"$size\">|" static/playground-app/index.html
+# The docs sync reads the checkout above, not the network. Then each large file is compressed
+# ahead of time, more tightly than the server would on the fly.
+RUN FRUS_REPO=/src/frus npm run build && node scripts/precompress.mjs build
 
 FROM nginx:1.27-alpine
 COPY deploy/nginx.conf /etc/nginx/conf.d/default.conf
