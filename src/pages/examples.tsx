@@ -69,13 +69,16 @@ export default function Examples(): ReactNode {
 
         <section className={styles.run}>
           <Heading as="h2">Running one</Heading>
-          <p>Unzip it, then from its folder:</p>
+          <p>
+            Unzip it, then from its folder (the <code>frus</code> command comes from{' '}
+            <code>cargo install frus-cli</code>):
+          </p>
           <CodeBlock language="sh">
             {[
-              'cargo run                 # on the desktop: Windows, macOS, Linux',
-              'cargo test                # its tests, without a window',
-              'frus run -d web           # in the browser, with the frus command',
-              'frus run -d android       # on the connected phone',
+              'frus run                  # on the desktop: Windows, macOS, Linux',
+              'frus run -d web           # in the browser',
+              'frus run -d android       # on the connected phone, or an emulator',
+              'frus test                 # its tests, without a window',
             ].join('\n')}
           </CodeBlock>
           <p>

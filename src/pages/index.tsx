@@ -184,7 +184,7 @@ function Counter(): ReactNode {
             entry points for every platform at once.
           </p>
           <p>
-            <code>cargo run</code> starts it on the desktop. <code>frus run -d android</code> and{' '}
+            <code>frus run</code> starts it on the desktop. <code>frus run -d android</code> and{' '}
             <code>frus run -d web</code> start it on a phone and in a browser. The source stays the same.
           </p>
           <Link to="/docs/getting-started">Write your first application →</Link>
