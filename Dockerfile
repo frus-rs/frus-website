@@ -19,6 +19,9 @@ RUN cargo build --lib --target wasm32-unknown-unknown --profile web-release \
       target/wasm32-unknown-unknown/web-release/frus_playground.wasm
 
 FROM node:22-bookworm-slim AS site
+# git: the example downloads are packed from a frus release tag (scripts/package-examples.mjs).
+RUN apt-get update && apt-get install -y --no-install-recommends git ca-certificates \
+ && rm -rf /var/lib/apt/lists/*
 WORKDIR /src/frus-website
 COPY package.json package-lock.json ./
 RUN npm ci --no-audit --no-fund
@@ -36,3 +39,6 @@ FROM nginx:1.27-alpine
 COPY deploy/nginx.conf /etc/nginx/conf.d/default.conf
 COPY --from=site /src/frus-website/build /usr/share/nginx/html
 EXPOSE 80
+# The host sends traffic to a new container once this answers, and keeps the old one until then.
+HEALTHCHECK --interval=10s --timeout=3s --start-period=5s --retries=3 \
+  CMD wget -q -O /dev/null http://127.0.0.1/ || exit 1

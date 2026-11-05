@@ -13,3 +13,6 @@ docs/guide
 docs/tooling
 docs/internals
 .git
+static/downloads
+src/data/examples.json
+.frus-release

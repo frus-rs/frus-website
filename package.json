@@ -4,9 +4,10 @@
   "private": true,
   "scripts": {
     "sync": "node scripts/sync-docs.mjs",
-    "prestart": "npm run sync",
+    "examples": "node scripts/package-examples.mjs",
+    "prestart": "npm run sync && npm run examples",
     "start": "docusaurus start",
-    "prebuild": "npm run sync",
+    "prebuild": "npm run sync && npm run examples",
     "build": "docusaurus build",
     "serve": "docusaurus serve",
     "clear": "docusaurus clear",

@@ -128,6 +128,7 @@ const config: Config = {
         {to: '/docs/guide', label: 'Guide', position: 'left'},
         {to: '/widgets', label: 'Widgets', position: 'left'},
         {to: '/playground', label: 'Playground', position: 'left'},
+        {to: '/examples', label: 'Examples', position: 'left'},
         {to: '/blog', label: 'Blog', position: 'left'},
         {href: 'https://docs.rs/frus', label: 'API', position: 'right'},
         {href: repo, label: 'GitHub', position: 'right'},
@@ -148,7 +149,7 @@ const config: Config = {
             {label: 'Get started', to: '/docs/getting-started'},
             {label: 'The guide', to: '/docs/guide'},
             {label: 'Widget gallery', href: 'https://frus-rs.github.io/frus/'},
-            {label: 'Example applications', href: `${repo}/tree/master/frus-examples`},
+            {label: 'Example applications', to: '/examples'},
           ],
         },
         {
