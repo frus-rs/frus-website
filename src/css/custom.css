@@ -59,6 +59,12 @@
   border-bottom: 1px solid var(--frus-border);
 }
 
+/* A backdrop filter makes the bar the containing block of the fixed mobile menu, which was
+   then cut to the bar's height: on a phone the menu opened but could not be seen. */
+.navbar.navbar-sidebar--show {
+  backdrop-filter: none;
+}
+
 .navbar__title {
   font-weight: 800;
   letter-spacing: -0.02em;
