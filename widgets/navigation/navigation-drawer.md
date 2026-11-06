@@ -32,7 +32,7 @@ impl NavigationDrawer {
 From [`frus-examples/widgets/src/features/navigation/widgets/navdrawer.rs`](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/navigation/widgets/navdrawer.rs):
 
 ```rust
-//! `NavigationDrawer` — the content of a side panel for an app with many destinations:
+//! `NavigationDrawer`: the content of a side panel for an app with many destinations:
 //! a header, every destination with its full label (and a badge), dividers, a footer.
 //! Put it in a `Drawer` (modal or docked) or let `NavScaffold` dock it on wide screens.
 
@@ -122,23 +122,23 @@ impl State for MailboxDemoState {
 | Method | Argument | Effect |
 | --- | --- | --- |
 | `.item()` | `icon: impl Into<DestinationIcon>, label: impl Into<String>` | Adds a destination: a glyph and a name. |
-| `.child()` | `child: impl Widget<Msg> + 'static` | — |
+| `.child()` | `child: impl Widget<Msg> + 'static` |  |
 | `.child_boxed()` | `child: Box<dyn Widget<Msg>>` | `Self::child`, for a widget already boxed. |
-| `.destinations()` | `destinations: impl IntoIterator<Item = NavigationDestination>` | Adds a whole list of destinations **declared elsewhere** — one navigation, handed to whichever chrome the width called for. |
+| `.destinations()` | `destinations: impl IntoIterator<Item = NavigationDestination>` | Adds a whole list of destinations **declared elsewhere**: one navigation, handed to whichever chrome the width called for. |
 | `.badge()` | `count: u32` | A notification count on the **last** destination. |
-| `.badge_dot()` | — | Adds a dot to the **last** destination (milestone 707). |
-| `.tooltip()` | `message: impl Into<String>` | — |
-| `.selected_icon()` | `icon: impl Into<DestinationIcon>` | — |
-| `.disabled()` | — | — |
-| `.tile_color()` | `color: Color` | — |
+| `.badge_dot()` |  | Adds a dot to the **last** destination (milestone 707). |
+| `.tooltip()` | `message: impl Into<String>` |  |
+| `.selected_icon()` | `icon: impl Into<DestinationIcon>` |  |
+| `.disabled()` |  |  |
+| `.tile_color()` | `color: Color` |  |
 | `.destination_indicator_color()` | `color: Color` | The **last** destination's own indicator colour, over the drawer's. |
 | `.destination_indicator_shape()` | `shape: ShapeBorder` | The **last** destination's own indicator shape, over the drawer's. |
 | `.destination_overlay_color()` | `overlay: WidgetStateProperty<Color>` | The **last** destination's own highlight per state, over the framework's state layer. |
-| `.header()` | `header: impl Widget<Msg> + 'static` | — |
+| `.header()` | `header: impl Widget<Msg> + 'static` |  |
 | `.header_boxed()` | `header: Box<dyn Widget<Msg>>` | `Self::header`, for a widget already boxed. |
-| `.footer()` | `footer: impl Widget<Msg> + 'static` | — |
+| `.footer()` | `footer: impl Widget<Msg> + 'static` |  |
 | `.footer_boxed()` | `footer: Box<dyn Widget<Msg>>` | `Self::footer`, for a widget already boxed. |
-| `.width()` | `width: f32` | How wide the panel asks to be. Unset, it takes the width it is offered — which is what a `Drawer` gives it, so a panel's width stays the panel's business and this is for one standing on its own. |
+| `.width()` | `width: f32` | How wide the panel asks to be. Unset, it takes the width it is offered, which is what a `Drawer` gives it, so a panel's width stays the panel's business and this is for one standing on its own. |
 | `.background_color()` | `color: Color` | The panel's surface. |
 | `.elevation()` | `elevation: f32` | How far off the page the panel sits. |
 | `.shadow_color()` | `color: Color` | The shadow's colour. |

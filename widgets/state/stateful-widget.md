@@ -29,7 +29,7 @@ pub trait State: Sized + 'static { .. }
 From [`frus-examples/widgets/src/features/state/widgets/stateful_widget.rs`](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/state/widgets/stateful_widget.rs):
 
 ```rust
-//! `StatefulWidget` and its `State` — the lifecycle: `create_state` and `init_state` once,
+//! `StatefulWidget` and its `State`: the lifecycle: `create_state` and `init_state` once,
 //! `did_update_widget` whenever the parent hands down a new configuration, `build` on
 //! every rebuild, and `dispose` when the widget leaves the screen.
 //!

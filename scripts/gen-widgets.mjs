@@ -20,6 +20,8 @@ import fs from 'node:fs';
 import path from 'node:path';
 import {fileURLToPath} from 'node:url';
 
+import {dropEmDashes} from './punctuation.mjs';
+
 const site = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const frus = path.resolve(process.env.FRUS_REPO ?? path.join(site, '../frus'));
 const rustdocDir = process.env.RUSTDOC_JSON;
@@ -220,7 +222,7 @@ function links(md) {
 
 const firstSentence = (docs) => {
   const clean = cleanDocs((docs ?? '').split(/\n\s*\n/)[0]);
-  return clean.replace(/\s+/g, ' ').trim() || '—';
+  return clean.replace(/\s+/g, ' ').trim() || '';
 };
 
 // ---- the demo's types ------------------------------------------------------------------------
@@ -321,7 +323,7 @@ function page(category, demo, position) {
     lines.push(items.length > 1 ? '| --- | --- | --- | --- |' : '| --- | --- | --- |');
     for (const {owner, m} of builders) {
       const args = argumentsOf(m);
-      const row = [`\`.${m.name}()\``, args ? `\`${table(args)}\`` : '—', table(firstSentence(m.docs))];
+      const row = [`\`.${m.name}()\``, args ? `\`${table(args)}\`` : '', table(firstSentence(m.docs))];
       if (items.length > 1) row.unshift(`\`${owner}\``);
       lines.push(`| ${row.join(' | ')} |`);
     }
@@ -382,7 +384,7 @@ catalog.forEach((category, i) => {
       {
         label: category.name,
         position: i + 1,
-        link: {type: 'generated-index', description: `${category.summary}.`, slug: `/${category.id}`},
+        link: {type: 'generated-index', description: dropEmDashes(`${category.summary}.`), slug: `/${category.id}`},
       },
       null,
       2,
@@ -391,12 +393,12 @@ catalog.forEach((category, i) => {
   category.demos.forEach((demo, j) => {
     const {text, typed} = page(category, demo, j + 1);
     if (!typed) untyped.push(demo.id);
-    fs.writeFileSync(path.join(dir, `${demo.id}.md`), text);
+    fs.writeFileSync(path.join(dir, `${demo.id}.md`), dropEmDashes(text));
     total++;
   });
 });
 
-fs.writeFileSync(path.join(site, 'widgets/index.md'), landing(total));
+fs.writeFileSync(path.join(site, 'widgets/index.md'), dropEmDashes(landing(total)));
 
 console.log(`wrote ${total} widget pages from frus ${short}`);
 if (untyped.length) console.log(`${untyped.length} without a single type (pattern demos): ${untyped.join(', ')}`);

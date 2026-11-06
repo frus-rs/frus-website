@@ -34,7 +34,7 @@ impl DropdownMenu {
 From [`frus-examples/widgets/src/features/buttons/widgets/dropdown_menu.rs`](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/buttons/widgets/dropdown_menu.rs):
 
 ```rust
-//! `DropdownMenu` — a dropdown that looks like a text field and filters its choices as
+//! `DropdownMenu`: a dropdown that looks like a text field and filters its choices as
 //! you type. For a closed list too long to scan (countries, time zones).
 
 use frus::{DropdownMenu, State, StateContext, StatefulWidget, Text, Widget};
@@ -125,11 +125,11 @@ impl State for DropdownMenuDemoState {
 | `.label()` | `label: impl Into<String>` | The name of the field, floating over its border the way a `TextField`'s does. |
 | `.placeholder()` | `placeholder: impl Into<String>` | What the field shows while **nothing is selected**. |
 | `.width()` | `width: f32` | The field's width, and the list's, in logical pixels (240 by default). |
-| `.selected()` | `index: Option<usize>` | Which choice is selected — the one ticked in the list, and the one the closed field shows. |
+| `.selected()` | `index: Option<usize>` | Which choice is selected: the one ticked in the list, and the one the closed field shows. |
 | `.enabled()` | `enabled: bool` | Whether the control can be used at all. Disabled it is **inert** and, like a disabled `DropdownButton`, **never open**. |
 | `.filter()` | `filter: bool` | Whether typing **filters** the list. On by default. |
 | `.max_visible()` | `rows: usize` | Limits the number of **visible** choices; past that the list scrolls instead of stretching down the screen. |
-| `.text_style()` | `style: TextStyle` | — |
+| `.text_style()` | `style: TextStyle` |  |
 | `.menu_background()` | `color: Color` | **The surface the choices float on**, over `MenuTheme::background` and `surface_container`. |
 | `.menu_shape()` | `shape: ShapeBorder` | What shape the panel is, over the theme's and the framework's corner. |
 | `.menu_radius()` | `radius: impl Into<BorderRadius>` | The shorthand for a rounded panel. |
@@ -137,7 +137,7 @@ impl State for DropdownMenuDemoState {
 | `.menu_shadow_color()` | `color: Color` | The colour of the panel's shadow, over the theme's and the scheme's shadow at 30 %. `Color::TRANSPARENT` casts none. |
 | `.menu_padding()` | `padding: Insets` | The room kept above and below the choices, inside the panel. Eight by default. |
 | `.options()` | `labels: &[&str], on_select: impl Fn(usize) -> R1 + 'static` | The choices, as words. `on_select` maps the chosen index to a message. |
-| `.options_widgets()` | `options: Vec<DropdownOption<Msg>>, on_select: impl Fn(usize) -> R1 + 'static` | The same, for choices that are not words — see `DropdownOption`. |
+| `.options_widgets()` | `options: Vec<DropdownOption<Msg>>, on_select: impl Fn(usize) -> R1 + 'static` | The same, for choices that are not words: see `DropdownOption`. |
 
 ## Behaviour
 

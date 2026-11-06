@@ -29,7 +29,7 @@ impl ExpansionTile {
 From [`frus-examples/widgets/src/features/scrolling/widgets/expansiontile.rs`](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/scrolling/widgets/expansiontile.rs):
 
 ```rust
-//! `ExpansionTile` — a list row that opens to show more underneath. It is controlled:
+//! `ExpansionTile`: a list row that opens to show more underneath. It is controlled:
 //! it shows the open state it is given and sends a message asking to change it, which
 //! is what lets a column of them act as an accordion.
 
@@ -128,15 +128,15 @@ pub fn example() -> Box<dyn Widget> {
 
 | Method | Argument | Effect |
 | --- | --- | --- |
-| `.title_child()` | `title: impl Widget<Msg> + 'static` | The first line as a **widget**, for a header the tile would not have made — a name with a badge beside it, a row of chips. |
-| `.title_child_boxed()` | `title: Box<dyn Widget<Msg>>` | The same, taking an **already boxed** widget — what a list of panels has to hand. |
+| `.title_child()` | `title: impl Widget<Msg> + 'static` | The first line as a **widget**, for a header the tile would not have made: a name with a badge beside it, a row of chips. |
+| `.title_child_boxed()` | `title: Box<dyn Widget<Msg>>` | The same, taking an **already boxed** widget: what a list of panels has to hand. |
 | `.content()` | `content: impl Widget<Msg> + 'static` | The body, shown only while the tile is open. |
 | `.subtitle()` | `subtitle: impl Into<String>` | A second line under the title. |
 | `.leading()` | `leading: impl Widget<Msg> + 'static` | What goes in front of the title: an icon, an avatar, a checkbox. |
 | `.trailing()` | `trailing: impl Widget<Msg> + 'static` | A widget of your own at the end of the row, **in place of** the chevron: a badge, a count, a switch. It replaces the chevron rather than joining it. |
 | `.show_trailing_icon()` | `show: bool` | Hides the chevron altogether, for a tile whose open state is read from something else on the row. |
 | `.control_affinity()` | `affinity: ControlAffinity` | Which side the chevron sits on; the end of the row by default. |
-| `.dense()` | — | A **dense** tile: the same shape, less room around it. |
+| `.dense()` |  | A **dense** tile: the same shape, less room around it. |
 | `.tile_padding()` | `padding: Insets` | The room inside the tile row itself. |
 | `.children_padding()` | `padding: Insets` | The room around the body, inside the tile's width. |
 | `.background_color()` | `color: Color` | The row's background **while open**. |
@@ -145,7 +145,7 @@ pub fn example() -> Box<dyn Widget> {
 | `.collapsed_text_color()` | `color: Color` | The title's colour while shut. |
 | `.icon_color()` | `color: Color` | The chevron's colour while open. |
 | `.collapsed_icon_color()` | `color: Color` | The chevron's colour while shut. |
-| `.shape()` | `shape: ShapeBorder` | **What shape the row is while the tile is open**, over the theme's and the framework's. The row is a `ListTile`, which has taken a shape since milestone 457 — its surface **and** its ink, so a rounded tile does not splash square corners. |
+| `.shape()` | `shape: ShapeBorder` | **What shape the row is while the tile is open**, over the theme's and the framework's. The row is a `ListTile`, which has taken a shape since milestone 457: its surface **and** its ink, so a rounded tile does not splash square corners. |
 | `.collapsed_shape()` | `shape: ShapeBorder` | And while it is shut. |
 | `.radius()` | `radius: impl Into<BorderRadius>` | The shorthand for a rounded rectangle on **both** states, which is what an application usually means. |
 
@@ -153,7 +153,7 @@ pub fn example() -> Box<dyn Widget> {
 
 A tile that opens to show more.
 
-**Controlled**, like everything else here: it is told whether it is open and emits a message asking to change, rather than keeping the answer to itself. That is what lets a column of them behave as an accordion — the application decides only one is open — without the widget knowing anything about its siblings.
+**Controlled**, like everything else here: it is told whether it is open and emits a message asking to change, rather than keeping the answer to itself. That is what lets a column of them behave as an accordion (the application decides only one is open) without the widget knowing anything about its siblings.
 
 ```rust
 ExpansionTile::new("Delivery", true, Msg::Toggle)

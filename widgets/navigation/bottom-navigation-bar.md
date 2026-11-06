@@ -32,7 +32,7 @@ impl BottomNavigationBar {
 From [`frus-examples/widgets/src/features/navigation/widgets/bottomnavbar.rs`](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/navigation/widgets/bottomnavbar.rs):
 
 ```rust
-//! `BottomNavigationBar` — the classic bar of three to five destinations along the bottom
+//! `BottomNavigationBar`: the classic bar of three to five destinations along the bottom
 //! of a phone screen. A fixed bar keeps every item the same width; a shifting one widens
 //! the selected item, shows only its label and takes its colour.
 
@@ -152,7 +152,7 @@ fn phone(page: &str, bar: BottomNavigationBar) -> Container {
 
 ## Behaviour
 
-**A bar of three to five destinations along the bottom of the screen**, the selected one marked by colour — and, on a [shifting] bar, by its width, its label and the bar's own colour.
+**A bar of three to five destinations along the bottom of the screen**, the selected one marked by colour, and, on a [shifting] bar, by its width, its label and the bar's own colour.
 
 ```rust
 use frus_widgets::{BottomNavigationBar, BottomNavigationBarItem, Icons};

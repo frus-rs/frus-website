@@ -23,7 +23,7 @@ This demo shows a pattern rather than one type. The names it uses are in the exa
 From [`frus-examples/widgets/src/features/state/widgets/use_interval.rs`](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/state/widgets/use_interval.rs):
 
 ```rust
-//! `use_interval` — a timer owned by a component: it ticks for as long as builds keep
+//! `use_interval`: a timer owned by a component: it ticks for as long as builds keep
 //! asking for it, and stops by itself when a build does not (or the component goes).
 //!
 //! Unlike the other hooks it **may** be called conditionally: `if running { .. }` is

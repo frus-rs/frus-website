@@ -17,6 +17,8 @@ import path from 'node:path';
 import {fileURLToPath} from 'node:url';
 import {crc32, deflateRawSync} from 'node:zlib';
 
+import {dropEmDashes} from './punctuation.mjs';
+
 const site = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const out = path.join(site, 'static/downloads/examples');
 
@@ -145,7 +147,7 @@ function zip(files) {
 function descriptions(readme) {
   const found = [];
   for (const match of readme.matchAll(/^\| \[`([\w-]+)`\]\([\w-]+\) \| (.+?) \|$/gm)) {
-    found.push({name: match[1], teaches: match[2]});
+    found.push({name: match[1], teaches: dropEmDashes(match[2])});
   }
   return found;
 }

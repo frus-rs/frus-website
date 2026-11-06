@@ -16,6 +16,8 @@ import fs from 'node:fs';
 import path from 'node:path';
 import {fileURLToPath} from 'node:url';
 
+import {dropEmDashes} from './punctuation.mjs';
+
 const site = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const github = 'https://github.com/frus-rs/frus/blob/master';
 
@@ -76,6 +78,9 @@ function rewriteLinks(source, text) {
   });
 }
 
+// Translations are not copied: a translated page is written in this repository, under
+// `i18n/<locale>/docusaurus-plugin-content-docs/current/`, at the page's path here. A page
+// nobody has translated yet is shown in English. See TRANSLATING.md.
 for (const [source, page] of Object.entries(pages)) {
   let text = fs.readFileSync(path.join(repo, source), 'utf8');
   // A page's own title for the sidebar, where its heading would read oddly there.
@@ -95,7 +100,7 @@ for (const [source, page] of Object.entries(pages)) {
   const front = `---\n${label ? `sidebar_label: ${label}\n` : ''}custom_edit_url: ${github}/${source}\n---\n\n`;
   const out = path.join(site, 'docs', page);
   fs.mkdirSync(path.dirname(out), {recursive: true});
-  fs.writeFileSync(out, front + rewriteLinks(source, text));
+  fs.writeFileSync(out, front + dropEmDashes(rewriteLinks(source, text)));
 }
 
 const mediaOut = path.join(site, 'static/media');

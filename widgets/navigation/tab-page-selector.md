@@ -29,7 +29,7 @@ impl TabPageSelector {
 From [`frus-examples/widgets/src/features/navigation/widgets/pageselector.rs`](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/navigation/widgets/pageselector.rs):
 
 ```rust
-//! `TabPageSelector` — the row of dots that says which of several pages you are on:
+//! `TabPageSelector`: the row of dots that says which of several pages you are on:
 //! under an onboarding walkthrough, a gallery or a carousel.
 
 use frus::{
@@ -117,7 +117,7 @@ pub fn example() -> Box<dyn Widget> {
 
 | Method | Argument | Effect |
 | --- | --- | --- |
-| `.size()` | `size: f32` | — |
+| `.size()` | `size: f32` |  |
 | `.gap()` | `gap: f32` | The gap between two dots. |
 | `.color()` | `color: Color` | What the dot you are on is filled with. Unset, the accent. |
 | `.border_color()` | `color: Color` | The ring every dot is drawn with. |
@@ -126,9 +126,9 @@ pub fn example() -> Box<dyn Widget> {
 
 **The row of dots that says which page of several you are on.**
 
-It pairs with `PageView` as much as with a `TabBar`: an onboarding walkthrough, a gallery, a carousel — anything with a handful of pages and no room for a bar. It is a **read-out**, not a control: it says where you are and does not take a press, because a four-pixel target is not one.
+It pairs with `PageView` as much as with a `TabBar`: an onboarding walkthrough, a gallery, a carousel, anything with a handful of pages and no room for a bar. It is a **read-out**, not a control: it says where you are and does not take a press, because a four-pixel target is not one.
 
-The dot for the page you are on is filled and the rest are rings, and the fill **crosses** rather than jumping — driven by the same fractional index the tab bar's indicator slides along, so a selector under a page view and a bar over it agree on where the crossing has got to.
+The dot for the page you are on is filled and the rest are rings, and the fill **crosses** rather than jumping: driven by the same fractional index the tab bar's indicator slides along, so a selector under a page view and a bar over it agree on where the crossing has got to.
 
 ```rust
 use frus_widgets::TabPageSelector;

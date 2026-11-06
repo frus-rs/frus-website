@@ -44,7 +44,7 @@ impl DateTimePicker {
 From [`frus-examples/widgets/src/features/inputs/widgets/date_time_picker.rs`](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/inputs/widgets/date_time_picker.rs):
 
 ```rust
-//! `DateTimePicker` — a calendar above a time picker, with a summary of the choice on
+//! `DateTimePicker`: a calendar above a time picker, with a summary of the choice on
 //! top. For one moment: an appointment, a reminder.
 
 use frus::{DateTimePicker, State, StateContext, StatefulWidget, Widget};
@@ -89,7 +89,7 @@ impl State for DateTimeDemoState {
     type Widget = DateTimeDemo;
 
     fn build(&self, cx: &StateContext<Self>) -> Box<dyn Widget> {
-        // Four handlers — day, month arrows, hour, minute — each storing one field. The
+        // Four handlers (day, month arrows, hour, minute) each storing one field. The
         // summary at the top appears once a day is chosen.
         let picker = DateTimePicker::new(
             self.year,

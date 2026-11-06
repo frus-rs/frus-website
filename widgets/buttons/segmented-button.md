@@ -32,7 +32,7 @@ impl SegmentedButton {
 From [`frus-examples/widgets/src/features/buttons/widgets/segmented_button.rs`](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/buttons/widgets/segmented_button.rs):
 
 ```rust
-//! `SegmentedButton` — one outlined control with a few segments, exactly one of them
+//! `SegmentedButton`: one outlined control with a few segments, exactly one of them
 //! chosen. For switching between views or modes (day / week / month).
 
 use frus::{Color, SegmentedButton, State, StateContext, StatefulWidget, Text, Widget};
@@ -123,7 +123,7 @@ impl State for SegmentedDemoState {
 | `.height()` | `height: f32` | The control's height. |
 | `.padding()` | `padding: f32` | The room either side of a label. |
 | `.label_style()` | `style: TextStyle` | The labels' type. Defaults to the theme's `label_large` step. |
-| `.enabled()` | `enabled: bool` | Greys the whole control out and makes it inert: no press, no ink, out of the tab order, and announced as disabled. The labels and the current choice stay legible — a disabled control is read-only, not invisible. |
+| `.enabled()` | `enabled: bool` | Greys the whole control out and makes it inert: no press, no ink, out of the tab order, and announced as disabled. The labels and the current choice stay legible: a disabled control is read-only, not invisible. |
 | `.show_selected_icon()` | `show: bool` | Whether the chosen segment carries a checkmark. On by default; turning it off gives every segment back the room it reserved. |
 
 ## Behaviour

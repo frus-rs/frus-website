@@ -1,0 +1,102 @@
+{
+  "version.label": {
+    "message": "Prochaine",
+    "description": "The label for version current"
+  },
+  "sidebar.widgets.category.Layout": {
+    "message": "Mise en page",
+    "description": "The label for category 'Layout' in sidebar 'widgets'"
+  },
+  "sidebar.widgets.category.Layout.link.generated-index.description": {
+    "message": "Boîtes, lignes, colonnes, piles et contraintes.",
+    "description": "The generated-index page description for category 'Layout' in sidebar 'widgets'"
+  },
+  "sidebar.widgets.category.Text": {
+    "message": "Texte",
+    "description": "The label for category 'Text' in sidebar 'widgets'"
+  },
+  "sidebar.widgets.category.Text.link.generated-index.description": {
+    "message": "Texte, styles, texte enrichi et sélectionnable.",
+    "description": "The generated-index page description for category 'Text' in sidebar 'widgets'"
+  },
+  "sidebar.widgets.category.Buttons & menus": {
+    "message": "Boutons et menus",
+    "description": "The label for category 'Buttons & menus' in sidebar 'widgets'"
+  },
+  "sidebar.widgets.category.Buttons & menus.link.generated-index.description": {
+    "message": "Boutons, boutons d'icône, bascules et menus.",
+    "description": "The generated-index page description for category 'Buttons & menus' in sidebar 'widgets'"
+  },
+  "sidebar.widgets.category.Inputs & forms": {
+    "message": "Saisie et formulaires",
+    "description": "The label for category 'Inputs & forms' in sidebar 'widgets'"
+  },
+  "sidebar.widgets.category.Inputs & forms.link.generated-index.description": {
+    "message": "Champs de texte, choix, curseurs, sélecteurs et validation.",
+    "description": "The generated-index page description for category 'Inputs & forms' in sidebar 'widgets'"
+  },
+  "sidebar.widgets.category.Display": {
+    "message": "Affichage",
+    "description": "The label for category 'Display' in sidebar 'widgets'"
+  },
+  "sidebar.widgets.category.Display.link.generated-index.description": {
+    "message": "Cartes, puces, avatars, icônes, images, tableaux et graphiques.",
+    "description": "The generated-index page description for category 'Display' in sidebar 'widgets'"
+  },
+  "sidebar.widgets.category.Feedback": {
+    "message": "Retours",
+    "description": "The label for category 'Feedback' in sidebar 'widgets'"
+  },
+  "sidebar.widgets.category.Feedback.link.generated-index.description": {
+    "message": "Dialogues, snack bars, feuilles, bannières et progression.",
+    "description": "The generated-index page description for category 'Feedback' in sidebar 'widgets'"
+  },
+  "sidebar.widgets.category.Navigation": {
+    "message": "Navigation",
+    "description": "The label for category 'Navigation' in sidebar 'widgets'"
+  },
+  "sidebar.widgets.category.Navigation.link.generated-index.description": {
+    "message": "Barres d'application, onglets, barres de navigation, rails et tiroirs.",
+    "description": "The generated-index page description for category 'Navigation' in sidebar 'widgets'"
+  },
+  "sidebar.widgets.category.Lists & scrolling": {
+    "message": "Listes et défilement",
+    "description": "The label for category 'Lists & scrolling' in sidebar 'widgets'"
+  },
+  "sidebar.widgets.category.Lists & scrolling.link.generated-index.description": {
+    "message": "Listes, grilles, pages, réorganisation et dépliage.",
+    "description": "The generated-index page description for category 'Lists & scrolling' in sidebar 'widgets'"
+  },
+  "sidebar.widgets.category.Animation": {
+    "message": "Animation",
+    "description": "The label for category 'Animation' in sidebar 'widgets'"
+  },
+  "sidebar.widgets.category.Animation.link.generated-index.description": {
+    "message": "Animations implicites, transitions et héros.",
+    "description": "The generated-index page description for category 'Animation' in sidebar 'widgets'"
+  },
+  "sidebar.widgets.category.Painting & effects": {
+    "message": "Dessin et effets",
+    "description": "The label for category 'Painting & effects' in sidebar 'widgets'"
+  },
+  "sidebar.widgets.category.Painting & effects.link.generated-index.description": {
+    "message": "Décoration, découpe, transformations, dessin personnalisé et filtres.",
+    "description": "The generated-index page description for category 'Painting & effects' in sidebar 'widgets'"
+  },
+  "sidebar.widgets.category.Interaction": {
+    "message": "Interaction",
+    "description": "The label for category 'Interaction' in sidebar 'widgets'"
+  },
+  "sidebar.widgets.category.Interaction.link.generated-index.description": {
+    "message": "Gestes, survol, glisser-déposer, focus et raccourcis.",
+    "description": "The generated-index page description for category 'Interaction' in sidebar 'widgets'"
+  },
+  "sidebar.widgets.category.State & async": {
+    "message": "État et asynchrone",
+    "description": "The label for category 'State & async' in sidebar 'widgets'"
+  },
+  "sidebar.widgets.category.State & async.link.generated-index.description": {
+    "message": "Hooks, notificateurs, futures, flux, thème et taille d'écran.",
+    "description": "The generated-index page description for category 'State & async' in sidebar 'widgets'"
+  }
+}

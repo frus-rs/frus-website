@@ -29,7 +29,7 @@ impl AspectRatio {
 From [`frus-examples/widgets/src/features/layout/widgets/aspect_ratio.rs`](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/layout/widgets/aspect_ratio.rs):
 
 ```rust
-//! `AspectRatio` — a box whose height follows from its width: a video frame, a photo
+//! `AspectRatio`: a box whose height follows from its width: a video frame, a photo
 //! card, a square tile.
 
 use frus::{Alignment, AspectRatio, Color, Container, Row, SizedBox, Text, Widget};
@@ -81,9 +81,9 @@ fn frame(label: &str, color: &str) -> Container {
 
 Imposes a `width / height` ratio on its box: the box **takes the full available width**, then derives its height from the ratio (`height = width / ratio`). In a column 100 wide, `AspectRatio::new(2.0)` gives a 100×50 box and `AspectRatio::new(0.5)` a 100×200 one.
 
-The ratio follows the usual convention (taffy's included): `width / height` — `2.0` is twice as wide as it is tall, `0.5` twice as tall as it is wide.
+The ratio follows the usual convention (taffy's included): `width / height`, `2.0` is twice as wide as it is tall, `0.5` twice as tall as it is wide.
 
-The child inherits the box: it stretches in height, along the cross axis, and fills the width if it grows (`flex`) — typically an image or a solid background.
+The child inherits the box: it stretches in height, along the cross axis, and fills the width if it grows (`flex`), typically an image or a solid background.
 
 ## See also
 

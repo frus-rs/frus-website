@@ -37,11 +37,11 @@ impl ScaffoldMessenger {
 From [`frus-examples/widgets/src/features/feedback/widgets/snack_bar.rs`](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/feedback/widgets/snack_bar.rs):
 
 ```rust
-//! `SnackBar`, `SnackBarQueue` and `ScaffoldMessenger` — a short message at the bottom
+//! `SnackBar`, `SnackBarQueue` and `ScaffoldMessenger`: a short message at the bottom
 //! of the screen that goes away by itself.
 //!
 //! The three split the job: `SnackBar` is the bar, `ScaffoldMessenger` is the layer that
-//! places it over the screen, and `SnackBarQueue` — plain application state — decides
+//! places it over the screen, and `SnackBarQueue` (plain application state) decides
 //! which message shows and when it leaves.
 
 use std::time::Duration;
@@ -292,27 +292,27 @@ impl State for SnackBarDemoState {
 
 | Type | Method | Argument | Effect |
 | --- | --- | --- | --- |
-| `SnackBar` | `.behavior()` | `behavior: SnackBarBehavior` | — |
-| `SnackBar` | `.shape()` | `shape: ShapeBorder` | — |
-| `SnackBar` | `.width()` | `width: f32` | — |
-| `SnackBar` | `.margin()` | `margin: Insets` | — |
+| `SnackBar` | `.behavior()` | `behavior: SnackBarBehavior` |  |
+| `SnackBar` | `.shape()` | `shape: ShapeBorder` |  |
+| `SnackBar` | `.width()` | `width: f32` |  |
+| `SnackBar` | `.margin()` | `margin: Insets` |  |
 | `SnackBar` | `.background()` | `color: Color` | The bar's surface, over the theme's and the scheme's `inverse_surface`. |
 | `SnackBar` | `.elevation()` | `elevation: f32` | `0.0` casts no shadow. |
 | `SnackBar` | `.text_color()` | `color: Color` | The message's colour, over the theme's and the scheme's `on_inverse_surface`. |
 | `SnackBar` | `.action_text_color()` | `color: Color` | The action's colour, over the theme's and the scheme's `inverse_primary`. |
 | `SnackBar` | `.accent()` | `color: Color` | The stripe down the leading edge, over the theme's and the kind's. |
-| `SnackBar` | `.content_text_style()` | `style: TextStyle` | — |
-| `SnackBar` | `.action_text_style()` | `style: TextStyle` | — |
-| `SnackBar` | `.success()` | — | The success variant. |
-| `SnackBar` | `.error()` | — | The error variant. |
-| `SnackBar` | `.action()` | `label: impl Into<String>, message: Msg` | Adds an **action button** (an uppercased label, Material style) that emits `message` on click — typically "UNDO", to undo whatever triggered the notification. |
+| `SnackBar` | `.content_text_style()` | `style: TextStyle` |  |
+| `SnackBar` | `.action_text_style()` | `style: TextStyle` |  |
+| `SnackBar` | `.success()` |  | The success variant. |
+| `SnackBar` | `.error()` |  | The error variant. |
+| `SnackBar` | `.action()` | `label: impl Into<String>, message: Msg` | Adds an **action button** (an uppercased label, Material style) that emits `message` on click: typically "UNDO", to undo whatever triggered the notification. |
 | `SnackBar` | `.close_icon()` | `message: impl Into<Msg>` | Carries the current action *and the current style* into the child. |
-| `SnackBar` | `.close_icon_color()` | `color: Color` | — |
+| `SnackBar` | `.close_icon_color()` | `color: Color` |  |
 | `SnackBar` | `.close_icon_label()` | `label: impl Into<String>` | See `crate::localizations`. |
-| `ScaffoldMessenger` | `.padding()` | `padding: f32` | Margin between the toasts and the edges. **None by default**: what a notification keeps clear of the page is the notification's own business — see `SnackBar::margin`. |
+| `ScaffoldMessenger` | `.padding()` | `padding: f32` | Margin between the toasts and the edges. **None by default**: what a notification keeps clear of the page is the notification's own business, see `SnackBar::margin`. |
 | `ScaffoldMessenger` | `.toast()` | `widget: impl Widget<Msg> + 'static` | Adds a toast to the stack (call it several times to stack several). |
 | `ScaffoldMessenger` | `.fade_in()` | `duration: f32` | Wraps **every** toast in an animated opacity (`duration` seconds): a fade-in built on the existing animation layer. Call this after the `toast`s. |
-| `ScaffoldMessenger` | `.fade_out()` | `duration: f32` | The mirror of `fade_in`: animates the opacity toward **0** — the **exit** transition (the toast fades out before it is removed, Material style). The application plays it when the notification is leaving (see `crate::SnackBarQueue::is_leaving`). |
+| `ScaffoldMessenger` | `.fade_out()` | `duration: f32` | The mirror of `fade_in`: animates the opacity toward **0**, the **exit** transition (the toast fades out before it is removed, Material style). The application plays it when the notification is leaving (see `crate::SnackBarQueue::is_leaving`). |
 
 ## Behaviour
 

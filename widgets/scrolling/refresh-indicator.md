@@ -29,7 +29,7 @@ impl RefreshIndicator {
 From [`frus-examples/widgets/src/features/scrolling/widgets/refresh.rs`](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/scrolling/widgets/refresh.rs):
 
 ```rust
-//! `RefreshIndicator` — pull a list down past its top to ask for fresh data. The app
+//! `RefreshIndicator`: pull a list down past its top to ask for fresh data. The app
 //! decides when the answer has arrived: the spinner turns for as long as it says
 //! `refreshing(true)`.
 
@@ -108,7 +108,7 @@ RefreshIndicator::new(SingleChildScrollView::new().child(rows))
     .color(theme.scheme.tertiary)     // every part is overridable
 ```
 
-The child does not have to be a `SingleChildScrollView` directly — any scrollable anywhere inside feeds the pull, which is what lets a screen keep its own layout around the list.
+The child does not have to be a `SingleChildScrollView` directly: any scrollable anywhere inside feeds the pull, which is what lets a screen keep its own layout around the list.
 
 ## See also
 

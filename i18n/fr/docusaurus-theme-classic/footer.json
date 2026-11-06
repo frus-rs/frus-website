@@ -1,0 +1,78 @@
+{
+  "link.title.Learn": {
+    "message": "Apprendre",
+    "description": "The title of the footer links column with title=Learn in the footer"
+  },
+  "link.title.Reference": {
+    "message": "Référence",
+    "description": "The title of the footer links column with title=Reference in the footer"
+  },
+  "link.title.Community": {
+    "message": "Communauté",
+    "description": "The title of the footer links column with title=Community in the footer"
+  },
+  "link.item.label.Get started": {
+    "message": "Commencer",
+    "description": "The label of footer link with label=Get started linking to /docs/getting-started"
+  },
+  "link.item.label.The guide": {
+    "message": "Le guide",
+    "description": "The label of footer link with label=The guide linking to /docs/guide"
+  },
+  "link.item.label.Widget gallery": {
+    "message": "Galerie de widgets",
+    "description": "The label of footer link with label=Widget gallery linking to https://frus-rs.github.io/frus/"
+  },
+  "link.item.label.Example applications": {
+    "message": "Applications d'exemple",
+    "description": "The label of footer link with label=Example applications linking to /examples"
+  },
+  "link.item.label.The frus command": {
+    "message": "La commande frus",
+    "description": "The label of footer link with label=The frus command linking to /docs/tooling/cli"
+  },
+  "link.item.label.VS Code extension": {
+    "message": "Extension VS Code",
+    "description": "The label of footer link with label=VS Code extension linking to /docs/tooling/vscode"
+  },
+  "link.item.label.Architecture": {
+    "message": "Architecture",
+    "description": "The label of footer link with label=Architecture linking to /docs/internals/architecture"
+  },
+  "link.item.label.API reference": {
+    "message": "Référence de l'API",
+    "description": "The label of footer link with label=API reference linking to https://docs.rs/frus"
+  },
+  "link.item.label.crates.io": {
+    "message": "crates.io",
+    "description": "The label of footer link with label=crates.io linking to https://crates.io/crates/frus"
+  },
+  "link.item.label.GitHub": {
+    "message": "GitHub",
+    "description": "The label of footer link with label=GitHub linking to https://github.com/frus-rs/frus"
+  },
+  "link.item.label.Issues": {
+    "message": "Issues",
+    "description": "The label of footer link with label=Issues linking to https://github.com/frus-rs/frus/issues"
+  },
+  "link.item.label.Discussions": {
+    "message": "Discussions",
+    "description": "The label of footer link with label=Discussions linking to https://github.com/frus-rs/frus/discussions"
+  },
+  "link.item.label.Roadmap": {
+    "message": "Feuille de route",
+    "description": "The label of footer link with label=Roadmap linking to https://github.com/frus-rs/frus/blob/master/ROADMAP.md"
+  },
+  "link.item.label.Blog": {
+    "message": "Blog",
+    "description": "The label of footer link with label=Blog linking to /blog"
+  },
+  "copyright": {
+    "message": "Contributeurs de frus, MIT OR Apache-2.0",
+    "description": "The footer copyright"
+  },
+  "logo.alt": {
+    "message": "frus",
+    "description": "The alt text of footer logo"
+  }
+}

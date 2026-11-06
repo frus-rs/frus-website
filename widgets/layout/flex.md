@@ -30,7 +30,7 @@ impl Flex {
 From [`frus-examples/widgets/src/features/layout/widgets/flex.rs`](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/layout/widgets/flex.rs):
 
 ```rust
-//! `Flex` — the flexbox container under `Row` and `Column`: a line of children that
+//! `Flex`: the flexbox container under `Row` and `Column`: a line of children that
 //! shrink-wraps, stretches them across, and can wrap or run in reverse.
 //!
 //! Reach for `Row`/`Column` first. `Flex` is for when you want flexbox's own rules: a
@@ -56,7 +56,7 @@ pub fn example() -> Box<dyn Widget> {
                     .child(chip("three")),
             ),
         )),
-        // Children are stretched across the line by default — here, to the tallest one.
+        // Children are stretched across the line by default: here, to the tallest one.
         // `align` picks another cross-axis position.
         Box::new(section(
             "Stretched across (the default) and centred",
@@ -86,7 +86,7 @@ pub fn example() -> Box<dyn Widget> {
                     .child(chip("right")),
             ),
         )),
-        // `reverse` lays the children out from the far end — a chat transcript that
+        // `reverse` lays the children out from the far end: a chat transcript that
         // grows upwards is a reversed column.
         Box::new(section(
             "Reversed column",
@@ -149,22 +149,22 @@ fn tall_chip() -> Container {
 | --- | --- | --- |
 | `.width()` | `width: f32` | Sets the width, in logical pixels. |
 | `.height()` | `height: f32` | Sets the height, in logical pixels. |
-| `.width_fraction()` | `fraction: f32` | Sets the width as a **fraction of the space the parent offers** — `1.0` fills it. |
+| `.width_fraction()` | `fraction: f32` | Sets the width as a **fraction of the space the parent offers**: `1.0` fills it. |
 | `.flex()` | `grow: f32` | The flex grow factor along the parent's main axis. |
 | `.shrink()` | `shrink: f32` | How much of a row's deficit this box absorbs. |
-| `.no_shrink()` | — | This box never shrinks — the default said out loud, kept because a layout that depends on it reads better for saying so. See `Self::shrink`. |
-| `.reverse()` | — | Lays the children out from the **far end** of the axis: a column from the bottom up, a row from the end of the line back. Their order is unchanged — the first child is simply placed last. |
+| `.no_shrink()` |  | This box never shrinks: the default said out loud, kept because a layout that depends on it reads better for saying so. See `Self::shrink`. |
+| `.reverse()` |  | Lays the children out from the **far end** of the axis: a column from the bottom up, a row from the end of the line back. Their order is unchanged: the first child is simply placed last. |
 | `.justify()` | `justify: Justify` | How the children are distributed along the main axis. |
 | `.align()` | `align: Align` | How the children are aligned on the cross axis. |
 | `.padding()` | `padding: f32` | Uniform padding, in logical pixels. |
-| `.padding_insets()` | `padding: impl Into<frus_core::InsetsGeometry>` | Sets the padding from any insets: one number, physical `Insets` — whose left stays on the left in a right-to-left script — or `InsetsDirectional`, whose start is the right there. |
-| `.padding_each()` | `top: f32, right: f32, bottom: f32, left: f32` | Padding per side: top, right, bottom, left — physical: the left stays on the left in a right-to-left script. `padding_insets` takes a start and an end. |
+| `.padding_insets()` | `padding: impl Into<frus_core::InsetsGeometry>` | Sets the padding from any insets: one number, physical `Insets` (whose left stays on the left in a right-to-left script) or `InsetsDirectional`, whose start is the right there. |
+| `.padding_each()` | `top: f32, right: f32, bottom: f32, left: f32` | Padding per side: top, right, bottom, left, physical: the left stays on the left in a right-to-left script. `padding_insets` takes a start and an end. |
 | `.gap()` | `gap: f32` | Spacing between children, in logical pixels. |
-| `.run_gap()` | `gap: f32` | — |
-| `.align_lines()` | `align: AlignContent` | — |
-| `.wrap()` | — | Turns **wrapping** on: children that overflow the main axis move to a new line, a responsive reflow. See also `Wrap` as a named entry point. |
+| `.run_gap()` | `gap: f32` |  |
+| `.align_lines()` | `align: AlignContent` |  |
+| `.wrap()` |  | Turns **wrapping** on: children that overflow the main axis move to a new line, a responsive reflow. See also `Wrap` as a named entry point. |
 | `.child()` | `child: impl Widget<Msg> + 'static` | Adds a child. |
-| `.child_boxed()` | `child: Box<dyn Widget<Msg>>` | Adds an **already boxed** child — useful when children are built dynamically, in a `Vec<Box<dyn Widget>>`, and already erased to the dynamic type. |
+| `.child_boxed()` | `child: Box<dyn Widget<Msg>>` | Adds an **already boxed** child: useful when children are built dynamically, in a `Vec<Box<dyn Widget>>`, and already erased to the dynamic type. |
 
 ## Behaviour
 

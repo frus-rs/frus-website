@@ -33,7 +33,7 @@ pub struct OrientationBuilder;
 From [`frus-examples/widgets/src/features/layout/widgets/layout_builder.rs`](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/layout/widgets/layout_builder.rs):
 
 ```rust
-//! `LayoutBuilder` and `OrientationBuilder` — build from the room actually given, not
+//! `LayoutBuilder` and `OrientationBuilder`: build from the room actually given, not
 //! from the window's size, so a component adapts wherever it is placed.
 //!
 //! The content is built on the fly every frame from the box: it keeps no state of its

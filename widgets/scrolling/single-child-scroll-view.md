@@ -29,7 +29,7 @@ impl SingleChildScrollView {
 From [`frus-examples/widgets/src/features/scrolling/widgets/scrollview.rs`](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/scrolling/widgets/scrollview.rs):
 
 ```rust
-//! `SingleChildScrollView` — makes one child scrollable when it is bigger than the room
+//! `SingleChildScrollView`: makes one child scrollable when it is bigger than the room
 //! it has: down, across, or both ways. It builds the whole child, so it suits content of
 //! a known, modest size; long lists want `ListView`.
 
@@ -136,17 +136,17 @@ fn swatch(i: usize) -> Container {
 | Method | Argument | Effect |
 | --- | --- | --- |
 | `.axis()` | `axis: Axis` | Chooses the scrolling axis or axes; vertical by default. |
-| `.reverse()` | — | Scrolls **from the far end**: the content is anchored to the bottom of a vertical viewport (the right of a horizontal one) and the area starts there. |
+| `.reverse()` |  | Scrolls **from the far end**: the content is anchored to the bottom of a vertical viewport (the right of a horizontal one) and the area starts there. |
 | `.physics()` | `physics: ScrollPhysics` | Overrides how this area behaves at its edges and after a fling. |
 | `.scrollbars()` | `scrollbars: crate::physics::Scrollbars` | **Whether this area draws a scrollbar**, over the application's answer. |
-| `.thumb_visibility()` | `visible: bool` | — |
+| `.thumb_visibility()` | `visible: bool` |  |
 | `.width()` | `width: f32` | Sets the viewport width, in logical pixels. |
 | `.height()` | `height: f32` | Sets the viewport height, in logical pixels. |
 | `.flex()` | `grow: f32` | Flex growth factor along the parent's main axis. |
 | `.padding()` | `padding: f32` | Insets the content, **inside** the viewport: the padding scrolls with what it surrounds rather than shrinking the window onto it. |
 | `.padding_each()` | `top: f32, right: f32, bottom: f32, left: f32` | The same, one side at a time. |
-| `.on_scroll()` | `on_scroll: impl Fn(crate::ScrollPosition) -> R + 'static` | **Says where this area is** whenever it moves — a "back to top" button that appears once the page has gone down, a rule that fills as it goes, a load-more when the end comes into view. |
-| `.notify_every()` | `px: f32` | Reports no more often than every `px` of movement — and **always** reports where it comes to rest, however short the last step was. |
+| `.on_scroll()` | `on_scroll: impl Fn(crate::ScrollPosition) -> R + 'static` | **Says where this area is** whenever it moves: a "back to top" button that appears once the page has gone down, a rule that fills as it goes, a load-more when the end comes into view. |
+| `.notify_every()` | `px: f32` | Reports no more often than every `px` of movement, and **always** reports where it comes to rest, however short the last step was. |
 | `.child()` | `content: impl Widget<Msg> + 'static` | Sets the scrollable content. |
 
 ## Behaviour

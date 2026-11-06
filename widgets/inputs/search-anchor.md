@@ -29,7 +29,7 @@ impl SearchAnchor {
 From [`frus-examples/widgets/src/features/inputs/widgets/search_anchor.rs`](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/inputs/widgets/search_anchor.rs):
 
 ```rust
-//! `SearchAnchor` — a search bar that opens a **search view** when pressed: the same
+//! `SearchAnchor`: a search bar that opens a **search view** when pressed: the same
 //! query, and a list of suggestions under it. Full screen on a phone, a panel under the
 //! bar on a desktop.
 
@@ -115,12 +115,12 @@ impl State for SearchAnchorDemoState {
 | Method | Argument | Effect |
 | --- | --- | --- |
 | `.hint()` | `hint: impl Into<String>` | What the **bar** says while it is empty. |
-| `.view_hint()` | `hint: impl Into<String>` | What the **view's header** says, when it differs. Unset, the bar's — a view that renamed the thing being searched the moment it opened would be answering a different question. |
+| `.view_hint()` | `hint: impl Into<String>` | What the **view's header** says, when it differs. Unset, the bar's: a view that renamed the thing being searched the moment it opened would be answering a different question. |
 | `.anchor()` | `anchor: impl Widget<Msg> + 'static` | A bar is the usual anchor and not the only one: an icon button in an app bar is a search anchor too. |
 | `.anchor_boxed()` | `anchor: Box<dyn Widget<Msg>>` | `Self::anchor`, for a widget already boxed. |
 | `.suggestion()` | `suggestion: impl Widget<Msg> + 'static` | Here the application owns it, so these are simply what it decided the query meant. |
 | `.suggestion_boxed()` | `suggestion: Box<dyn Widget<Msg>>` | `Self::suggestion`, for a widget already boxed. |
-| `.view_leading()` | `leading: impl Widget<Msg> + 'static` | — |
+| `.view_leading()` | `leading: impl Widget<Msg> + 'static` |  |
 | `.view_leading_boxed()` | `leading: Box<dyn Widget<Msg>>` | `Self::view_leading`, for a widget already boxed. |
 | `.view_trailing()` | `trailing: impl Widget<Msg> + 'static` | Adds a widget after the view's field, in place of the clear cross it builds by default. |
 | `.view_trailing_boxed()` | `trailing: Box<dyn Widget<Msg>>` | `Self::view_trailing`, for a widget already boxed. |

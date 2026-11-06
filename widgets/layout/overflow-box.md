@@ -34,7 +34,7 @@ impl OverflowBox {
 From [`frus-examples/widgets/src/features/layout/widgets/overflow_box.rs`](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/layout/widgets/overflow_box.rs):
 
 ```rust
-//! `UnconstrainedBox`, `OverflowBox`, `SizedOverflowBox` and `ConstraintsTransformBox` —
+//! `UnconstrainedBox`, `OverflowBox`, `SizedOverflowBox` and `ConstraintsTransformBox`:
 //! let a child be a size its parent did not offer.
 
 use frus::{
@@ -138,16 +138,16 @@ fn tag(label: &str) -> Container {
 | --- | --- | --- | --- |
 | `OverflowBox` | `.width()` | `width: f32` | The width to lay the child out at. |
 | `OverflowBox` | `.height()` | `height: f32` | The height to lay the child out at. |
-| `OverflowBox` | `.natural_height()` | — | Lays the child out at the box's width and **the height it asks for**, however tall or short the box is (milestone 595). |
-| `OverflowBox` | `.alignment()` | `alignment: Alignment` | Where the child sits in the box — and so which edges it spills past. |
+| `OverflowBox` | `.natural_height()` |  | Lays the child out at the box's width and **the height it asks for**, however tall or short the box is (milestone 595). |
+| `OverflowBox` | `.alignment()` | `alignment: Alignment` | Where the child sits in the box, and so which edges it spills past. |
 
 ## Behaviour
 
 ### `UnconstrainedBox`
 
-Lets its child be its **natural size** even where the parent offers less — and says so when that does not fit.
+Lets its child be its **natural size** even where the parent offers less, and says so when that does not fit.
 
-The child is laid out as if nothing were constraining it, and the box is as big as the child, up to the space it was itself offered. Where the child fits, nothing is unusual — the box is simply the child's size, hugging it in a place that would have stretched it. Where it does not, the child is painted past the edges and a band says by how much, in debug builds.
+The child is laid out as if nothing were constraining it, and the box is as big as the child, up to the space it was itself offered. Where the child fits, nothing is unusual: the box is simply the child's size, hugging it in a place that would have stretched it. Where it does not, the child is painted past the edges and a band says by how much, in debug builds.
 
 ```rust
 // A row of chips that must not be squashed: too many, and the overflow is visible.
@@ -162,7 +162,7 @@ That visible failure is the point, and the difference between this and `Overflow
 
 A child laid out to constraints of **its own**, free to be bigger than the box that holds it, and painted over whatever is around it.
 
-The box itself takes the size it would have taken with no child at all, so nothing around it moves. What changes is the child: it is laid out separately — at a size given here, or at the size it asks for (`OverflowBox::unconstrained`) — then anchored in the box and allowed to spill past its edges.
+The box itself takes the size it would have taken with no child at all, so nothing around it moves. What changes is the child: it is laid out separately (at a size given here, or at the size it asks for (`OverflowBox::unconstrained`)) then anchored in the box and allowed to spill past its edges.
 
 This is the escape hatch for a background that should bleed past its slot, or a decoration wider than the row it belongs to. It does **not** clip: put a `crate::ClipRRect` above it if the spill should stop somewhere.
 

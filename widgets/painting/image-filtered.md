@@ -30,7 +30,7 @@ impl ImageFiltered {
 From [`frus-examples/widgets/src/features/painting/widgets/image_filtered.rs`](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/painting/widgets/image_filtered.rs):
 
 ```rust
-//! `ImageFiltered` — treats a child as an image and filters it: a blur, or shapes
+//! `ImageFiltered`: treats a child as an image and filters it: a blur, or shapes
 //! grown (dilate) or shrunk (erode).
 //!
 //! It filters the widget itself; to blur what lies *behind* a widget, use
@@ -46,10 +46,10 @@ use crate::common::shared::{section, sections};
 pub fn example() -> Box<dyn Widget> {
     sections(vec![
         // Live: the slider sets the blur's sigma, in logical pixels. At zero the filter is
-        // switched off with `enabled(false)` — a zero blur would still cost a layer.
+        // switched off with `enabled(false)`: a zero blur would still cost a layer.
         Box::new(section("Blur, driven by state", live_blur())),
         // Separate sigmas per axis make a directional smear; dilate and erode grow or
-        // shrink the light shapes — the bases of a glow or a thinner outline.
+        // shrink the light shapes: the bases of a glow or a thinner outline.
         Box::new(section(
             "Other filters",
             Wrap::new()
@@ -147,7 +147,7 @@ fn labelled(label: &str, child: impl Widget + 'static) -> Column {
 
 Applies an `ImageFilter` to its child: a blur, a dilate, an erode.
 
-The result depends on a pixel's neighbours, so the child is treated as an image — which is why the effect **spreads beyond the child's box**, and why a caller who wants it contained wraps this in a clip.
+The result depends on a pixel's neighbours, so the child is treated as an image, which is why the effect **spreads beyond the child's box**, and why a caller who wants it contained wraps this in a clip.
 
 This is the cheap way to blur one thing. `BackdropFilter` blurs everything painted beneath it, which is a different and much more expensive question; when the answer wanted is "blur this widget", it is this one.
 

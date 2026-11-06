@@ -1,0 +1,26 @@
+[package]
+name = "example-shots"
+version = "0.0.0"
+edition = "2021"
+publish = false
+
+# Renders screens of frus's example applications to PNGs, for the Examples page and the home
+# page. Expects the frus repository beside this one (`../frus`), like the docs sync.
+#
+#     cargo run --release --manifest-path tools/example-shots/Cargo.toml -- static/examples
+#     python tools/example-shots/shrink.py static/examples      # PNG to the WebP the site serves
+
+[workspace]
+
+[dependencies]
+frus = { path = "../../../frus/crates/frus" }
+frus-shell = { path = "../../../frus/crates/frus-shell" }
+frus-test = { path = "../../../frus/crates/frus-test" }
+hello_world = { path = "../../../frus/frus-examples/hello_world" }
+counter = { path = "../../../frus/frus-examples/counter" }
+forms = { path = "../../../frus/frus-examples/forms" }
+navigation = { path = "../../../frus/frus-examples/navigation" }
+http = { path = "../../../frus/frus-examples/http" }
+websocket = { path = "../../../frus/frus-examples/websocket" }
+authentication = { path = "../../../frus/frus-examples/authentication" }
+widgets = { path = "../../../frus/frus-examples/widgets" }

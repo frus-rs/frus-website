@@ -33,7 +33,7 @@ impl ListWheel {
 From [`frus-examples/widgets/src/features/scrolling/widgets/listwheel.rs`](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/scrolling/widgets/listwheel.rs):
 
 ```rust
-//! `ListWheel` — the spinning cylinder of values you turn to pick one: the control
+//! `ListWheel`: the spinning cylinder of values you turn to pick one: the control
 //! behind time and duration pickers, and the one to reach for a picker of your own.
 
 use frus::{Center, Color, Container, ListWheel, Row, Text, Widget};
@@ -113,12 +113,12 @@ pub fn example() -> Box<dyn Widget> {
 
 | Method | Argument | Effect |
 | --- | --- | --- |
-| `.selected()` | `index: usize` | The row the application says is chosen. Applied on the first frame and on every change, the way `crate::PageView::page` is — so a wheel opens on the value it holds rather than on the first one and then jumping. |
+| `.selected()` | `index: usize` | The row the application says is chosen. Applied on the first frame and on every change, the way `crate::PageView::page` is, so a wheel opens on the value it holds rather than on the first one and then jumping. |
 | `.on_selected()` | `message: impl Fn(usize) -> R + 'static` | What to send when the wheel comes to rest on a different row. |
 | `.label()` | `label: impl Fn(usize) -> String + 'static` | **What each row is called**, for a reader who cannot see it. |
 | `.diameter_ratio()` | `ratio: f32` | How curved the cylinder is: the diameter as a multiple of the wheel's own height. |
 | `.perspective()` | `perspective: f32` | How much a receding row narrows. `0.0` for none. |
-| `.physics()` | `physics: ScrollPhysics` | The scroll physics of the spin — its scroll behaviour's by default (`ScrollBehavior`). |
+| `.physics()` | `physics: ScrollPhysics` | The scroll physics of the spin: its scroll behaviour's by default (`ScrollBehavior`). |
 | `.width()` | `width: f32` | A fixed width. |
 | `.height()` | `height: f32` | A fixed height. A wheel needs one: it is a window onto a cylinder, and a window that hugged its content would be the whole strip. |
 | `.flex()` | `grow: f32` | Grows to fill the space its parent has left along the main axis. |

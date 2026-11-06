@@ -48,7 +48,7 @@ impl LicensePage {
 From [`frus-examples/widgets/src/features/feedback/widgets/about_dialog.rs`](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/feedback/widgets/about_dialog.rs):
 
 ```rust
-//! `AboutDialog`, `AboutListTile` and `LicensePage` — the "about this app" box and the
+//! `AboutDialog`, `AboutListTile` and `LicensePage`: the "about this app" box and the
 //! page listing the licences of everything the app ships. Every distributed app owes
 //! that page; `frus::licenses::add_all(include_str!(..))` fills it from a file generated
 //! out of the app's real dependency graph.
@@ -167,20 +167,20 @@ impl State for AboutDemoState {
 | --- | --- | --- | --- |
 | `AboutDialog` | `.application()` | `name: impl Into<String>` | The application's name. |
 | `AboutDialog` | `.version()` | `version: impl Into<String>` | Its version. |
-| `AboutDialog` | `.legalese()` | `legalese: impl Into<String>` | The legal line — a copyright, a notice of the application's own. |
+| `AboutDialog` | `.legalese()` | `legalese: impl Into<String>` | The legal line: a copyright, a notice of the application's own. |
 | `AboutDialog` | `.icon()` | `icon: impl Widget<Msg> + 'static` | Its mark, beside the name. |
 | `AboutDialog` | `.on_licences()` | `message: impl Into<Msg>` | The button through to the licences, and what it says. |
 | `AboutDialog` | `.licences_label()` | `label: impl Into<String>` | Its label, for an application in another language. |
-| `AboutDialog` | `.on_close()` | `message: impl Into<Msg>` | The button that closes it — which is also what a tap outside sends. |
+| `AboutDialog` | `.on_close()` | `message: impl Into<Msg>` | The button that closes it, which is also what a tap outside sends. |
 | `AboutDialog` | `.close_label()` | `label: impl Into<String>` | Its label. |
 | `AboutListTile` | `.application()` | `name: impl Into<String>` | The application's name, which the row's default title is *about*. |
 | `AboutListTile` | `.title()` | `title: impl Into<String>` | A title of the caller's own, over the default `About <name>`. |
-| `AboutListTile` | `.subtitle()` | `subtitle: impl Into<String>` | A second line under it — a version, usually. |
+| `AboutListTile` | `.subtitle()` | `subtitle: impl Into<String>` | A second line under it: a version, usually. |
 | `AboutListTile` | `.icon()` | `icon: Option<crate::IconData>` | The glyph at its leading edge, or `None` for a row with no icon at all. |
 | `LicensePage` | `.notices()` | `notices: Vec<LicenseNotice>` | A page over notices of the caller's own, instead of the registry's. |
 | `LicensePage` | `.application()` | `name: impl Into<String>` | The application's name, at the head of the page. |
 | `LicensePage` | `.version()` | `version: impl Into<String>` | Its version, under the name. |
-| `LicensePage` | `.legalese()` | `legalese: impl Into<String>` | The application's own legal line — a copyright, usually. |
+| `LicensePage` | `.legalese()` | `legalese: impl Into<String>` | The application's own legal line: a copyright, usually. |
 | `LicensePage` | `.empty_message()` | `message: impl Into<String>` | What the page says when **nothing** is registered. There is a default, and it says what to do about it. |
 | `LicensePage` | `.back_label()` | `label: impl Into<String>` | The label on the way back from a licence, for an application in another language. |
 | `LicensePage` | `.text_style()` | `style: TextStyle` | The type the licence text is set in. |

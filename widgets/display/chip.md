@@ -29,7 +29,7 @@ impl Chip {
 From [`frus-examples/widgets/src/features/display/widgets/chip.rs`](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/display/widgets/chip.rs):
 
 ```rust
-//! `Chip` — a compact element for an attribute, a filter, a choice or an entry. One
+//! `Chip`: a compact element for an attribute, a filter, a choice or an entry. One
 //! widget; what makes it one kind or another is what it can do: be selected, carry an
 //! icon, be removed, be pressed.
 
@@ -155,7 +155,7 @@ pub fn example() -> Box<dyn Widget> {
 | Method | Argument | Effect |
 | --- | --- | --- |
 | `.selected()` | `selected: bool` | Marks the chip **selected**: it fills, its label takes the colour that goes with the fill, and a checkmark appears in the leading slot unless there is an icon there already (or `Chip::show_checkmark` says otherwise). |
-| `.leading()` | `icon: IconData` | A leading icon — the avatar or glyph an entry chip carries. |
+| `.leading()` | `icon: IconData` | A leading icon: the avatar or glyph an entry chip carries. |
 | `.enabled()` | `enabled: bool` | Greys the chip out and makes it inert: no press, no ink, out of the tab order, and announced to a reader as disabled rather than simply going quiet. |
 | `.on_press()` | `message: impl Into<Msg>` | The message the chip emits when pressed. A chip with none is inert, which is what an attribute chip is. |
 | `.on_remove()` | `message: impl Into<Msg>` | Adds a delete cross that emits `message`. |
@@ -167,7 +167,7 @@ pub fn example() -> Box<dyn Widget> {
 | `.label_style()` | `style: TextStyle` | The label's type. Defaults to the theme's `label_large` step. |
 | `.border_color()` | `color: Color` | The outline's colour. |
 | `.border_width()` | `width: f32` | The outline's thickness; `0.0` removes it. |
-| `.radius()` | `radius: impl Into<BorderRadius>` | The corner radii (uniform via `f32`, per corner via `BorderRadius`) — the shorthand for a rounded rectangle. See `Chip::shape`. |
+| `.radius()` | `radius: impl Into<BorderRadius>` | The corner radii (uniform via `f32`, per corner via `BorderRadius`): the shorthand for a rounded rectangle. See `Chip::shape`. |
 | `.shape()` | `shape: ShapeBorder` | The last of the two to be called is the one that counts: they are one property. |
 | `.padding()` | `padding: f32` | The room inside the outline. |
 | `.label_padding()` | `padding: f32` | The room on either side of the label. |
@@ -176,7 +176,7 @@ pub fn example() -> Box<dyn Widget> {
 
 ## Behaviour
 
-A compact label — an attribute, a filter or an entry.
+A compact label: an attribute, a filter or an entry.
 
 ## See also
 

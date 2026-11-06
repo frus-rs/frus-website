@@ -37,7 +37,7 @@ impl DragTarget {
 From [`frus-examples/widgets/src/features/interaction/widgets/drag_and_drop.rs`](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/interaction/widgets/drag_and_drop.rs):
 
 ```rust
-//! `Draggable` and `DragTarget` — pick a thing up and drop it somewhere else.
+//! `Draggable` and `DragTarget`: pick a thing up and drop it somewhere else.
 //!
 //! What travels between the two is a **payload**: a `u64` you choose (an id, an index) and
 //! get back in the target's `on_drop`. The two ends need not know of each other.
@@ -175,14 +175,14 @@ impl State for SortingState {
 
 | Type | Method | Argument | Effect |
 | --- | --- | --- | --- |
-| `Draggable` | `.payload()` | `payload: u64` | What this item carries — an id, an index, anything the application can map back. It is handed to the target's `on_drop` untouched. |
-| `Draggable` | `.long_press()` | — | Lift on a **long press** rather than on the first movement. |
+| `Draggable` | `.payload()` | `payload: u64` | What this item carries: an id, an index, anything the application can map back. It is handed to the target's `on_drop` untouched. |
+| `Draggable` | `.long_press()` |  | Lift on a **long press** rather than on the first movement. |
 | `Draggable` | `.ghost_opacity()` | `opacity: f32` | How solid the item left behind looks while its copy is being dragged. `1.0` leaves it untouched, `0.0` makes the lift look like a removal. |
 | `Draggable` | `.on_dropped()` | `message: impl Fn(bool) -> R + 'static` | The message sent when the drag ends, `true` if a target took it. |
 | `DragTarget` | `.on_drop()` | `message: impl Fn(u64) -> R + 'static` | The message sent when an accepted item is dropped here, given its payload. |
 | `DragTarget` | `.accepts()` | `predicate: impl Fn(u64) -> bool + 'static` | Which payloads this target takes; everything, by default. |
 | `DragTarget` | `.on_files()` | `message: impl Fn(Vec<PathBuf>) -> R + 'static` | The message sent when **files** dragged onto the window from outside the application are dropped here, given their paths, in the order the system listed them. |
-| `DragTarget` | `.accepts_files()` | `predicate: impl Fn(&[PathBuf]) -> bool + 'static` | Which sets of files this target takes; every set, by default, once it has `DragTarget::on_files`. The predicate sees every path being dragged, so a target that wants images can refuse a drag that holds anything else — and is then not highlighted, so the answer shows before the button is let go. |
+| `DragTarget` | `.accepts_files()` | `predicate: impl Fn(&[PathBuf]) -> bool + 'static` | Which sets of files this target takes; every set, by default, once it has `DragTarget::on_files`. The predicate sees every path being dragged, so a target that wants images can refuse a drag that holds anything else, and is then not highlighted, so the answer shows before the button is let go. |
 | `DragTarget` | `.highlight()` | `color: Color` | The colour of the "drop it here" highlight. Unset, it is the theme's accent; set it to `Color::TRANSPARENT` to draw none and paint your own from the child. |
 
 ## Behaviour
@@ -191,15 +191,15 @@ impl State for SortingState {
 
 A widget that can be **picked up** and dropped on a `DragTarget`.
 
-It carries a `payload`: a number the application chooses and gets back on the drop, so the two ends of the gesture never have to know each other's types. What floats under the pointer is the widget's own appearance, lifted out of the frame — nothing to build twice, and nothing that can drift from what is on screen.
+It carries a `payload`: a number the application chooses and gets back on the drop, so the two ends of the gesture never have to know each other's types. What floats under the pointer is the widget's own appearance, lifted out of the frame: nothing to build twice, and nothing that can drift from what is on screen.
 
 ### `DragTarget`
 
 A widget that can be **dropped onto**.
 
-By default it takes anything. `accepts` narrows that — a column that only takes tasks of its own project, say — and a target that refuses is not highlighted and not offered the drop, so the answer is visible before the finger lifts rather than after.
+By default it takes anything. `accepts` narrows that (a column that only takes tasks of its own project, say) and a target that refuses is not highlighted and not offered the drop, so the answer is visible before the finger lifts rather than after.
 
-It can also take **files dragged onto the window** from outside the application — from the system's file manager, say — once it is given `DragTarget::on_files`:
+It can also take **files dragged onto the window** from outside the application (from the system's file manager, say) once it is given `DragTarget::on_files`:
 
 ```rust
 DragTarget::new(drop_area)

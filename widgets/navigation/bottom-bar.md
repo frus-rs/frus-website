@@ -32,7 +32,7 @@ impl BottomBar {
 From [`frus-examples/widgets/src/features/navigation/widgets/bottombar.rs`](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/navigation/widgets/bottombar.rs):
 
 ```rust
-//! `BottomBar` — the bar of three to five main destinations along the bottom of a phone
+//! `BottomBar`: the bar of three to five main destinations along the bottom of a phone
 //! screen. One is selected; a badge can say something is waiting in another.
 
 use frus::{
@@ -132,17 +132,17 @@ fn phone(page: &str, bar: BottomBar) -> Container {
 | --- | --- | --- |
 | `.labels()` | `labels: RailLabels` | When the destinations say what they are. |
 | `.item()` | `icon: impl Into<DestinationIcon>, label: impl Into<String>` | Adds a destination (mark + label). |
-| `.destinations()` | `destinations: impl IntoIterator<Item = NavigationDestination>` | Adds a whole list of destinations **declared elsewhere** — one navigation, handed to whichever chrome the width called for. |
+| `.destinations()` | `destinations: impl IntoIterator<Item = NavigationDestination>` | Adds a whole list of destinations **declared elsewhere**: one navigation, handed to whichever chrome the width called for. |
 | `.badge()` | `count: u32` | Adds a notification count to the **last** destination. |
-| `.badge_dot()` | — | Adds a dot to the **last** destination's glyph (milestone 707). |
-| `.tooltip()` | `message: impl Into<String>` | — |
-| `.selected_icon()` | `icon: impl Into<DestinationIcon>` | — |
-| `.disabled()` | — | — |
-| `.indicator_color()` | `color: Color` | — |
-| `.indicator_shape()` | `shape: ShapeBorder` | — |
-| `.overlay_color()` | `overlay: WidgetStateProperty<Color>` | — |
-| `.label_text_style()` | `style: TextStyle` | — |
-| `.badge_text_style()` | `style: TextStyle` | — |
+| `.badge_dot()` |  | Adds a dot to the **last** destination's glyph (milestone 707). |
+| `.tooltip()` | `message: impl Into<String>` |  |
+| `.selected_icon()` | `icon: impl Into<DestinationIcon>` |  |
+| `.disabled()` |  |  |
+| `.indicator_color()` | `color: Color` |  |
+| `.indicator_shape()` | `shape: ShapeBorder` |  |
+| `.overlay_color()` | `overlay: WidgetStateProperty<Color>` |  |
+| `.label_text_style()` | `style: TextStyle` |  |
+| `.badge_text_style()` | `style: TextStyle` |  |
 | `.background()` | `color: Color` | The bar's surface. |
 
 ## Behaviour

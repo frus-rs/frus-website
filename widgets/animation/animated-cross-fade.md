@@ -34,7 +34,7 @@ impl AnimatedCrossFade {
 From [`frus-examples/widgets/src/features/animation/widgets/animated_cross_fade.rs`](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/animation/widgets/animated_cross_fade.rs):
 
 ```rust
-//! `AnimatedCrossFade` — shows one of two children and cross-fades to the other when told
+//! `AnimatedCrossFade`: shows one of two children and cross-fades to the other when told
 //! to, the box moving between their two sizes as they fade.
 //!
 //! Reach for it when the two states are known in advance (collapsed / expanded, a
@@ -65,9 +65,9 @@ pub fn example() -> Box<dyn Widget> {
         let details = Column::new()
             .spacing(6.0)
             .cross_axis_alignment(Align::Start)
-            .child(Text::new("Ada — Lunch on Friday?"))
-            .child(Text::new("Grace — The build is green"))
-            .child(Text::new("Alan — Notes from the meeting"));
+            .child(Text::new("Ada, Lunch on Friday?"))
+            .child(Text::new("Grace (The build is green"))
+            .child(Text::new("Alan) Notes from the meeting"));
 
         let card = Container::new()
             .width(300.0)
@@ -106,7 +106,7 @@ pub fn example() -> Box<dyn Widget> {
 | `.first_curve()` | `curve: Curve` | The easing of the first child's fade. |
 | `.second_curve()` | `curve: Curve` | The easing of the second child's fade. |
 | `.size_curve()` | `curve: Curve` | The easing of the box's move between the two sizes. |
-| `.alignment()` | `alignment: Alignment` | — |
+| `.alignment()` | `alignment: Alignment` |  |
 
 ## Behaviour
 
@@ -118,7 +118,7 @@ let summary = AnimatedCrossFade::<()>::new(
     text("Three tasks"),
     text("Buy milk, write code, call Mum"),
     !expanded,
-    0.25,
+    0.25
 );
 ```
 

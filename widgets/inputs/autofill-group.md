@@ -33,7 +33,7 @@ pub enum AutofillHint { .. }
 From [`frus-examples/widgets/src/features/inputs/widgets/autofill_group.rs`](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/inputs/widgets/autofill_group.rs):
 
 ```rust
-//! `AutofillGroup` and `AutofillHint` — say what each field **holds** (a user name, a new
+//! `AutofillGroup` and `AutofillHint`: say what each field **holds** (a user name, a new
 //! password, an SMS code) so that password managers and the system can fill it in, and
 //! group a form's fields so that a username and its password are saved together.
 
@@ -131,7 +131,7 @@ No builder methods: everything is set through the constructor.
 
 The fields of **one form**, declared together so that the platform can fill them and save them as a set.
 
-A transparent wrapper: it changes nothing about how its subtree is laid out or painted. What it does is answer, for every field inside it, *which form is this part of* — and a password with no username beside it is a credential a service cannot save.
+A transparent wrapper: it changes nothing about how its subtree is laid out or painted. What it does is answer, for every field inside it, *which form is this part of*, and a password with no username beside it is a credential a service cannot save.
 
 ### `AutofillHint`
 

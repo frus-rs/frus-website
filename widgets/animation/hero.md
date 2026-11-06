@@ -29,7 +29,7 @@ impl Hero {
 From [`frus-examples/widgets/src/features/animation/widgets/hero.rs`](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/animation/widgets/hero.rs):
 
 ```rust
-//! `Hero` — a shared element between two pages: during the transition it flies from where
+//! `Hero`: a shared element between two pages: during the transition it flies from where
 //! it was to where it is going, instead of one copy fading out while another fades in.
 //!
 //! Two heroes with the **same tag**, one on each side of a page transition, are one thing

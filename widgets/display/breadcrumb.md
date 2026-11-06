@@ -29,7 +29,7 @@ impl Breadcrumb {
 From [`frus-examples/widgets/src/features/display/widgets/breadcrumb.rs`](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/display/widgets/breadcrumb.rs):
 
 ```rust
-//! `Breadcrumb` — the trail from the top of a hierarchy to the current page. Every
+//! `Breadcrumb`: the trail from the top of a hierarchy to the current page. Every
 //! segment but the last can be clicked to go back up.
 
 use frus::{Align, Breadcrumb, Button, Column, Text, Variant, Widget};

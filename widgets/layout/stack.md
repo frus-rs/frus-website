@@ -40,7 +40,7 @@ impl Positioned {
 From [`frus-examples/widgets/src/features/layout/widgets/stack.rs`](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/layout/widgets/stack.rs):
 
 ```rust
-//! `Stack` and `Positioned` — children layered in the same box, the last on top: a
+//! `Stack` and `Positioned`: children layered in the same box, the last on top: a
 //! badge on an avatar, a caption over a picture, a button floating over content.
 
 use frus::{Alignment, Clip, Color, Container, Positioned, Stack, StackFit, Text, Widget, Wrap};
@@ -90,7 +90,7 @@ pub fn example() -> Box<dyn Widget> {
         )),
         // Pinning two opposite edges sizes the layer: `left` + `right` makes a caption bar
         // as wide as the picture, `bottom` puts it at the foot. `Positioned::fill` covers
-        // the whole stack — a tint over a picture.
+        // the whole stack: a tint over a picture.
         Box::new(section(
             "Caption over a picture",
             Stack::new()
@@ -166,7 +166,7 @@ fn squares(alignment: Alignment) -> Stack {
 | `Stack` | `.height()` | `height: f32` | Sets the height, in logical pixels. |
 | `Stack` | `.flex()` | `grow: f32` | Flex growth factor along the parent's main axis. |
 | `Stack` | `.layer()` | `layer: impl Widget<Msg> + 'static` | Adds a layer, on top of the previous ones. |
-| `Positioned` | `.left()` | `px: f32` | Distance from the stack's left edge — the left in either reading direction; see `start` for one that follows the script. |
+| `Positioned` | `.left()` | `px: f32` | Distance from the stack's left edge: the left in either reading direction; see `start` for one that follows the script. |
 | `Positioned` | `.top()` | `px: f32` | Distance from the stack's top edge. |
 | `Positioned` | `.right()` | `px: f32` | Distance from the stack's right edge. |
 | `Positioned` | `.bottom()` | `px: f32` | Distance from the stack's bottom edge. |

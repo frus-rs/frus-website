@@ -29,7 +29,7 @@ impl Steps {
 From [`frus-examples/widgets/src/features/navigation/widgets/steps.rs`](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/navigation/widgets/steps.rs):
 
 ```rust
-//! `Steps` — the numbered indicator of a multi-step form or wizard: done steps show a
+//! `Steps`: the numbered indicator of a multi-step form or wizard: done steps show a
 //! tick, the current one its number in the accent. The navigation (Back, Next) and the
 //! validation of each step stay in your state.
 
@@ -59,7 +59,7 @@ pub struct WizardState {
 }
 
 impl WizardState {
-    /// Whether step `i` is complete — what the indicator ticks, and what Next checks.
+    /// Whether step `i` is complete: what the indicator ticks, and what Next checks.
     pub fn is_done(&self, i: usize) -> bool {
         match i {
             0 => self.terms_accepted,
@@ -139,7 +139,7 @@ impl State for WizardState {
                     .child(Text::new("Premium plan")),
             ),
             _ => Box::new(Text::new(if self.finished {
-                "All done — welcome aboard!".to_string()
+                "All done: welcome aboard!".to_string()
             } else {
                 format!("Plan: {}", if self.premium { "Premium" } else { "Free" })
             })),
@@ -189,12 +189,12 @@ impl State for WizardState {
 
 | Method | Argument | Effect |
 | --- | --- | --- |
-| `.label_text_style()` | `style: TextStyle` | — |
+| `.label_text_style()` | `style: TextStyle` |  |
 | `.index_text_style()` | `style: TextStyle` | The figures inside the markers, over the theme's and the framework's. |
-| `.completed()` | `flags: impl IntoIterator<Item = bool>` | Explicitly marks the **done** steps (a tick) with one flag per step — typically each step's **validity**, rather than position alone. Without this call, a step counts as "done" if it precedes the current one (`i < current`). |
+| `.completed()` | `flags: impl IntoIterator<Item = bool>` | Explicitly marks the **done** steps (a tick) with one flag per step: typically each step's **validity**, rather than position alone. Without this call, a step counts as "done" if it precedes the current one (`i < current`). |
 | `.current()` | `index: usize` | Sets the **current** step (the earlier ones are "done", the later ones "upcoming"). Clamped to the last index. |
 | `.color()` | `color: Color` | Overrides the accent color (done and current markers + the connectors crossed). |
-| `.on_tap()` | `on_tap: impl Fn(usize) -> Msg` | Makes the markers **clickable**: clicking step `i`'s marker emits `on_tap(i)` (to jump there — typically a step already visited). Lays a row of transparent clickable zones **exactly** over the markers (a `SpaceBetween` distribution of marker-sized boxes), without changing the rendering. |
+| `.on_tap()` | `on_tap: impl Fn(usize) -> Msg` | Makes the markers **clickable**: clicking step `i`'s marker emits `on_tap(i)` (to jump there, typically a step already visited). Lays a row of transparent clickable zones **exactly** over the markers (a `SpaceBetween` distribution of marker-sized boxes), without changing the rendering. |
 
 ## Behaviour
 

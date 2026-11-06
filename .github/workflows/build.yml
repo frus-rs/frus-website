@@ -28,5 +28,6 @@ jobs:
           cache: npm
 
       - run: npm ci
-      - run: npm run typecheck
+      # The build writes src/data/examples.json, which the Examples page imports: type-check after.
       - run: npm run build
+      - run: npm run typecheck

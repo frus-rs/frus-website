@@ -29,7 +29,7 @@ impl Dismissible {
 From [`frus-examples/widgets/src/features/scrolling/widgets/dismissible.rs`](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/scrolling/widgets/dismissible.rs):
 
 ```rust
-//! `Dismissible` — swipe a row aside to remove it (or archive it). The row slides out,
+//! `Dismissible`: swipe a row aside to remove it (or archive it). The row slides out,
 //! its gap closes, then the app is told and drops the item from its list.
 
 use frus::{
@@ -139,7 +139,7 @@ Dismissible::new(row)
     .background(Container::new().color(theme.error))
 ```
 
-The background is revealed as the item slides off it. Give a `secondary_background` to show something different in each direction — the usual "archive one way, delete the other".
+The background is revealed as the item slides off it. Give a `secondary_background` to show something different in each direction: the usual "archive one way, delete the other".
 
 Wrap each item in a `crate::Keyed` when the list can reorder: the retained dismissal state is keyed by identity, and positional identity would hand a half-swiped state to whichever row moved into that slot.
 

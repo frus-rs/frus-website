@@ -29,7 +29,7 @@ impl AnimatedPositioned {
 From [`frus-examples/widgets/src/features/animation/widgets/animated_positioned.rs`](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/animation/widgets/animated_positioned.rs):
 
 ```rust
-//! `AnimatedPositioned` — a `Stack` layer whose pins (left, top, right, bottom, width,
+//! `AnimatedPositioned`: a `Stack` layer whose pins (left, top, right, bottom, width,
 //! height) move to each new value: a panel that slides in, a card that travels.
 //!
 //! Only a pin set on **both** sides of a change travels: an edge that appears or disappears
@@ -71,7 +71,7 @@ fn panel() -> Component {
         let stage = Stack::new()
             .width(300.0)
             .height(STAGE_HEIGHT)
-            // `Expand`: the layers that are not positioned fill the stack — the page behind.
+            // `Expand`: the layers that are not positioned fill the stack, the page behind.
             .fit(StackFit::Expand)
             .layer(
                 Container::new()
@@ -182,7 +182,7 @@ let _sheet: Stack<()> = Stack::new().layer(
         .left(0.0)
         .right(0.0)
         .bottom(0.0)
-        .height(if open { 320.0 } else { 0.0 }),
+        .height(if open { 320.0 } else { 0.0 })
 );
 ```
 
@@ -190,7 +190,7 @@ let _sheet: Stack<()> = Stack::new().layer(
 
 The six pins share **one timeline**, as a scale and a turn do: a layer changing two of its edges arrives on both at the same moment rather than on two clocks that happen to agree.
 
-Unlike `crate::Positioned`, which is a transparent wrapper, this is a **node of its own** with the child beneath it. An animated value belongs to a node, and a wrapper that fused with its child would put the layer's timeline and the child's on the same one — the rule the whole of this module is built on.
+Unlike `crate::Positioned`, which is a transparent wrapper, this is a **node of its own** with the child beneath it. An animated value belongs to a node, and a wrapper that fused with its child would put the layer's timeline and the child's on the same one: the rule the whole of this module is built on.
 
 ## See also
 

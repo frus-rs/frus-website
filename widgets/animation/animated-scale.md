@@ -70,7 +70,7 @@ impl AnimatedSlide {
 From [`frus-examples/widgets/src/features/animation/widgets/animated_transform.rs`](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/animation/widgets/animated_transform.rs):
 
 ```rust
-//! `AnimatedScale`, `AnimatedRotation` and `AnimatedSlide` — grow, turn or shift a child to
+//! `AnimatedScale`, `AnimatedRotation` and `AnimatedSlide`: grow, turn or shift a child to
 //! each new value.
 //!
 //! All three only change how the child is **painted**: its box stays where the layout put
@@ -174,7 +174,7 @@ No builder methods: everything is set through the constructor.
 
 ### `AnimatedScale`
 
-**Grows and shrinks its child** rather than letting it jump between sizes — a paint-time scale, so nothing around it moves.
+**Grows and shrinks its child** rather than letting it jump between sizes: a paint-time scale, so nothing around it moves.
 
 It wraps a `Transform` that was told to animate: the widget declares the scale it is heading for and the runtime drives it there, on the same clock as every other implicit animation here.
 
@@ -187,13 +187,13 @@ let _sunken: AnimatedScale<()> = AnimatedScale::new(
     if pressed { 0.95 } else { 1.0 },
     0.12,
     Curve::ease_out(),
-    Text::new("Tap"),
+    Text::new("Tap")
 );
 ```
 
 ### `AnimatedRotation`
 
-**Turns its child** rather than letting it snap between angles — a paint-time rotation, so nothing around it moves.
+**Turns its child** rather than letting it snap between angles: a paint-time rotation, so nothing around it moves.
 
 ```rust
 use frus_core::Curve;
@@ -204,7 +204,7 @@ let _chevron: AnimatedRotation<()> = AnimatedRotation::new(
     if open { std::f32::consts::PI } else { 0.0 },
     0.2,
     Curve::ease_in_out(),
-    Icon::new(Icons::EXPAND_MORE),
+    Icon::new(Icons::EXPAND_MORE)
 );
 ```
 
@@ -212,7 +212,7 @@ let _chevron: AnimatedRotation<()> = AnimatedRotation::new(
 
 **Slides its child by a fraction of its own size**, at paint time, moving there rather than jumping.
 
-`(1.0, 0.0)` is one whole width to the right — exactly clear of where the child was, whatever that width turns out to be. That is the difference between this and an animated `Transform::translate`: the number the caller writes is a multiple of a size the **layout** decides, so a panel can be parked off its own edge without anybody having to know how wide it ended up.
+`(1.0, 0.0)` is one whole width to the right: exactly clear of where the child was, whatever that width turns out to be. That is the difference between this and an animated `Transform::translate`: the number the caller writes is a multiple of a size the **layout** decides, so a panel can be parked off its own edge without anybody having to know how wide it ended up.
 
 ```rust
 use frus_core::Curve;
@@ -224,7 +224,7 @@ let _panel: AnimatedSlide<()> = AnimatedSlide::new(
     0.0,
     0.25,
     Curve::ease_out(),
-    Text::new("Filters"),
+    Text::new("Filters")
 );
 ```
 

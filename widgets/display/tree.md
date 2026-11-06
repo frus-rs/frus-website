@@ -29,7 +29,7 @@ impl Tree {
 From [`frus-examples/widgets/src/features/display/widgets/tree.rs`](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/display/widgets/tree.rs):
 
 ```rust
-//! `Tree` — a hierarchy (files, categories, an org chart) shown as indented rows that
+//! `Tree`: a hierarchy (files, categories, an org chart) shown as indented rows that
 //! expand and collapse. The app owns the structure and which nodes are open, and hands
 //! the tree only the rows that are visible.
 
@@ -115,7 +115,7 @@ pub fn visible_rows(expanded: &HashSet<u64>) -> Vec<VisibleRow> {
 
 | Method | Argument | Effect |
 | --- | --- | --- |
-| `.text_style()` | `style: TextStyle` | — |
+| `.text_style()` | `style: TextStyle` |  |
 | `.on_select()` | `on_select: impl Fn(u64) -> R + 'static` | Makes the nodes **selectable**: `on_select(id)` when the row's body is clicked (outside the chevron), **leaves included**. Without it, clicking the row expands or collapses. |
 | `.selected()` | `id: Option<u64>` | Marks the **selected** node (highlighted). `None` = none. |
 | `.node()` | `id: u64, depth: usize, label: impl Into<String>, expandable: bool, expanded: bool` | Adds a visible row: `id`, `depth` (indentation), `label`, whether the node has children (`expandable`) and whether it is expanded (`expanded`). |

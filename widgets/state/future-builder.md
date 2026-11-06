@@ -25,7 +25,7 @@ pub struct FutureBuilder;
 From [`frus-examples/widgets/src/features/state/widgets/future_builder.rs`](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/state/widgets/future_builder.rs):
 
 ```rust
-//! `use_future` and `FutureBuilder` — work that finishes later: start it once, show
+//! `use_future` and `FutureBuilder`: work that finishes later: start it once, show
 //! "waiting" meanwhile, then the result. A rebuild does not start it again; a change of
 //! its key (the dependencies) does.
 //!
@@ -113,7 +113,7 @@ fn show(snapshot: &AsyncSnapshot<usize>, n: usize) -> Box<dyn Widget> {
     }
 }
 
-/// How many primes are below `n` — a sieve, slow enough for big `n` to see the wait.
+/// How many primes are below `n`: a sieve, slow enough for big `n` to see the wait.
 fn count_primes(n: usize) -> usize {
     if n < 3 {
         return 0;
@@ -149,7 +149,7 @@ let greeting = FutureBuilder::new(
         let lang = *lang;
         async move { if lang == "en" { "Hello" } else { "Bonjour" } }
     },
-    |_, snapshot| Box::new(text(snapshot.data.unwrap_or("…"))),
+    |_, snapshot| Box::new(text(snapshot.data.unwrap_or("…")))
 );
 ```
 

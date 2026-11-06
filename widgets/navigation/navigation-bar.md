@@ -29,7 +29,7 @@ impl NavigationBar {
 From [`frus-examples/widgets/src/features/navigation/widgets/navbar.rs`](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/navigation/widgets/navbar.rs):
 
 ```rust
-//! `NavigationBar` — a simple screen header: a centred title and, on a screen that can
+//! `NavigationBar`: a simple screen header: a centred title and, on a screen that can
 //! be left, a back button. It slides with its screen during `Navigator` transitions.
 
 use frus::{

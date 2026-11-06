@@ -39,3 +39,6 @@ yarn-error.log*
 /static/downloads
 /src/data/examples.json
 /.frus-release
+
+# The example-shots tool's build.
+/tools/example-shots/target

@@ -30,7 +30,7 @@ impl TextEditingController {
 From [`frus-examples/widgets/src/features/inputs/widgets/text_editing_controller.rs`](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/inputs/widgets/text_editing_controller.rs):
 
 ```rust
-//! `TextEditingController` — a field's text held outside the field, so the program can
+//! `TextEditingController`: a field's text held outside the field, so the program can
 //! read it, fill it and clear it. Made once and kept: `cx.use_text_controller(..)` in a
 //! function component, or a field of a `State`.
 

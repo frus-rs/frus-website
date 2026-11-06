@@ -29,11 +29,11 @@ pub fn component(build: impl Fn(&BuildContext) -> Box<dyn Widget> + 'static) -> 
 From [`frus-examples/widgets/src/features/state/widgets/stateless_widget.rs`](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/state/widgets/stateless_widget.rs):
 
 ```rust
-//! `StatelessWidget`, `component` and `Builder` — a piece of interface pulled out into a
+//! `StatelessWidget`, `component` and `Builder`: a piece of interface pulled out into a
 //! widget of its own, built from its configuration and nothing else.
 //!
 //! A struct with `build`, made again (cheaply) on every rebuild of its parent; or, for a
-//! one-off, a closure: `frus::component(|cx| ..)` — which can also keep state with hooks.
+//! one-off, a closure: `frus::component(|cx| ..)`, which can also keep state with hooks.
 
 use frus::{
     component, Align, BuildContext, Builder, Column, Container, Row, StatelessWidget, Text, Widget,
@@ -126,7 +126,7 @@ No builder methods: everything is set through the constructor.
 
 A widget with nothing to remember: it says what it looks like from what it is configured with, and from nothing else.
 
-Any `Fn(&BuildContext) -> Box<dyn Widget>` is one, which is how a function becomes a component — and, with hooks, one that remembers.
+Any `Fn(&BuildContext) -> Box<dyn Widget>` is one, which is how a function becomes a component, and, with hooks, one that remembers.
 
 ### `component`
 

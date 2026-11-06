@@ -23,7 +23,7 @@ This demo shows a pattern rather than one type. The names it uses are in the exa
 From [`frus-examples/widgets/src/features/state/widgets/host_tasks.rs`](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/state/widgets/host_tasks.rs):
 
 ```rust
-//! `host::spawn` and `host::after` — run slow work on another thread and get its result
+//! `host::spawn` and `host::after`: run slow work on another thread and get its result
 //! back on the interface's thread, or run something after a delay.
 //!
 //! Both can be called from any handler. The callback that receives the result runs on the

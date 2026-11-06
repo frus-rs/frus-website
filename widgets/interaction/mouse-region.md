@@ -29,7 +29,7 @@ impl MouseRegion {
 From [`frus-examples/widgets/src/features/interaction/widgets/mouse_region.rs`](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/interaction/widgets/mouse_region.rs):
 
 ```rust
-//! `MouseRegion` — hears the mouse entering, moving over and leaving a widget, and sets
+//! `MouseRegion`: hears the mouse entering, moving over and leaving a widget, and sets
 //! the cursor shown there.
 //!
 //! On a touch screen a finger is "over" a region only while it touches: an enter when it
@@ -138,7 +138,7 @@ impl State for HoverDemoState {
 | `.on_enter()` | `build: impl Fn(Point) -> R1 + 'static` | The pointer came in: `build` is given where it is, in the region's coordinates. |
 | `.on_hover()` | `build: impl Fn(Point) -> R1 + 'static` | The pointer moved inside, with no button held: `build` is given where it is now. |
 | `.on_exit()` | `build: impl Fn(Point) -> R1 + 'static` | The pointer left: `build` is given where it is, now outside. |
-| `.cursor()` | `cursor: Cursor` | The cursor shown while the pointer is over the region, unless something inside it asks for another — a field's text cursor, a button's hand. |
+| `.cursor()` | `cursor: Cursor` | The cursor shown while the pointer is over the region, unless something inside it asks for another: a field's text cursor, a button's hand. |
 | `.opaque()` | `opaque: bool` | Whether the regions behind this one are left while the pointer is over it. On by default. |
 
 ## Behaviour

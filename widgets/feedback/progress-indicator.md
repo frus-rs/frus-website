@@ -41,7 +41,7 @@ impl CircularProgressIndicator {
 From [`frus-examples/widgets/src/features/feedback/widgets/progress_indicator.rs`](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/feedback/widgets/progress_indicator.rs):
 
 ```rust
-//! `LinearProgressIndicator` and `CircularProgressIndicator` — how far along some work is.
+//! `LinearProgressIndicator` and `CircularProgressIndicator`: how far along some work is.
 //! **Determinate** when you know the share done (a download), **indeterminate** when you
 //! do not (waiting for a server).
 
@@ -196,24 +196,24 @@ impl State for ProgressDemoState {
 | --- | --- | --- | --- |
 | `LinearProgressIndicator` | `.width()` | `width: f32` | Sets the width, in logical pixels. |
 | `LinearProgressIndicator` | `.color()` | `color: Color` | **The colour of the fill**, over the theme's and `primary`. |
-| `LinearProgressIndicator` | `.track_color()` | `color: Color` | — |
-| `LinearProgressIndicator` | `.min_height()` | `height: f32` | — |
+| `LinearProgressIndicator` | `.track_color()` | `color: Color` |  |
+| `LinearProgressIndicator` | `.min_height()` | `height: f32` |  |
 | `LinearProgressIndicator` | `.radius()` | `radius: impl Into<BorderRadius>` | **The corners of the fill, the lines and the track.** Unset, square in the 2023 look and 2 px in the newer one. |
 | `LinearProgressIndicator` | `.stop_indicator_color()` | `color: Color` | **The dot at the far end of the track**, in the newer look. Unset, the theme's, then `primary`. |
 | `LinearProgressIndicator` | `.stop_indicator_radius()` | `radius: f32` | That dot's radius, in the newer look; never more than half the bar's height. **Zero draws none.** |
 | `LinearProgressIndicator` | `.track_gap()` | `gap: f32` | **The gap between a line and the track**, in the newer look. |
-| `LinearProgressIndicator` | `.year2023()` | `year2023: bool` | — |
+| `LinearProgressIndicator` | `.year2023()` | `year2023: bool` |  |
 | `LinearProgressIndicator` | `.semantics_label()` | `label: impl Into<String>` | **What the bar is the progress of**, for whoever cannot see it. |
 | `LinearProgressIndicator` | `.semantics_value()` | `value: impl Into<String>` | **The value read out**, in place of the percentage. |
 | `CircularProgressIndicator` | `.size()` | `size: f32` | Unset, the theme's, then 36 (2023 look) or 40 (newer). |
 | `CircularProgressIndicator` | `.color()` | `color: Color` | **The colour of the arc**, over the theme's and `primary`. |
 | `CircularProgressIndicator` | `.track_color()` | `color: Color` | Unset, the theme's, then none in the 2023 look, `secondary_container` behind a determinate arc in the newer one. |
 | `CircularProgressIndicator` | `.stroke_width()` | `width: f32` | **How thick the arc is.** Unset, the theme's, then four. |
-| `CircularProgressIndicator` | `.stroke_align()` | `align: f32` | — |
+| `CircularProgressIndicator` | `.stroke_align()` | `align: f32` |  |
 | `CircularProgressIndicator` | `.stroke_cap()` | `cap: StrokeCap` | **How the arc's ends are drawn.** |
 | `CircularProgressIndicator` | `.track_gap()` | `gap: f32` | **The gap between the arc and the track**, in the newer look. |
 | `CircularProgressIndicator` | `.padding()` | `padding: f32` | **The room around the circle**, on every side. |
-| `CircularProgressIndicator` | `.year2023()` | `year2023: bool` | — |
+| `CircularProgressIndicator` | `.year2023()` | `year2023: bool` |  |
 | `CircularProgressIndicator` | `.semantics_label()` | `label: impl Into<String>` | **What the indicator is the progress of**, for whoever cannot see it. |
 | `CircularProgressIndicator` | `.semantics_value()` | `value: impl Into<String>` | **The value read out**, in place of the percentage. |
 

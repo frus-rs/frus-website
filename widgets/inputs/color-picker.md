@@ -33,7 +33,7 @@ impl ColorPicker {
 From [`frus-examples/widgets/src/features/inputs/widgets/color_picker.rs`](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/inputs/widgets/color_picker.rs):
 
 ```rust
-//! `ColorPicker` — a grid of colour swatches; the chosen one wears a ring.
+//! `ColorPicker`: a grid of colour swatches; the chosen one wears a ring.
 
 use frus::{Color, ColorPicker, Container, Row, State, StateContext, StatefulWidget, Text, Widget};
 

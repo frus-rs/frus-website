@@ -51,7 +51,7 @@ impl ErrorSummary {
 From [`frus-examples/widgets/src/features/inputs/widgets/form.rs`](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/inputs/widgets/form.rs):
 
 ```rust
-//! `form::Form`, `form::Rule` and `ErrorSummary` — validation as a plain function of the
+//! `form::Form`, `form::Rule` and `ErrorSummary`: validation as a plain function of the
 //! state. Rules check each value, `Form` collects the answers, and the fields only
 //! **show** them: nothing here draws until you hand an error to a `TextField`.
 
@@ -232,8 +232,8 @@ impl State for SignUpState {
 | Type | Method | Argument | Effect |
 | --- | --- | --- | --- |
 | `Form` | `.field()` | `key: &'static str, value: &str, rule: Rule` | Validates `value` with `rule` and records the result under `key`. |
-| `Form` | `.field_with()` | `key: &'static str, value: &str, check: impl Fn(&str, &Form) -> Option<String>` | Validates a field with a **cross-field** function receiving its value **and** the partial form (the fields **already declared**): `check(value, form)` can consult `form.value(other)` — a confirmed password, consistent dates, and so on. So declare the referenced field **first**. |
-| `Form` | `.matches()` | `key: &'static str, value: &str, other: &'static str, message: impl Into<String>` | A cross-field convenience: `value` must **equal** field `other`'s value (already declared) — the "confirm the password" case. Otherwise `message`. |
+| `Form` | `.field_with()` | `key: &'static str, value: &str, check: impl Fn(&str, &Form) -> Option<String>` | Validates a field with a **cross-field** function receiving its value **and** the partial form (the fields **already declared**): `check(value, form)` can consult `form.value(other)`, a confirmed password, consistent dates, and so on. So declare the referenced field **first**. |
+| `Form` | `.matches()` | `key: &'static str, value: &str, other: &'static str, message: impl Into<String>` | A cross-field convenience: `value` must **equal** field `other`'s value (already declared), the "confirm the password" case. Otherwise `message`. |
 | `ErrorSummary` | `.title_text_style()` | `style: TextStyle` | The heading's type, over the theme's and the framework's. |
 | `ErrorSummary` | `.bullet_text_style()` | `style: TextStyle` | The bullets' type, over the theme's and the framework's. |
 
@@ -249,9 +249,9 @@ One field's validation rule: returns `Some(message)` if the value is invalid, `N
 
 ### `ErrorSummary`
 
-An **error summary**: an "error"-tinted card listing the messages (a "Please fix N error(s)" title, then one bullet per message), to place at the head of a form after an invalid submission. Built from `Form::errors`. Empty when there is no message, and then it should not be displayed — see `is_empty`.
+An **error summary**: an "error"-tinted card listing the messages (a "Please fix N error(s)" title, then one bullet per message), to place at the head of a form after an invalid submission. Built from `Form::errors`. Empty when there is no message, and then it should not be displayed: see `is_empty`.
 
-The bullets are **inert** with `new`; with `links` each one carries an application message emitted on click — typically to **focus** the offending field (via `Command::focus`), the summary then acting as a table of contents of the errors.
+The bullets are **inert** with `new`; with `links` each one carries an application message emitted on click: typically to **focus** the offending field (via `Command::focus`), the summary then acting as a table of contents of the errors.
 
 ## See also
 

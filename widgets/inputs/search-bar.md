@@ -29,7 +29,7 @@ impl SearchBar {
 From [`frus-examples/widgets/src/features/inputs/widgets/search_bar.rs`](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/inputs/widgets/search_bar.rs):
 
 ```rust
-//! `SearchBar` — the raised pill an application searches from: a borderless field with
+//! `SearchBar`: the raised pill an application searches from: a borderless field with
 //! room for a leading and trailing widget.
 
 use frus::{
@@ -120,8 +120,8 @@ impl State for SearchBarDemoState {
 | Method | Argument | Effect |
 | --- | --- | --- |
 | `.controller()` | `controller: &crate::TextEditingController` | Drives the bar from `controller`: it shows the controller's text, and what is typed in it is written to the controller. |
-| `.hint()` | `hint: impl Into<String>` | — |
-| `.leading()` | `leading: impl Widget<Msg> + 'static` | The widget before the field — usually a menu button, a back arrow or a magnifier. |
+| `.hint()` | `hint: impl Into<String>` |  |
+| `.leading()` | `leading: impl Widget<Msg> + 'static` | The widget before the field: usually a menu button, a back arrow or a magnifier. |
 | `.leading_boxed()` | `leading: Box<dyn Widget<Msg>>` | `Self::leading`, for a widget already boxed. |
 | `.trailing()` | `trailing: impl Widget<Msg> + 'static` | Adds a widget **after** the field. |
 | `.trailing_boxed()` | `trailing: Box<dyn Widget<Msg>>` | `Self::trailing`, for a widget already boxed. |
@@ -129,10 +129,10 @@ impl State for SearchBarDemoState {
 | `.on_submit()` | `message: impl Into<Msg>` | What to emit when the search is confirmed. |
 | `.on_tap()` | `message: impl Into<Msg>` | It goes with `Self::read_only`. |
 | `.enabled()` | `enabled: bool` | Whether the bar can be used at all. A disabled one is inert and fades. |
-| `.read_only()` | `read_only: bool` | The bar takes no typing, only presses — a bar whose real search happens somewhere else. It is **not** `disabled`: it still lights, still answers a press, and still reads as available, because it is. |
+| `.read_only()` | `read_only: bool` | The bar takes no typing, only presses: a bar whose real search happens somewhere else. It is **not** `disabled`: it still lights, still answers a press, and still reads as available, because it is. |
 | `.background_color()` | `color: Color` | The bar's fill. |
-| `.shadow_color()` | `color: Color` | The colour its shadow is cast in, used **as it is given**, alpha included — so `Color::TRANSPARENT` casts none. Unset, the scheme's `shadow` at 30 %. |
-| `.elevation()` | `elevation: f32` | How far off the page it sits. Unset, `6` — and `0.0` is the flat bar an application that separates by colour wants. |
+| `.shadow_color()` | `color: Color` | The colour its shadow is cast in, used **as it is given**, alpha included, so `Color::TRANSPARENT` casts none. Unset, the scheme's `shadow` at 30 %. |
+| `.elevation()` | `elevation: f32` | How far off the page it sits. Unset, `6`, and `0.0` is the flat bar an application that separates by colour wants. |
 | `.shape()` | `shape: ShapeBorder` | Its shape. |
 | `.radius()` | `radius: impl Into<BorderRadius>` | Its corners, for the ordinary case of a rounded rectangle. See `Self::shape`. |
 | `.side()` | `width: f32, color: Color` | An outline around it. |

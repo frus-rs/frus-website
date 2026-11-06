@@ -31,7 +31,7 @@ impl ReorderableList {
 From [`frus-examples/widgets/src/features/scrolling/widgets/reorderable.rs`](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/scrolling/widgets/reorderable.rs):
 
 ```rust
-//! `ReorderableList` — a list whose rows can be dragged into a new order: a playlist, a
+//! `ReorderableList`: a list whose rows can be dragged into a new order: a playlist, a
 //! set of favourites, a to-do list. The order is the app's; the list reports each move.
 
 use frus::{
@@ -54,7 +54,7 @@ pub fn example() -> Box<dyn Widget> {
         let tasks = cx.use_state(|| vec!["Write the brief", "Review", "Ship it"]);
 
         // `on_reorder(from, to)`: `to` is where the row ends up, already accounting for
-        // the row having left its old place — remove, then insert.
+        // the row having left its old place: remove, then insert.
         let reorder = songs.clone();
         let playlist = songs.get().into_iter().enumerate().fold(
             ReorderableList::new(move |from: usize, to: usize| {
@@ -76,7 +76,7 @@ pub fn example() -> Box<dyn Widget> {
             },
         );
 
-        // `LongPress`: hold anywhere on the row to lift it — the touch-screen default.
+        // `LongPress`: hold anywhere on the row to lift it, the touch-screen default.
         let reorder_tasks = tasks.clone();
         let todo = tasks.get().into_iter().fold(
             ReorderableList::new(move |from: usize, to: usize| {
@@ -126,15 +126,15 @@ pub fn key_of(text: &str) -> u64 {
 | Method | Argument | Effect |
 | --- | --- | --- |
 | `.keyed_row()` | `key: u64, row: impl Widget<Msg> + 'static` | Adds a row, identified by `key`. |
-| `.row()` | `row: impl Widget<Msg> + 'static` | Adds a row with no key of its own — for a list that never changes length. |
+| `.row()` | `row: impl Widget<Msg> + 'static` | Adds a row with no key of its own: for a list that never changes length. |
 | `.grab()` | `grab: ReorderGrab` | How a row is picked up. |
 | `.axis()` | `axis: ReorderAxis` | The way the rows run, `ReorderAxis::Vertical` by default. A horizontal list lays its rows out along x, puts each grip under its row, and is reordered across: see the module's notes for what that means under a right-to-left layout. |
 | `.enabled()` | `enabled: bool` | Turns reordering off without changing the list: no grip, no hold, no drop target. A list that is briefly read-only stays the same widget, so its rows keep their state. |
-| `.handle()` | `handle: impl Fn(&Theme) -> W + 'static` | The whole grip, replaced by a widget of the application's. It is built with the ambient theme, and what it is made of is nobody's business but the caller's — this widget only says where it goes and what grabbing it means. |
+| `.handle()` | `handle: impl Fn(&Theme) -> W + 'static` | The whole grip, replaced by a widget of the application's. It is built with the ambient theme, and what it is made of is nobody's business but the caller's: this widget only says where it goes and what grabbing it means. |
 | `.handle_icon()` | `icon: IconData` | The grip's glyph, over the theme's and the framework's. |
 | `.handle_color()` | `color: Color` | The grip's colour, over the theme's. |
 | `.handle_icon_size()` | `size: f32` | The grip's glyph size. |
-| `.handle_width()` | `width: f32` | The depth of the grip's box — its tap target, which is not the size of the glyph inside it. A width beside the rows of a vertical list, a height under the rows of a horizontal one. |
+| `.handle_width()` | `width: f32` | The depth of the grip's box: its tap target, which is not the size of the glyph inside it. A width beside the rows of a vertical list, a height under the rows of a horizontal one. |
 | `.gap()` | `gap: f32` | Space between rows. |
 | `.width()` | `width: f32` | An explicit width. |
 | `.width_fraction()` | `fraction: f32` | A width given as a fraction of what the parent offers. |
@@ -153,7 +153,7 @@ ReorderableList::new(|from, to| Msg::MoveTrack(from, to))
     .keyed_row(track.id, track_row(track))
 ```
 
-**Each row should carry a key** — `keyed_row`, or a `crate::keyed` wrapper of your own. Rows are told apart by position otherwise, and a list whose rows are about to swap positions is exactly where that goes wrong: the hover and the animations of the row that moved would stay behind with its index.
+**Each row should carry a key**: `keyed_row`, or a `crate::keyed` wrapper of your own. Rows are told apart by position otherwise, and a list whose rows are about to swap positions is exactly where that goes wrong: the hover and the animations of the row that moved would stay behind with its index.
 
 ## See also
 

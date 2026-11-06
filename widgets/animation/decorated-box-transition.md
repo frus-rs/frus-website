@@ -49,7 +49,7 @@ impl DefaultTextStyleTransition {
 From [`frus-examples/widgets/src/features/animation/widgets/decorated_transitions.rs`](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/animation/widgets/decorated_transitions.rs):
 
 ```rust
-//! `DecoratedBoxTransition` and `DefaultTextStyleTransition` — a whole decoration, or a
+//! `DecoratedBoxTransition` and `DefaultTextStyleTransition`: a whole decoration, or a
 //! whole text style, a given fraction of the way from one to another.
 //!
 //! Every part moves by its own rule: colours blend, corners round, shadows grow, sizes and
@@ -145,7 +145,7 @@ pub fn example() -> Box<dyn Widget> {
 
 ### `DecoratedBoxTransition`
 
-**Paints a decoration that moves** by a value the caller owns — its fill, gradient, border, corners and shadow, each travelling by its own rule (see `BoxDecoration::lerp`).
+**Paints a decoration that moves** by a value the caller owns: its fill, gradient, border, corners and shadow, each travelling by its own rule (see `BoxDecoration::lerp`).
 
 ```rust
 use frus_core::{Border, BoxDecoration, Color};
@@ -158,7 +158,7 @@ let _row: DecoratedBoxTransition<()> = DecoratedBoxTransition::between(
         .radius(12.0)
         .border(Border::new(2.0, Color::rgb(0.1, 0.2, 0.6))),
     selected,
-    Text::new("Reminders"),
+    Text::new("Reminders")
 );
 ```
 
@@ -179,13 +179,13 @@ let _title: DefaultTextStyleTransition<()> = DefaultTextStyleTransition::between
     TextStyle::NONE.size(20.0),
     TextStyle::NONE.size(24.0),
     arriving,
-    Text::new("Groceries"),
+    Text::new("Groceries")
 );
 ```
 
 What travels, what holds and what swaps half-way is `TextStyle::lerp`'s business. Alignment, wrapping, overflow and the line count take effect at once, as they do on the implicit one: they are arrangements, not quantities.
 
-**It is a transparent wrapper, which its implicit twin cannot be.** An implicit animation keeps a timeline in the runtime, and a timeline belongs to a node, so two of those nested have to be two nodes or they would share one. This keeps nothing — the caller's number is the whole of its state — so two nested fuse into one node and simply hand down both of what they say, the inner one asked by the outer as a nested theme is.
+**It is a transparent wrapper, which its implicit twin cannot be.** An implicit animation keeps a timeline in the runtime, and a timeline belongs to a node, so two of those nested have to be two nodes or they would share one. This keeps nothing (the caller's number is the whole of its state) so two nested fuse into one node and simply hand down both of what they say, the inner one asked by the outer as a nested theme is.
 
 A text that names a field for itself keeps it: an inherited style answers a question, it does not overrule an answer.
 

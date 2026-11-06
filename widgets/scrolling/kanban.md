@@ -31,7 +31,7 @@ impl Kanban {
 From [`frus-examples/widgets/src/features/scrolling/widgets/kanban.rs`](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/scrolling/widgets/kanban.rs):
 
 ```rust
-//! `Kanban` — a board of columns and cards, with drag and drop between columns. The
+//! `Kanban`: a board of columns and cards, with drag and drop between columns. The
 //! board is controlled: the app holds the cards and moves one when a drop is reported.
 
 use frus::{Align, Axis, Column, Container, Kanban, SingleChildScrollView, Text, Widget};
@@ -133,7 +133,7 @@ pub fn move_card(columns: &mut [(String, Vec<String>)], from: (usize, usize), to
 | `.column_widgets()` | `title: impl Into<String>, cards: impl IntoIterator<Item = CellFn<Msg>>` | Adds a column in which every card is a **widget** (a rich card: a label + tags + a delete button…), supplied by a **factory** called again on every rebuild. The card stays a drag and drop source and target; its clickable elements (a × button…) capture their own click. |
 | `.on_add()` | `on_add: impl Fn(usize) -> R + 'static` | Adds a **"+ Add card"** button at the bottom of every column; `on_add(col)` on click (the app adds a card to the column). Without this call, there is no add button. |
 | `.card_area_height()` | `h: f32` | Makes each column's cards **scroll vertically** within a region of height `h` (in logical pixels), Trello style: the **title** stays fixed above, the "+ Add card" button fixed below, and only the cards (with the final drop zone) scroll. Without this call, the column stretches to the height of its content. |
-| `.scrollable_columns()` | — | Per-column vertical scrolling **Trello style, with no explicit height** (milestone 266): the columns **fill** the board's height and each column's card area takes the rest (below the title, above the "+ Add card" button) and then **scrolls**. Unlike `Kanban::card_area_height`, the app has no height to compute: the board sits in an ancestor of **definite height** (a window, a bounded horizontal `SingleChildScrollView`…) and the flex fill does the rest. Takes precedence over `card_area_height` when both are set. |
+| `.scrollable_columns()` |  | Per-column vertical scrolling **Trello style, with no explicit height** (milestone 266): the columns **fill** the board's height and each column's card area takes the rest (below the title, above the "+ Add card" button) and then **scrolls**. Unlike `Kanban::card_area_height`, the app has no height to compute: the board sits in an ancestor of **definite height** (a window, a bounded horizontal `SingleChildScrollView`…) and the flex fill does the rest. Takes precedence over `card_area_height` when both are set. |
 
 ## Behaviour
 

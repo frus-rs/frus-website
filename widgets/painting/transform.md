@@ -43,7 +43,7 @@ impl FractionalTranslation {
 From [`frus-examples/widgets/src/features/painting/widgets/transform.rs`](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/painting/widgets/transform.rs):
 
 ```rust
-//! `Transform` and `FractionalTranslation` — move, scale or rotate a child's painting
+//! `Transform` and `FractionalTranslation`: move, scale or rotate a child's painting
 //! without changing the layout around it.
 //!
 //! The neighbours still see the untransformed box; use `RotatedBox` when the layout
@@ -73,7 +73,7 @@ pub fn example() -> Box<dyn Widget> {
                         .child(card("both")),
                 )),
         )),
-        // Live: the slider sets the angle; `animated` eases to each new value — the way a
+        // Live: the slider sets the angle; `animated` eases to each new value, the way a
         // pressed button shrinks a little, or a chevron turns when a panel opens.
         Box::new(section("Driven by state, animated", spinner())),
         // `FractionalTranslation` moves by a fraction of the child's own size: (0.5, 0)
@@ -153,9 +153,9 @@ fn card(label: &str) -> Container {
 
 Transforms its child **at paint time** (both rendering **and** hit-testing), without changing layout: the siblings do not move, and the child may overflow its box, since there is no clipping.
 
-Two transformations, each combinable with a `Tween` read in `view()` to **animate**: - **`translate(dx, dy)`** — offsets the subtree (a dot in a corner, an entry   that slides in, an error shake…). - **`scale(factor)`** / **`scale_xy(sx, sy)`** — scales the subtree about a   pivot (the centre by default), uniformly or **per axis** (stretching,   flattening): a button's "pop" effect, a thumbnail zoom. - **`rotate(radians)`** — rotates the subtree about a pivot (the centre by   default): a needle, a chevron that flips, a spinner.
+Two transformations, each combinable with a `Tween` read in `view()` to **animate**: - **`translate(dx, dy)`**, offsets the subtree (a dot in a corner, an entry   that slides in, an error shake…). - **`scale(factor)`** / **`scale_xy(sx, sy)`**: scales the subtree about a   pivot (the centre by default), uniformly or **per axis** (stretching,   flattening): a button's "pop" effect, a thumbnail zoom. - **`rotate(radians)`**: rotates the subtree about a pivot (the centre by   default): a needle, a chevron that flips, a spinner.
 
-Scale and rotation (and their composition) are melted into **a single affine matrix** carried by a transformed composited layer; hit-testing applies the **inverse** matrix to the point. They **compose** within one widget through the chainers `and_translate`, `and_scale` / `and_scale_xy`, `and_rotate` — applied in the order translation → scale → rotation (the translation innermost, through the child offset). So `Transform::scale(1.5).and_rotate(0.2)` enlarges **and** rotates, exactly, with no composition approximation.
+Scale and rotation (and their composition) are melted into **a single affine matrix** carried by a transformed composited layer; hit-testing applies the **inverse** matrix to the point. They **compose** within one widget through the chainers `and_translate`, `and_scale` / `and_scale_xy`, `and_rotate`: applied in the order translation → scale → rotation (the translation innermost, through the child offset). So `Transform::scale(1.5).and_rotate(0.2)` enlarges **and** rotates, exactly, with no composition approximation.
 
 ### `FractionalTranslation`
 
@@ -163,7 +163,7 @@ Offsets its child by a **fraction of the child's own size**, at paint time, with
 
 `FractionalTranslation::new(0.5, 0.0)` slides the subtree half its own width to the right; `(-1.0, 0.0)` slides it a whole width to the left, exactly clear of where it was. Like `Transform::translate`, it moves the render **and** the hit-test, and it moves nothing else: the box stays where the layout put it and the siblings do not budge.
 
-The reason it exists next to `Transform::translate` is that the number is not known where the widget is written. A panel that has to sit exactly off the edge of itself, a badge half outside its anchor, a row that slides its own width aside to uncover what is under it — each of those is a multiple of a size the layout decides, and a caller that had to pass pixels would be passing a guess.
+The reason it exists next to `Transform::translate` is that the number is not known where the widget is written. A panel that has to sit exactly off the edge of itself, a badge half outside its anchor, a row that slides its own width aside to uncover what is under it: each of those is a multiple of a size the layout decides, and a caller that had to pass pixels would be passing a guess.
 
 ```rust
 // A panel parked one full width off the left, sliding in as `open` runs 0 → 1.

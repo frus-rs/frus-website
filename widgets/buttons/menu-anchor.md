@@ -29,7 +29,7 @@ impl MenuAnchor {
 From [`frus-examples/widgets/src/features/buttons/widgets/menu_anchor.rs`](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/buttons/widgets/menu_anchor.rs):
 
 ```rust
-//! `MenuAnchor` — a floating panel with **any content**, anchored to a widget and closed
+//! `MenuAnchor`: a floating panel with **any content**, anchored to a widget and closed
 //! by a click outside. A popup menu is a list of rows; this is for everything else.
 
 use frus::{
@@ -103,7 +103,7 @@ impl State for AnchorDemoState {
 | Method | Argument | Effect |
 | --- | --- | --- |
 | `.content()` | `content: impl Widget<Msg> + 'static` | Sets the floating content, which is shown only when open. |
-| `.background()` | `color: Color` | — |
+| `.background()` | `color: Color` |  |
 | `.shape()` | `shape: ShapeBorder` | **What shape the panel is**, over the theme's and the framework's corner. |
 | `.radius()` | `radius: impl Into<BorderRadius>` | See `PopupMenuButton::radius` for why it is not the default. |
 | `.elevation()` | `elevation: f32` | **How far off the page the panel sits**, in pixels. Three by default. |
@@ -114,7 +114,7 @@ impl State for AnchorDemoState {
 
 A popover: an anchor plus an optional floating panel.
 
-Each of those answers to the builders below, then to `MenuTheme`. Content that brings a surface of its own — a `Card` — would be a surface on a surface; hand the anchor what goes *on* the panel instead.
+Each of those answers to the builders below, then to `MenuTheme`. Content that brings a surface of its own (a `Card`) would be a surface on a surface; hand the anchor what goes *on* the panel instead.
 
 ## See also
 

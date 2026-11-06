@@ -29,7 +29,7 @@ impl Table {
 From [`frus-examples/widgets/src/features/display/widgets/table.rs`](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/display/widgets/table.rs):
 
 ```rust
-//! `Table` — a grid of rows and columns that only shows what it is handed: the app
+//! `Table`: a grid of rows and columns that only shows what it is handed: the app
 //! sorts its own data and decides what is selected. Cells can be text or widgets.
 
 use frus::{Badge, Color, Colors, Icons, Table, Text, Widget};
@@ -124,7 +124,7 @@ pub fn status(label: &str, hex: &str) -> Badge {
         .text_color(Colors::WHITE)
 }
 
-/// The planets ordered by one column — the sorting the app owns.
+/// The planets ordered by one column: the sorting the app owns.
 pub fn sorted_planets(column: usize, ascending: bool) -> Vec<(&'static str, u32, f32)> {
     let mut rows = PLANETS.to_vec();
     rows.sort_by(|a, b| match column {
@@ -143,10 +143,10 @@ pub fn sorted_planets(column: usize, ascending: bool) -> Vec<(&'static str, u32,
 
 | Method | Argument | Effect |
 | --- | --- | --- |
-| `.heading_text_style()` | `style: TextStyle` | — |
+| `.heading_text_style()` | `style: TextStyle` |  |
 | `.data_text_style()` | `style: TextStyle` | See `heading_text_style`. |
 | `.header()` | `labels: &[&str]` | Sets the header row (one label per column). |
-| `.widget_header()` | `cells: Vec<CellFn<Msg>>` | Replaces the header row with **fully widget headers** (one per column) — for heavily customised grids (a bespoke sort button, an embedded filter, a two-line title…). **Automatic** sorting and reordering do not apply here: the application wires the behaviour into the widgets it supplies (e.g. a button emitting its own sort message). Each factory is called again on every rebuild (a fresh widget). Excludes `header` (the last one called wins). |
+| `.widget_header()` | `cells: Vec<CellFn<Msg>>` | Replaces the header row with **fully widget headers** (one per column): for heavily customised grids (a bespoke sort button, an embedded filter, a two-line title…). **Automatic** sorting and reordering do not apply here: the application wires the behaviour into the widgets it supplies (e.g. a button emitting its own sort message). Each factory is called again on every rebuild (a fresh widget). Excludes `header` (the last one called wins). |
 | `.header_icons()` | `icons: &[Option<IconData>]` | Gives header columns a **leading icon** (icon + label): `None` leaves the column without one. The header stays **sortable** and **reorderable** just like a text header (the icon is purely decorative). |
 | `.header_action()` | `col: usize, make: impl Fn() -> Box<dyn Widget<Msg>> + 'static` | Places an **action widget** (a filter button, a menu…) on the right of column `col`'s header. It is a **child** of the cell: it captures its own click (deepest-first hit-test), while the rest of the header **sorts** and **reorders** as usual. The factory is called again on every rebuild (a fresh widget). |
 | `.row()` | `cells: &[&str]` | Adds a data row (one **text** value per column). |
@@ -157,8 +157,8 @@ pub fn sorted_planets(column: usize, ascending: bool) -> Vec<(&'static str, u32,
 | `.sorted()` | `column: usize, ascending: bool` | States the sorted column and its direction (`true` = ascending) → shows the indicator. |
 | `.on_select_row()` | `on_select: impl Fn(usize) -> R + 'static` | Makes the rows **clickable**: `on_select_row(row)` on a click on a row. |
 | `.checkboxes()` | `on_check: impl Fn(usize) -> R1 + 'static, on_check_all: Msg` | Turns on **multi-selection**: a checkbox column (on the left) topped by a "check all" box. `on_check(row)` toggles one row, `on_check_all` toggles every row. The checked state mirrors `selected`. |
-| `.frozen_columns()` | `n: usize` | **Freezes** the first `n` columns: they stay **pinned** on the left while the rest **scrolls horizontally** (the scrolling columns' header follows its columns), with a **separation shadow** at the freeze edge. For wide grids where an identifier must stay in view. Requires a total `width` and columns that are **all fixed** (`column_widths`) — otherwise it does nothing. **Text** tables only; not combined with virtualisation / checkboxes / resizing / reordering. |
-| `.frozen_columns_right()` | `m: usize` | **Freezes** the **last** `m` columns (pinned on the **right** — action columns, totals…), the middle scrolling. Combines with `frozen_columns` (both edges frozen). Same conditions and exclusions. |
+| `.frozen_columns()` | `n: usize` | **Freezes** the first `n` columns: they stay **pinned** on the left while the rest **scrolls horizontally** (the scrolling columns' header follows its columns), with a **separation shadow** at the freeze edge. For wide grids where an identifier must stay in view. Requires a total `width` and columns that are **all fixed** (`column_widths`): otherwise it does nothing. **Text** tables only; not combined with virtualisation / checkboxes / resizing / reordering. |
+| `.frozen_columns_right()` | `m: usize` | **Freezes** the **last** `m` columns (pinned on the **right**: action columns, totals…), the middle scrolling. Combines with `frozen_columns` (both edges frozen). Same conditions and exclusions. |
 | `.virtual_rows()` | `count: usize, viewport_height: f32, build: impl Fn(usize) -> Vec<String> + 'static` | Switches the table to **virtualised** mode: `count` data rows, of which only the **visible** ones are built/laid out/painted (internal vertical scrolling inside a viewport of `viewport_height` px). `build(index)` supplies the row's **texts** (one value per column). Indispensable for large grids (thousands of rows): the per-frame cost is ∝ the visible rows, not the total. The header stays **pinned**. |
 | `.virtual_widget_rows()` | `count: usize, viewport_height: f32, build: impl Fn(usize) -> Vec<Box<dyn Widget<Msg>>> + 'static` | Like `virtual_rows`, but every row is made of **widgets** (avatars, chips, buttons…): `build(index)` returns one widget per column. Only the visible rows are built. Click selection **and** checkboxes; the header stays pinned. Same exclusions (resizing / reordering). |
 | `.on_resize()` | `on_resize: impl Fn(usize, f32) -> R + 'static` | Makes the columns **resizable** with the mouse: a thin handle at each column's right edge (except the last) emits `on_resize(column, delta_px)` when dragged. The application **accumulates** the width, e.g. `widths[col] = (widths[col] + delta).max(MIN)`, and hands it back through `column_widths`. Only has an effect when **every** column has a fixed width (so the edges are known). |

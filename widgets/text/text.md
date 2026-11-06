@@ -30,7 +30,7 @@ impl Text {
 From [`frus-examples/widgets/src/features/text/widgets/text.rs`](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/text/widgets/text.rs):
 
 ```rust
-//! `Text` — a run of text in one style: size, weight, colour, slant, decoration,
+//! `Text`: a run of text in one style: size, weight, colour, slant, decoration,
 //! alignment, wrapping and line limits are all set on the widget.
 
 use frus::{
@@ -157,24 +157,24 @@ fn boxed(text: Text) -> Container {
 
 | Method | Argument | Effect |
 | --- | --- | --- |
-| `.selectable()` | — | Makes this text **selectable**: a press, a drag, a double click or a long press selects words in it, and Ctrl+C, or the bar that opens over the selection, copies them. Ordinary text is not — it is drawn, and there is nothing under the pointer to select — and choosing which of an application's texts a reader may copy from is the application's business: an order number, an address, a code, an error message. |
-| `.selection_toolbar()` | `build: impl Fn(&ToolbarContext, Vec<ToolbarItem<Msg>>) -> Vec<ToolbarItem<Msg>> + 'static` | Changes what the bar over a selectable text's selection offers — the application's say, as `TextField::selection_toolbar` is for a field. `build` is given the context and the default list (Copy when something is selected, Select all unless everything is) and answers with the list to show; an empty one shows no bar. |
-| `.heading()` | — | Wraps at the width the parent offers. This is the default, and the call is kept because saying so at the call site is not redundant when it is the whole point of the widget being there. Marks this text as a **heading**: a landmark assistive technology can jump between, instead of one more run of prose. |
-| `.wrap()` | — | Wraps the text at the width it is given: `soft_wrap(true)`. It is what an unset text does already; this says so, and undoes a `no_wrap` further up a chain. |
-| `.no_wrap()` | — | Keeps the text on **one line**, explicit newlines aside. It then runs past its box rather than folding, and `Text::overflow` decides what becomes of the part that hangs over. |
+| `.selectable()` |  | Makes this text **selectable**: a press, a drag, a double click or a long press selects words in it, and Ctrl+C, or the bar that opens over the selection, copies them. Ordinary text is not (it is drawn, and there is nothing under the pointer to select) and choosing which of an application's texts a reader may copy from is the application's business: an order number, an address, a code, an error message. |
+| `.selection_toolbar()` | `build: impl Fn(&ToolbarContext, Vec<ToolbarItem<Msg>>) -> Vec<ToolbarItem<Msg>> + 'static` | Changes what the bar over a selectable text's selection offers: the application's say, as `TextField::selection_toolbar` is for a field. `build` is given the context and the default list (Copy when something is selected, Select all unless everything is) and answers with the list to show; an empty one shows no bar. |
+| `.heading()` |  | Wraps at the width the parent offers. This is the default, and the call is kept because saying so at the call site is not redundant when it is the whole point of the widget being there. Marks this text as a **heading**: a landmark assistive technology can jump between, instead of one more run of prose. |
+| `.wrap()` |  | Wraps the text at the width it is given: `soft_wrap(true)`. It is what an unset text does already; this says so, and undoes a `no_wrap` further up a chain. |
+| `.no_wrap()` |  | Keeps the text on **one line**, explicit newlines aside. It then runs past its box rather than folding, and `Text::overflow` decides what becomes of the part that hangs over. |
 | `.soft_wrap()` | `soft_wrap: bool` | Whether the text wraps at the width it is given. `wrap()` is `soft_wrap(true)`. |
 | `.align()` | `align: TextAlign` | Where the lines sit **inside the box** the text was given. |
 | `.max_lines()` | `max_lines: usize` | At most `max_lines` lines; what is past them is dropped, and `Text::overflow` decides how the last one ends. |
 | `.overflow()` | `overflow: TextOverflow` | What becomes of text that does not fit: cut, cut with an ellipsis, faded out, or drawn past the box. |
-| `.ellipsis()` | — | — |
+| `.ellipsis()` |  |  |
 | `.size()` | `size: f32` | Sets the font size, in pixels. |
 | `.weight()` | `weight: FontWeight` | Sets the weight. |
-| `.italic()` | — | Switches to italic. |
-| `.family()` | `family: frus_core::FontFamily` | — |
-| `.height()` | `height: f32` | — |
+| `.italic()` |  | Switches to italic. |
+| `.family()` | `family: frus_core::FontFamily` |  |
+| `.height()` | `height: f32` |  |
 | `.color()` | `color: Color` | Sets the text color (otherwise the theme's). |
-| `.underline()` | — | Underlines the text. |
-| `.strikethrough()` | — | Strikes the text through. |
+| `.underline()` |  | Underlines the text. |
+| `.strikethrough()` |  | Strikes the text through. |
 | `.decoration()` | `decoration: frus_core::TextDecoration` | Sets the decoration lines (freely combined). |
 | `.decoration_color()` | `color: Color` | Sets the decoration color (otherwise the text's). |
 

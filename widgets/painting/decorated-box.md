@@ -38,11 +38,11 @@ impl ColoredBox {
 From [`frus-examples/widgets/src/features/painting/widgets/decorated_box.rs`](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/painting/widgets/decorated_box.rs):
 
 ```rust
-//! `DecoratedBox`, `ColoredBox` and `BoxDecoration` — paint a box behind (or in front
+//! `DecoratedBox`, `ColoredBox` and `BoxDecoration`: paint a box behind (or in front
 //! of) a child: a fill, rounded corners, a border, shadows, a circle.
 //!
 //! `Container` does all of this too, along with sizing and padding. These widgets say
-//! one thing each, and `BoxDecoration` is the value they share — the thing a theme or
+//! one thing each, and `BoxDecoration` is the value they share: the thing a theme or
 //! a design system hands you.
 
 use frus::{
@@ -184,7 +184,7 @@ No builder methods: everything is set through the constructor.
 
 ### `DecoratedBox`
 
-**Paints a decoration** — a fill or a gradient, a border, corners, a shadow — behind its child, or [in front of it](Self::foreground).
+**Paints a decoration** (a fill or a gradient, a border, corners, a shadow) behind its child, or [in front of it](Self::foreground).
 
 ```rust
 use frus_core::{Border, BorderRadius, BoxDecoration, Color};
@@ -198,7 +198,7 @@ let _framed: DecoratedBox<()> = DecoratedBox::new(frame, Text::new("Framed"));
 
 ### `ColoredBox`
 
-**Paints its box in one colour** behind its child — a `Container` with a colour and nothing else, for the tree that only wants a fill.
+**Paints its box in one colour** behind its child: a `Container` with a colour and nothing else, for the tree that only wants a fill.
 
 ```rust
 use frus_core::Color;

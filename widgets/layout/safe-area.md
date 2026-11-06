@@ -36,7 +36,7 @@ impl SafeArea {
 From [`frus-examples/widgets/src/features/layout/widgets/safe_area.rs`](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/layout/widgets/safe_area.rs):
 
 ```rust
-//! `SafeArea` — keeps its child clear of the parts of the screen the system has taken:
+//! `SafeArea`: keeps its child clear of the parts of the screen the system has taken:
 //! the status bar, a notch or camera cut-out, the gesture handle, the keyboard.
 //!
 //! On desktop those insets are zero and `SafeArea` changes nothing, so the same screen
@@ -101,10 +101,10 @@ fn content(text: &str) -> Container {
 
 | Method | Argument | Effect |
 | --- | --- | --- |
-| `.edges()` | `edges: Edges` | Which edges to inset. The rest are left to run to the screen's border — a list that should scroll under the gesture handle, say, keeps its bottom edge free. |
+| `.edges()` | `edges: Edges` | Which edges to inset. The rest are left to run to the screen's border: a list that should scroll under the gesture handle, say, keeps its bottom edge free. |
 | `.minimum()` | `minimum: Insets` | A floor for the padding: each side ends up at least this far in, even where the system asks for nothing. The usual way to give a screen its margin and its notch avoidance in one widget. |
-| `.maintain_bottom_view_padding()` | — | Keeps the bottom padding the keyboard would otherwise consume. |
-| `.avoid_keyboard()` | — | Also avoids the **soft keyboard**, not just the permanent bars. |
+| `.maintain_bottom_view_padding()` |  | Keeps the bottom padding the keyboard would otherwise consume. |
+| `.avoid_keyboard()` |  | Also avoids the **soft keyboard**, not just the permanent bars. |
 
 ## Behaviour
 
@@ -112,7 +112,7 @@ Pads its child by the system's occupied edges.
 
 ### Nesting
 
-A `SafeArea` **consumes** the padding it applies: its subtree sees a `MediaQuery` whose consumed edges are already zero, so a second `SafeArea` further down adds nothing and the notch is not avoided twice — and a widget that clears the status bar on its own, a `NavigationBar` or a `DrawerHeader`, is not pushed down by it twice either.
+A `SafeArea` **consumes** the padding it applies: its subtree sees a `MediaQuery` whose consumed edges are already zero, so a second `SafeArea` further down adds nothing and the notch is not avoided twice, and a widget that clears the status bar on its own, a `NavigationBar` or a `DrawerHeader`, is not pushed down by it twice either.
 
 That holds for both constructors. `SafeArea::build` still hands the consumed description to its closure, for code that reads it while composing.
 

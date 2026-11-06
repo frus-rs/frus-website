@@ -29,7 +29,7 @@ impl AlertDialog {
 From [`frus-examples/widgets/src/features/feedback/widgets/alert_dialog.rs`](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/feedback/widgets/alert_dialog.rs):
 
 ```rust
-//! `AlertDialog` — a modal box that asks a question and waits for the answer: an
+//! `AlertDialog`: a modal box that asks a question and waits for the answer: an
 //! optional icon, a title, some content and the buttons that answer it.
 //!
 //! There is no "show dialog" call. A dialog is **controlled** like every overlay: it is
@@ -165,17 +165,17 @@ impl State for AlertDialogDemoState {
 | `.content_text_style()` | `style: TextStyle` | The content's type. `bodyMedium` by default. |
 | `.action()` | `action: impl Widget<Msg> + 'static` | Adds a button to the row along the bottom. |
 | `.actions_alignment()` | `alignment: ActionsAlignment` | Where the buttons sit along that row. |
-| `.actions_overflow_alignment()` | `alignment: Align` | Which edge the buttons line up on **once they have stacked** — see `OverflowBar::overflow_alignment`. |
-| `.actions_overflow_direction()` | `direction: VerticalDirection` | Which way that column runs — see `OverflowBar::overflow_direction`. Downwards by default, so the buttons stack in the order they were given. |
-| `.actions_overflow_button_spacing()` | `spacing: f32` | — |
-| `.background()` | `color: Color` | The surface's colour — see `Dialog::background`. |
-| `.elevation()` | `elevation: f32` | How far off the page it sits — see `Dialog::elevation`. |
-| `.shadow_color()` | `color: Color` | The shadow's colour — see `Dialog::shadow_color`. |
-| `.surface_tint()` | `color: Color` | The tint for its elevation — see `Dialog::surface_tint`. |
-| `.shape()` | `shape: ShapeBorder` | **What shape it is** — see `Dialog::shape`. |
-| `.inset_padding()` | `padding: Insets` | How far off the window's edges — see `Dialog::inset_padding`. |
-| `.min_width()` | `width: f32` | The narrowest it gets — see `Dialog::min_width`. |
-| `.max_width()` | `width: f32` | The widest it gets — see `Dialog::max_width`. |
+| `.actions_overflow_alignment()` | `alignment: Align` | Which edge the buttons line up on **once they have stacked**: see `OverflowBar::overflow_alignment`. |
+| `.actions_overflow_direction()` | `direction: VerticalDirection` | Which way that column runs: see `OverflowBar::overflow_direction`. Downwards by default, so the buttons stack in the order they were given. |
+| `.actions_overflow_button_spacing()` | `spacing: f32` |  |
+| `.background()` | `color: Color` | The surface's colour: see `Dialog::background`. |
+| `.elevation()` | `elevation: f32` | How far off the page it sits: see `Dialog::elevation`. |
+| `.shadow_color()` | `color: Color` | The shadow's colour: see `Dialog::shadow_color`. |
+| `.surface_tint()` | `color: Color` | The tint for its elevation: see `Dialog::surface_tint`. |
+| `.shape()` | `shape: ShapeBorder` | **What shape it is**: see `Dialog::shape`. |
+| `.inset_padding()` | `padding: Insets` | How far off the window's edges: see `Dialog::inset_padding`. |
+| `.min_width()` | `width: f32` | The narrowest it gets: see `Dialog::min_width`. |
+| `.max_width()` | `width: f32` | The widest it gets: see `Dialog::max_width`. |
 
 ## Behaviour
 

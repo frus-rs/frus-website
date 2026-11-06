@@ -203,25 +203,54 @@
   margin-right: 0.35rem;
 }
 
-.shotGrid {
+/* The example applications, each in a phone's outline. */
+.appGrid {
   display: grid;
-  gap: 1.25rem;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem 1.25rem;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 150px), 1fr));
 }
 
-.shot {
-  margin: 0;
+.app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.6rem;
+  color: inherit;
+  text-decoration: none;
 }
 
-.shot img {
+.app:hover {
+  color: inherit;
+  text-decoration: none;
+}
+
+.appScreen {
+  display: block;
   width: 100%;
-  border-radius: 12px;
+  max-width: 220px;
+  padding: 6px;
+  border-radius: 26px;
+  background: #0d0d10;
   border: 1px solid var(--frus-border);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+  transition: transform 0.15s ease, border-color 0.15s ease;
 }
 
-.shot figcaption {
-  margin-top: 0.5rem;
+.app:hover .appScreen {
+  transform: translateY(-3px);
+  border-color: var(--ifm-color-primary);
+}
+
+.appScreen img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+}
+
+.appTitle {
   font-weight: 600;
+  text-align: center;
 }
 
 .phoneRow {

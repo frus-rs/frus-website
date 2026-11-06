@@ -30,7 +30,7 @@ impl Icon {
 From [`frus-examples/widgets/src/features/display/widgets/icon.rs`](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/display/widgets/icon.rs):
 
 ```rust
-//! `Icon` — a vector icon from the bundled set (`Icons::…`), or one of your own,
+//! `Icon`: a vector icon from the bundled set (`Icons::…`), or one of your own,
 //! scaled and coloured to the theme.
 
 use frus::{

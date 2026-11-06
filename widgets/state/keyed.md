@@ -34,7 +34,7 @@ impl Keyed {
 From [`frus-examples/widgets/src/features/state/widgets/keyed.rs`](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/state/widgets/keyed.rs):
 
 ```rust
-//! `keyed` / `Keyed` — give a widget a stable identity, so its state follows it when its
+//! `keyed` / `Keyed`: give a widget a stable identity, so its state follows it when its
 //! siblings move.
 //!
 //! Without a key, a state belongs to a **position** among siblings: rotate a list and each
@@ -131,7 +131,7 @@ No builder methods: everything is set through the constructor.
 
 ### `keyed`
 
-Shorthand: gives a widget — a list item, say — a **stable identity**. `keyed(todo.id, todo_row(todo))` is `Keyed::new(todo.id, todo_row(todo))`.
+Shorthand: gives a widget (a list item, say) a **stable identity**. `keyed(todo.id, todo_row(todo))` is `Keyed::new(todo.id, todo_row(todo))`.
 
 ### `Keyed`
 

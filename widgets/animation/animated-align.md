@@ -34,7 +34,7 @@ impl AnimatedAlign {
 From [`frus-examples/widgets/src/features/animation/widgets/animated_align.rs`](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/animation/widgets/animated_align.rs):
 
 ```rust
-//! `AnimatedAlign` — moves a child to a new anchor inside its box instead of letting it
+//! `AnimatedAlign`: moves a child to a new anchor inside its box instead of letting it
 //! jump: a badge changing corner, a thumb crossing a track.
 
 use frus::{
@@ -158,7 +158,7 @@ fn knob() -> Component {
 
 **Slides its child** to each new anchor instead of letting it jump across the box.
 
-The anchor is where the child sits in the free space around it, so this is the widget for a thing that moves *within* something — a thumb crossing a track, a badge changing corner, a label that settles against the other edge when a panel opens.
+The anchor is where the child sits in the free space around it, so this is the widget for a thing that moves *within* something: a thumb crossing a track, a badge changing corner, a label that settles against the other edge when a panel opens.
 
 ```rust
 use frus_core::{Alignment, Curve};
@@ -169,13 +169,13 @@ let _thumb: AnimatedAlign<()> = AnimatedAlign::new(
     if on { Alignment::CENTER_RIGHT } else { Alignment::CENTER_LEFT },
     0.15,
     Curve::ease_out(),
-    Container::new().width(20.0).height(20.0),
+    Container::new().width(20.0).height(20.0)
 );
 ```
 
 The **kind** of anchor is kept the whole way: a directional one stays directional, so in a right-to-left script the whole movement mirrors rather than the two ends mirroring separately and the child crossing the box the wrong way.
 
-Unlike a scale's pivot, an anchor **is** the quantity here — it says where the child is, not where the maths starts from — which is why this one animates and that one does not.
+Unlike a scale's pivot, an anchor **is** the quantity here (it says where the child is, not where the maths starts from) which is why this one animates and that one does not.
 
 ## See also
 

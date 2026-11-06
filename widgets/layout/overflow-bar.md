@@ -29,7 +29,7 @@ impl OverflowBar {
 From [`frus-examples/widgets/src/features/layout/widgets/overflow_bar.rs`](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/layout/widgets/overflow_bar.rs):
 
 ```rust
-//! `OverflowBar` — a row of buttons that becomes a column when they stop fitting.
+//! `OverflowBar`: a row of buttons that becomes a column when they stop fitting.
 //!
 //! Unlike `Wrap`, it folds all of its children or none: never a second line with one
 //! button stranded on it. It is the bar for dialog actions, which must survive a larger
@@ -48,7 +48,7 @@ pub fn example() -> Box<dyn Widget> {
             framed(320.0, actions(["Cancel", "Keep", "Delete"])),
         )),
         // Longer labels in a narrower box: the buttons fold into a column, aligned at
-        // the end, with `overflow_spacing` between them — never a squashed row.
+        // the end, with `overflow_spacing` between them: never a squashed row.
         Box::new(section(
             "Too narrow: folds into a column",
             framed(
@@ -86,7 +86,7 @@ fn framed(width: f32, bar: OverflowBar) -> Container {
 | Method | Argument | Effect |
 | --- | --- | --- |
 | `.child()` | `child: impl Widget<Msg> + 'static` | Adds a child, after the ones already there. |
-| `.child_boxed()` | `child: Box<dyn Widget<Msg>>` | Adds an **already boxed** child — what a builder holding `Vec<Box<dyn Widget>>` has to hand. |
+| `.child_boxed()` | `child: Box<dyn Widget<Msg>>` | Adds an **already boxed** child: what a builder holding `Vec<Box<dyn Widget>>` has to hand. |
 | `.spacing()` | `spacing: f32` | The space between the children **on one line**. |
 | `.overflow_spacing()` | `spacing: f32` | The space between them **once they have stacked**. |
 | `.alignment()` | `alignment: Justify` | How the children are distributed **along the line** while they fit. |
@@ -97,7 +97,7 @@ fn framed(width: f32, bar: OverflowBar) -> Container {
 
 A row of children that folds into a **column** when they do not fit on one line.
 
-A flex row does not wrap and its children do not shrink, so a row of buttons that has run out of room keeps its natural width and is drawn straight past whatever is holding it — which is what a reader who has turned their system font size up gets, every time. A bar folds instead, and folds **all** of them rather than stranding the last one on a second line the way a `Wrap` would.
+A flex row does not wrap and its children do not shrink, so a row of buttons that has run out of room keeps its natural width and is drawn straight past whatever is holding it, which is what a reader who has turned their system font size up gets, every time. A bar folds instead, and folds **all** of them rather than stranding the last one on a second line the way a `Wrap` would.
 
 ```rust
 OverflowBar::new()
@@ -108,7 +108,7 @@ OverflowBar::new()
     .child(button("Delete permanently", Msg::Delete))
 ```
 
-The arrangement is chosen **during layout**, from the box actually offered and the natural width of the children measured under the theme in force — which is what lets the text scale reach it. That has a price, the same one `LayoutBuilder` pays: the subtree is composed more than once a frame, so the children are held by shared pointer, and a **deferred overlay declared inside a bar does not open**. Clicks, hover, focus and the accessibility tree all work; a tooltip on a button in a bar does not, and belongs around the bar instead.
+The arrangement is chosen **during layout**, from the box actually offered and the natural width of the children measured under the theme in force, which is what lets the text scale reach it. That has a price, the same one `LayoutBuilder` pays: the subtree is composed more than once a frame, so the children are held by shared pointer, and a **deferred overlay declared inside a bar does not open**. Clicks, hover, focus and the accessibility tree all work; a tooltip on a button in a bar does not, and belongs around the bar instead.
 
 No child is ever wider than the bar: one that would be is capped, and ellipsises or wraps inside its own box rather than escaping it.
 

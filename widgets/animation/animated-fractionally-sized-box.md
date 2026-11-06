@@ -29,7 +29,7 @@ impl AnimatedFractionallySizedBox {
 From [`frus-examples/widgets/src/features/animation/widgets/animated_fractionally_sized_box.rs`](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/animation/widgets/animated_fractionally_sized_box.rs):
 
 ```rust
-//! `AnimatedFractionallySizedBox` — a box sized as a fraction of the room it is given,
+//! `AnimatedFractionallySizedBox`: a box sized as a fraction of the room it is given,
 //! moving to each new fraction: a progress bar, a panel that widens.
 
 use frus::{
@@ -109,7 +109,7 @@ fn progress() -> Component {
 
 **Grows and shrinks its share of the parent** rather than taking the new share at once.
 
-The quantity is a fraction and not a length, which is the reason to reach for this rather than an animated size: a bar filling half its row, a panel taking two thirds of a page, a sheet at a third of the height — none of them knows what those come to, and a resize of the window during the movement is answered by the layout rather than by a number that was right when it was written.
+The quantity is a fraction and not a length, which is the reason to reach for this rather than an animated size: a bar filling half its row, a panel taking two thirds of a page, a sheet at a third of the height, none of them knows what those come to, and a resize of the window during the movement is answered by the layout rather than by a number that was right when it was written.
 
 ```rust
 use frus_core::Curve;

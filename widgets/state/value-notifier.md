@@ -37,11 +37,11 @@ impl ChangeNotifier {
 From [`frus-examples/widgets/src/features/state/widgets/notifiers.rs`](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/state/widgets/notifiers.rs):
 
 ```rust
-//! `ValueNotifier`, `ChangeNotifier` and the builders that follow them —
+//! `ValueNotifier`, `ChangeNotifier` and the builders that follow them:
 //! `ValueListenableBuilder` and `ListenableBuilder`.
 //!
-//! A notifier is state that lives **outside** the widgets — in a model, a service, a
-//! controller — and tells whoever cares when it changed. Cloning one gives another
+//! A notifier is state that lives **outside** the widgets: in a model, a service, a
+//! controller, and tells whoever cares when it changed. Cloning one gives another
 //! handle to the same value, so it can be handed to every widget that needs it.
 
 use std::cell::RefCell;

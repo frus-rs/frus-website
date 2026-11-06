@@ -29,7 +29,7 @@ impl ListTile {
 From [`frus-examples/widgets/src/features/display/widgets/listtile.rs`](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/display/widgets/listtile.rs):
 
 ```rust
-//! `ListTile` — one row of a list: something in front, one to three lines of text, and
+//! `ListTile`: one row of a list: something in front, one to three lines of text, and
 //! something behind. The shape of a settings line, a contact, a menu entry.
 
 use frus::{
@@ -89,7 +89,7 @@ pub fn example() -> Box<dyn Widget> {
                         ),
                 ),
             )),
-            // Two lines: a subtitle under the title, and any widget behind — here a live
+            // Two lines: a subtitle under the title, and any widget behind, here a live
             // switch, which keeps its own tap.
             Box::new(section(
                 "Two lines, with a control",
@@ -108,7 +108,7 @@ pub fn example() -> Box<dyn Widget> {
                     ListTile::new()
                         .leading(CircleAvatar::initials("Grace Hopper"))
                         .title("Grace Hopper")
-                        .subtitle("Re: compiler meeting — I moved it to Thursday so that everyone can make it.")
+                        .subtitle("Re: compiler meeting, I moved it to Thursday so that everyone can make it.")
                         .three_line()
                         .trailing(Text::new("9:41")),
                 ),
@@ -153,11 +153,11 @@ fn list(child: impl Widget + 'static) -> Container {
 | `.leading()` | `leading: impl Widget<Msg> + 'static` | What goes in front: an icon, an avatar, a checkbox. |
 | `.trailing()` | `trailing: impl Widget<Msg> + 'static` | What goes behind: a chevron, a switch, a timestamp. |
 | `.title()` | `title: impl Into<String>` | The first line, styled by the tile (`body_large` on `on_surface`). |
-| `.title_child()` | `title: impl Widget<Msg> + 'static` | The first line as a **widget**, for a caller who wants something the tile would not have made — a rich span, a row of chips. |
+| `.title_child()` | `title: impl Widget<Msg> + 'static` | The first line as a **widget**, for a caller who wants something the tile would not have made: a rich span, a row of chips. |
 | `.subtitle()` | `subtitle: impl Into<String>` | The second line, styled by the tile (`body_medium` on `on_surface_variant`). Its presence is what makes the tile a two-line one. |
 | `.subtitle_child()` | `subtitle: impl Widget<Msg> + 'static` | The second line as a **widget**. See `Self::title_child`. |
-| `.three_line()` | — | Room for three lines rather than two, for a subtitle that wraps. |
-| `.dense()` | — | The compact height, for a dense list. |
+| `.three_line()` |  | Room for three lines rather than two, for a subtitle that wraps. |
+| `.dense()` |  | The compact height, for a dense list. |
 | `.selected()` | `selected: bool` | Marks the tile as the chosen one: its text and its two slots take the primary colour. |
 | `.enabled()` | `enabled: bool` | Available or not. A disabled tile flattens and stops answering. |
 | `.on_tap()` | `msg: impl Into<Msg>` | The message a tap sends. |
@@ -169,9 +169,9 @@ fn list(child: impl Widget + 'static) -> Container {
 | `.subtitle_style()` | `style: TextStyle` | The subtitle's text style. |
 | `.tile_color()` | `color: Color` | The tile's own background. |
 | `.selected_color()` | `color: Color` | The colour the text and the two slots take when the tile is the chosen one. |
-| `.selected_tile_color()` | `color: Color` | — |
-| `.icon_color()` | `color: Color` | — |
-| `.text_color()` | `color: Color` | — |
+| `.selected_tile_color()` | `color: Color` |  |
+| `.icon_color()` | `color: Color` |  |
+| `.text_color()` | `color: Color` |  |
 | `.shape()` | `shape: ShapeBorder` | The surface takes it, and so does the ink, so a rounded tile does not splash square corners over a list. |
 
 ## Behaviour

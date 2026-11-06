@@ -46,7 +46,7 @@ impl TimeRange {
 From [`frus-examples/widgets/src/features/inputs/widgets/time_picker.rs`](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/inputs/widgets/time_picker.rs):
 
 ```rust
-//! `TimePicker` and `TimeRange` — a time of day picked from an hour grid and a minute
+//! `TimePicker` and `TimeRange`: a time of day picked from an hour grid and a minute
 //! grid; `TimeRange` is two of them, for a start and an end. Times always come back in
 //! 24-hour form, whatever the picker displays.
 
@@ -130,7 +130,7 @@ impl State for TimePickerDemoState {
                 "Meeting at {:02}:{:02} (stored in 24-hour time)",
                 self.meeting.0, self.meeting.1
             ))),
-            // A start and an end side by side — wider than a phone, so it may scroll
+            // A start and an end side by side: wider than a phone, so it may scroll
             // sideways.
             Box::new(section(
                 "TimeRange",
@@ -161,13 +161,13 @@ impl State for TimePickerDemoState {
 
 | Type | Method | Argument | Effect |
 | --- | --- | --- | --- |
-| `TimePicker` | `.hour12()` | — | Switches to **12-hour**: a 1-to-12 grid + an AM/PM toggle; the preview shows 12-hour time. The messages emitted stay in 24-hour time. |
+| `TimePicker` | `.hour12()` |  | Switches to **12-hour**: a 1-to-12 grid + an AM/PM toggle; the preview shows 12-hour time. The messages emitted stay in 24-hour time. |
 | `TimePicker` | `.minute_step()` | `step: u32` | Sets the **minute step** offered (1–60, clamped). Defaults to 5. |
-| `TimePicker` | `.dial_text_style()` | `style: TextStyle` | — |
+| `TimePicker` | `.dial_text_style()` | `style: TextStyle` |  |
 | `TimePicker` | `.preview_text_style()` | `style: TextStyle` | The `HH:MM` line's type, over the theme's and the framework's. |
-| `TimePicker` | `.help_text_style()` | `style: TextStyle` | — |
+| `TimePicker` | `.help_text_style()` | `style: TextStyle` |  |
 | `TimeRange` | `.label_text_style()` | `style: TextStyle` | The "Start" and "End" headings' type, over the theme's and the framework's. |
-| `TimeRange` | `.hour12()` | — | Switches both pickers to **12-hour** (AM/PM). |
+| `TimeRange` | `.hour12()` |  | Switches both pickers to **12-hour** (AM/PM). |
 | `TimeRange` | `.minute_step()` | `step: u32` | Sets the **minute step** of both pickers (1–60). |
 
 ## Behaviour

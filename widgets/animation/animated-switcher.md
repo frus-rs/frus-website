@@ -32,7 +32,7 @@ impl AnimatedSwitcher {
 From [`frus-examples/widgets/src/features/animation/widgets/animated_switcher.rs`](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/animation/widgets/animated_switcher.rs):
 
 ```rust
-//! `AnimatedSwitcher` — when the value it shows changes, the old child leaves as the new
+//! `AnimatedSwitcher`, when the value it shows changes, the old child leaves as the new
 //! one arrives: a fade by default, or any transition you hand it.
 //!
 //! It is given the **value** a child is made from, not the child: values that compare
@@ -125,12 +125,12 @@ pub fn example() -> Box<dyn Widget> {
 | `.reverse_duration()` | `seconds: f32` | How long a child takes to **leave**, when it is not as long as one takes to arrive. |
 | `.switch_in_curve()` | `curve: Curve` | The curve a child **arrives** on. |
 | `.switch_out_curve()` | `curve: Curve` | The curve a child **leaves** on, read as its progress falls from where it was to nothing. Linear by default. |
-| `.transition()` | `transition: impl Fn(Box<dyn Widget<Msg>>, f32) -> W + 'static` | **How** a child arrives and leaves: handed the child and its progress — `1` in place, `0` gone — it returns the child as it should be drawn at that point. A fade by default. |
+| `.transition()` | `transition: impl Fn(Box<dyn Widget<Msg>>, f32) -> W + 'static` | **How** a child arrives and leaves: handed the child and its progress (`1` in place, `0` gone) it returns the child as it should be drawn at that point. A fade by default. |
 | `.layout()` | `layout: impl Fn(Vec<Box<dyn Widget<Msg>>>) -> W + 'static` | **Where** the children go while more than one is showing: handed them oldest first, the arriving one last, it returns what holds them. By default they overlap, centred in a box as big as the largest. |
 
 ## Behaviour
 
-**Moves between two different children** when the value it shows changes: the old one leaves as the new one arrives — a fade by default.
+**Moves between two different children** when the value it shows changes: the old one leaves as the new one arrives, a fade by default.
 
 ```rust
 use frus_widgets::{AnimatedSwitcher, Text};
@@ -140,7 +140,7 @@ let _shown: AnimatedSwitcher<()> =
     AnimatedSwitcher::new(0.25, count, |n: &i32| Text::new(n.to_string()));
 ```
 
-It is handed the **value** a child is made from rather than the child, because a value is what can be kept from one frame to the next — see the module documentation. Two values that compare equal are the same child: nothing moves. A value that differs is a switch, and the child that was showing leaves from wherever it had got to.
+It is handed the **value** a child is made from rather than the child, because a value is what can be kept from one frame to the next: see the module documentation. Two values that compare equal are the same child: nothing moves. A value that differs is a switch, and the child that was showing leaves from wherever it had got to.
 
 - `AnimatedSwitcher::transition` says **how** a child arrives and leaves. It is
   handed the child and its progress, and any explicit transition fits:

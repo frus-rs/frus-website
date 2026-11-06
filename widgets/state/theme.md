@@ -32,7 +32,7 @@ impl Theme {
 From [`frus-examples/widgets/src/features/state/widgets/theme.rs`](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/state/widgets/theme.rs):
 
 ```rust
-//! `Theme` — reading the colours and type every widget is dressed in (`cx.theme()`), and
+//! `Theme`: reading the colours and type every widget is dressed in (`cx.theme()`), and
 //! switching the whole application between light and dark (`host::app()`).
 //!
 //! Read colours from the theme rather than writing them down: then dark mode, a brand
@@ -150,13 +150,13 @@ pub fn example() -> Box<dyn Widget> {
 | `.with_platform()` | `platform: frus_core::TargetPlatform` | The same theme, following `platform`'s conventions (`Theme::platform`). |
 | `.with_cupertino_override_theme()` | `data: crate::CupertinoThemeData` | The same theme, its Apple-style widgets taking what `data` sets instead of what this theme would give them (`Theme::cupertino_override_theme`). |
 | `.with_visual_density()` | `density: crate::VisualDensity` | The same theme, its controls at `density` whatever the platform. |
-| `.rtl()` | — | The same theme in **right-to-left** (Arabic, Hebrew…). |
+| `.rtl()` |  | The same theme in **right-to-left** (Arabic, Hebrew…). |
 
 ## Behaviour
 
 A set of style tokens.
 
-The `ColorScheme` (`theme.scheme`) is the **source of truth** for the colors; the "flat" fields (`background`, `surface`, `primary`, …) are **convenience views** of the most used roles, derived from the scheme — the widgets' historical API stays intact. `focus`/`selection` are interaction accents specific to frus (outside the M3 roles).
+The `ColorScheme` (`theme.scheme`) is the **source of truth** for the colors; the "flat" fields (`background`, `surface`, `primary`, …) are **convenience views** of the most used roles, derived from the scheme: the widgets' historical API stays intact. `focus`/`selection` are interaction accents specific to frus (outside the M3 roles).
 
 ## See also
 

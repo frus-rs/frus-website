@@ -29,7 +29,7 @@ impl TextField {
 From [`frus-examples/widgets/src/features/inputs/widgets/text_field.rs`](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/inputs/widgets/text_field.rs):
 
 ```rust
-//! `TextField` — a text input. It is **controlled**: the application holds the text, the
+//! `TextField`: a text input. It is **controlled**: the application holds the text, the
 //! field shows it and reports every change through `on_input`.
 
 use frus::{
@@ -204,7 +204,7 @@ impl State for TextFieldDemoState {
                             ),
                     ),
             )),
-            // Outlined (the default), filled, or borderless — the last one for a field
+            // Outlined (the default), filled, or borderless: the last one for a field
             // inside something that is already a container.
             Box::new(section(
                 "Variants, disabled and read-only",
@@ -271,15 +271,15 @@ impl State for TextFieldDemoState {
 | Method | Argument | Effect |
 | --- | --- | --- |
 | `.controller()` | `controller: &crate::TextEditingController` | Drives the field from `controller`: it shows the controller's text, and what is typed in it is written to the controller. |
-| `.outlined()` | — | **Outlined**: a box the caller can see all the way round, the floating label notching its top border. The default. |
-| `.borderless()` | — | **Filled**: a tinted container with a single line under it, the label floating inside the box rather than on its edge. For a field inside something that is already a container. See `TextFieldVariant::None`. |
-| `.filled()` | — | The **filled** variant: a tinted container with a single line under it, the label floating inside. See `TextFieldVariant::Filled`. |
+| `.outlined()` |  | **Outlined**: a box the caller can see all the way round, the floating label notching its top border. The default. |
+| `.borderless()` |  | **Filled**: a tinted container with a single line under it, the label floating inside the box rather than on its edge. For a field inside something that is already a container. See `TextFieldVariant::None`. |
+| `.filled()` |  | The **filled** variant: a tinted container with a single line under it, the label floating inside. See `TextFieldVariant::Filled`. |
 | `.variant()` | `variant: TextFieldVariant` | Chooses the variant directly, for a caller holding one in a variable. |
 | `.enabled()` | `enabled: bool` | Greys the field out and makes it inert. |
 | `.style()` | `style: TextFieldStyle` | Overrides part of the styling for this field alone. Anything left `None` falls to the theme's `TextFieldTheme`, then to the framework's defaults. |
-| `.dense()` | `dense: bool` | The shape, the label and the border are unchanged — only the room around the content. |
-| `.autofill()` | `hints: impl IntoIterator<Item = AutofillHint>` | What the field is **for** — a username, a new password, a one-time code, a postal code — so that the platform's autofill service can fill it, and save it once the form is submitted. See `AutofillHint`. |
-| `.multiline()` | — | Switches the field to **multi-line**: Enter inserts a line break (instead of submitting), and the box shows `rows` lines (see `rows`). |
+| `.dense()` | `dense: bool` | The shape, the label and the border are unchanged, only the room around the content. |
+| `.autofill()` | `hints: impl IntoIterator<Item = AutofillHint>` | What the field is **for** (a username, a new password, a one-time code, a postal code) so that the platform's autofill service can fill it, and save it once the form is submitted. See `AutofillHint`. |
+| `.multiline()` |  | Switches the field to **multi-line**: Enter inserts a line break (instead of submitting), and the box shows `rows` lines (see `rows`). |
 | `.rows()` | `rows: u16` | Number of visible lines in multi-line mode (at least 1). Implies `multiline`. |
 | `.min_lines()` | `lines: u16` | Implies `multiline`; with a `max_lines`, the box grows from these to those as the value wraps. |
 | `.max_lines()` | `lines: impl Into<Option<u16>>` | `None` grows without a limit. |
@@ -287,14 +287,14 @@ impl State for TextFieldDemoState {
 | `.obscuring_character()` | `character: char` | A dot unless told. |
 | `.cursor_color()` | `color: Color` | The caret's colour (milestone 659). Unset, the theme's, then the scheme's `primary`. |
 | `.cursor_error_color()` | `color: Color` | The caret's colour while an error is showing. Unset, the error colour. |
-| `.cursor_width()` | `width: f32` | — |
+| `.cursor_width()` | `width: f32` |  |
 | `.cursor_height()` | `height: f32` | The caret's height, centred on the line; the line's own unless told. |
 | `.cursor_radius()` | `radius: f32` | The radius of the caret's corners. |
 | `.show_cursor()` | `show: bool` | A field that hides it still takes keys and selections. |
 | `.autofocus()` | `autofocus: bool` | Where the focus came from is given back when it goes (milestone 605). |
 | `.text_align()` | `align: TextAlign` | Where the text sits inside the field: an amount to the right, a code centred. |
-| `.keyboard_type()` | `keyboard: KeyboardType` | Which keys the software keyboard should offer — a phone keypad, an email address, a number. |
-| `.action()` | `action: TextInputAction` | What the keyboard's action key does, and what it says — *Next* in a form, *Search* over a query, *Send* on a message. |
+| `.keyboard_type()` | `keyboard: KeyboardType` | Which keys the software keyboard should offer: a phone keypad, an email address, a number. |
+| `.action()` | `action: TextInputAction` | What the keyboard's action key does, and what it says: *Next* in a form, *Search* over a query, *Send* on a message. |
 | `.prefix_icon()` | `icon: IconData` | Decorative icon on the left inside the field. |
 | `.suffix_icon()` | `icon: IconData` | Decorative icon on the right inside the field. |
 | `.icon()` | `icon: IconData` | It is 24 pixels (18 dense) with 16 before the box, in the icon colour. |
@@ -304,22 +304,22 @@ impl State for TextFieldDemoState {
 | `.floating_label_alignment()` | `alignment: FloatingLabelAlignment` | Where the floated label sits along the field's top. Unset, the theme's, then `FloatingLabelAlignment::Start`. |
 | `.counter_text()` | `text: impl Into<String>` | An empty text hides the counter, limit or not. |
 | `.on_suffix()` | `message: impl Into<Msg>` | Makes the **suffix icon clickable**: a click on it emits `message` (a clear button, a reveal-password button…) instead of placing the caret. Implies a suffix icon (to be set through `suffix_icon`). |
-| `.on_tap_outside()` | `message: impl Into<Msg>` | — |
+| `.on_tap_outside()` | `message: impl Into<Msg>` |  |
 | `.label()` | `label: impl Into<String>` | Label displayed above the field. |
-| `.placeholder()` | `placeholder: impl Into<String>` | Hint displayed inside the field while it is empty — and, for a field with no `label`, the name a screen reader gives it. |
+| `.placeholder()` | `placeholder: impl Into<String>` | Hint displayed inside the field while it is empty, and, for a field with no `label`, the name a screen reader gives it. |
 | `.helper()` | `helper: impl Into<String>` | Helper text below the field (replaced by the error, if present). |
 | `.error()` | `message: impl Into<String>` | Marks the field **in error**: red border and label, `message` displayed below the field. Chain it only when the application's validation fails. |
 | `.width()` | `width: f32` | Sets the width, in logical pixels. |
 | `.size()` | `size: f32` | Sets the font size, in pixels. |
 | `.max_length()` | `max: usize` | The most characters the field will hold. |
 | `.input_filter()` | `filter: impl Fn(char) -> Option<char> + 'static` | What each typed character becomes before it reaches the value: `None` drops it, `Some(c)` puts `c` in instead of what was typed. |
-| `.digits_only()` | — | Digits, and nothing else. |
+| `.digits_only()` |  | Digits, and nothing else. |
 | `.capitalization()` | `capitalization: Capitalization` | Which letters the software keyboard capitalises by itself. |
-| `.read_only()` | — | A field whose value can be read, selected and copied — but not changed. |
-| `.selection_toolbar()` | `build: impl Fn(&ToolbarContext, Vec<ToolbarItem<Msg>>) -> Vec<ToolbarItem<Msg>> + 'static` | **What the bar over a selection offers** — Cut, Copy, Paste, Select all — decided by the application (milestone 568, [#23]). |
+| `.read_only()` |  | A field whose value can be read, selected and copied, but not changed. |
+| `.selection_toolbar()` | `build: impl Fn(&ToolbarContext, Vec<ToolbarItem<Msg>>) -> Vec<ToolbarItem<Msg>> + 'static` | **What the bar over a selection offers** (Cut, Copy, Paste, Select all) decided by the application (milestone 568, [#23]). |
 | `.on_input()` | `on_input: impl Fn(String) -> R + 'static` | Closure producing a message from the field's new value. |
 | `.on_submit()` | `message: impl Into<Msg>` | Message emitted on submission (the Enter key), without changing the value. |
-| `.announce()` | `message: impl Into<String>` | Text to speak through the screen reader's live region when `Self::on_submit` fires — the field's own counterpart to a button's `Widget::announce`, which only ever fires on a click or a plain Enter and so never sees a field's submit (#18). Compute it from the value the caller already has — `TextField::new(draft).announce(format!("{draft} added"))` — since by the time this fires, the widget it is read from is the one built **before** the keystroke, still holding what is about to be cleared. |
+| `.announce()` | `message: impl Into<String>` | Text to speak through the screen reader's live region when `Self::on_submit` fires: the field's own counterpart to a button's `Widget::announce`, which only ever fires on a click or a plain Enter and so never sees a field's submit (#18). Compute it from the value the caller already has: `TextField::new(draft).announce(format!("{draft} added"))`: since by the time this fires, the widget it is read from is the one built **before** the keystroke, still holding what is about to be cleared. |
 
 ## Behaviour
 

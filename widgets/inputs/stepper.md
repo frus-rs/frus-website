@@ -32,7 +32,7 @@ impl Stepper {
 From [`frus-examples/widgets/src/features/inputs/widgets/stepper.rs`](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/inputs/widgets/stepper.rs):
 
 ```rust
-//! `Stepper` — a whole number with − and + buttons on either side: a quantity in a
+//! `Stepper`: a whole number with − and + buttons on either side: a quantity in a
 //! cart, a number of guests. (The numbered step indicator of a wizard is `Steps`.)
 
 use frus::{State, StateContext, StatefulWidget, Stepper, Text, Widget};

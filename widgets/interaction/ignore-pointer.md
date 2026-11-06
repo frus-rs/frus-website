@@ -37,7 +37,7 @@ impl AbsorbPointer {
 From [`frus-examples/widgets/src/features/interaction/widgets/pointer_barriers.rs`](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/interaction/widgets/pointer_barriers.rs):
 
 ```rust
-//! `IgnorePointer` and `AbsorbPointer` — switch off the pointer for a subtree without
+//! `IgnorePointer` and `AbsorbPointer`: switch off the pointer for a subtree without
 //! touching the widgets in it.
 //!
 //! Both leave the subtree drawn exactly as it is. The difference is what happens to a tap:
@@ -87,9 +87,9 @@ pub fn example() -> Box<dyn Widget> {
             Button::new(label).on_press(move || tap.update(|n| *n += 1))
         };
 
-        // While on, the button cannot be pressed — and a tap on it reaches the card behind.
+        // While on, the button cannot be pressed, and a tap on it reaches the card behind.
         let ignoring = scene(Box::new(IgnorePointer::new(button("Ignored")).ignoring(on)));
-        // While on, the button cannot be pressed — and the tap stops there.
+        // While on, the button cannot be pressed, and the tap stops there.
         let absorbing = scene(Box::new(
             AbsorbPointer::new(button("Absorbed")).absorbing(on),
         ));
@@ -123,7 +123,7 @@ pub fn example() -> Box<dyn Widget> {
 
 | Type | Method | Argument | Effect |
 | --- | --- | --- | --- |
-| `IgnorePointer` | `.ignoring()` | `ignoring: bool` | Turns the barrier on or off from a condition — `false` leaves the child fully interactive, so a caller does not have to build two different trees. |
+| `IgnorePointer` | `.ignoring()` | `ignoring: bool` | Turns the barrier on or off from a condition: `false` leaves the child fully interactive, so a caller does not have to build two different trees. |
 | `AbsorbPointer` | `.absorbing()` | `absorbing: bool` | Turns the barrier on or off from a condition. |
 
 ## Behaviour
@@ -132,7 +132,7 @@ pub fn example() -> Box<dyn Widget> {
 
 Makes its child **invisible to input** while leaving it laid out and painted.
 
-Input passes straight through to whatever is behind — which is the whole difference from `AbsorbPointer`.
+Input passes straight through to whatever is behind, which is the whole difference from `AbsorbPointer`.
 
 ```rust
 IgnorePointer::new(row).ignoring(saving)   // inert while a save is in flight

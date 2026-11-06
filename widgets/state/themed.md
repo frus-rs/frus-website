@@ -39,7 +39,7 @@ impl ThemeBuilder {
 From [`frus-examples/widgets/src/features/state/widgets/themed.rs`](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/state/widgets/themed.rs):
 
 ```rust
-//! `Themed` and `ThemeBuilder` — a different theme for one part of the screen.
+//! `Themed` and `ThemeBuilder`: a different theme for one part of the screen.
 //!
 //! `Themed::new` replaces the theme for a subtree (a dark promo card on a light page).
 //! `Themed::tweak` changes **part** of the inherited one (this section's buttons are
@@ -103,7 +103,7 @@ pub fn example() -> Box<dyn Widget> {
                 sample(),
             ),
         )),
-        // Built late, from the theme in force *here* — inside the dark `Themed`, the
+        // Built late, from the theme in force *here*: inside the dark `Themed`, the
         // builder sees the dark theme.
         Box::new(section(
             "ThemeBuilder: build from the ambient theme",

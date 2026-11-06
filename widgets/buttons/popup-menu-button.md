@@ -41,7 +41,7 @@ impl MenuItem {
 From [`frus-examples/widgets/src/features/buttons/widgets/popup_menu_button.rs`](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/buttons/widgets/popup_menu_button.rs):
 
 ```rust
-//! `PopupMenuButton` and `MenuItem` — a list of actions that floats over a button and
+//! `PopupMenuButton` and `MenuItem`: a list of actions that floats over a button and
 //! closes on a click outside. For the "more" menu of a row or an app bar.
 
 use frus::{
@@ -164,22 +164,22 @@ impl State for PopupDemoState {
 
 | Type | Method | Argument | Effect |
 | --- | --- | --- | --- |
-| `PopupMenuButton` | `.text_style()` | `style: TextStyle` | — |
-| `PopupMenuButton` | `.background()` | `color: Color` | — |
+| `PopupMenuButton` | `.text_style()` | `style: TextStyle` |  |
+| `PopupMenuButton` | `.background()` | `color: Color` |  |
 | `PopupMenuButton` | `.shape()` | `shape: ShapeBorder` | **What shape the panel is**, over the theme's and the framework's corner. |
 | `PopupMenuButton` | `.radius()` | `radius: impl Into<BorderRadius>` | Reaching past that for a single widget would make the menu the only thing on screen ignoring the number an application set. |
 | `PopupMenuButton` | `.elevation()` | `elevation: f32` | **How far off the page the panel sits**, in pixels. Three by default. |
 | `PopupMenuButton` | `.shadow_color()` | `color: Color` | The colour of the panel's shadow, over the theme's and the scheme's shadow at 30 %. It is used as given, alpha and all: `Color::TRANSPARENT` casts none. |
 | `PopupMenuButton` | `.menu_padding()` | `padding: Insets` | The room kept **above and below** the rows, inside the panel. |
 | `PopupMenuButton` | `.item_padding()` | `padding: Insets` | The room kept either side of a row's label. |
-| `PopupMenuButton` | `.item_height()` | `height: f32` | **How tall one row is**, as a floor — a row still grows to fit the reader's type. The default is the smallest box a finger can be asked to hit. |
+| `PopupMenuButton` | `.item_height()` | `height: f32` | **How tall one row is**, as a floor: a row still grows to fit the reader's type. The default is the smallest box a finger can be asked to hit. |
 | `PopupMenuButton` | `.enabled()` | `enabled: bool` | Whether the menu can be used. Disabled it is **inert** and, like a disabled `DropdownButton`, **never open**: a floating panel over an anchor that answers nothing traps a press and returns no message. |
 | `PopupMenuButton` | `.item()` | `label: impl Into<String>, message: Msg` | Adds an action: a label plus a message on click. Ignored when the menu is closed. |
-| `PopupMenuButton` | `.item_widget()` | `child: impl Widget<Msg> + 'static, message: Msg` | Adds a row **the caller draws** — two lines, a swatch, a badge, rich text — plus the message it sends. |
+| `PopupMenuButton` | `.item_widget()` | `child: impl Widget<Msg> + 'static, message: Msg` | Adds a row **the caller draws** (two lines, a swatch, a badge, rich text) plus the message it sends. |
 | `PopupMenuButton` | `.icon_item()` | `icon: IconData, label: impl Into<String>, message: Msg` | Adds an action with a picture in the leading column. |
 | `PopupMenuButton` | `.checked_item()` | `label: impl Into<String>, checked: bool, message: Msg` | Adds an action that is **on or off**, ticked when it is on. |
-| `PopupMenuButton` | `.divider()` | — | Adds the **rule** between two groups of actions. |
-| `PopupMenuButton` | `.entry()` | `item: MenuItem<Msg>` | Adds an entry however it was built — the door to `MenuItem::enabled` and `MenuItem::shortcut`, which no shorthand carries. Ignored when the menu is closed. |
+| `PopupMenuButton` | `.divider()` |  | Adds the **rule** between two groups of actions. |
+| `PopupMenuButton` | `.entry()` | `item: MenuItem<Msg>` | Adds an entry however it was built: the door to `MenuItem::enabled` and `MenuItem::shortcut`, which no shorthand carries. Ignored when the menu is closed. |
 | `MenuItem` | `.enabled()` | `enabled: bool` | Whether **this row** can be used, over the menu's own availability. |
 | `MenuItem` | `.shortcut()` | `keys: impl Into<String>` | The **keys** that work this action, shown muted on the right. |
 
@@ -193,7 +193,7 @@ A controlled action menu, opened and closed by the application.
 
 **One entry of a `PopupMenuButton`'s list**: an action, or the rule between two groups of them.
 
-The shorthands on the button itself — `item`, `icon_item`, `checked_item`, `item_widget` and `divider` — each build one of these, and are what most call sites should write. This type is the door to the two things a shorthand cannot carry: a row that is **not available** while the rest of the menu is, and the **keys** that work an action.
+The shorthands on the button itself (`item`, `icon_item`, `checked_item`, `item_widget` and `divider`) each build one of these, and are what most call sites should write. This type is the door to the two things a shorthand cannot carry: a row that is **not available** while the rest of the menu is, and the **keys** that work an action.
 
 ```rust
 use frus_widgets::{Container, Icons, MenuItem, PopupMenuButton};

@@ -29,7 +29,7 @@ impl AnimatedSize {
 From [`frus-examples/widgets/src/features/animation/widgets/animated_size.rs`](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/animation/widgets/animated_size.rs):
 
 ```rust
-//! `AnimatedSize` — a box that follows its child's size over time: when the content grows
+//! `AnimatedSize`: a box that follows its child's size over time: when the content grows
 //! or shrinks, the box moves to the new size instead of jumping, and clips the child on
 //! the way.
 
@@ -43,7 +43,7 @@ use crate::common::shared::{section, sections};
 const SUMMARY: &str = "frus draws every pixel itself, on the GPU.";
 const MORE: &str = "That is why a widget looks the same on the desktop, on Android and in a \
                     browser: no native control is borrowed, so nothing changes from one \
-                    platform to the next except what the platform should change — scrolling \
+                    platform to the next except what the platform should change: scrolling \
                     physics, page transitions, the text selection handles.";
 
 pub fn example() -> Box<dyn Widget> {

@@ -29,7 +29,7 @@ impl Padding {
 From [`frus-examples/widgets/src/features/layout/widgets/padding.rs`](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/layout/widgets/padding.rs):
 
 ```rust
-//! `Padding` — empty space around a child, and nothing else.
+//! `Padding`: empty space around a child, and nothing else.
 
 use frus::{Color, Container, Insets, InsetsDirectional, Padding, Text, Widget};
 

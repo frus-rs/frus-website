@@ -29,7 +29,7 @@ impl FittedBox {
 From [`frus-examples/widgets/src/features/layout/widgets/fitted_box.rs`](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/layout/widgets/fitted_box.rs):
 
 ```rust
-//! `FittedBox` — scales its child to fit its box, following a `BoxFit` rule.
+//! `FittedBox`: scales its child to fit its box, following a `BoxFit` rule.
 //!
 //! Unlike `Transform::scale`, the scale is worked out from the layout: put the same
 //! child in a bigger box and it grows with it.
@@ -56,7 +56,7 @@ pub fn example() -> Box<dyn Widget> {
                 .child(fitted("ScaleDown", BoxFit::ScaleDown))
                 .child(fitted("None", BoxFit::None)),
         )),
-        // The everyday use: a label scaled to fill a slot whatever its own size — a big
+        // The everyday use: a label scaled to fill a slot whatever its own size, a big
         // figure on a dashboard tile.
         Box::new(section(
             "Growing a label to its slot",
@@ -106,7 +106,7 @@ fn badge() -> Container {
 
 ## Behaviour
 
-Scales its child to **fit** its own box according to a `BoxFit` (like CSS `object-fit`), then centres it. The child is measured at its **natural** size; the scale factor follows from that — hence the effect on layout (unlike `Transform`, where the scale is set by hand).
+Scales its child to **fit** its own box according to a `BoxFit` (like CSS `object-fit`), then centres it. The child is measured at its **natural** size; the scale factor follows from that: hence the effect on layout (unlike `Transform`, where the scale is set by hand).
 
 Ideal for making intrinsically sized content (text, an icon, a drawing) **fill** or **fit** a given frame with no manual arithmetic. The box needs a size (as `crate::SingleChildScrollView` does): a fixed `width`/`height`, or `flex`.
 

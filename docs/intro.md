@@ -25,7 +25,7 @@ next, and what is known to be missing.
 | Page | What it covers |
 | --- | --- |
 | [Starting a frus application](getting-started.md) | Install the `frus` command, make a project, run it on this computer, a phone and the browser |
-| [The guide](guide/README.md) | One topic per page — layout, style, input, lists, navigation, network, animation, testing, the system around the window |
+| [The guide](guide/README.md) | One topic per page: layout, style, input, lists, navigation, network, animation, testing, the system around the window |
 | [Structuring an application](app-structure.md) | Where each part of a growing application goes |
 | [The `frus` command](tooling/cli.md) | `create`, `doctor`, `devices`, `run`, `build`, hot reload, and the keys while it runs |
 | [The VS Code extension](tooling/vscode.md) | A device picker, F5 with the log in the Debug Console, reload on save, the inspector in the palette |

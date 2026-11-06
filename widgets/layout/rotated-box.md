@@ -29,7 +29,7 @@ impl RotatedBox {
 From [`frus-examples/widgets/src/features/layout/widgets/rotated_box.rs`](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/layout/widgets/rotated_box.rs):
 
 ```rust
-//! `RotatedBox` — turns its child by whole quarter turns, and the layout turns with it.
+//! `RotatedBox`: turns its child by whole quarter turns, and the layout turns with it.
 //!
 //! The difference from `Transform::rotate` is the layout: a rotated box swaps its width
 //! and height, so its neighbours make room for the turned child. A transform only moves
@@ -94,7 +94,7 @@ fn label(text: &str) -> Container {
 
 Rotates its child by `quarter_turns` **quarter turns** (90° each, clockwise), **changing the layout**: for an odd number of quarters, the box presented to the parent has the child's **width and height swapped** (a vertical label in a sidebar, a rotated chart axis label…).
 
-The child is measured at its **natural** size, centred, then rotated about the centre of the box — hit-testing counter-rotates the point (as `Transform` does). A negative `quarter_turns` turns the other way; only the remainder modulo 4 counts.
+The child is measured at its **natural** size, centred, then rotated about the centre of the box: hit-testing counter-rotates the point (as `Transform` does). A negative `quarter_turns` turns the other way; only the remainder modulo 4 counts.
 
 ## See also
 

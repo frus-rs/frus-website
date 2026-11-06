@@ -39,7 +39,7 @@ impl GridView {
 From [`frus-examples/widgets/src/features/scrolling/widgets/gridview.rs`](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/scrolling/widgets/gridview.rs):
 
 ```rust
-//! `GridView` — cells in equal columns, placed row by row: a fixed number of columns,
+//! `GridView`: cells in equal columns, placed row by row: a fixed number of columns,
 //! as many as fit a maximum width, or a virtualised grid that only builds the visible
 //! rows.
 
@@ -58,7 +58,7 @@ pub fn example() -> Box<dyn Widget> {
                 |grid, i| grid.cell(tile(i)),
             )),
         )),
-        // `extent` takes a maximum tile width and works out how many columns fit — more
+        // `extent` takes a maximum tile width and works out how many columns fit: more
         // on a wide window, fewer on a phone, with no breakpoints. Its cells are built
         // from their index once the width is known.
         Box::new(section(
@@ -99,14 +99,14 @@ fn tile(i: usize) -> Container {
 | `.row_gap()` | `gap: f32` | Spacing **between rows** only, in logical pixels. Overrides `GridView::gap` down the grid and leaves it alone across. |
 | `.column_gap()` | `gap: f32` | Spacing **between columns** only, in logical pixels. Overrides `GridView::gap` across the grid and leaves it alone down. |
 | `.aspect()` | `ratio: f32` | Gives every cell the same **shape**: a `width / height` ratio, so `1.0` is a square tile, `1.5` a landscape one and `0.75` a portrait one. |
-| `.tile_height()` | `height: f32` | — |
+| `.tile_height()` | `height: f32` |  |
 | `.width()` | `width: f32` | Sets the width, in logical pixels. |
 | `.height()` | `height: f32` | Sets the height, in logical pixels. |
 | `.flex()` | `grow: f32` | Flex growth factor along the parent's main axis. |
 | `.physics()` | `physics: crate::physics::ScrollPhysics` | Overrides how the grid behaves at its edges and after a fling (milestone 655); see `crate::scroll::SingleChildScrollView::physics`. |
 | `.primary()` | `primary: bool` | A primary view is always scrollable unless `physics` says otherwise: a drag moves it, and bounces or glows at its edge, even when everything is in sight, so a page that fits still answers the finger as a page. |
 | `.on_scroll()` | `on_scroll: impl Fn(crate::ScrollPosition) -> R + 'static` | **Says where this grid is** whenever it moves. A gallery that fetches the next page when the end comes into view is what a grid wants it for; see `crate::ScrollPosition::remaining_y`, and `GridView::notify_every` for how often that question is worth asking. |
-| `.notify_every()` | `px: f32` | Reports no more often than every `px` of movement — and **always** reports where it comes to rest, however short the last step was. |
+| `.notify_every()` | `px: f32` | Reports no more often than every `px` of movement, and **always** reports where it comes to rest, however short the last step was. |
 | `.cell()` | `cell: impl Widget<Msg> + 'static` | Adds a cell, placed automatically in the grid. |
 
 ## Behaviour

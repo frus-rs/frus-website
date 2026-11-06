@@ -34,7 +34,7 @@ pub struct AnimatedIcons;
 From [`frus-examples/widgets/src/features/animation/widgets/animated_icon.rs`](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/animation/widgets/animated_icon.rs):
 
 ```rust
-//! `Icon::animated` with `AnimatedIcons` — an icon that morphs between two marks: a menu
+//! `Icon::animated` with `AnimatedIcons`: an icon that morphs between two marks: a menu
 //! into a cross, play into pause.
 //!
 //! You say which end you want (`on`); the framework drives the morph there with the same
@@ -117,7 +117,7 @@ A vector icon. Size and colour can both be customised; they default to `24` px a
 
 ### `AnimatedIcons`
 
-The **bundled pairs**, as one constant each — the same shape of thing `Icons` is for the static set.
+The **bundled pairs**, as one constant each: the same shape of thing `Icons` is for the static set.
 
 These are the ones this framework needs itself. An application that needs another authors it with `AnimatedIconData::custom`, which is the same door `IconData::custom` opens for a static mark.
 

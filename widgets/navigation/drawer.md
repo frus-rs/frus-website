@@ -29,7 +29,7 @@ impl Drawer {
 From [`frus-examples/widgets/src/features/navigation/widgets/drawer.rs`](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/navigation/widgets/drawer.rs):
 
 ```rust
-//! `Drawer` — a side panel that slides over the page (modal) or sits docked beside it
+//! `Drawer`: a side panel that slides over the page (modal) or sits docked beside it
 //! (permanent). `DrawerHeader` and `UserAccountsDrawerHeader` are the blocks that go at
 //! its top.
 
@@ -180,16 +180,16 @@ fn option(label: &str, on: bool, toggle: impl Fn(bool) -> frus::Callback + 'stat
 | --- | --- | --- |
 | `.width()` | `width: f32` | Overrides the panel's width, in logical pixels. Defaults to `DRAWER_WIDTH`. |
 | `.background_color()` | `color: Color` | The panel's fill. Defaults to the theme's `drawer.background_color`, then to the theme's surface. |
-| `.border_color()` | `color: Color` | The hairline on the panel's **inner** edge — the one facing the content. |
+| `.border_color()` | `color: Color` | The hairline on the panel's **inner** edge: the one facing the content. |
 | `.border_width()` | `width: f32` | That hairline's thickness. `0.0` removes it, which is what a drawer told apart from its body by colour or by a shadow wants. |
 | `.radius()` | `radius: f32` | The rounding of the inner edge's two corners; the outer edge stays square against the window. Defaults to `DRAWER_RADIUS`, and `0.0` squares it off. |
-| `.shape()` | `shape: ShapeBorder` | — |
-| `.elevation()` | `elevation: f32` | How far off the surface the panel sits. `0.0` — the default — casts no shadow, and neither does a height without a `shadow_color`. |
+| `.shape()` | `shape: ShapeBorder` |  |
+| `.elevation()` | `elevation: f32` | How far off the surface the panel sits. `0.0` (the default) casts no shadow, and neither does a height without a `shadow_color`. |
 | `.shadow_color()` | `color: Color` | The colour of the shadow an elevated panel casts, **alpha included**. |
-| `.scrim_color()` | `color: Color` | The scrim behind a **modal** panel, **alpha included** — a scrim's transparency is the colour, so an opaque value here hides the body entirely and `Color::TRANSPARENT` darkens nothing at all. |
-| `.on_dismiss()` | `message: impl Into<Msg>` | Message emitted on a click on the scrim (outside the panel) — to close it. |
-| `.right()` | — | Docks the drawer to the **right** edge (left by default). |
-| `.permanent()` | `permanent: bool` | Makes the drawer **permanent** (docked in the flow, no scrim) when `permanent` is true — typically at the `Expanded` breakpoint. |
+| `.scrim_color()` | `color: Color` | The scrim behind a **modal** panel, **alpha included**: a scrim's transparency is the colour, so an opaque value here hides the body entirely and `Color::TRANSPARENT` darkens nothing at all. |
+| `.on_dismiss()` | `message: impl Into<Msg>` | Message emitted on a click on the scrim (outside the panel): to close it. |
+| `.right()` |  | Docks the drawer to the **right** edge (left by default). |
+| `.permanent()` | `permanent: bool` | Makes the drawer **permanent** (docked in the flow, no scrim) when `permanent` is true: typically at the `Expanded` breakpoint. |
 | `.panel()` | `content: impl Widget<Msg> + 'static` | Sets the **drawer's content**, usually the navigation. |
 | `.body()` | `body: impl Widget<Msg> + 'static` | Sets the **background body**: the content that stays visible behind a modal panel, or beside a docked one. |
 

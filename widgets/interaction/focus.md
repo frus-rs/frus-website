@@ -29,7 +29,7 @@ impl Focus {
 From [`frus-examples/widgets/src/features/interaction/widgets/focus.rs`](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/interaction/widgets/focus.rs):
 
 ```rust
-//! Focus — which widgets the keyboard can reach and in what order: `Focus`,
+//! Focus, which widgets the keyboard can reach and in what order: `Focus`,
 //! `FocusTraversalGroup`, `FocusTraversalOrder`, `ExcludeFocus`, `ExcludeFocusTraversal`,
 //! and moving the focus from code with `host::focus`.
 //!
@@ -53,7 +53,7 @@ pub fn example() -> Box<dyn Widget> {
 
         let (set_name, set_email, toggle_help) = (name.clone(), email.clone(), help.clone());
         // A field wrapped in `keyed(key, ..)` can be focused from code with
-        // `host::focus(key)` — after a validation error, or when a dialog opens.
+        // `host::focus(key)`: after a validation error, or when a dialog opens.
         let name_field = keyed(
             "focus-demo-name",
             TextField::new(name.get())
@@ -102,7 +102,7 @@ pub fn example() -> Box<dyn Widget> {
                     .on_press(|| host::focus("focus-demo-email")),
             );
 
-        // `Focus` makes anything a stop — a custom control that wants the keyboard.
+        // `Focus` makes anything a stop: a custom control that wants the keyboard.
         // `ExcludeFocus` takes a whole subtree out of reach: here, a field behind a panel
         // the user should not get to.
         let stops = Wrap::new()
@@ -135,7 +135,7 @@ pub fn example() -> Box<dyn Widget> {
 | Method | Argument | Effect |
 | --- | --- | --- |
 | `.can_request_focus()` | `can: bool` | `false` leaves the subtree in place and simply stops being a stop. |
-| `.skip_traversal()` | — | Focusable by a click, passed over by Tab. |
+| `.skip_traversal()` |  | Focusable by a click, passed over by Tab. |
 | `.on_focus_change()` | `on_change: impl Fn(bool) -> R + 'static` | A move between two widgets inside it says nothing. |
 
 ## Behaviour

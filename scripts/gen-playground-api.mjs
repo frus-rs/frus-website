@@ -7,6 +7,8 @@ import fs from 'node:fs';
 import path from 'node:path';
 import {fileURLToPath} from 'node:url';
 
+import {dropEmDashes} from './punctuation.mjs';
+
 const site = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const rustdocDir = process.env.RUSTDOC_JSON;
 if (!rustdocDir) throw new Error('RUSTDOC_JSON: the folder holding frus_widgets.json');
@@ -42,7 +44,7 @@ function firstSentence(text) {
 let documented = 0;
 for (const [type, entry] of Object.entries(api.types)) {
   for (const member of [...entry.constructors, ...entry.methods]) {
-    const doc = firstSentence(docs.get(`${type}.${member.name}`));
+    const doc = dropEmDashes(firstSentence(docs.get(`${type}.${member.name}`)) ?? '');
     if (doc) {
       member.doc = doc;
       documented++;

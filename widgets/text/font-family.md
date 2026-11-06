@@ -16,7 +16,7 @@ Sans-serif, serif, monospace, or a font registered by name.
 
 ```rust
 pub enum FontFamily {
-    /// The application's default sans-serif — what text gets when it says nothing.
+    /// The application's default sans-serif: what text gets when it says nothing.
     SansSerif,
     /// A serif face, if the platform or the application has one.
     Serif,
@@ -34,7 +34,7 @@ pub enum FontFamily {
 From [`frus-examples/widgets/src/features/text/widgets/font_family.rs`](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/text/widgets/font_family.rs):
 
 ```rust
-//! `FontFamily` — which typeface a text is set in: the default sans-serif, a serif, the
+//! `FontFamily`, which typeface a text is set in: the default sans-serif, a serif, the
 //! monospace face, or a font you registered by name.
 
 use frus::{Align, Column, FontFamily, Text, TextStyle, Widget};
@@ -56,7 +56,7 @@ pub fn example() -> Box<dyn Widget> {
             "Serif",
             Text::new(SAMPLE).family(FontFamily::Serif),
         )),
-        // Monospace: every character the same width, so columns line up — code, keys,
+        // Monospace: every character the same width, so columns line up, code, keys,
         // tables of numbers.
         Box::new(section(
             "Monospace",
@@ -72,7 +72,7 @@ pub fn example() -> Box<dyn Widget> {
         // Your own font: register its bytes once at start-up with
         // `frus::fonts::add_font(include_bytes!("../res/fonts/Brand.ttf").to_vec())`, then
         // name its family. A name that matches no font falls back to the default rather
-        // than showing nothing — as this one does.
+        // than showing nothing, as this one does.
         Box::new(section(
             "Named (falls back when missing)",
             Text::styled(

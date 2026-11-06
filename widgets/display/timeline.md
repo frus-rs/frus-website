@@ -29,7 +29,7 @@ impl Timeline {
 From [`frus-examples/widgets/src/features/display/widgets/timeline.rs`](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/display/widgets/timeline.rs):
 
 ```rust
-//! `Timeline` — a vertical chronology: events joined by a line, each marked with a dot.
+//! `Timeline`: a vertical chronology: events joined by a line, each marked with a dot.
 
 use frus::{FontWeight, TextStyle, Timeline, Widget};
 
@@ -41,10 +41,10 @@ pub fn example() -> Box<dyn Widget> {
         Box::new(section(
             "Order history",
             Timeline::new()
-                .event("Ordered", "Monday 09:12 — paid by card")
-                .event("Packed", "Monday 15:40 — warehouse B")
-                .event("Shipped", "Tuesday 08:05 — tracking FR123456")
-                .event("Delivered", "Wednesday 11:30 — left with a neighbour"),
+                .event("Ordered", "Monday 09:12 (paid by card")
+                .event("Packed", "Monday 15:40) warehouse B")
+                .event("Shipped", "Tuesday 08:05 (tracking FR123456")
+                .event("Delivered", "Wednesday 11:30) left with a neighbour"),
         )),
         // The two lines' type is the theme's unless you say otherwise.
         Box::new(section(
@@ -65,8 +65,8 @@ pub fn example() -> Box<dyn Widget> {
 | Method | Argument | Effect |
 | --- | --- | --- |
 | `.event()` | `title: impl Into<String>, detail: impl Into<String>` | Adds an event, title and detail, oldest to most recent. |
-| `.title_text_style()` | `style: TextStyle` | — |
-| `.detail_text_style()` | `style: TextStyle` | — |
+| `.title_text_style()` | `style: TextStyle` |  |
+| `.detail_text_style()` | `style: TextStyle` |  |
 
 ## Behaviour
 

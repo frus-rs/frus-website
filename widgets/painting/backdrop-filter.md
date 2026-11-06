@@ -30,10 +30,10 @@ impl BackdropFilter {
 From [`frus-examples/widgets/src/features/painting/widgets/backdrop_filter.rs`](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/painting/widgets/backdrop_filter.rs):
 
 ```rust
-//! `BackdropFilter` and `BackdropGroup` — blur what is already painted *underneath* a
+//! `BackdropFilter` and `BackdropGroup`: blur what is already painted *underneath* a
 //! widget: the frosted glass a bar, a sheet or a dialog sits on.
 //!
-//! The blurred region is whatever clips the filter, not its own box — unclipped, the
+//! The blurred region is whatever clips the filter, not its own box: unclipped, the
 //! whole window would blur. So a backdrop almost always sits inside a `ClipRRect` or a
 //! `ClipRect`. It is the most expensive filter: when you mean "blur this widget", use
 //! `ImageFiltered` instead.
@@ -158,7 +158,7 @@ fn circle(size: f32, color: &str) -> Container {
 
 | Method | Argument | Effect |
 | --- | --- | --- |
-| `.grouped()` | — | Shares the filtered copy with every other grouped backdrop under the same `BackdropGroup`: they are filtered **once** between them. |
+| `.grouped()` |  | Shares the filtered copy with every other grouped backdrop under the same `BackdropGroup`: they are filtered **once** between them. |
 | `.key()` | `key: u64` | Shares the filtered copy with every other backdrop given the same `key`, without needing a group around them. |
 | `.blend()` | `blend: BlendMode` | How the filtered copy meets what it was copied from. The default paints it over, which is what an opaque frame wants; `BlendMode::Src` replaces instead, which is what a frame that is not opaque underneath wants. |
 | `.child()` | `child: impl Widget<Msg> + 'static` | Sets the child painted over the filtered backdrop. |
@@ -174,11 +174,11 @@ The **region** is whatever clips this widget, not the widget's own box. Unclippe
 ClipRRect::new(28.0).child(
     BackdropFilter::blur(24.0).child(
         Container::new().height(72.0).color(theme.surface.fade(0.6)),
-    ),
+    )
 )
 ```
 
-This is the expensive filter. `ImageFiltered` blurs *the widget*, from a texture the renderer was going to make anyway; a backdrop blurs *the frame so far*, so the renderer stops, copies what it has drawn, filters that, and carries on — once per backdrop. When the answer wanted is "blur this widget", the other one is both easier to reason about and dramatically cheaper.
+This is the expensive filter. `ImageFiltered` blurs *the widget*, from a texture the renderer was going to make anyway; a backdrop blurs *the frame so far*, so the renderer stops, copies what it has drawn, filters that, and carries on: once per backdrop. When the answer wanted is "blur this widget", the other one is both easier to reason about and dramatically cheaper.
 
 A list of frosted rows is the case where that cost becomes a problem, and `BackdropGroup` with `BackdropFilter::grouped` is the answer: sixty rows, one blur.
 

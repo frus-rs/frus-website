@@ -7,9 +7,15 @@ import type * as Preset from '@docusaurus/preset-classic';
 const repo = 'https://github.com/frus-rs/frus';
 const baseUrl = process.env.BASE_URL ?? '/';
 
+// The site is built once per language; this is the one being built.
+const locale = process.env.DOCUSAURUS_CURRENT_LOCALE ?? 'en';
+const fr = locale === 'fr';
+// Where a page of this language starts: `/` in English, `/fr/` in French.
+const localeBase = fr ? `${baseUrl}fr/` : baseUrl;
+
 const config: Config = {
   title: 'frus',
-  tagline: 'One Rust codebase. Every screen.',
+  tagline: fr ? 'Un seul code Rust. Tous les écrans.' : 'One Rust codebase. Every screen.',
   favicon: 'img/favicon.ico',
 
   future: {
@@ -27,7 +33,11 @@ const config: Config = {
 
   i18n: {
     defaultLocale: 'en',
-    locales: ['en'],
+    locales: ['en', 'fr'],
+    localeConfigs: {
+      en: {label: 'English', htmlLang: 'en'},
+      fr: {label: 'Français', htmlLang: 'fr'},
+    },
   },
 
   markdown: {
@@ -48,6 +58,7 @@ const config: Config = {
       '@easyops-cn/docusaurus-search-local',
       {
         hashed: true,
+        language: ['en', 'fr'],
         indexBlog: true,
         indexPages: true,
         docsRouteBasePath: ['/docs', '/widgets'],
@@ -106,8 +117,9 @@ const config: Config = {
     },
     announcementBar: {
       id: 'pre-alpha',
-      content:
-        `frus is pre-alpha: the API changes between releases. <a href="${baseUrl}docs/getting-started">Try it</a> and tell us what breaks.`,
+      content: fr
+        ? `frus est en pré-alpha : l'API change d'une version à l'autre. <a href="${localeBase}docs/getting-started">Essayez-le</a> et dites-nous ce qui casse.`
+        : `frus is pre-alpha: the API changes between releases. <a href="${localeBase}docs/getting-started">Try it</a> and tell us what breaks.`,
       backgroundColor: '#1a120b',
       textColor: '#ffd2a8',
       isCloseable: true,
@@ -122,7 +134,7 @@ const config: Config = {
         {
           type: 'html',
           position: 'left',
-          value: '<span class="badge badge--prealpha">pre-alpha</span>',
+          value: `<span class="badge badge--prealpha">${fr ? 'pré-alpha' : 'pre-alpha'}</span>`,
         },
         {type: 'docSidebar', sidebarId: 'docs', position: 'left', label: 'Docs'},
         {to: '/docs/guide', label: 'Guide', position: 'left'},
@@ -131,6 +143,7 @@ const config: Config = {
         {to: '/examples', label: 'Examples', position: 'left'},
         {to: '/blog', label: 'Blog', position: 'left'},
         {href: 'https://docs.rs/frus', label: 'API', position: 'right'},
+        {type: 'localeDropdown', position: 'right'},
         {href: repo, label: 'GitHub', position: 'right'},
       ],
     },
@@ -173,7 +186,7 @@ const config: Config = {
           ],
         },
       ],
-      copyright: `frus contributors — MIT OR Apache-2.0`,
+      copyright: `frus contributors, MIT OR Apache-2.0`,
     },
     prism: {
       theme: prismThemes.github,

@@ -34,7 +34,7 @@ pub enum Permission {
 From [`frus-examples/widgets/src/features/interaction/widgets/permissions.rs`](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/interaction/widgets/permissions.rs):
 
 ```rust
-//! `Permission` — asking the person for the camera, the microphone, the location and
+//! `Permission`: asking the person for the camera, the microphone, the location and
 //! notifications, and knowing what they said. `status()` looks without asking; `request()` asks
 //! when there is something to ask. Both are `async`, so they run from an async handler.
 

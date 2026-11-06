@@ -29,7 +29,7 @@ impl IndexedStack {
 From [`frus-examples/widgets/src/features/layout/widgets/indexed_stack.rs`](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/layout/widgets/indexed_stack.rs):
 
 ```rust
-//! `IndexedStack` — several children in one box, only one of them shown: the panels of
+//! `IndexedStack`: several children in one box, only one of them shown: the panels of
 //! a tab set, the steps of a wizard.
 //!
 //! The box is as big as the biggest child, so switching panels does not make the page
@@ -111,9 +111,9 @@ fn panel(title: &str, body: &str, color: &str, height: f32) -> Container {
 
 A stack that lays **every** child out and paints one of them.
 
-The difference between this and `crate::Offstage` is the whole reason it exists. `Offstage` takes a branch out of the tree — no box, no paint, and nothing retained: right for a branch that is genuinely gone, wrong for the three pages of a tabbed screen. There, every switch measures a subtree that was laid out a moment ago, and the page that comes back comes back blank: its scroll offset, its caret and its focus were the runtime's record of a widget that stopped existing.
+The difference between this and `crate::Offstage` is the whole reason it exists. `Offstage` takes a branch out of the tree: no box, no paint, and nothing retained: right for a branch that is genuinely gone, wrong for the three pages of a tabbed screen. There, every switch measures a subtree that was laid out a moment ago, and the page that comes back comes back blank: its scroll offset, its caret and its focus were the runtime's record of a widget that stopped existing.
 
-An `IndexedStack` keeps them all. Each child is laid out, in the same box, and one is painted; the others are **silent** — not drawn, not clickable, not read out — but still measured, and still holding whatever the runtime holds for them. So switching keeps their sizes, and keeps where they had been scrolled to.
+An `IndexedStack` keeps them all. Each child is laid out, in the same box, and one is painted; the others are **silent** (not drawn, not clickable, not read out) but still measured, and still holding whatever the runtime holds for them. So switching keeps their sizes, and keeps where they had been scrolled to.
 
 ```rust
 IndexedStack::new(self.tab)
@@ -122,7 +122,7 @@ IndexedStack::new(self.tab)
     .child(drafts_page())
 ```
 
-The price is exactly that: every page laid out on every frame, however many are shown. It is what a handful of tabs wants, and what a list of ten thousand rows does not — an index past the end simply paints nothing.
+The price is exactly that: every page laid out on every frame, however many are shown. It is what a handful of tabs wants, and what a list of ten thousand rows does not: an index past the end simply paints nothing.
 
 ## See also
 

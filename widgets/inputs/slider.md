@@ -29,7 +29,7 @@ impl Slider {
 From [`frus-examples/widgets/src/features/inputs/widgets/slider.rs`](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/inputs/widgets/slider.rs):
 
 ```rust
-//! `Slider` — a value picked by dragging along a track: continuous, or in steps with
+//! `Slider`: a value picked by dragging along a track: continuous, or in steps with
 //! `divisions`, with a bubble showing the value while dragging.
 
 use frus::{
@@ -145,15 +145,15 @@ impl State for SliderDemoState {
 | `.range()` | `min: f32, max: f32` | The travel this slider covers; `0.0..=1.0` by default. |
 | `.secondary_track_value()` | `value: f32` | A **second value**, shown as a lighter part of the track beyond the value: how much of a video is buffered behind where it is playing. It is not dragged. |
 | `.divisions()` | `n: usize` | Splits the travel into `n` **steps**: the value snaps to `min + k·(max−min)/n`, a tick marks each, and an arrow key moves by one of them. Without this call the travel is continuous and an arrow moves by 5 %. |
-| `.value_label()` | `label: impl Fn(f32) -> String + 'static` | Formats the value for the **value indicator**, the drop over the thumb — a percentage, a price, a duration. When it shows is `show_value_indicator`'s to say. A screen reader hears it too, unless `semantic_formatter` says otherwise. |
+| `.value_label()` | `label: impl Fn(f32) -> String + 'static` | Formats the value for the **value indicator**, the drop over the thumb: a percentage, a price, a duration. When it shows is `show_value_indicator`'s to say. A screen reader hears it too, unless `semantic_formatter` says otherwise. |
 | `.allowed_interaction()` | `interaction: SliderInteraction` | What a press and a slide may do. |
 | `.show_value_indicator()` | `when: ShowValueIndicator` | When the value indicator shows. |
-| `.semantic_formatter()` | `format: impl Fn(f32) -> String + 'static` | — |
+| `.semantic_formatter()` | `format: impl Fn(f32) -> String + 'static` |  |
 | `.width()` | `width: f32` | The width, in logical pixels. Unset, the slider takes the width it is offered, and 220 where none can be offered. |
 | `.on_change()` | `on_change: impl Fn(f32) -> R + 'static` | A closure producing a message from the new value, in the slider's units. |
-| `.on_change_start()` | `on_start: impl Fn(f32) -> R + 'static` | Sent **once**, when a drag begins — before the first `on_change`, with the value the press landed on. |
-| `.on_change_end()` | `on_end: impl Fn(f32) -> R + 'static` | Sent **once**, when the drag ends — after the last `on_change`, with the value it settled on. |
-| `.enabled()` | `enabled: bool` | Whether the slider can be moved. Disabled it is **inert** — it takes no drag and answers no key — and it still shows where it is set. |
+| `.on_change_start()` | `on_start: impl Fn(f32) -> R + 'static` | Sent **once**, when a drag begins: before the first `on_change`, with the value the press landed on. |
+| `.on_change_end()` | `on_end: impl Fn(f32) -> R + 'static` | Sent **once**, when the drag ends: after the last `on_change`, with the value it settled on. |
+| `.enabled()` | `enabled: bool` | Whether the slider can be moved. Disabled it is **inert** (it takes no drag and answers no key) and it still shows where it is set. |
 
 ## Behaviour
 

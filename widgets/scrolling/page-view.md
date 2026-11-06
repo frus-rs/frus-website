@@ -32,7 +32,7 @@ impl PageView {
 From [`frus-examples/widgets/src/features/scrolling/widgets/pageview.rs`](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/scrolling/widgets/pageview.rs):
 
 ```rust
-//! `PageView` — a scrollable that always comes to rest on a page: onboarding screens, a
+//! `PageView`: a scrollable that always comes to rest on a page: onboarding screens, a
 //! photo gallery, swipeable panels. Pages are built on demand from their index.
 
 use frus::{Align, Axis, Center, Color, Colors, Column, Container, PageView, Text, Widget};
@@ -53,7 +53,7 @@ pub fn example() -> Box<dyn Widget> {
             .width(320.0)
             .on_page_changed(move |i: usize| follow.set(i));
 
-        // `viewport_fraction` below 1 shows a sliver of the neighbours — a hint that
+        // `viewport_fraction` below 1 shows a sliver of the neighbours: a hint that
         // there is more to swipe to.
         let peek = PageView::new(HUES.len(), |i| {
             Container::new().padding(6.0).child(card(i, "Peek"))
@@ -104,12 +104,12 @@ fn card(i: usize, hint: &str) -> Container {
 | Method | Argument | Effect |
 | --- | --- | --- |
 | `.axis()` | `axis: Axis` | Lays the pages out along `axis`. Only `Axis::Horizontal` and `Axis::Vertical` mean anything here: a page view pages one way. |
-| `.viewport_fraction()` | `fraction: f32` | The fraction of the viewport one page occupies; `1.0` — the default — makes each page fill it. |
+| `.viewport_fraction()` | `fraction: f32` | The fraction of the viewport one page occupies; `1.0` (the default) makes each page fill it. |
 | `.pad_ends()` | `pad: bool` | Whether there is room at **both ends** of the content, so that the first and last pages come to rest centred in the viewport. On by default, and nil at the default `viewport_fraction` of one, where a page already fills the viewport and there is nothing to centre. |
-| `.page_snapping()` | `snapping: bool` | Whether a release comes to rest **on** a page. On by default — it is what makes this a page view rather than a scroll. |
-| `.reverse()` | — | Pages **from the far end**: page 0 sits at the edge the axis finishes at — the right of a horizontal view, the bottom of a vertical one — page 1 before it, and the view opens there. |
+| `.page_snapping()` | `snapping: bool` | Whether a release comes to rest **on** a page. On by default: it is what makes this a page view rather than a scroll. |
+| `.reverse()` |  | Pages **from the far end**: page 0 sits at the edge the axis finishes at (the right of a horizontal view, the bottom of a vertical one) page 1 before it, and the view opens there. |
 | `.page()` | `page: usize` | The page to show. |
-| `.on_page_changed()` | `message: impl Fn(usize) -> R + 'static` | The message sent when the page a reader would name changes — mid-drag, as soon as the rounding tips, not once the motion has settled. A title above a gallery should follow the picture, not trail it. |
+| `.on_page_changed()` | `message: impl Fn(usize) -> R + 'static` | The message sent when the page a reader would name changes: mid-drag, as soon as the rounding tips, not once the motion has settled. A title above a gallery should follow the picture, not trail it. |
 | `.physics()` | `physics: ScrollPhysics` | Overrides how the view behaves at its edges; see `crate::SingleChildScrollView::physics`. The **fling** is a page view's own business either way. |
 | `.width()` | `width: f32` | Sets the viewport width, in logical pixels. |
 | `.height()` | `height: f32` | Sets the viewport height, in logical pixels. |

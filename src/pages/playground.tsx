@@ -1,5 +1,6 @@
 import {useCallback, useEffect, useRef, useState, type ReactNode} from 'react';
 import BrowserOnly from '@docusaurus/BrowserOnly';
+import Translate, {translate} from '@docusaurus/Translate';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 import Layout from '@theme/Layout';
 
@@ -10,11 +11,11 @@ import api from '@site/src/data/playground-api.json';
 import styles from './playground.module.css';
 
 const examples = [
-  {id: 'counter', label: 'Counter'},
-  {id: 'profile', label: 'Profile card'},
-  {id: 'form', label: 'Form'},
-  {id: 'list', label: 'A list from a loop'},
-  {id: 'shop', label: 'Shop: grid, tabs and navigation'},
+  {id: 'counter', label: translate({id: 'playground.example.counter', message: 'Counter'})},
+  {id: 'profile', label: translate({id: 'playground.example.profile', message: 'Profile card'})},
+  {id: 'form', label: translate({id: 'playground.example.form', message: 'Form'})},
+  {id: 'list', label: translate({id: 'playground.example.list', message: 'A list from a loop'})},
+  {id: 'shop', label: translate({id: 'playground.example.shop', message: 'Shop: grid, tabs and navigation'})},
 ];
 
 type Status =
@@ -128,14 +129,21 @@ export default function Playground(): ReactNode {
 
   return (
     <Layout
-      title="Playground"
-      description="Write frus code in your browser, and see it rendered as you type."
+      title={translate({id: 'playground.meta.title', message: 'Playground'})}
+      description={translate({
+        id: 'playground.meta.description',
+        message: 'Write frus code in your browser, and see it rendered as you type.',
+      })}
       noFooter>
       <main className={styles.page}>
         <div className={styles.toolbar}>
-          <h1 className={styles.title}>Playground</h1>
+          <h1 className={styles.title}>
+            <Translate id="playground.title">Playground</Translate>
+          </h1>
           <label className={styles.picker}>
-            <span>Example</span>
+            <span>
+              <Translate id="playground.picker">Example</Translate>
+            </span>
             <select
               value={example}
               onChange={(event) => {
@@ -150,14 +158,19 @@ export default function Playground(): ReactNode {
             </select>
           </label>
           <button type="button" className="button button--secondary button--sm" onClick={copy}>
-            {copied ? 'Copied' : 'Copy as a project’s src/lib.rs'}
+            {copied
+              ? translate({id: 'playground.copied', message: 'Copied'})
+              : translate({id: 'playground.copy', message: 'Copy as a project’s src/lib.rs'})}
           </button>
           <span className={styles.status} role="status">
-            {status.kind === 'loading' && 'Loading frus…'}
-            {status.kind === 'ok' && `Rendered in ${Math.round(status.ms)} ms`}
-            {status.kind === 'error' && 'Showing the last version that worked'}
-            {status.kind === 'crashed' && 'Restarted'}
-            {status.kind === 'unsupported' && 'No preview in this browser'}
+            {status.kind === 'loading' && translate({id: 'playground.status.loading', message: 'Loading frus…'})}
+            {status.kind === 'ok' &&
+              translate({id: 'playground.status.ok', message: 'Rendered in {ms} ms'}, {ms: Math.round(status.ms)})}
+            {status.kind === 'error' &&
+              translate({id: 'playground.status.error', message: 'Showing the last version that worked'})}
+            {status.kind === 'crashed' && translate({id: 'playground.status.crashed', message: 'Restarted'})}
+            {status.kind === 'unsupported' &&
+              translate({id: 'playground.status.unsupported', message: 'No preview in this browser'})}
           </span>
         </div>
 
@@ -174,13 +187,28 @@ export default function Playground(): ReactNode {
             </div>
             {failure && (
               <button type="button" className={styles.error} onClick={() => editor.current?.goTo(failure)}>
-                <strong>Line {failure.line}.</strong> {failure.message}
+                <strong>
+                  <Translate id="playground.error.line" values={{line: failure.line}}>
+                    {'Line {line}.'}
+                  </Translate>
+                </strong>{' '}
+                {failure.message}
               </button>
             )}
             {status.kind === 'crashed' && (
               <div className={styles.error}>
-                <strong>This code stopped the preview,</strong> which started again on the last version
-                that worked. {status.message}
+                <Translate
+                  id="playground.crashed"
+                  values={{
+                    stopped: (
+                      <strong>
+                        <Translate id="playground.crashed.stopped">This code stopped the preview,</Translate>
+                      </strong>
+                    ),
+                  }}>
+                  {'{stopped} which started again on the last version that worked.'}
+                </Translate>{' '}
+                {status.message}
               </div>
             )}
           </div>
@@ -190,26 +218,47 @@ export default function Playground(): ReactNode {
               ref={frame}
               className={styles.frame}
               src={preview}
-              title="Preview"
+              title={translate({id: 'playground.preview', message: 'Preview'})}
               sandbox="allow-scripts allow-same-origin"
             />
           </div>
         </div>
 
         <details className={styles.help}>
-          <summary>What the playground understands</summary>
+          <summary>
+            <Translate id="playground.help.title">What the playground understands</Translate>
+          </summary>
           <p>
-            A subset of Rust, interpreted in your browser with no compiler: one function, usually{' '}
-            <code>fn app(cx: &amp;BuildContext) -&gt; Box&lt;dyn Widget&gt;</code>, with <code>let</code>,{' '}
-            <code>if</code>, <code>for</code>, <code>while</code>, arithmetic, <code>format!</code>,
-            closures, <code>cx.use_state</code> and <code>cx.theme()</code>. The examples also compile as ordinary Rust. Code without its own{' '}
-            <code>Scaffold</code> is centred on the theme’s surface while it fits, and scrolls when it does not; in a real project, write that yourself, as the examples do. Structs,
-            traits, crates and the other hooks are not supported yet.
+            <Translate
+              id="playground.help.subset"
+              values={{
+                signature: <code>fn app(cx: &amp;BuildContext) -&gt; Box&lt;dyn Widget&gt;</code>,
+                syntax: (
+                  <>
+                    <code>let</code>, <code>if</code>, <code>for</code>, <code>while</code>
+                  </>
+                ),
+                format: <code>format!</code>,
+                useState: <code>cx.use_state</code>,
+                theme: <code>cx.theme()</code>,
+                scaffold: <code>Scaffold</code>,
+              }}>
+              {'A subset of Rust, interpreted in your browser with no compiler: one function, usually {signature}, with {syntax}, arithmetic, {format}, closures, {useState} and {theme}. The examples also compile as ordinary Rust. Code without its own {scaffold} is centred on the theme’s surface while it fits, and scrolls when it does not; in a real project, write that yourself, as the examples do. Structs, traits, crates and the other hooks are not supported yet.'}
+            </Translate>
           </p>
           <p>
-            <strong>Widgets:</strong> {widgetNames.join(', ')}, with their most common methods. The editor
-            completes from the same list (Ctrl+Space, or after a dot), and an unknown method’s error names the
-            ones available.
+            <Translate
+              id="playground.help.widgets"
+              values={{
+                widgets: (
+                  <strong>
+                    <Translate id="playground.help.widgets.label">Widgets:</Translate>
+                  </strong>
+                ),
+                names: widgetNames.join(', '),
+              }}>
+              {'{widgets} {names}, with their most common methods. The editor completes from the same list (Ctrl+Space, or after a dot), and an unknown method’s error names the ones available.'}
+            </Translate>
           </p>
         </details>
       </main>

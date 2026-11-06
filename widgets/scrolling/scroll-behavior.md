@@ -30,7 +30,7 @@ impl ScrollBehavior {
 From [`frus-examples/widgets/src/features/scrolling/widgets/scrollbehavior.rs`](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/scrolling/widgets/scrollbehavior.rs):
 
 ```rust
-//! Scroll behaviour — how scrollables feel at their edges and whether they show
+//! Scroll behaviour: how scrollables feel at their edges and whether they show
 //! scrollbars. The app's default follows the platform; `ScrollConfiguration` changes it
 //! for a subtree, and each scrollable can override its own physics and scrollbar.
 

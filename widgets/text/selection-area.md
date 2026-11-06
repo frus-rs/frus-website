@@ -33,11 +33,11 @@ impl SelectionArea {
 From [`frus-examples/widgets/src/features/text/widgets/selectable_text.rs`](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/text/widgets/selectable_text.rs):
 
 ```rust
-//! `Text::selectable` and `SelectionArea` — text the reader can select and copy: one
+//! `Text::selectable` and `SelectionArea`: text the reader can select and copy: one
 //! text on its own, or a selection that runs across several.
 //!
 //! Text is not selectable by default: a label on a button should take the tap, not
-//! start a selection. Make selectable what a reader may want to copy — an order
+//! start a selection. Make selectable what a reader may want to copy: an order
 //! number, an address, an error message, an article.
 
 use frus::{Align, Color, Column, Container, FontFamily, SelectionArea, Text, ToolbarItem, Widget};
@@ -62,7 +62,7 @@ pub fn example() -> Box<dyn Widget> {
                 ),
         )),
         // `SelectionArea` wraps a subtree, and the selection runs from one text into the
-        // next, in reading order — select from the title into the second paragraph.
+        // next, in reading order: select from the title into the second paragraph.
         Box::new(section(
             "A selection across several texts",
             Container::new()
@@ -100,7 +100,7 @@ pub fn example() -> Box<dyn Widget> {
 
 | Type | Method | Argument | Effect |
 | --- | --- | --- | --- |
-| `SelectionArea` | `.selection_toolbar()` | `build: impl Fn(&ToolbarContext, Vec<ToolbarItem<Msg>>) -> Vec<ToolbarItem<Msg>> + 'static` | Changes what the bar over the area's selection offers, as `TextField::selection_toolbar` does for a field. `build` is given the context and the default list — Copy, and Select all unless everything is selected — and answers with the list to show; an empty one shows no bar. |
+| `SelectionArea` | `.selection_toolbar()` | `build: impl Fn(&ToolbarContext, Vec<ToolbarItem<Msg>>) -> Vec<ToolbarItem<Msg>> + 'static` | Changes what the bar over the area's selection offers, as `TextField::selection_toolbar` does for a field. `build` is given the context and the default list (Copy, and Select all unless everything is selected) and answers with the list to show; an empty one shows no bar. |
 | `SelectionArea` | `.selection_color()` | `color: Color` | The highlight under the selected words in this area. Unset, the theme's `TextSelectionTheme::selection_color`. |
 | `SelectionArea` | `.handle_color()` | `color: Color` | The handles under a touch selection in this area. Unset, the theme's `TextSelectionTheme::handle_color`. |
 
@@ -126,7 +126,7 @@ let terms: SelectionArea<()> = SelectionArea::around(column![
 
 How it looks and what its bar offers are the application's: the highlight and the handles take `TextSelectionTheme`, which `selection_color` and `handle_color` set for one area, and `selection_toolbar` changes the list on the bar.
 
-A text that is itself `selectable` keeps its own selection, and what takes a press — a button, a field, a link — keeps that: a press begins a selection only over words nothing else has a claim on.
+A text that is itself `selectable` keeps its own selection, and what takes a press (a button, a field, a link) keeps that: a press begins a selection only over words nothing else has a claim on.
 
 The area does not draw anything and does not change the layout: it is a wrapper that is its child, and says so to the texts inside it.
 

@@ -1,6 +1,7 @@
 import type {ReactNode} from 'react';
 import clsx from 'clsx';
 import Link from '@docusaurus/Link';
+import Translate, {translate} from '@docusaurus/Translate';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 import Layout from '@theme/Layout';
 import CodeBlock from '@theme/CodeBlock';
@@ -18,20 +19,24 @@ function Hero(): ReactNode {
       <div className="container">
         <img className={styles.heroLogo} src={useBaseUrl('/img/logo.png')} alt="" width={176} height={176} />
         <Heading as="h1" className={styles.heroTitle}>
-          One Rust codebase.
+          <Translate id="home.hero.title1">One Rust codebase.</Translate>
           <br />
-          <span className="frus-gradient-text">Every screen.</span>
+          <span className="frus-gradient-text">
+            <Translate id="home.hero.title2">Every screen.</Translate>
+          </span>
         </Heading>
         <p className={styles.heroSubtitle}>
-          frus is a UI framework written entirely in Rust. Build an application from components, and
-          run it on Windows, Linux, macOS, Android and the web, drawn on the GPU by frus itself.
+          <Translate id="home.hero.subtitle">
+            frus is a UI framework written entirely in Rust. Build an application from components,
+            and run it on Windows, Linux, macOS, Android and the web, drawn on the GPU by frus itself.
+          </Translate>
         </p>
         <div className={styles.heroButtons}>
           <Link className="button button--primary button--lg" to="/docs/getting-started">
-            Get started
+            <Translate id="home.hero.start">Get started</Translate>
           </Link>
           <Link className="button button--secondary button--outline button--lg" href={gallery}>
-            Widget gallery
+            <Translate id="home.hero.gallery">Widget gallery</Translate>
           </Link>
         </div>
         <code className={styles.install}>cargo install frus-cli</code>
@@ -40,60 +45,73 @@ function Hero(): ReactNode {
   );
 }
 
+const c = (name: string) => <code>{name}</code>;
+
 const features: {title: string; body: ReactNode}[] = [
   {
-    title: 'Components and hooks',
+    title: translate({id: 'home.features.components.title', message: 'Components and hooks'}),
     body: (
-      <>
-        A widget is what it builds. Keep state with a <code>StatefulWidget</code>, or in a plain
-        function with <code>use_state</code>, <code>use_memo</code> and <code>use_effect</code>.
-      </>
+      <Translate
+        id="home.features.components.body"
+        values={{
+          statefulWidget: c('StatefulWidget'),
+          useState: c('use_state'),
+          useMemo: c('use_memo'),
+          useEffect: c('use_effect'),
+        }}>
+        {'A widget is what it builds. Keep state with a {statefulWidget}, or in a plain function with {useState}, {useMemo} and {useEffect}.'}
+      </Translate>
     ),
   },
   {
-    title: 'Rust from the app to the pixels',
+    title: translate({id: 'home.features.rust.title', message: 'Rust from the app to the pixels'}),
     body: (
-      <>
+      <Translate id="home.features.rust.body">
         Layout, text, widgets, gestures, theming and the renderer are all Rust. No VM, no second
         language, no bridge in the hot path.
-      </>
+      </Translate>
     ),
   },
   {
-    title: 'GPU rendering on wgpu',
+    title: translate({id: 'home.features.gpu.title', message: 'GPU rendering on wgpu'}),
     body: (
-      <>
+      <Translate id="home.features.gpu.body">
         Vulkan, Metal, DX12, OpenGL ES and WebGPU from one backend. Paths are tessellated with
         lyon, and text is shaped by cosmic-text.
-      </>
+      </Translate>
     ),
   },
   {
-    title: 'Desktop, Android and web',
+    title: translate({id: 'home.features.platforms.title', message: 'Desktop, Android and web'}),
     body: (
-      <>
-        One <code>frus::main!</code> wires every entry point. Screen readers, IME, insets and
-        notifications work on each platform.
-      </>
+      <Translate id="home.features.platforms.body" values={{main: c('frus::main!')}}>
+        {'One {main} wires every entry point. Screen readers, IME, insets and notifications work on each platform.'}
+      </Translate>
     ),
   },
   {
-    title: 'Every widget restyles',
+    title: translate({id: 'home.features.restyle.title', message: 'Every widget restyles'}),
     body: (
-      <>
+      <Translate id="home.features.restyle.body">
         Light and dark themes are generated from a seed colour. Every widget takes its colours
         from the theme, so you can restyle one widget, or every widget of a kind.
-      </>
+      </Translate>
     ),
   },
   {
-    title: 'A command for the whole loop',
+    title: translate({id: 'home.features.command.title', message: 'A command for the whole loop'}),
     body: (
-      <>
-        <code>frus create</code>, <code>run</code>, <code>build</code>, <code>test</code> and{' '}
-        <code>doctor</code>, with hot reload that keeps the state. Whatever a command needs, it
-        installs first.
-      </>
+      <Translate
+        id="home.features.command.body"
+        values={{
+          create: c('frus create'),
+          run: c('run'),
+          build: c('build'),
+          test: c('test'),
+          doctor: c('doctor'),
+        }}>
+        {'{create}, {run}, {build}, {test} and {doctor}, with hot reload that keeps the state. Whatever a command needs, it installs first.'}
+      </Translate>
     ),
   },
 ];
@@ -115,24 +133,28 @@ function Features(): ReactNode {
   );
 }
 
-const stats = [
-  {value: '~2,180', label: 'tests in the repository, run on every change'},
-  {value: '184', label: 'golden reference images, compared pixel by pixel'},
-  {value: '170+', label: 'widget demos, each one shown with its code'},
-  {value: '0.6–0.8 s', label: 'Windows cold start, down from 1.3–2.0 s in 0.4'},
-];
-
 function Numbers(): ReactNode {
+  const stats = [
+    {value: '~2,180', label: translate({id: 'home.numbers.tests', message: 'tests in the repository, run on every change'})},
+    {value: '184', label: translate({id: 'home.numbers.goldens', message: 'golden reference images, compared pixel by pixel'})},
+    {value: '170+', label: translate({id: 'home.numbers.demos', message: 'widget demos, each one shown with its code'})},
+    {
+      value: translate({id: 'home.numbers.startup.value', message: '0.6–0.8 s'}),
+      label: translate({id: 'home.numbers.startup', message: 'Windows cold start, down from 1.3–2.0 s in 0.4'}),
+    },
+  ];
   return (
     <section className={clsx(styles.section, styles.sectionAlt)}>
       <div className="container">
         <Heading as="h2" className={styles.sectionTitle}>
-          Tested like it means it
+          <Translate id="home.numbers.title">Tested like it means it</Translate>
         </Heading>
         <p className={styles.sectionLead}>
-          Components run with no window and no GPU, so frus tests the whole lifecycle in plain
-          Rust tests. Rendering is checked against reference images. Every example in the guide
-          is compiled by the test suite.
+          <Translate id="home.numbers.lead">
+            Components run with no window and no GPU, so frus tests the whole lifecycle in plain
+            Rust tests. Rendering is checked against reference images. Every example in the guide
+            is compiled by the test suite.
+          </Translate>
         </p>
         <div className={styles.statGrid}>
           {stats.map((s) => (
@@ -143,9 +165,11 @@ function Numbers(): ReactNode {
           ))}
         </div>
         <p className={styles.caveat}>
-          These figures come from the repository and the changelog. frus does not publish
-          side-by-side benchmarks against other toolkits yet: that comes once the numbers have
-          been measured on real devices, with the method written down.
+          <Translate id="home.numbers.caveat">
+            These figures come from the repository and the changelog. frus does not publish
+            side-by-side benchmarks against other toolkits yet: that comes once the numbers have
+            been measured on real devices, with the method written down.
+          </Translate>
         </p>
       </div>
     </section>
@@ -176,18 +200,29 @@ function Counter(): ReactNode {
       <div className={clsx('container', styles.split)}>
         <div className={styles.splitText}>
           <Heading as="h2" className={styles.sectionTitle}>
-            A counter, in full
+            <Translate id="home.counter.title">A counter, in full</Translate>
           </Heading>
           <p>
-            That is a complete, runnable application. <code>cx.use_state</code> keeps the count
-            between rebuilds, and the buttons update it. <code>frus::main!</code> declares the
-            entry points for every platform at once.
+            <Translate
+              id="home.counter.body1"
+              values={{useState: c('cx.use_state'), main: c('frus::main!')}}>
+              {'That is a complete, runnable application. {useState} keeps the count between rebuilds, and the buttons update it. {main} declares the entry points for every platform at once.'}
+            </Translate>
           </p>
           <p>
-            <code>frus run</code> starts it on the desktop. <code>frus run -d android</code> and{' '}
-            <code>frus run -d web</code> start it on a phone and in a browser. The source stays the same.
+            <Translate
+              id="home.counter.body2"
+              values={{
+                run: c('frus run'),
+                android: c('frus run -d android'),
+                web: c('frus run -d web'),
+              }}>
+              {'{run} starts it on the desktop. {android} and {web} start it on a phone and in a browser. The source stays the same.'}
+            </Translate>
           </p>
-          <Link to="/docs/getting-started">Write your first application →</Link>
+          <Link to="/docs/getting-started">
+            <Translate id="home.counter.link">Write your first application →</Translate>
+          </Link>
         </div>
         <div className={styles.splitCode}>
           <CodeBlock language="rust" title="src/lib.rs">
@@ -199,39 +234,41 @@ function Counter(): ReactNode {
   );
 }
 
-const targets = [
-  {
-    title: 'Desktop',
-    note: 'Windows, Linux and macOS: a window from winit, drawn with wgpu.',
-    command: 'frus run',
-  },
-  {
-    title: 'Android',
-    note: 'A phone or an emulator. The first run installs the SDK, the NDK and Java.',
-    command: 'frus run -d android',
-  },
-  {
-    title: 'Web',
-    note: 'Built to wasm, served, and opened in a WebGPU browser.',
-    command: 'frus run -d web',
-  },
-  {
-    title: 'Any phone, on any computer',
-    note: 'A debug build shown in a phone’s frame, with its safe areas, cutout and keyboard.',
-    command: 'frus run -d iphone-15',
-  },
-];
-
 function Platforms(): ReactNode {
+  const targets = [
+    {
+      title: translate({id: 'home.platforms.desktop', message: 'Desktop'}),
+      note: translate({id: 'home.platforms.desktop.note', message: 'Windows, Linux and macOS: a window from winit, drawn with wgpu.'}),
+      command: 'frus run',
+    },
+    {
+      title: 'Android',
+      note: translate({id: 'home.platforms.android.note', message: 'A phone or an emulator. The first run installs the SDK, the NDK and Java.'}),
+      command: 'frus run -d android',
+    },
+    {
+      title: 'Web',
+      note: translate({id: 'home.platforms.web.note', message: 'Built to wasm, served, and opened in a WebGPU browser.'}),
+      command: 'frus run -d web',
+    },
+    {
+      title: translate({id: 'home.platforms.simulated', message: 'Any phone, on any computer'}),
+      note: translate({
+        id: 'home.platforms.simulated.note',
+        message: 'A debug build shown in a phone’s frame, with its safe areas, cutout and keyboard.',
+      }),
+      command: 'frus run -d iphone-15',
+    },
+  ];
   return (
     <section className={clsx(styles.section, styles.sectionAlt)}>
       <div className="container">
         <Heading as="h2" className={styles.sectionTitle}>
-          Build for every screen
+          <Translate id="home.platforms.title">Build for every screen</Translate>
         </Heading>
         <div className={styles.targetGrid}>
           {targets.map((t) => (
-            <div key={t.title} className={styles.card}>
+            <div key={t.command} className={styles.card}>
               <Heading as="h3">{t.title}</Heading>
               <p>{t.note}</p>
               <CodeBlock language="bash">{t.command}</CodeBlock>
@@ -243,29 +280,28 @@ function Platforms(): ReactNode {
   );
 }
 
-const keys = [
-  ['r', 'reload, keeping the state'],
-  ['R', 'restart afresh'],
-  ['i', 'the widget inspector'],
-  ['P', 'a performance panel with graphs'],
-  ['b', 'light or dark'],
-  ['T', 'the text size'],
-  ['o', 'another platform’s behaviour'],
-  ['s', 'a screenshot'],
-];
-
 function HotReload(): ReactNode {
+  const keys = [
+    ['r', translate({id: 'home.reload.key.r', message: 'reload, keeping the state'})],
+    ['R', translate({id: 'home.reload.key.R', message: 'restart afresh'})],
+    ['i', translate({id: 'home.reload.key.i', message: 'the widget inspector'})],
+    ['P', translate({id: 'home.reload.key.P', message: 'a performance panel with graphs'})],
+    ['b', translate({id: 'home.reload.key.b', message: 'light or dark'})],
+    ['T', translate({id: 'home.reload.key.T', message: 'the text size'})],
+    ['o', translate({id: 'home.reload.key.o', message: 'another platform’s behaviour'})],
+    ['s', translate({id: 'home.reload.key.s', message: 'a screenshot'})],
+  ];
   return (
     <section className={styles.section}>
       <div className={clsx('container', styles.split)}>
         <div className={styles.splitText}>
           <Heading as="h2" className={styles.sectionTitle}>
-            Change the code. Keep the state.
+            <Translate id="home.reload.title">Change the code. Keep the state.</Translate>
           </Heading>
           <p>
-            <code>frus run --hot</code> patches each saved change into the running application, on
-            the desktop, Android and the web. The log of every platform shows in your terminal,
-            and single keys drive the application while it runs.
+            <Translate id="home.reload.body" values={{hot: c('frus run --hot')}}>
+              {'{hot} patches each saved change into the running application, on the desktop, Android and the web. The log of every platform shows in your terminal, and single keys drive the application while it runs.'}
+            </Translate>
           </p>
           <ul className={styles.keys}>
             {keys.map(([k, what]) => (
@@ -275,22 +311,31 @@ function HotReload(): ReactNode {
             ))}
           </ul>
           <p>
-            In VS Code, the frus extension does the same from the editor: a device picker in the
-            status bar, F5 with the log in the Debug Console, reload on save with the state kept,
-            and the inspector and the trees in the command palette.
+            <Translate id="home.reload.vscode">
+              In VS Code, the frus extension does the same from the editor: a device picker in the
+              status bar, F5 with the log in the Debug Console, reload on save with the state kept,
+              and the inspector and the trees in the command palette.
+            </Translate>
           </p>
           <div className={styles.links}>
             <Link className="button button--primary" href="https://marketplace.visualstudio.com/items?itemName=kalybospro.frus">
-              Install for VS Code
+              <Translate id="home.reload.install">Install for VS Code</Translate>
             </Link>
-            <Link to="/docs/tooling/vscode">The extension →</Link>
-            <Link to="/docs/tooling/cli">The frus command →</Link>
+            <Link to="/docs/tooling/vscode">
+              <Translate id="home.reload.extension">The extension →</Translate>
+            </Link>
+            <Link to="/docs/tooling/cli">
+              <Translate id="home.reload.cli">The frus command →</Translate>
+            </Link>
           </div>
         </div>
         <div className={styles.splitMedia}>
           <img
             src={useBaseUrl('/media/tour.gif')}
-            alt="Four screens of the demo application, entered and left through frus's spring route transitions"
+            alt={translate({
+              id: 'home.reload.tour.alt',
+              message: "Four screens of the demo application, entered and left through frus's spring route transitions",
+            })}
             loading="lazy"
           />
         </div>
@@ -299,43 +344,95 @@ function HotReload(): ReactNode {
   );
 }
 
-const shots = [
-  {src: '/media/tasks.png', title: 'Widgets, gestures, theming', alt: 'A task list with an app bar, a segmented control, checkboxes and a floating action button'},
-  {src: '/media/charts.png', title: 'Charts', alt: 'A line chart with a clickable legend above a grouped bar chart'},
-  {src: '/media/board.png', title: 'Drag and drop', alt: 'A Kanban board of three columns of cards'},
-  {src: '/media/data.png', title: 'Data tables', alt: 'A data table with search, sortable headers, row checkboxes and pagination'},
-];
-
+// Screens of the example applications, rendered by tools/example-shots from the applications
+// themselves: the same code a reader downloads from the Examples page.
 function Showcase(): ReactNode {
   const base = useBaseUrl('/');
+  const apps = [
+    {
+      file: 'navigation',
+      example: 'navigation',
+      title: translate({id: 'home.showcase.shop', message: 'A shop'}),
+      alt: translate({id: 'home.showcase.shop.alt', message: 'The Corner Shop example: a grid of products under a search field, with a navigation bar'}),
+    },
+    {
+      file: 'navigation-product',
+      example: 'navigation',
+      title: translate({id: 'home.showcase.product', message: 'Its product page'}),
+      alt: translate({id: 'home.showcase.product.alt', message: 'A product page of the shop example, with sizes and an add-to-cart button'}),
+    },
+    {
+      file: 'forms',
+      example: 'forms',
+      title: translate({id: 'home.showcase.forms', message: 'A sign-up form'}),
+      alt: translate({id: 'home.showcase.forms.alt', message: 'The forms example: text fields, choices and pickers'}),
+    },
+    {
+      file: 'authentication',
+      example: 'authentication',
+      title: translate({id: 'home.showcase.auth', message: 'Signing in'}),
+      alt: translate({id: 'home.showcase.auth.alt', message: 'The authentication example: a sign-in screen'}),
+    },
+    {
+      file: 'http',
+      example: 'http',
+      title: translate({id: 'home.showcase.http', message: 'A JSON API'}),
+      alt: translate({id: 'home.showcase.http.alt', message: 'The http example: posts loaded from a web API'}),
+    },
+    {
+      file: 'widgets',
+      example: 'widgets',
+      title: translate({id: 'home.showcase.gallery', message: 'The widget gallery'}),
+      alt: translate({id: 'home.showcase.gallery.alt', message: 'The widget gallery example: its families of widgets'}),
+    },
+  ];
   return (
     <section className={clsx(styles.section, styles.sectionAlt)}>
       <div className="container">
         <Heading as="h2" className={styles.sectionTitle}>
-          What it looks like
+          <Translate id="home.showcase.title">What it looks like</Translate>
         </Heading>
         <p className={styles.sectionLead}>
-          These screens all come from one application. frus renders each picture through the same
-          pipeline a window uses.
+          <Translate id="home.showcase.lead">
+            These are the example applications, each pictured by frus itself from the code you can
+            download. Every one runs on the desktop, on Android and in the browser.
+          </Translate>
         </p>
-        <div className={styles.shotGrid}>
-          {shots.map((s) => (
-            <figure key={s.src} className={styles.shot}>
-              <img src={base + s.src.slice(1)} alt={s.alt} loading="lazy" />
-              <figcaption>{s.title}</figcaption>
-            </figure>
+        <div className={styles.appGrid}>
+          {apps.map((a) => (
+            <Link key={a.file} to={`/examples#${a.example}`} className={styles.app}>
+              <span className={styles.appScreen}>
+                <img src={`${base}examples/${a.file}.webp`} alt={a.alt} loading="lazy" width={540} height={1169} />
+              </span>
+              <span className={styles.appTitle}>{a.title}</span>
+            </Link>
           ))}
         </div>
         <div className={styles.phoneRow}>
-          <img src={base + 'media/android.png'} alt="The same application running on an Android phone" loading="lazy" />
+          <img
+            src={base + 'media/android.png'}
+            alt={translate({id: 'home.showcase.android.alt', message: 'A frus application running on an Android phone'})}
+            loading="lazy"
+          />
           <div>
-            <Heading as="h3">The same code on a phone</Heading>
+            <Heading as="h3">
+              <Translate id="home.showcase.android.title">The same code on a phone</Translate>
+            </Heading>
             <p>
-              Android is a first-class target, not a port: a native activity, Vulkan, a real IME
-              with composition and swipe typing, system insets, and the lifecycle. This picture is
-              a photograph of a device.
+              <Translate id="home.showcase.android.body">
+                Android is a first-class target, not a port: a native activity, Vulkan, a real IME
+                with composition and swipe typing, system insets, and the lifecycle. This picture
+                is a photograph of a device.
+              </Translate>
             </p>
-            <Link href={gallery}>Open the widget gallery in your browser →</Link>
+            <div className={styles.links}>
+              <Link to="/examples">
+                <Translate id="home.showcase.examples">Download the examples →</Translate>
+              </Link>
+              <Link href={gallery}>
+                <Translate id="home.showcase.gallery.link">Open the widget gallery in your browser →</Translate>
+              </Link>
+            </div>
           </div>
         </div>
       </div>
@@ -343,23 +440,38 @@ function Showcase(): ReactNode {
   );
 }
 
-const next = [
-  {title: 'Get started', to: '/docs/getting-started', body: 'Install the command, make a project, run it on three platforms.'},
-  {title: 'The guide', to: '/docs/guide', body: 'Layout, style, input, lists, navigation, network, animation, testing.'},
-  {title: 'Widget catalog', to: '/widgets', body: 'Twelve families of widgets, each demo shown with the code that builds it.'},
-  {title: 'Architecture', to: '/docs/internals/architecture', body: 'Four layers, and where each kind of code belongs.'},
-];
-
 function WhereNext(): ReactNode {
+  const next = [
+    {
+      title: translate({id: 'home.next.start', message: 'Get started'}),
+      to: '/docs/getting-started',
+      body: translate({id: 'home.next.start.body', message: 'Install the command, make a project, run it on three platforms.'}),
+    },
+    {
+      title: translate({id: 'home.next.guide', message: 'The guide'}),
+      to: '/docs/guide',
+      body: translate({id: 'home.next.guide.body', message: 'Layout, style, input, lists, navigation, network, animation, testing.'}),
+    },
+    {
+      title: translate({id: 'home.next.widgets', message: 'Widget catalog'}),
+      to: '/widgets',
+      body: translate({id: 'home.next.widgets.body', message: 'Twelve families of widgets, each demo shown with the code that builds it.'}),
+    },
+    {
+      title: translate({id: 'home.next.architecture', message: 'Architecture'}),
+      to: '/docs/internals/architecture',
+      body: translate({id: 'home.next.architecture.body', message: 'Four layers, and where each kind of code belongs.'}),
+    },
+  ];
   return (
     <section className={styles.section}>
       <div className="container">
         <Heading as="h2" className={styles.sectionTitle}>
-          Where to next
+          <Translate id="home.next.title">Where to next</Translate>
         </Heading>
         <div className={styles.nextGrid}>
           {next.map((n) => (
-            <Link key={n.title} to={n.to} className={clsx(styles.card, styles.nextCard)}>
+            <Link key={n.to} to={n.to} className={clsx(styles.card, styles.nextCard)}>
               <Heading as="h3">{n.title} →</Heading>
               <p>{n.body}</p>
             </Link>
@@ -375,20 +487,22 @@ function Status(): ReactNode {
     <section className={clsx(styles.section, styles.status)}>
       <div className="container">
         <Heading as="h2" className={styles.sectionTitle}>
-          frus is pre-alpha
+          <Translate id="home.status.title">frus is pre-alpha</Translate>
         </Heading>
         <p className={styles.sectionLead}>
-          The core is real, and three sample applications exercise it. The API is not stable,
-          though, and any release may break it. Two gaps are known: there are no iOS or native
-          macOS shells yet, and text rendering still has edge cases. At this stage, one pull
-          request can shape a whole subsystem.
+          <Translate id="home.status.body">
+            The core is real, and the example applications exercise it. The API is not stable,
+            though, and any release may break it. Two gaps are known: there are no iOS or native
+            macOS shells yet, and text rendering still has edge cases. At this stage, one pull
+            request can shape a whole subsystem.
+          </Translate>
         </p>
         <div className={styles.heroButtons}>
           <Link className="button button--secondary button--outline" href={`${repo}/blob/master/ROADMAP.md`}>
-            Read the roadmap
+            <Translate id="home.status.roadmap">Read the roadmap</Translate>
           </Link>
           <Link className="button button--secondary button--outline" href={`${repo}/issues`}>
-            Open issues
+            <Translate id="home.status.issues">Open issues</Translate>
           </Link>
         </div>
       </div>
@@ -399,8 +513,12 @@ function Status(): ReactNode {
 export default function Home(): ReactNode {
   return (
     <Layout
-      title="One Rust codebase. Every screen."
-      description="frus is a cross-platform UI framework written entirely in Rust: desktop, Android and the web, GPU-rendered, built from components.">
+      title={translate({id: 'home.meta.title', message: 'One Rust codebase. Every screen.'})}
+      description={translate({
+        id: 'home.meta.description',
+        message:
+          'frus is a cross-platform UI framework written entirely in Rust: desktop, Android and the web, GPU-rendered, built from components.',
+      })}>
       <Hero />
       <main>
         <Features />

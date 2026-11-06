@@ -34,7 +34,7 @@ impl AnimatedDefaultTextStyle {
 From [`frus-examples/widgets/src/features/animation/widgets/animated_text_style.rs`](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/animation/widgets/animated_text_style.rs):
 
 ```rust
-//! `AnimatedDefaultTextStyle` — the text style handed down to a subtree, moving to each new
+//! `AnimatedDefaultTextStyle`: the text style handed down to a subtree, moving to each new
 //! style: size, weight and colour change smoothly for every text inside that does not set
 //! them itself.
 
@@ -48,7 +48,7 @@ use crate::common::shared::{section, sections};
 pub fn example() -> Box<dyn Widget> {
     sections(vec![
         // A heading that grows when its section is selected. The texts inside name no size,
-        // weight or colour of their own — a text that states its size keeps it.
+        // weight or colour of their own: a text that states its size keeps it.
         Box::new(section("Selected heading", heading())),
     ])
 }
@@ -100,7 +100,7 @@ fn heading() -> Component {
 
 | Method | Argument | Effect |
 | --- | --- | --- |
-| `.align()` | `align: TextAlign` | Where the lines sit inside their box. **Not animated** — it takes effect at once. |
+| `.align()` | `align: TextAlign` | Where the lines sit inside their box. **Not animated**: it takes effect at once. |
 | `.soft_wrap()` | `wrap: bool` | Whether the text wraps at the width it is given. **Not animated.** |
 | `.overflow()` | `overflow: TextOverflow` | What becomes of text that does not fit. **Not animated.** |
 | `.max_lines()` | `lines: usize` | At most this many lines. **Not animated.** |
@@ -120,17 +120,17 @@ let _row: AnimatedDefaultTextStyle<()> = AnimatedDefaultTextStyle::new(
     0.2,
     Curve::ease_out(),
     TextStyle::NONE.size(if selected { 22.0 } else { 16.0 }),
-    Text::new("Reminders"),
+    Text::new("Reminders")
 );
 ```
 
-It reaches the subtree through the **theme**, the way `DefaultTextStyle::around` does: a `Text` resolves *what the caller said ?? what the subtree hands down ?? what the framework ships*, so this styles the words a caller passed in already assembled and never has to be threaded through them. A field the caller set on a particular text still wins — an inherited style is the answer to a question, not an instruction.
+It reaches the subtree through the **theme**, the way `DefaultTextStyle::around` does: a `Text` resolves *what the caller said ?? what the subtree hands down ?? what the framework ships*, so this styles the words a caller passed in already assembled and never has to be threaded through them. A field the caller set on a particular text still wins: an inherited style is the answer to a question, not an instruction.
 
 **It is the only animated value in this framework that layout reads through the theme**, which is why it is the only one whose consumer is the walk's theme swap rather than the node. That swap is made four times over a frame, and all four go through one function so they cannot answer differently.
 
-What travels, what holds and what swaps at the halfway point within the type itself is `TextStyle::lerp`'s business — in short, sizes travel, a field only one end states holds still, and faces swap in the middle.
+What travels, what holds and what swaps at the halfway point within the type itself is `TextStyle::lerp`'s business: in short, sizes travel, a field only one end states holds still, and faces swap in the middle.
 
-Like `AnimatedPositioned`, and unlike the transparent `Themed` it is built on the same idea as, this is a **node of its own**. Two of these nested — an outer one moving the colour, an inner one the size, which is a thing the cascade positively invites — would otherwise fuse into one node and put two timelines on it.
+Like `AnimatedPositioned`, and unlike the transparent `Themed` it is built on the same idea as, this is a **node of its own**. Two of these nested (an outer one moving the colour, an inner one the size, which is a thing the cascade positively invites) would otherwise fuse into one node and put two timelines on it.
 
 ## See also
 

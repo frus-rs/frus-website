@@ -23,7 +23,7 @@ This demo shows a pattern rather than one type. The names it uses are in the exa
 From [`frus-examples/widgets/src/features/interaction/widgets/disabled.rs`](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/interaction/widgets/disabled.rs):
 
 ```rust
-//! The disabled state — one contract every control shares: `enabled(false)` greys it out
+//! The disabled state: one contract every control shares: `enabled(false)` greys it out
 //! **and** makes it inert (no press, no ink, out of the Tab order, announced as disabled),
 //! while it keeps showing its value.
 //!

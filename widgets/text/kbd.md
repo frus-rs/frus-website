@@ -29,7 +29,7 @@ impl Kbd {
 From [`frus-examples/widgets/src/features/text/widgets/kbd.rs`](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/text/widgets/kbd.rs):
 
 ```rust
-//! `Kbd` — a keyboard key cap, for showing shortcuts in menus, tooltips and help pages.
+//! `Kbd`: a keyboard key cap, for showing shortcuts in menus, tooltips and help pages.
 
 use frus::{Align, Column, FontWeight, Kbd, MainAxisSize, Row, SizedBox, Text, TextStyle, Widget};
 
@@ -58,7 +58,7 @@ pub fn example() -> Box<dyn Widget> {
                 .child(shortcut("Command palette", &["Ctrl", "Shift", "P"]))
                 .child(shortcut("Close the window", &["Alt", "F4"])),
         )),
-        // The cap's text style can be changed — bigger and bold here, for a help screen.
+        // The cap's text style can be changed: bigger and bold here, for a help screen.
         Box::new(section(
             "Custom style",
             Kbd::new("Space").text_style(TextStyle::new(18.0).weight(FontWeight::Bold)),

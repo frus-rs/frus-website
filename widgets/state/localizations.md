@@ -29,7 +29,7 @@ pub trait Localizations { .. }
 From [`frus-examples/widgets/src/features/state/widgets/localizations.rs`](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/state/widgets/localizations.rs):
 
 ```rust
-//! `Locale` and `Localizations` — the language the interface is in, and the words the
+//! `Locale` and `Localizations`: the language the interface is in, and the words the
 //! framework itself says in it: button labels a screen reader announces, month names in a
 //! date picker, "1–10 of 100" under a table, digit grouping.
 //!
@@ -121,7 +121,7 @@ No builder methods: everything is set through the constructor.
 
 ### `Locale`
 
-Comparison is exact — `fr` is not `fr-CA`. Deciding that one of them will do for the other is `resolve`'s work, and it takes the whole list to do it.
+Comparison is exact: `fr` is not `fr-CA`. Deciding that one of them will do for the other is `resolve`'s work, and it takes the whole list to do it.
 
 ### `Localizations`
 
@@ -129,7 +129,7 @@ Comparison is exact — `fr` is not `fr-CA`. Deciding that one of them will do f
 
 Every method has an English body, so implementing this means writing down only what differs.
 
-**A default is not agreement.** An entry left unanswered is an English string in a French interface, and it compiles. So a table shipped here writes out every entry, even the ones whose right answer in that language *is* the English one — "OK" is "OK" in a good many languages — with the reason beside it; `French` does, and a test reads this file to check that it still does.
+**A default is not agreement.** An entry left unanswered is an English string in a French interface, and it compiles. So a table shipped here writes out every entry, even the ones whose right answer in that language *is* the English one ("OK" is "OK" in a good many languages) with the reason beside it; `French` does, and a test reads this file to check that it still does.
 
 ## See also
 

@@ -37,11 +37,11 @@ impl DefaultTextStyle {
 From [`frus-examples/widgets/src/features/text/widgets/text_style.rs`](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/text/widgets/text_style.rs):
 
 ```rust
-//! `TextStyle` — a style as a value: define it once, share it, merge it, and hand it to
+//! `TextStyle`: a style as a value: define it once, share it, merge it, and hand it to
 //! `Text::styled`, a `TextSpan` or a whole subtree with `DefaultTextStyle`.
 //!
 //! Every field of a style is optional. A style that only says "size 20" leaves the
-//! weight and colour to whatever is around it — which is what makes styles layer.
+//! weight and colour to whatever is around it, which is what makes styles layer.
 
 use frus::{
     Align, Color, Column, DefaultTextStyle, FontWeight, Text, TextAlign, TextStyle, Widget,
@@ -91,7 +91,7 @@ pub fn example() -> Box<dyn Widget> {
                     TextStyle::new(18.0).letter_spacing(4.0),
                 )),
         )),
-        // `DefaultTextStyle::around` gives every text in a subtree a default — the way a
+        // `DefaultTextStyle::around` gives every text in a subtree a default: the way a
         // card or a toolbar styles all its text at once. A text's own settings still win.
         Box::new(section(
             "DefaultTextStyle for a subtree",
@@ -118,14 +118,14 @@ pub fn example() -> Box<dyn Widget> {
 | Type | Method | Argument | Effect |
 | --- | --- | --- | --- |
 | `TextStyle` | `.weight()` | `weight: FontWeight` | Sets the weight. |
-| `TextStyle` | `.italic()` | — | Switches to italic. |
+| `TextStyle` | `.italic()` |  | Switches to italic. |
 | `TextStyle` | `.size()` | `size: f32` | Sets the size. |
 | `TextStyle` | `.color()` | `color: Color` | Sets the colour. |
 | `TextStyle` | `.decoration()` | `decoration: TextDecoration` | Sets the decoration lines. |
-| `TextStyle` | `.underline()` | — | Adds an underline, combining with any other decoration **this style** already carries — never with an inherited one, which this style cannot see. |
-| `TextStyle` | `.strikethrough()` | — | Adds a strikethrough, combining with any other decoration this style carries. |
+| `TextStyle` | `.underline()` |  | Adds an underline, combining with any other decoration **this style** already carries: never with an inherited one, which this style cannot see. |
+| `TextStyle` | `.strikethrough()` |  | Adds a strikethrough, combining with any other decoration this style carries. |
 | `TextStyle` | `.decoration_color()` | `color: Color` | Sets the decoration colour; otherwise the text's colour is used. |
-| `TextStyle` | `.height()` | `height: f32` | Sets the line's height, as a **multiple of the font size** — `2.0` is double leading, not two pixels. See the [field](Self::height) for why it is a ratio. |
+| `TextStyle` | `.height()` | `height: f32` | Sets the line's height, as a **multiple of the font size**: `2.0` is double leading, not two pixels. See the [field](Self::height) for why it is a ratio. |
 | `TextStyle` | `.family()` | `family: FontFamily` | Names the font family. See the [field](Self::family) for the one case where a named family does not get the last word. |
 | `TextStyle` | `.letter_spacing()` | `spacing: f32` | Sets the room added after every character, in logical pixels; negative draws them closer. See the [field](Self::letter_spacing). |
 | `TextStyle` | `.clamp_scale()` | `max_scale: f32` | Every question answered: the framework's own default wherever nothing in the chain said anything, and **the reader's font size applied**. |
@@ -135,7 +135,7 @@ pub fn example() -> Box<dyn Widget> {
 
 ### `TextStyle`
 
-The typographic attributes of a single line of text — **every field optional**.
+The typographic attributes of a single line of text: **every field optional**.
 
 `None` is not a missing value but an answer: *this style does not say*.
 
@@ -147,7 +147,7 @@ Ask `TextStyle::resolved` for the concrete numbers to measure and draw with.
 
 It carried its own copy of every typographic field until `TextStyle` learned to say *unset*; now the style is just a style.
 
-A `Text` resolves `what the caller said ?? what this says ?? what the framework ships`, field by field, and **a default the caller did not choose does not count as having said something** — which is what an `Option` per field means and what `TextStyle::new(16.0)` could not express.
+A `Text` resolves `what the caller said ?? what this says ?? what the framework ships`, field by field, and **a default the caller did not choose does not count as having said something**, which is what an `Option` per field means and what `TextStyle::new(16.0)` could not express.
 
 `DefaultTextStyle::around` wraps a subtree with one, and that is how `AppBar::toolbar_text_style` delivers its own.
 

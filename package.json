@@ -5,9 +5,10 @@
   "scripts": {
     "sync": "node scripts/sync-docs.mjs",
     "examples": "node scripts/package-examples.mjs",
+    "check:dashes": "node scripts/check-dashes.mjs",
     "prestart": "npm run sync && npm run examples",
     "start": "docusaurus start",
-    "prebuild": "npm run sync && npm run examples",
+    "prebuild": "npm run sync && npm run examples && npm run check:dashes",
     "build": "docusaurus build",
     "serve": "docusaurus serve",
     "clear": "docusaurus clear",

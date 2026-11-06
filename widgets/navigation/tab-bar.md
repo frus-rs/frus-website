@@ -32,7 +32,7 @@ impl TabBar {
 From [`frus-examples/widgets/src/features/navigation/widgets/tabs.rs`](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/navigation/widgets/tabs.rs):
 
 ```rust
-//! `TabBar` — a row of tabs and the panel of the selected one. Primary for the top
+//! `TabBar`: a row of tabs and the panel of the selected one. Primary for the top
 //! level of a screen, secondary for a division inside it; icons, scrolling and swiping
 //! between panels are all options.
 
@@ -145,8 +145,8 @@ fn narrow(bar: frus::TabBar) -> Container {
 | Method | Argument | Effect |
 | --- | --- | --- |
 | `.tab()` | `label: impl Into<String>, content: impl Widget<Msg> + 'static` | Adds a tab, a label plus content. The content is realised only when it belongs to the selected tab. |
-| `.tab_widget()` | `child: impl Widget<Msg> + 'static, label: impl Into<String>, content: impl Widget<Msg> + 'static` | Adds a tab **the caller draws** — a label with an unread count beside it, a coloured dot, two lines, rich text — plus the word it is called by and its content. |
-| `.item()` | `tab: TabItem<Msg>, content: impl Widget<Msg> + 'static` | Adds a tab however it was built, plus its content — the door to `TabItem::width`, which no shorthand carries. |
+| `.tab_widget()` | `child: impl Widget<Msg> + 'static, label: impl Into<String>, content: impl Widget<Msg> + 'static` | Adds a tab **the caller draws** (a label with an unread count beside it, a coloured dot, two lines, rich text) plus the word it is called by and its content. |
+| `.item()` | `tab: TabItem<Msg>, content: impl Widget<Msg> + 'static` | Adds a tab however it was built, plus its content: the door to `TabItem::width`, which no shorthand carries. |
 | `.icon_tab()` | `icon: IconData, label: impl Into<String>, content: impl Widget<Msg> + 'static` | Adds a tab with an **icon over its label**. |
 | `.icon_only_tab()` | `icon: IconData, label: impl Into<String>, content: impl Widget<Msg> + 'static` | Adds a tab showing **only** an icon, in a row of the ordinary height. |
 | `.swipeable()` | `swipeable: bool` | **Whether a drag across the panel changes tab.** |
@@ -155,12 +155,12 @@ fn narrow(bar: frus::TabBar) -> Container {
 | `.enabled()` | `enabled: bool` | Whether the bar can be switched. Disabled every tab is **inert** - no press, no ink, out of the tab order - and the **panel stays**, because which tab is showing is still the answer even when it cannot be changed. |
 | `.variant()` | `variant: TabBarVariant` | Chooses between the two bars. See `TabBarVariant`. |
 | `.indicator_color()` | `color: Color` | The indicator's colour. Defaults to the theme's accent. |
-| `.indicator_weight()` | `weight: f32` | The indicator's thickness — and, on a primary bar, the radius of its top corners. `0.0` removes it. |
+| `.indicator_weight()` | `weight: f32` | The indicator's thickness, and, on a primary bar, the radius of its top corners. `0.0` removes it. |
 | `.label_color()` | `color: Color` | The **selected** label's colour. |
 | `.unselected_label_color()` | `color: Color` | The colour of every label but the selected one. |
 | `.label_style()` | `style: TextStyle` | The labels' type. Defaults to the theme's `title_small` step. |
 | `.divider_color()` | `color: Color` | The hairline's colour. |
-| `.divider_height()` | `height: f32` | The hairline's thickness. `0.0` removes it — a bar sitting directly on a coloured surface usually wants that. |
+| `.divider_height()` | `height: f32` | The hairline's thickness. `0.0` removes it: a bar sitting directly on a coloured surface usually wants that. |
 | `.label_padding()` | `padding: f32` | The room on either side of a label. |
 | `.tab_height()` | `height: f32` | The tabs' height, the indicator excluded. |
 

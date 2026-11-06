@@ -29,7 +29,7 @@ impl Tooltip {
 From [`frus-examples/widgets/src/features/feedback/widgets/tooltip.rs`](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/feedback/widgets/tooltip.rs):
 
 ```rust
-//! `Tooltip` — a short label that appears while the pointer rests on a widget (or on a
+//! `Tooltip`: a short label that appears while the pointer rests on a widget (or on a
 //! long press). For naming what an icon does; never for something the user must read.
 
 use frus::{Color, Icon, IconButton, Icons, Insets, Row, Text, TextStyle, Tooltip, Widget, Wrap};
@@ -93,7 +93,7 @@ pub fn example() -> Box<dyn Widget> {
 Tooltip::new("Delete this row").child(IconButton::new(Icons::DELETE).on_press(Msg::Delete))
 ```
 
-It wraps a child, shows nothing until the child is hovered, and then floats a bubble above it — below, if there is no room above. An empty message shows nothing at all and costs nothing, which is what lets a caller write `Tooltip::new(maybe_hint).child(..)` without branching.
+It wraps a child, shows nothing until the child is hovered, and then floats a bubble above it: below, if there is no room above. An empty message shows nothing at all and costs nothing, which is what lets a caller write `Tooltip::new(maybe_hint).child(..)` without branching.
 
 ### What this cannot do yet
 

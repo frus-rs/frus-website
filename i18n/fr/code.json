@@ -1,0 +1,769 @@
+{
+  "examples.screen.alt": {
+    "message": "L'exemple {name}, tel qu'il s'ouvre"
+  },
+  "examples.download": {
+    "message": "Télécharger le .zip"
+  },
+  "examples.source": {
+    "message": "Voir le code source"
+  },
+  "examples.meta": {
+    "message": "{files} fichiers · {size}"
+  },
+  "examples.meta.title": {
+    "message": "Exemples"
+  },
+  "examples.meta.description": {
+    "message": "Des applications frus complètes à télécharger, lancer et copier."
+  },
+  "examples.title": {
+    "message": "Applications d'exemple"
+  },
+  "examples.lead": {
+    "message": "Des projets complets de frus {version}, chacun un projet Cargo autonome qui dépend de la crate publiée. Lisez-les dans cet ordre. Chaque image montre l'application telle qu'elle s'ouvre, dessinée par frus."
+  },
+  "examples.run.title": {
+    "message": "En lancer un"
+  },
+  "examples.run.lead": {
+    "message": "Décompressez-le, puis depuis son dossier (la commande {frus} vient de {install}) :"
+  },
+  "examples.run.desktop": {
+    "message": "sur l'ordinateur : Windows, macOS, Linux"
+  },
+  "examples.run.web": {
+    "message": "dans le navigateur"
+  },
+  "examples.run.android": {
+    "message": "sur le téléphone branché, ou un émulateur"
+  },
+  "examples.run.test": {
+    "message": "ses tests, sans fenêtre"
+  },
+  "examples.run.structure": {
+    "message": "Chaque projet est organisé de la même façon, décrite dans {structure}. La commande {frus} est présentée dans {cli}."
+  },
+  "examples.run.structure.link": {
+    "message": "Structure d'une application"
+  },
+  "examples.run.cli.link": {
+    "message": "La commande frus"
+  },
+  "home.hero.title1": {
+    "message": "Un seul code Rust."
+  },
+  "home.hero.title2": {
+    "message": "Tous les écrans."
+  },
+  "home.hero.subtitle": {
+    "message": "frus est un framework d'interface écrit entièrement en Rust. Construisez une application à partir de composants, et lancez-la sur Windows, Linux, macOS, Android et le web, dessinée sur le GPU par frus lui-même."
+  },
+  "home.hero.start": {
+    "message": "Commencer"
+  },
+  "home.hero.gallery": {
+    "message": "Galerie de widgets"
+  },
+  "home.features.components.title": {
+    "message": "Composants et hooks"
+  },
+  "home.features.components.body": {
+    "message": "Un widget est ce qu'il construit. Gardez l'état dans un {statefulWidget}, ou dans une simple fonction avec {useState}, {useMemo} et {useEffect}."
+  },
+  "home.features.rust.title": {
+    "message": "Du Rust, de l'application aux pixels"
+  },
+  "home.features.rust.body": {
+    "message": "Mise en page, texte, widgets, gestes, thèmes et moteur de rendu : tout est en Rust. Pas de machine virtuelle, pas de second langage, pas de pont sur le chemin critique."
+  },
+  "home.features.gpu.title": {
+    "message": "Rendu GPU sur wgpu"
+  },
+  "home.features.gpu.body": {
+    "message": "Vulkan, Metal, DX12, OpenGL ES et WebGPU depuis un seul backend. Les tracés sont triangulés avec lyon, et le texte est mis en forme par cosmic-text."
+  },
+  "home.features.platforms.title": {
+    "message": "Ordinateur, Android et web"
+  },
+  "home.features.platforms.body": {
+    "message": "Un seul {main} branche tous les points d'entrée. Lecteurs d'écran, IME, marges système et notifications fonctionnent sur chaque plateforme."
+  },
+  "home.features.restyle.title": {
+    "message": "Chaque widget se restyle"
+  },
+  "home.features.restyle.body": {
+    "message": "Les thèmes clair et sombre sont générés à partir d'une couleur de base. Chaque widget prend ses couleurs dans le thème : vous pouvez restyler un widget, ou tous les widgets d'un même type."
+  },
+  "home.features.command.title": {
+    "message": "Une commande pour tout le cycle"
+  },
+  "home.features.command.body": {
+    "message": "{create}, {run}, {build}, {test} et {doctor}, avec un rechargement à chaud qui garde l'état. Ce dont une commande a besoin, elle l'installe d'abord."
+  },
+  "home.numbers.tests": {
+    "message": "tests dans le dépôt, lancés à chaque changement"
+  },
+  "home.numbers.goldens": {
+    "message": "images de référence, comparées pixel par pixel"
+  },
+  "home.numbers.demos": {
+    "message": "démos de widgets, chacune affichée avec son code"
+  },
+  "home.numbers.startup.value": {
+    "message": "0,6–0,8 s"
+  },
+  "home.numbers.startup": {
+    "message": "démarrage à froid sous Windows, contre 1,3–2,0 s en 0.4"
+  },
+  "home.numbers.title": {
+    "message": "Testé sérieusement"
+  },
+  "home.numbers.lead": {
+    "message": "Les composants tournent sans fenêtre ni GPU : frus teste tout leur cycle de vie dans de simples tests Rust. Le rendu est vérifié contre des images de référence. Chaque exemple du guide est compilé par la suite de tests."
+  },
+  "home.numbers.caveat": {
+    "message": "Ces chiffres viennent du dépôt et du journal des changements. frus ne publie pas encore de comparatifs avec d'autres toolkits : ils viendront quand les mesures auront été faites sur de vrais appareils, avec la méthode écrite."
+  },
+  "home.counter.title": {
+    "message": "Un compteur, en entier"
+  },
+  "home.counter.body1": {
+    "message": "Voilà une application complète, prête à lancer. {useState} garde le compte d'une reconstruction à l'autre, et les boutons le modifient. {main} déclare d'un coup les points d'entrée de chaque plateforme."
+  },
+  "home.counter.body2": {
+    "message": "{run} la lance sur l'ordinateur. {android} et {web} la lancent sur un téléphone et dans un navigateur. Le code source reste le même."
+  },
+  "home.counter.link": {
+    "message": "Écrire votre première application →"
+  },
+  "home.platforms.desktop": {
+    "message": "Ordinateur"
+  },
+  "home.platforms.desktop.note": {
+    "message": "Windows, Linux et macOS : une fenêtre winit, dessinée avec wgpu."
+  },
+  "home.platforms.android.note": {
+    "message": "Un téléphone ou un émulateur. Le premier lancement installe le SDK, le NDK et Java."
+  },
+  "home.platforms.web.note": {
+    "message": "Compilée en wasm, servie, et ouverte dans un navigateur WebGPU."
+  },
+  "home.platforms.simulated": {
+    "message": "N'importe quel téléphone, sur n'importe quel ordinateur"
+  },
+  "home.platforms.simulated.note": {
+    "message": "Une version de débogage affichée dans le cadre d'un téléphone, avec ses zones sûres, son encoche et son clavier."
+  },
+  "home.platforms.title": {
+    "message": "Pour tous les écrans"
+  },
+  "home.reload.key.r": {
+    "message": "recharger, en gardant l'état"
+  },
+  "home.reload.key.R": {
+    "message": "redémarrer de zéro"
+  },
+  "home.reload.key.i": {
+    "message": "l'inspecteur de widgets"
+  },
+  "home.reload.key.P": {
+    "message": "un panneau de performances avec graphiques"
+  },
+  "home.reload.key.b": {
+    "message": "clair ou sombre"
+  },
+  "home.reload.key.T": {
+    "message": "la taille du texte"
+  },
+  "home.reload.key.o": {
+    "message": "le comportement d'une autre plateforme"
+  },
+  "home.reload.key.s": {
+    "message": "une capture d'écran"
+  },
+  "home.reload.title": {
+    "message": "Changez le code. Gardez l'état."
+  },
+  "home.reload.body": {
+    "message": "{hot} applique chaque modification enregistrée à l'application en cours, sur l'ordinateur, Android et le web. Le journal de chaque plateforme s'affiche dans votre terminal, et de simples touches pilotent l'application pendant qu'elle tourne."
+  },
+  "home.reload.vscode": {
+    "message": "Dans VS Code, l'extension frus fait de même depuis l'éditeur : un choix d'appareil dans la barre d'état, F5 avec le journal dans la console de débogage, le rechargement à l'enregistrement en gardant l'état, et l'inspecteur et les arbres dans la palette de commandes."
+  },
+  "home.reload.install": {
+    "message": "Installer pour VS Code"
+  },
+  "home.reload.extension": {
+    "message": "L'extension →"
+  },
+  "home.reload.cli": {
+    "message": "La commande frus →"
+  },
+  "home.reload.tour.alt": {
+    "message": "Quatre écrans de l'application de démonstration, ouverts et quittés avec les transitions à ressort de frus"
+  },
+  "home.showcase.shop": {
+    "message": "Une boutique"
+  },
+  "home.showcase.shop.alt": {
+    "message": "L'exemple Corner Shop : une grille de produits sous un champ de recherche, avec une barre de navigation"
+  },
+  "home.showcase.product": {
+    "message": "Sa fiche produit"
+  },
+  "home.showcase.product.alt": {
+    "message": "Une fiche produit de l'exemple boutique, avec les tailles et un bouton d'ajout au panier"
+  },
+  "home.showcase.forms": {
+    "message": "Un formulaire d'inscription"
+  },
+  "home.showcase.forms.alt": {
+    "message": "L'exemple forms : champs de texte, choix et sélecteurs"
+  },
+  "home.showcase.auth": {
+    "message": "La connexion"
+  },
+  "home.showcase.auth.alt": {
+    "message": "L'exemple authentication : un écran de connexion"
+  },
+  "home.showcase.http": {
+    "message": "Une API JSON"
+  },
+  "home.showcase.http.alt": {
+    "message": "L'exemple http : des articles chargés depuis une API web"
+  },
+  "home.showcase.gallery": {
+    "message": "La galerie de widgets"
+  },
+  "home.showcase.gallery.alt": {
+    "message": "L'exemple galerie de widgets : ses familles de widgets"
+  },
+  "home.showcase.title": {
+    "message": "À quoi ça ressemble"
+  },
+  "home.showcase.lead": {
+    "message": "Voici les applications d'exemple, chacune photographiée par frus lui-même à partir du code que vous pouvez télécharger. Toutes tournent sur l'ordinateur, sur Android et dans le navigateur."
+  },
+  "home.showcase.android.alt": {
+    "message": "Une application frus sur un téléphone Android"
+  },
+  "home.showcase.android.title": {
+    "message": "Le même code sur un téléphone"
+  },
+  "home.showcase.android.body": {
+    "message": "Android est une cible à part entière, pas un portage : une activité native, Vulkan, un vrai IME avec composition et saisie gestuelle, les marges système et le cycle de vie. Cette image est une photo d'un appareil."
+  },
+  "home.showcase.examples": {
+    "message": "Télécharger les exemples →"
+  },
+  "home.showcase.gallery.link": {
+    "message": "Ouvrir la galerie de widgets dans votre navigateur →"
+  },
+  "home.next.start": {
+    "message": "Commencer"
+  },
+  "home.next.start.body": {
+    "message": "Installer la commande, créer un projet, le lancer sur trois plateformes."
+  },
+  "home.next.guide": {
+    "message": "Le guide"
+  },
+  "home.next.guide.body": {
+    "message": "Mise en page, style, saisie, listes, navigation, réseau, animation, tests."
+  },
+  "home.next.widgets": {
+    "message": "Catalogue de widgets"
+  },
+  "home.next.widgets.body": {
+    "message": "Douze familles de widgets, chaque démo avec le code qui la construit."
+  },
+  "home.next.architecture": {
+    "message": "Architecture"
+  },
+  "home.next.architecture.body": {
+    "message": "Quatre couches, et où va chaque type de code."
+  },
+  "home.next.title": {
+    "message": "Et ensuite"
+  },
+  "home.status.title": {
+    "message": "frus est en pré-alpha"
+  },
+  "home.status.body": {
+    "message": "Le cœur est solide, et les applications d'exemple le mettent à l'épreuve. L'API n'est pas stable pour autant, et chaque version peut la casser. Deux manques sont connus : pas encore de couche iOS ni macOS native, et le rendu du texte a encore des cas limites. À ce stade, une seule pull request peut façonner tout un sous-système."
+  },
+  "home.status.roadmap": {
+    "message": "Lire la feuille de route"
+  },
+  "home.status.issues": {
+    "message": "Issues ouvertes"
+  },
+  "home.meta.title": {
+    "message": "Un seul code Rust. Tous les écrans."
+  },
+  "home.meta.description": {
+    "message": "frus est un framework d'interface multiplateforme écrit entièrement en Rust : ordinateur, Android et web, rendu sur le GPU, construit à partir de composants."
+  },
+  "playground.example.counter": {
+    "message": "Compteur"
+  },
+  "playground.example.profile": {
+    "message": "Carte de profil"
+  },
+  "playground.example.form": {
+    "message": "Formulaire"
+  },
+  "playground.example.list": {
+    "message": "Une liste à partir d'une boucle"
+  },
+  "playground.example.shop": {
+    "message": "Boutique : grille, onglets et navigation"
+  },
+  "playground.meta.title": {
+    "message": "Bac à sable"
+  },
+  "playground.meta.description": {
+    "message": "Écrivez du code frus dans votre navigateur, et voyez-le rendu pendant que vous tapez."
+  },
+  "playground.title": {
+    "message": "Bac à sable"
+  },
+  "playground.picker": {
+    "message": "Exemple"
+  },
+  "playground.copied": {
+    "message": "Copié"
+  },
+  "playground.copy": {
+    "message": "Copier comme src/lib.rs d'un projet"
+  },
+  "playground.status.loading": {
+    "message": "Chargement de frus…"
+  },
+  "playground.status.ok": {
+    "message": "Rendu en {ms} ms"
+  },
+  "playground.status.error": {
+    "message": "Affichage de la dernière version qui fonctionnait"
+  },
+  "playground.status.crashed": {
+    "message": "Redémarré"
+  },
+  "playground.status.unsupported": {
+    "message": "Pas d'aperçu dans ce navigateur"
+  },
+  "playground.error.line": {
+    "message": "Ligne {line}."
+  },
+  "playground.crashed": {
+    "message": "{stopped} qui a redémarré sur la dernière version qui fonctionnait."
+  },
+  "playground.crashed.stopped": {
+    "message": "Ce code a arrêté l'aperçu,"
+  },
+  "playground.preview": {
+    "message": "Aperçu"
+  },
+  "playground.help.title": {
+    "message": "Ce que le bac à sable comprend"
+  },
+  "playground.help.subset": {
+    "message": "Un sous-ensemble de Rust, interprété dans votre navigateur sans compilateur : une fonction, en général {signature}, avec {syntax}, l'arithmétique, {format}, les closures, {useState} et {theme}. Les exemples compilent aussi comme du Rust ordinaire. Le code sans son propre {scaffold} est centré sur la surface du thème tant qu'il tient, et défile sinon ; dans un vrai projet, écrivez-le vous-même, comme le font les exemples. Les structs, traits, crates et les autres hooks ne sont pas encore pris en charge."
+  },
+  "playground.help.widgets": {
+    "message": "{widgets} {names}, avec leurs méthodes les plus courantes. L'éditeur complète à partir de la même liste (Ctrl+Espace, ou après un point), et l'erreur d'une méthode inconnue nomme celles qui existent."
+  },
+  "playground.help.widgets.label": {
+    "message": "Widgets :"
+  },
+  "theme.ErrorPageContent.title": {
+    "message": "Cette page a planté.",
+    "description": "The title of the fallback page when the page crashed"
+  },
+  "theme.BackToTopButton.buttonAriaLabel": {
+    "message": "Retour au début de la page",
+    "description": "The ARIA label for the back to top button"
+  },
+  "theme.blog.archive.title": {
+    "message": "Archive",
+    "description": "The page & hero title of the blog archive page"
+  },
+  "theme.blog.archive.description": {
+    "message": "Archive",
+    "description": "The page & hero description of the blog archive page"
+  },
+  "theme.blog.paginator.navAriaLabel": {
+    "message": "Pagination de la liste des articles du blog",
+    "description": "The ARIA label for the blog pagination"
+  },
+  "theme.blog.paginator.newerEntries": {
+    "message": "Nouvelles entrées",
+    "description": "The label used to navigate to the newer blog posts page (previous page)"
+  },
+  "theme.blog.paginator.olderEntries": {
+    "message": "Anciennes entrées",
+    "description": "The label used to navigate to the older blog posts page (next page)"
+  },
+  "theme.blog.post.paginator.navAriaLabel": {
+    "message": "Pagination des articles du blog",
+    "description": "The ARIA label for the blog posts pagination"
+  },
+  "theme.blog.post.paginator.newerPost": {
+    "message": "Article plus récent",
+    "description": "The blog post button label to navigate to the newer/previous post"
+  },
+  "theme.blog.post.paginator.olderPost": {
+    "message": "Article plus ancien",
+    "description": "The blog post button label to navigate to the older/next post"
+  },
+  "theme.tags.tagsPageLink": {
+    "message": "Voir tous les tags",
+    "description": "The label of the link targeting the tag list page"
+  },
+  "theme.colorToggle.ariaLabel.mode.system": {
+    "message": "system mode",
+    "description": "The name for the system color mode"
+  },
+  "theme.colorToggle.ariaLabel.mode.light": {
+    "message": "mode clair",
+    "description": "The name for the light color mode"
+  },
+  "theme.colorToggle.ariaLabel.mode.dark": {
+    "message": "mode sombre",
+    "description": "The name for the dark color mode"
+  },
+  "theme.colorToggle.ariaLabel": {
+    "message": "Basculer entre le mode sombre et clair (actuellement {mode})",
+    "description": "The ARIA label for the color mode toggle"
+  },
+  "theme.docs.breadcrumbs.navAriaLabel": {
+    "message": "Fil d'Ariane",
+    "description": "The ARIA label for the breadcrumbs"
+  },
+  "theme.docs.paginator.navAriaLabel": {
+    "message": "Pages de documentation",
+    "description": "The ARIA label for the docs pagination"
+  },
+  "theme.docs.paginator.previous": {
+    "message": "Précédent",
+    "description": "The label used to navigate to the previous doc"
+  },
+  "theme.docs.paginator.next": {
+    "message": "Suivant",
+    "description": "The label used to navigate to the next doc"
+  },
+  "theme.docs.tagDocListPageTitle.nDocsTagged": {
+    "message": "Un document tagué|{count} documents tagués",
+    "description": "Pluralized label for \"{count} docs tagged\". Use as much plural forms (separated by \"|\") as your language support (see https://www.unicode.org/cldr/cldr-aux/charts/34/supplemental/language_plural_rules.html)"
+  },
+  "theme.docs.tagDocListPageTitle": {
+    "message": "{nDocsTagged} avec \"{tagName}\"",
+    "description": "The title of the page for a docs tag"
+  },
+  "theme.docs.versions.unreleasedVersionLabel": {
+    "message": "Ceci est la documentation de la prochaine version {versionLabel} de {siteTitle}.",
+    "description": "The label used to tell the user that he's browsing an unreleased doc version"
+  },
+  "theme.docs.versions.unmaintainedVersionLabel": {
+    "message": "Ceci est la documentation de {siteTitle} {versionLabel}, qui n'est plus activement maintenue.",
+    "description": "The label used to tell the user that he's browsing an unmaintained doc version"
+  },
+  "theme.docs.versions.latestVersionSuggestionLabel": {
+    "message": "Pour une documentation à jour, consultez la {latestVersionLink} ({versionLabel}).",
+    "description": "The label used to tell the user to check the latest version"
+  },
+  "theme.docs.versions.latestVersionLinkLabel": {
+    "message": "dernière version",
+    "description": "The label used for the latest version suggestion link label"
+  },
+  "theme.docs.versionBadge.label": {
+    "message": "Version: {versionLabel}"
+  },
+  "theme.common.editThisPage": {
+    "message": "Éditer cette page",
+    "description": "The link label to edit the current page"
+  },
+  "theme.common.headingLinkTitle": {
+    "message": "Lien direct vers {heading}",
+    "description": "Title for link to heading"
+  },
+  "theme.lastUpdated.atDate": {
+    "message": " le {date}",
+    "description": "The words used to describe on which date a page has been last updated"
+  },
+  "theme.lastUpdated.byUser": {
+    "message": " par {user}",
+    "description": "The words used to describe by who the page has been last updated"
+  },
+  "theme.lastUpdated.lastUpdatedAtBy": {
+    "message": "Dernière mise à jour{atDate}{byUser}",
+    "description": "The sentence used to display when a page has been last updated, and by who"
+  },
+  "theme.navbar.mobileVersionsDropdown.label": {
+    "message": "Versions",
+    "description": "The label for the navbar versions dropdown on mobile view"
+  },
+  "theme.NotFound.title": {
+    "message": "Page introuvable",
+    "description": "The title of the 404 page"
+  },
+  "theme.tags.tagsListLabel": {
+    "message": "Tags :",
+    "description": "The label alongside a tag list"
+  },
+  "theme.AnnouncementBar.closeButtonAriaLabel": {
+    "message": "Fermer",
+    "description": "The ARIA label for close button of announcement bar"
+  },
+  "theme.admonition.caution": {
+    "message": "attention",
+    "description": "The default label used for the Caution admonition (:::caution)"
+  },
+  "theme.admonition.danger": {
+    "message": "danger",
+    "description": "The default label used for the Danger admonition (:::danger)"
+  },
+  "theme.admonition.info": {
+    "message": "info",
+    "description": "The default label used for the Info admonition (:::info)"
+  },
+  "theme.admonition.note": {
+    "message": "remarque",
+    "description": "The default label used for the Note admonition (:::note)"
+  },
+  "theme.admonition.tip": {
+    "message": "astuce",
+    "description": "The default label used for the Tip admonition (:::tip)"
+  },
+  "theme.admonition.warning": {
+    "message": "attention",
+    "description": "The default label used for the Warning admonition (:::warning)"
+  },
+  "theme.blog.sidebar.navAriaLabel": {
+    "message": "Navigation article de blog récent",
+    "description": "The ARIA label for recent posts in the blog sidebar"
+  },
+  "theme.DocSidebarItem.expandCategoryAriaLabel": {
+    "message": "Développer la catégorie '{label}' de la barre latérale",
+    "description": "The ARIA label to expand the sidebar category"
+  },
+  "theme.DocSidebarItem.collapseCategoryAriaLabel": {
+    "message": "Réduire la catégorie '{label}' de la barre latérale",
+    "description": "The ARIA label to collapse the sidebar category"
+  },
+  "theme.IconExternalLink.ariaLabel": {
+    "message": "(opens in new tab)",
+    "description": "The ARIA label for the external link icon"
+  },
+  "theme.NotFound.p1": {
+    "message": "Nous n'avons pas trouvé ce que vous recherchez.",
+    "description": "The first paragraph of the 404 page"
+  },
+  "theme.NotFound.p2": {
+    "message": "Veuillez contacter le propriétaire du site qui vous a lié à l'URL d'origine et leur faire savoir que leur lien est cassé.",
+    "description": "The 2nd paragraph of the 404 page"
+  },
+  "theme.navbar.mobileLanguageDropdown.label": {
+    "message": "Langues",
+    "description": "The label for the mobile language switcher dropdown"
+  },
+  "theme.TOCCollapsible.toggleButtonLabel": {
+    "message": "Sur cette page",
+    "description": "The label used by the button on the collapsible TOC component"
+  },
+  "theme.NavBar.navAriaLabel": {
+    "message": "Main",
+    "description": "The ARIA label for the main navigation"
+  },
+  "theme.blog.post.readingTime.plurals": {
+    "message": "Une minute de lecture|{readingTime} minutes de lecture",
+    "description": "Pluralized label for \"{readingTime} min read\". Use as much plural forms (separated by \"|\") as your language support (see https://www.unicode.org/cldr/cldr-aux/charts/34/supplemental/language_plural_rules.html)"
+  },
+  "theme.blog.post.readMore": {
+    "message": "Lire plus",
+    "description": "The label used in blog post item excerpts to link to full blog posts"
+  },
+  "theme.blog.post.readMoreLabel": {
+    "message": "En savoir plus sur {title}",
+    "description": "The ARIA label for the link to full blog posts from excerpts"
+  },
+  "theme.docs.breadcrumbs.home": {
+    "message": "Page d'accueil",
+    "description": "The ARIA label for the home page in the breadcrumbs"
+  },
+  "theme.CodeBlock.wordWrapToggle": {
+    "message": "Activer/désactiver le retour à la ligne",
+    "description": "The title attribute for toggle word wrapping button of code block lines"
+  },
+  "theme.CodeBlock.copy": {
+    "message": "Copier",
+    "description": "The copy button label on code blocks"
+  },
+  "theme.CodeBlock.copied": {
+    "message": "Copié",
+    "description": "The copied button label on code blocks"
+  },
+  "theme.CodeBlock.copyButtonAriaLabel": {
+    "message": "Copier le code",
+    "description": "The ARIA label for copy code blocks button"
+  },
+  "theme.docs.sidebar.collapseButtonTitle": {
+    "message": "Réduire le menu latéral",
+    "description": "The title attribute for collapse button of doc sidebar"
+  },
+  "theme.docs.sidebar.collapseButtonAriaLabel": {
+    "message": "Réduire le menu latéral",
+    "description": "The title attribute for collapse button of doc sidebar"
+  },
+  "theme.docs.sidebar.navAriaLabel": {
+    "message": "Docs sidebar",
+    "description": "The ARIA label for the sidebar navigation"
+  },
+  "theme.docs.sidebar.closeSidebarButtonAriaLabel": {
+    "message": "Fermer la barre de navigation",
+    "description": "The ARIA label for close button of mobile sidebar"
+  },
+  "theme.docs.sidebar.toggleSidebarButtonAriaLabel": {
+    "message": "Ouvrir/fermer la barre de navigation",
+    "description": "The ARIA label for hamburger menu button of mobile navigation"
+  },
+  "theme.navbar.mobileSidebarSecondaryMenu.backButtonLabel": {
+    "message": "← Retour au menu principal",
+    "description": "The label of the back button to return to main menu, inside the mobile navbar sidebar secondary menu (notably used to display the docs sidebar)"
+  },
+  "theme.docs.sidebar.expandButtonTitle": {
+    "message": "Déplier le menu latéral",
+    "description": "The ARIA label and title attribute for expand button of doc sidebar"
+  },
+  "theme.docs.sidebar.expandButtonAriaLabel": {
+    "message": "Déplier le menu latéral",
+    "description": "The ARIA label and title attribute for expand button of doc sidebar"
+  },
+  "theme.navbar.mobileDropdown.collapseButton.expandAriaLabel": {
+    "message": "Expand the dropdown",
+    "description": "The ARIA label of the button to expand the mobile dropdown navbar item"
+  },
+  "theme.navbar.mobileDropdown.collapseButton.collapseAriaLabel": {
+    "message": "Collapse the dropdown",
+    "description": "The ARIA label of the button to collapse the mobile dropdown navbar item"
+  },
+  "theme.SearchPage.existingResultsTitle": {
+    "message": "Search results for \"{query}\"",
+    "description": "The search page title for non-empty query"
+  },
+  "theme.SearchPage.emptyResultsTitle": {
+    "message": "Search the documentation",
+    "description": "The search page title for empty query"
+  },
+  "theme.SearchPage.searchContext.everywhere": {
+    "message": "Everywhere"
+  },
+  "theme.SearchPage.documentsFound.plurals": {
+    "message": "1 document found|{count} documents found",
+    "description": "Pluralized label for \"{count} documents found\". Use as much plural forms (separated by \"|\") as your language support (see https://www.unicode.org/cldr/cldr-aux/charts/34/supplemental/language_plural_rules.html)"
+  },
+  "theme.SearchPage.noResultsText": {
+    "message": "No documents were found",
+    "description": "The paragraph for empty search result"
+  },
+  "theme.SearchBar.noResultsText": {
+    "message": "No results"
+  },
+  "theme.SearchBar.seeAllOutsideContext": {
+    "message": "See all results outside \"{context}\""
+  },
+  "theme.SearchBar.searchInContext": {
+    "message": "See all results within \"{context}\""
+  },
+  "theme.SearchBar.seeAll": {
+    "message": "See all results"
+  },
+  "theme.SearchBar.label": {
+    "message": "Search",
+    "description": "The ARIA label and placeholder for search button"
+  },
+  "theme.blog.post.plurals": {
+    "message": "Un article|{count} articles",
+    "description": "Pluralized label for \"{count} posts\". Use as much plural forms (separated by \"|\") as your language support (see https://www.unicode.org/cldr/cldr-aux/charts/34/supplemental/language_plural_rules.html)"
+  },
+  "theme.blog.tagTitle": {
+    "message": "{nPosts} tagués avec « {tagName} »",
+    "description": "The title of the page for a blog tag"
+  },
+  "theme.blog.author.pageTitle": {
+    "message": "{authorName} - {nPosts}",
+    "description": "The title of the page for a blog author"
+  },
+  "theme.blog.authorsList.pageTitle": {
+    "message": "Authors",
+    "description": "The title of the authors page"
+  },
+  "theme.blog.authorsList.viewAll": {
+    "message": "View All Authors",
+    "description": "The label of the link targeting the blog authors page"
+  },
+  "theme.blog.author.noPosts": {
+    "message": "This author has not written any posts yet.",
+    "description": "The text for authors with 0 blog post"
+  },
+  "theme.contentVisibility.unlistedBanner.title": {
+    "message": "Page non répertoriée",
+    "description": "The unlisted content banner title"
+  },
+  "theme.contentVisibility.unlistedBanner.message": {
+    "message": "Cette page n'est pas répertoriée. Les moteurs de recherche ne l'indexeront pas, et seuls les utilisateurs ayant un lien direct peuvent y accéder.",
+    "description": "The unlisted content banner message"
+  },
+  "theme.contentVisibility.draftBanner.title": {
+    "message": "Draft page",
+    "description": "The draft content banner title"
+  },
+  "theme.contentVisibility.draftBanner.message": {
+    "message": "This page is a draft. It will only be visible in dev and be excluded from the production build.",
+    "description": "The draft content banner message"
+  },
+  "theme.docs.DocCard.categoryDescription.plurals": {
+    "message": "1 élément|{count} éléments",
+    "description": "The default description for a category card in the generated index about how many items this category includes"
+  },
+  "theme.ErrorPageContent.tryAgain": {
+    "message": "Réessayer",
+    "description": "The label of the button to try again rendering when the React error boundary captures an error"
+  },
+  "theme.common.skipToMainContent": {
+    "message": "Aller au contenu principal",
+    "description": "The skip to content label used for accessibility, allowing to rapidly navigate to main content with keyboard tab/enter navigation"
+  },
+  "theme.tags.tagsPageTitle": {
+    "message": "Tags",
+    "description": "The title of the tag list page"
+  },
+  "examples.teaches.hello_world": {
+    "message": "la plus petite application : un point d'entrée, une page `StatelessWidget`"
+  },
+  "examples.teaches.counter": {
+    "message": "l'état : un `StatefulWidget`, son `State`, des gestionnaires, un minuteur, des tests unitaires"
+  },
+  "examples.teaches.widgets": {
+    "message": "**la galerie de widgets** : chaque widget avec un exemple vivant et son code"
+  },
+  "examples.teaches.forms": {
+    "message": "champs de texte, choix, sélecteurs, validation et envoi"
+  },
+  "examples.teaches.navigation": {
+    "message": "routes, paramètres, chaînes de requête, pages imbriquées, gardes, barres de navigation"
+  },
+  "examples.teaches.http": {
+    "message": "appeler une API JSON : chargement, erreurs, nouvelles tentatives, envoi de données"
+  },
+  "examples.teaches.websocket": {
+    "message": "une connexion durable : des messages dans le temps, envoi, reconnexion"
+  },
+  "examples.teaches.authentication": {
+    "message": "connexion, un service d'authentification partagé, gardes de routes, sessions"
+  },
+  "examples.teaches.forge": {
+    "message": "une vraie application plus grande (front end et back end)"
+  }
+}

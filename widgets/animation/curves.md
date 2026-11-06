@@ -25,7 +25,7 @@ pub enum Curve { .. }
 From [`frus-examples/widgets/src/features/animation/widgets/curves.rs`](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/animation/widgets/curves.rs):
 
 ```rust
-//! `Curve` — the shape of a motion, separate from its duration. Every animated widget
+//! `Curve`: the shape of a motion, separate from its duration. Every animated widget
 //! takes one; `eased(progress, &curve)` applies one to a progress of your own.
 //!
 //! Below, one `AnimationController` loops from 0 to 1 and every dot reads the same linear

@@ -32,11 +32,11 @@ impl ShaderMask {
 From [`frus-examples/widgets/src/features/painting/widgets/shader_mask.rs`](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/painting/widgets/shader_mask.rs):
 
 ```rust
-//! `ShaderMask` — lays a gradient over a child's own pixels: a headline painted in a
+//! `ShaderMask`: lays a gradient over a child's own pixels: a headline painted in a
 //! gradient, a list that fades out at its edge, a spotlight.
 //!
 //! By default the mask's alpha multiplies the child (a fade). With `BlendMode::SrcIn`
-//! the mask's colours replace the child's wherever the child is drawn — a gradient
+//! the mask's colours replace the child's wherever the child is drawn: a gradient
 //! fill for text or icons.
 
 use frus::{Align, Alignment, BlendMode, Color, Column, Container, ShaderMask, Text, Widget};
@@ -57,8 +57,8 @@ pub fn example() -> Box<dyn Widget> {
             .blend(BlendMode::SrcIn)
             .child(Text::new("Gradient headline").size(36.0)),
         )),
-        // The default blend multiplies alpha in: opaque at the top, gone at the bottom —
-        // the edge of a list that continues past view.
+        // The default blend multiplies alpha in: opaque at the top, gone at the bottom,
+// the edge of a list that continues past view.
         Box::new(section(
             "Fade out at the bottom",
             ShaderMask::fade_out_bottom().child(
@@ -78,7 +78,7 @@ pub fn example() -> Box<dyn Widget> {
                 ),
             ),
         )),
-        // A radial mask: visible in the middle, fading towards the edges — a spotlight
+        // A radial mask: visible in the middle, fading towards the edges, a spotlight
         // or a vignette. The default blend multiplies colour as well as alpha, so a pure
         // fade is drawn in white, from opaque to transparent.
         Box::new(section(
@@ -114,7 +114,7 @@ pub fn example() -> Box<dyn Widget> {
 
 Blends a **two-stop fade** over its child: a list that fades out at its bottom edge, a headline filled with a gradient, a photograph dissolving into its page.
 
-The fade is written in **fractions of the child's box** — `(0, 0)` its top-left corner, `(1, 1)` its bottom-right — and follows it through every resize with nothing to recompute. The default blend, `BlendMode::Modulate`, multiplies, so the fade's *alpha* becomes the child's transparency: that is what makes a mask a mask, and it is why the colours in the examples below are white with only their alpha varying. Any other blend mode turns it into a tint, a highlight, or a silhouette instead.
+The fade is written in **fractions of the child's box** (`(0, 0)` its top-left corner, `(1, 1)` its bottom-right) and follows it through every resize with nothing to recompute. The default blend, `BlendMode::Modulate`, multiplies, so the fade's *alpha* becomes the child's transparency: that is what makes a mask a mask, and it is why the colours in the examples below are white with only their alpha varying. Any other blend mode turns it into a tint, a highlight, or a silhouette instead.
 
 ```rust
 ShaderMask::fade_out_bottom().child(list)
