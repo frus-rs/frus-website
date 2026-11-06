@@ -16,3 +16,4 @@ docs/internals
 static/downloads
 src/data/examples.json
 .frus-release
+tools/example-shots/target
