@@ -1,0 +1,32 @@
+name: Translation
+description: Offer to translate the site into a new language, or report a wrong translation
+labels: ["translation"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        To translate a French documentation page, comment on the [French translation issue](https://github.com/frus-rs/frus-website/issues/2) instead, so that two people do not take the same page. [TRANSLATING.md](https://github.com/frus-rs/frus-website/blob/master/TRANSLATING.md) explains how.
+
+  - type: dropdown
+    id: kind
+    attributes:
+      label: What is it
+      options:
+        - A new language I would like to translate into
+        - A wrong or awkward translation
+    validations:
+      required: true
+
+  - type: input
+    id: language
+    attributes:
+      label: Language
+      placeholder: Español, Deutsch, Português...
+    validations:
+      required: true
+
+  - type: textarea
+    id: details
+    attributes:
+      label: Details
+      description: For a wrong translation, the page, the text as it is, and what it should say.

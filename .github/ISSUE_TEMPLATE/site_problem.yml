@@ -1,0 +1,39 @@
+name: Something wrong on the site
+description: A broken page or link, a layout problem, the playground or the search misbehaving, a wrong translation
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for the report. A mistake in the *content* of a documentation page belongs to the [frus repository](https://github.com/frus-rs/frus/issues): the site copies those pages from there.
+
+  - type: input
+    id: page
+    attributes:
+      label: Page
+      description: The address where you saw it.
+      placeholder: https://frus.dev/fr/examples
+    validations:
+      required: true
+
+  - type: textarea
+    id: what
+    attributes:
+      label: What is wrong
+      description: What you saw, and what you expected instead.
+    validations:
+      required: true
+
+  - type: input
+    id: browser
+    attributes:
+      label: Browser and device
+      placeholder: Firefox 133 on Windows 11, or Chrome on an Android phone
+    validations:
+      required: true
+
+  - type: textarea
+    id: screenshot
+    attributes:
+      label: Screenshot
+      description: For anything you can see, please add one.

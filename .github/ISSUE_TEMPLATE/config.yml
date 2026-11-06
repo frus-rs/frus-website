@@ -1,0 +1,11 @@
+blank_issues_enabled: true
+contact_links:
+  - name: A bug in frus, or a feature for frus
+    url: https://github.com/frus-rs/frus/issues
+    about: The framework's issues. This repository is the website only.
+  - name: A mistake in a documentation page
+    url: https://github.com/frus-rs/frus/tree/master/docs
+    about: The documentation is written in the frus repository and copied into the site. Fix it there, or open an issue there.
+  - name: Question or idea
+    url: https://github.com/frus-rs/frus/discussions
+    about: Anything that is not yet a concrete problem with the site. English or French.

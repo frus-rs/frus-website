@@ -12,6 +12,8 @@ npm run build      # the static site in both languages: build/ and build/fr/
 npm run serve      # serves build/, where the language menu works
 ```
 
+You need Node 20 or newer. Contributing? Start with [CONTRIBUTING.md](CONTRIBUTING.md).
+
 `npm start` serves one language: there, the language menu leads to "Page Not Found". To
 see both, build and serve. [TRANSLATING.md](TRANSLATING.md) says how a page is translated.
 
@@ -108,14 +110,43 @@ outside service.
 
 Docusaurus builds with `@docusaurus/faster`, which `future.v4` requires since 3.10.
 
+## The example pictures
+
+The Examples page and the home page show each example application as it first opens.
+`tools/example-shots` renders the applications themselves, from a `../frus` checkout, and
+`shrink.py` turns them into the WebP pictures in `static/examples/`:
+
+```sh
+cargo run --release --manifest-path tools/example-shots/Cargo.toml -- static/examples
+python tools/example-shots/shrink.py static/examples      # needs Pillow
+```
+
 ## Deployment
 
-Not wired yet. `SITE_URL` and `BASE_URL` set where the site is served (defaults:
-`https://frus.dev`, a placeholder, and `/`):
+The site is served at <https://frus.dev>. The `Dockerfile` builds everything a deployment needs,
+the playground's wasm included, and serves it with nginx (`deploy/nginx.conf`):
+
+```sh
+docker build -t frus-website .
+docker run -p 8080:80 frus-website        # http://localhost:8080
+```
+
+`SITE_URL` and `BASE_URL` set where the site is served (defaults: `https://frus.dev` and `/`):
 
 ```sh
 SITE_URL=https://example.org BASE_URL=/ npm run build
 ```
 
-CI (`.github/workflows/build.yml`) builds the site on every push and pull request, against
-frus's `master`. It does not publish the site.
+CI (`.github/workflows/build.yml`) builds the site and type-checks it on every push and pull
+request, against frus's `master`. It does not publish the site.
+
+## Contributing
+
+Contributions are welcome, translations especially. [CONTRIBUTING.md](CONTRIBUTING.md) says
+where each kind of change belongs (much of the text lives in the frus repository), how to set up
+and what to check before a pull request. [TRANSLATING.md](TRANSLATING.md) covers translations.
+
+## Licence
+
+MIT or Apache-2.0, at your option: see [LICENSE-MIT](LICENSE-MIT), [LICENSE-APACHE](LICENSE-APACHE)
+and [NOTICE](NOTICE).
