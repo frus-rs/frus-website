@@ -8,6 +8,7 @@
     "check:dashes": "node scripts/check-dashes.mjs",
     "prestart": "npm run sync && npm run examples",
     "start": "docusaurus start",
+    "start:fr": "npm run start -- --locale fr",
     "prebuild": "npm run sync && npm run examples && npm run check:dashes",
     "build": "docusaurus build",
     "serve": "docusaurus serve",

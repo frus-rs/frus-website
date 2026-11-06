@@ -142,9 +142,9 @@ const config: Config = {
         {to: '/playground', label: 'Playground', position: 'left'},
         {to: '/examples', label: 'Examples', position: 'left'},
         {to: '/blog', label: 'Blog', position: 'left'},
-        {href: 'https://docs.rs/frus', label: 'API', position: 'right'},
         {type: 'localeDropdown', position: 'right'},
-        {href: repo, label: 'GitHub', position: 'right'},
+        // GitHub's mark, not its name: the bar is full at a laptop's width (src/css/custom.css).
+        {href: repo, position: 'right', className: 'navbar-github', 'aria-label': 'GitHub'},
       ],
     },
     footer: {

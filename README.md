@@ -1,14 +1,19 @@
 # frus-website
 
 The frus website: a home page, the documentation, the widget catalog and the blog, built with
-[Docusaurus](https://docusaurus.io/). This repository is private; frus itself is
+[Docusaurus](https://docusaurus.io/), in English and French. frus itself is
 <https://github.com/frus-rs/frus>.
 
 ```sh
 npm install
-npm start          # http://localhost:3000, reloads on change
-npm run build      # the static site, in build/
+npm start          # http://localhost:3000, in English, reloads on change
+npm run start:fr   # the same, in French
+npm run build      # the static site in both languages: build/ and build/fr/
+npm run serve      # serves build/, where the language menu works
 ```
+
+`npm start` serves one language: there, the language menu leads to "Page Not Found". To
+see both, build and serve. [TRANSLATING.md](TRANSLATING.md) says how a page is translated.
 
 ## Where the pages come from
 
