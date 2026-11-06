@@ -23,7 +23,7 @@ when the site is built, into `docs/` (run `npm run sync` to get them). A page's 
 
 ## How to translate a page
 
-1. Say which page you are taking in the [translation issue](https://github.com/frus-rs/frus-website/issues?q=is%3Aissue+label%3Atranslation),
+1. Say which page you are taking in the [translation issue](https://github.com/frus-rs/frus-website/issues/2),
    so that two people do not translate the same one.
 2. Run `npm run sync`, and copy the English page from `docs/` to its place under `i18n/<locale>/`.
 3. Translate the prose. Leave as they are:

@@ -26,7 +26,7 @@ anglais) dit ce qui vient ensuite, et ce qui manque à ce jour.
 Les pages de la documentation sont écrites en anglais dans le
 [dépôt frus](https://github.com/frus-rs/frus). Celles qui ne sont pas encore traduites
 s'affichent en anglais. Pour aider à les traduire, voyez
-[l'issue sur la traduction](https://github.com/frus-rs/frus/issues?q=is%3Aissue+label%3Atranslation).
+[l'issue sur la traduction](https://github.com/frus-rs/frus-website/issues/2).
 
 :::
 
