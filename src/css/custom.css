@@ -115,7 +115,7 @@ div[class^='announcementBar_'] {
 }
 
 /* The navigation bar. Its name and badge never shrink; what gives way at a laptop's width is
-   the room between items, the search's shortcut hint and the language's name. */
+   the room between items and the language's name. */
 .navbar__brand,
 .navbar__title,
 .badge--prealpha {
@@ -159,11 +159,6 @@ div[class^='announcementBar_'] {
     padding-right: 0.55rem;
   }
 
-  /* The search keeps its field, not its "ctrl K". */
-  .navbar [class*='searchHintContainer'] {
-    display: none;
-  }
-
   /* The language menu keeps its icon and arrow; the list still names each language. */
   .navbar .dropdown > .navbar__link[href='#'],
   .navbar .dropdown > .navbar__link:not([href]) {
@@ -176,19 +171,9 @@ div[class^='announcementBar_'] {
   }
 }
 
-/* Narrower still, the API reference leaves the bar (the footer keeps it) and the search
-   field gets shorter. */
 @media (min-width: 997px) and (max-width: 1200px) {
   .navbar__item {
     padding-left: 0.4rem;
     padding-right: 0.4rem;
-  }
-
-  .navbar-api {
-    display: none;
-  }
-
-  .navbar .navbar__search-input {
-    width: 8.5rem;
   }
 }
