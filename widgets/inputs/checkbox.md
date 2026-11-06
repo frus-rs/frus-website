@@ -30,7 +30,7 @@ impl Checkbox {
 From [`frus-examples/widgets/src/features/inputs/widgets/checkbox.rs`](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/inputs/widgets/checkbox.rs):
 
 ```rust
-//! `Checkbox` — a yes/no choice, with an optional label beside it. `Checkbox::maybe` is
+//! `Checkbox`: a yes/no choice, with an optional label beside it. `Checkbox::maybe` is
 //! the three-state version: on, off, or partly on (a "select all" over a list).
 
 use frus::{
@@ -155,18 +155,18 @@ impl State for CheckboxDemoState {
 | `.check_color()` | `color: Color` | The tick drawn on that fill; the theme's, then `on_primary`. |
 | `.border_color()` | `color: Color` | The outline when the box is **not** ticked and at rest. |
 | `.active_border_color()` | `color: Color` | The outline under a pointer, a finger or focus. |
-| `.overlay_color()` | `overlay: WidgetStateProperty<Color>` | — |
+| `.overlay_color()` | `overlay: WidgetStateProperty<Color>` |  |
 | `.splash_radius()` | `radius: f32` | That halo's radius. Unset, the theme's, then 20. |
-| `.visual_density()` | `density: crate::VisualDensity` | — |
+| `.visual_density()` | `density: crate::VisualDensity` |  |
 | `.radius()` | `radius: f32` | The box's corner radius. Unset, the theme's, then 2. |
 | `.label_color()` | `color: Color` | The label's colour; the theme's `on_surface` otherwise. |
-| `.error()` | `error: bool` | — |
+| `.error()` | `error: bool` |  |
 | `.semantic_label()` | `label: impl Into<String>` | **What a screen reader calls it** when it has no label to read. |
 | `.label()` | `label: impl Into<String>` | Adds a label after it. |
-| `.enabled()` | `enabled: bool` | Whether the box can be ticked. Disabled it is **inert** — no message, out of the tab order, announced as unavailable — and it still shows whether it is ticked, because read-only is not invisible. |
+| `.enabled()` | `enabled: bool` | Whether the box can be ticked. Disabled it is **inert** (no message, out of the tab order, announced as unavailable) and it still shows whether it is ticked, because read-only is not invisible. |
 | `.on_toggle()` | `on_toggle: impl Fn(bool) -> R + 'static` | A closure producing a message from the new state, checked or not. |
 | `.on_change()` | `on_change: impl Fn(Option<bool>) -> R + 'static` | A closure producing a message from the new state, **including** the partly-on one. What `Checkbox::maybe` wants; it wins over `on_toggle` when both are given. |
-| `.tap_target()` | `target: TapTarget` | **How much room it reserves for a finger** (`TapTarget`). Unset, the theme's answer, which is `Padded` — 48 pixels either way, whatever this control paints in the middle of it. |
+| `.tap_target()` | `target: TapTarget` | **How much room it reserves for a finger** (`TapTarget`). Unset, the theme's answer, which is `Padded`: 48 pixels either way, whatever this control paints in the middle of it. |
 
 ## Behaviour
 

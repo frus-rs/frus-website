@@ -29,7 +29,7 @@ impl Switch {
 From [`frus-examples/widgets/src/features/inputs/widgets/switch.rs`](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/inputs/widgets/switch.rs):
 
 ```rust
-//! `Switch` — an on/off toggle that takes effect at once (a setting), as opposed to a
+//! `Switch`: an on/off toggle that takes effect at once (a setting), as opposed to a
 //! checkbox, which is usually confirmed later (a form).
 
 use frus::{Align, Color, Icons, Row, State, StateContext, StatefulWidget, Switch, Text, Widget};
@@ -125,22 +125,22 @@ impl State for SwitchDemoState {
 
 | Method | Argument | Effect |
 | --- | --- | --- |
-| `.tap_target()` | `target: TapTarget` | **How much room it reserves for a finger** (`TapTarget`). Unset, the theme's answer, which is `Padded` — at least 48 pixels either way, whatever this control paints inside it. |
+| `.tap_target()` | `target: TapTarget` | **How much room it reserves for a finger** (`TapTarget`). Unset, the theme's answer, which is `Padded`: at least 48 pixels either way, whatever this control paints inside it. |
 | `.track_color()` | `color: Color` | The track's colour when the switch is **on**, in every state; the theme's `primary` otherwise. |
-| `.inactive_track_color()` | `color: Color` | — |
-| `.thumb_icon()` | `icon: IconData` | — |
-| `.inactive_thumb_icon()` | `icon: IconData` | The same while the switch is **off** — a cross beside the tick. |
-| `.thumb_color()` | `color: Color` | — |
-| `.inactive_thumb_color()` | `color: Color` | — |
-| `.thumb_colors()` | `colors: WidgetStateProperty<Color>` | — |
+| `.inactive_track_color()` | `color: Color` |  |
+| `.thumb_icon()` | `icon: IconData` |  |
+| `.inactive_thumb_icon()` | `icon: IconData` | The same while the switch is **off**: a cross beside the tick. |
+| `.thumb_color()` | `color: Color` |  |
+| `.inactive_thumb_color()` | `color: Color` |  |
+| `.thumb_colors()` | `colors: WidgetStateProperty<Color>` |  |
 | `.track_colors()` | `colors: WidgetStateProperty<Color>` | See `Self::thumb_colors`. |
 | `.track_outline_color()` | `colors: WidgetStateProperty<Color>` | Unset, `outline` round an off track, none round an on one, and the disabled container colour round a disabled off one. |
 | `.track_outline_width()` | `width: f32` | **How wide that rule is.** Unset, the theme's, then 2 pixels. |
 | `.overlay_color()` | `colors: WidgetStateProperty<Color>` | Unset, the theme's, then `primary` round an on switch and `on_surface` round an off one, at 8 % under a pointer and 10 % focused or pressed. |
 | `.splash_radius()` | `radius: f32` | **The halo's radius.** Unset, the theme's, then 20. |
-| `.padding()` | `padding: Insets` | Unset, the theme's, then 4 pixels left and right — which is what lets the halo spill past the track. |
+| `.padding()` | `padding: Insets` | Unset, the theme's, then 4 pixels left and right, which is what lets the halo spill past the track. |
 | `.on_toggle()` | `on_toggle: impl Fn(bool) -> R + 'static` | A closure producing a message from the new state. |
-| `.enabled()` | `enabled: bool` | Whether the switch can be flipped. Disabled it is **inert** — no message, out of the tab order, announced as unavailable — and it still shows which way it is set. |
+| `.enabled()` | `enabled: bool` | Whether the switch can be flipped. Disabled it is **inert** (no message, out of the tab order, announced as unavailable) and it still shows which way it is set. |
 
 ## Behaviour
 

@@ -29,7 +29,7 @@ impl InkWell {
 From [`frus-examples/widgets/src/features/interaction/widgets/ink_well.rs`](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/interaction/widgets/ink_well.rs):
 
 ```rust
-//! `InkWell` — makes any content pressable, with the ink ripple that spreads from the
+//! `InkWell`: makes any content pressable, with the ink ripple that spreads from the
 //! point of contact, a hover tint and a focus highlight.
 //!
 //! Use it for custom tiles and rows that should feel like buttons. It answers a click and
@@ -107,7 +107,7 @@ pub fn example() -> Box<dyn Widget> {
 
 | Method | Argument | Effect |
 | --- | --- | --- |
-| `.color()` | `color: Color` | Overrides the splash colour, **alpha included** — the caller decides how present the ink is, not just what hue it takes. |
+| `.color()` | `color: Color` | Overrides the splash colour, **alpha included**: the caller decides how present the ink is, not just what hue it takes. |
 | `.radius()` | `radius: impl Into<BorderRadius>` | The rounding the ink is clipped to (uniform via `f32`, per corner via `BorderRadius`). It should match whatever draws the surface underneath. |
 | `.on_click()` | `msg: impl Into<Msg>` | The message a tap emits. |
 | `.on_long_press()` | `msg: impl Into<Msg>` | The message a long press emits. |

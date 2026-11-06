@@ -32,7 +32,7 @@ impl CircleAvatar {
 From [`frus-examples/widgets/src/features/display/widgets/avatar.rs`](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/display/widgets/avatar.rs):
 
 ```rust
-//! `CircleAvatar` — a circle that stands for a person: their picture, or failing that
+//! `CircleAvatar`: a circle that stands for a person: their picture, or failing that
 //! their initials or an icon, on a colour.
 
 use frus::{CircleAvatar, Color, Colors, Icon, Icons, Row, Widget, Wrap};
@@ -42,7 +42,7 @@ use crate::common::shared::{section, sections};
 pub fn example() -> Box<dyn Widget> {
     // `asset!` embeds a file in the binary at compile time (the path is relative to this
     // source file), and decodes it once per process. `handle()` is the decoded picture,
-    // or `None` if the bytes were not an image — the avatar then shows its colour.
+    // or `None` if the bytes were not an image: the avatar then shows its colour.
     let photo = frus::asset!("../../../../res/mipmap-xxxhdpi/ic_launcher.png").handle();
 
     sections(vec![
@@ -104,7 +104,7 @@ pub fn example() -> Box<dyn Widget> {
 | `.child()` | `child: impl Widget<Msg> + 'static` | What is shown in the circle, centred: usually a text, or an icon. |
 | `.background_color()` | `color: Color` | The colour the circle is filled with; the scheme's `primary_container` otherwise. |
 | `.foreground_color()` | `color: Color` | The colour of the child's text and icons; the scheme's `on_primary_container` otherwise. |
-| `.background_image()` | `image: impl Into<Option<ImageHandle>>` | A picture under the child, covering the circle: the fallback for `Self::foreground_image`. `None` — a picture not yet arrived — shows the colour. |
+| `.background_image()` | `image: impl Into<Option<ImageHandle>>` | A picture under the child, covering the circle: the fallback for `Self::foreground_image`. `None` (a picture not yet arrived) shows the colour. |
 | `.foreground_image()` | `image: impl Into<Option<ImageHandle>>` | A picture over the child, covering the circle: usually the user's photo. |
 | `.radius()` | `radius: f32` | The radius, in logical pixels: the avatar is this big, whatever it holds. |
 | `.min_radius()` | `radius: f32` | The smallest radius it may have; nought by default once a bound is set. |
@@ -113,7 +113,7 @@ pub fn example() -> Box<dyn Widget> {
 
 ## Behaviour
 
-A circle that represents a user: a picture cropped to the circle, or, without one, a child — usually their initials — centred on a colour.
+A circle that represents a user: a picture cropped to the circle, or, without one, a child (usually their initials) centred on a colour.
 
 ```rust
 CircleAvatar::initials("Ada Lovelace")                       // "AL" on the theme's colour

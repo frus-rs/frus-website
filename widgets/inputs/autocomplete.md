@@ -33,7 +33,7 @@ impl Autocomplete {
 From [`frus-examples/widgets/src/features/inputs/widgets/autocomplete.rs`](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/inputs/widgets/autocomplete.rs):
 
 ```rust
-//! `Autocomplete` — a text field that suggests completions in a floating list. The
+//! `Autocomplete`: a text field that suggests completions in a floating list. The
 //! application filters the suggestions; the widget shows them and reports the pick.
 
 use frus::{Autocomplete, State, StateContext, StatefulWidget, Text, Widget};
@@ -126,9 +126,9 @@ impl State for AutocompleteDemoState {
 
 | Method | Argument | Effect |
 | --- | --- | --- |
-| `.text_style()` | `style: TextStyle` | — |
+| `.text_style()` | `style: TextStyle` |  |
 | `.width()` | `width: f32` | The width of the field and the suggestions, in logical pixels (260 by default). |
-| `.active()` | `index: usize` | The index of the **active** suggestion (highlighted; chosen from the keyboard). The app moves it along (arrows) and commits it (Enter) — the state stays with it. |
+| `.active()` | `index: usize` | The index of the **active** suggestion (highlighted; chosen from the keyboard). The app moves it along (arrows) and commits it (Enter): the state stays with it. |
 | `.max_visible()` | `rows: usize` | Limits the number of **visible** suggestions; beyond that the floating list **scrolls** (a viewport bounded to `n` rows) instead of stretching forever. |
 | `.suggestion()` | `label: impl Into<String>` | Adds a suggestion to the floating list. |
 

@@ -10,7 +10,7 @@
 
 .list {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(min(100%, 20rem), 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 26rem), 1fr));
   gap: 1rem;
   padding: 0;
   margin: 0 0 3rem;
@@ -20,13 +20,43 @@
 
 .card {
   display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
+  gap: 1.1rem;
   padding: 1.25rem;
   border: 1px solid var(--frus-border);
   border-radius: 12px;
   background: var(--frus-surface);
   counter-increment: example;
+}
+
+.body {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 0.5rem;
+  min-width: 0;
+}
+
+/* The application's first screen, in a phone's outline. */
+.screen {
+  flex: none;
+  align-self: flex-start;
+  width: 108px;
+  padding: 4px;
+  border-radius: 16px;
+  background: #0d0d10;
+  border: 1px solid var(--frus-border);
+  transition: border-color 0.15s ease;
+}
+
+.screen:hover {
+  border-color: var(--ifm-color-primary);
+}
+
+.screen img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
 }
 
 .name {
@@ -71,4 +101,10 @@
 
 .run {
   max-width: 46rem;
+}
+
+@media (max-width: 420px) {
+  .screen {
+    width: 84px;
+  }
 }

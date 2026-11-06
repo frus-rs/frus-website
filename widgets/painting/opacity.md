@@ -29,7 +29,7 @@ impl Opacity {
 From [`frus-examples/widgets/src/features/painting/widgets/opacity.rs`](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/painting/widgets/opacity.rs):
 
 ```rust
-//! `Opacity` — paints a child partly transparent, the whole subtree as one layer.
+//! `Opacity`: paints a child partly transparent, the whole subtree as one layer.
 //!
 //! To fade something in or out over time, use `AnimatedOpacity` (Animation category);
 //! `Opacity` is for a fixed or state-driven amount.
@@ -54,7 +54,7 @@ pub fn example() -> Box<dyn Widget> {
                 .child(Opacity::new(1.0, tile("100 %"))),
         )),
         // Live: the slider's value is the opacity. The overlapping squares fade as one
-        // picture — you never see the lower one through the upper.
+        // picture: you never see the lower one through the upper.
         Box::new(section("Driven by state", live())),
     ])
 }

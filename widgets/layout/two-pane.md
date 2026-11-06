@@ -33,12 +33,12 @@ pub fn responsive<Msg>(width: f32) -> Responsive<Msg>
 From [`frus-examples/widgets/src/features/layout/widgets/two_pane.rs`](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/layout/widgets/two_pane.rs):
 
 ```rust
-//! `TwoPane` and `responsive` — adapt a screen to its size class: a list and its detail
+//! `TwoPane` and `responsive`: adapt a screen to its size class: a list and its detail
 //! side by side on a wide window, one at a time on a phone.
 //!
 //! The size class (`Compact` under 600 px, `Medium` up to 840, `Expanded` above) is a
 //! plain value: take it from the window, or, as here, from the room a `LayoutBuilder`
-//! reports — or from a switch, to show both arrangements on one screen.
+//! reports, or from a switch, to show both arrangements on one screen.
 
 use frus::{
     component, responsive, Align, Button, Color, Column, Container, Expanded, LayoutBuilder,
@@ -199,7 +199,7 @@ An adaptive master-detail layout.
 
 A responsive selector for a given width, in logical px.
 
-`responsive(w).compact(a).medium(b).expanded(c)` — see `Responsive`.
+`responsive(w).compact(a).medium(b).expanded(c)`: see `Responsive`.
 
 ## See also
 

@@ -33,7 +33,7 @@ impl NavScaffold {
 From [`frus-examples/widgets/src/features/navigation/widgets/navscaffold.rs`](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/navigation/widgets/navscaffold.rs):
 
 ```rust
-//! `NavScaffold` — navigation that adapts to the screen's size class: a bottom bar on a
+//! `NavScaffold`: navigation that adapts to the screen's size class: a bottom bar on a
 //! phone, a rail on a tablet, an extended rail (or a docked drawer) on a wide window.
 //! The destinations are declared once.
 
@@ -76,7 +76,7 @@ impl State for NavScaffoldDemoState {
     type Widget = NavScaffoldDemo;
 
     fn build(&self, cx: &StateContext<Self>) -> Box<dyn Widget> {
-        // In an app the class comes from the screen — `MediaQuery::of().size_class()` —
+        // In an app the class comes from the screen (`MediaQuery::of().size_class()`)
         // so rotating a tablet or widening a window switches the presentation. Here it
         // is picked by hand so all three fit in the demo.
         let class = CLASSES[self.class].1;
@@ -120,13 +120,13 @@ impl State for NavScaffoldDemoState {
 | `.destinations()` | `destinations: impl IntoIterator<Item = NavigationDestination>` | Adds a whole list of destinations **declared elsewhere**. Call this **before** `body`. |
 | `.tooltip()` | `message: impl Into<String>` | What a pointer resting on the **last** destination is told. See `NavigationRail::tooltip`. |
 | `.badge()` | `count: u32` | Adds a notification count to the **last** destination. |
-| `.badge_dot()` | — | Adds a dot to the **last** destination (milestone 707). |
+| `.badge_dot()` |  | Adds a dot to the **last** destination (milestone 707). |
 | `.selected_icon()` | `icon: impl Into<DestinationIcon>` | The glyph the **last** destination shows while it is selected, where that differs from its resting one. See `NavigationRail::selected_icon`. |
-| `.disabled()` | — | Marks the **last** destination inaccessible. See `NavigationRail::disabled`. |
+| `.disabled()` |  | Marks the **last** destination inaccessible. See `NavigationRail::disabled`. |
 | `.indicator_color()` | `color: Color` | The **last** destination's own indicator colour, over the theme's. See `NavigationRail::indicator_color`. |
-| `.nav_labels()` | `labels: RailLabels` | **When the destinations say what they are**, whichever widget the class chose. Unsaid, each keeps its own default — a bar labels everything, a plain rail nothing, an extended rail everything (milestones 432 and 433). |
-| `.rail()` | `configure: impl FnOnce(NavigationRail<Msg>) -> NavigationRail<Msg> + 'static` | **What to do to the rail** once the shell has built it — the door `Scaffold::rail` opens on the fixed shell, and the way to decline this one's extended form: `.rail(\|rail\| rail.extended(false))`. |
-| `.nav_drawer()` | `configure: impl FnOnce(NavigationDrawer<Msg>) -> NavigationDrawer<Msg> + 'static` | **Give the widest band a drawer** instead of an extended rail, and say what to do to it once the shell has built it — the door `Self::rail` opens on the other two forms. `.nav_drawer(\|drawer\| drawer.header(title))` is the ordinary use: a drawer with nothing above its destinations is a rail that spent 48 more pixels. |
+| `.nav_labels()` | `labels: RailLabels` | **When the destinations say what they are**, whichever widget the class chose. Unsaid, each keeps its own default: a bar labels everything, a plain rail nothing, an extended rail everything (milestones 432 and 433). |
+| `.rail()` | `configure: impl FnOnce(NavigationRail<Msg>) -> NavigationRail<Msg> + 'static` | **What to do to the rail** once the shell has built it: the door `Scaffold::rail` opens on the fixed shell, and the way to decline this one's extended form: `.rail(\|rail\| rail.extended(false))`. |
+| `.nav_drawer()` | `configure: impl FnOnce(NavigationDrawer<Msg>) -> NavigationDrawer<Msg> + 'static` | **Give the widest band a drawer** instead of an extended rail, and say what to do to it once the shell has built it: the door `Self::rail` opens on the other two forms. `.nav_drawer(\|drawer\| drawer.header(title))` is the ordinary use: a drawer with nothing above its destinations is a rail that spent 48 more pixels. |
 | `.body()` | `body: impl Widget<Msg> + 'static` | Sets the body and **finalises** the scaffold; call it last. The body fills the space left beside, or above, the navigation. |
 
 ## Behaviour

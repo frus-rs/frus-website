@@ -30,7 +30,7 @@ impl Button {
 From [`frus-examples/widgets/src/features/buttons/widgets/button.rs`](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/buttons/widgets/button.rs):
 
 ```rust
-//! `Button` — the labelled button, in its five variants: filled, tonal, elevated,
+//! `Button`: the labelled button, in its five variants: filled, tonal, elevated,
 //! outlined and text. One widget, one `variant`, everything else shared.
 
 use frus::{
@@ -44,7 +44,7 @@ pub fn example() -> Box<dyn Widget> {
     Box::new(ButtonDemo.into_widget())
 }
 
-/// The demo keeps one number — how many times a button was pressed — so that every
+/// The demo keeps one number (how many times a button was pressed) so that every
 /// press visibly does something.
 struct ButtonDemo;
 
@@ -81,7 +81,7 @@ impl State for ButtonDemoState {
 
         sections(vec![
             Box::new(Text::new(format!(
-                "Pressed {} times — last: {}",
+                "Pressed {} times: last: {}",
                 self.presses, self.last
             ))),
             // From the loudest to the quietest. Use one `Filled` per screen for the main
@@ -140,7 +140,7 @@ impl State for ButtonDemoState {
                             .on_press(press("Next")),
                     ),
             )),
-            // `enabled(false)` greys a button out and makes it ignore presses — for an
+            // `enabled(false)` greys a button out and makes it ignore presses: for an
             // action that is not possible yet (a form that is still invalid, say).
             Box::new(section(
                 "Disabled",
@@ -224,20 +224,20 @@ impl State for ButtonDemoState {
 
 | Method | Argument | Effect |
 | --- | --- | --- |
-| `.icon()` | `icon: impl Widget<Msg> + 'static` | — |
+| `.icon()` | `icon: impl Widget<Msg> + 'static` |  |
 | `.enabled()` | `enabled: bool` | Enables or **disables** the button. |
 | `.style()` | `style: ButtonStyle` | The builders below each set one property of it. |
 | `.radius()` | `radius: impl Into<BorderRadius>` | The corner radii (uniform via `f32`, per corner via `BorderRadius`). Unset, a **stadium**. |
-| `.shape()` | `shape: ShapeBorder` | — |
-| `.variant()` | `variant: Variant` | — |
+| `.shape()` | `shape: ShapeBorder` |  |
+| `.variant()` | `variant: Variant` |  |
 | `.label_style()` | `style: TextStyle` | The label's type. Unset, the theme's `label_large`. |
-| `.size()` | `size: f32` | Font size — sugar for `Button::label_style` with the label step resized. |
+| `.size()` | `size: f32` | Font size: sugar for `Button::label_style` with the label step resized. |
 | `.color()` | `color: Color` | The surface while enabled. |
 | `.label_color()` | `color: Color` | The label's colour while enabled. |
 | `.border_color()` | `color: Color` | The outline's colour, `1` px thick unless `border_width` says. |
 | `.border_width()` | `width: f32` | The outline's thickness; `0.0` removes it. |
 | `.padding()` | `padding: f32` | The room either side of the content. |
-| `.height()` | `height: f32` | — |
+| `.height()` | `height: f32` |  |
 | `.min_width()` | `width: f32` | The narrowest it will be, before the visual density. |
 | `.elevation()` | `elevation: f32` | How far it sits off the surface **in every state** while enabled. Unset, the variant's: an elevated button rests at 1 and rises to 3 under a pointer; a filled or tonal one is flat and rises to 1; an outlined or text one stays flat. |
 | `.icon_alignment()` | `alignment: IconAlignment` | Which side of the label an icon goes. |

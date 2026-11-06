@@ -29,7 +29,7 @@ impl Skeleton {
 From [`frus-examples/widgets/src/features/feedback/widgets/skeleton.rs`](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/feedback/widgets/skeleton.rs):
 
 ```rust
-//! `Skeleton` — a pulsing grey placeholder in the shape of content that is still loading.
+//! `Skeleton`: a pulsing grey placeholder in the shape of content that is still loading.
 //! Better than a spinner when you know the layout: the page does not jump when the data
 //! arrives.
 

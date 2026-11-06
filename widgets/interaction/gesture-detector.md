@@ -29,7 +29,7 @@ impl GestureDetector {
 From [`frus-examples/widgets/src/features/interaction/widgets/gesture_detector.rs`](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/interaction/widgets/gesture_detector.rs):
 
 ```rust
-//! `GestureDetector` — taps, double taps, long presses, secondary clicks and drags on any
+//! `GestureDetector`: taps, double taps, long presses, secondary clicks and drags on any
 //! widget, answered with your own handlers.
 //!
 //! It adds no look of its own (no ink, no hover): it is the widget it wraps. For a
@@ -138,7 +138,7 @@ impl State for GestureDemoState {
             )
             .layer(Positioned::new(chip).left(self.chip.x).top(self.chip.y));
 
-        // `pan_axis` keeps only one direction — and inside a vertical scroll, leaves the
+        // `pan_axis` keeps only one direction, and inside a vertical scroll, leaves the
         // vertical drags to the scroll.
         let slide = cx.handler(|s: &mut Self, delta: Point| {
             s.handle = (s.handle + delta.x).clamp(0.0, TRACK - HANDLE);
@@ -200,7 +200,7 @@ impl State for GestureDemoState {
 
 **Answers gestures on its child** with the application's messages: a tap, a double tap, a long press, a secondary click (the right mouse button), and a drag.
 
-It is a transparent wrapper: it **is** its child, laid out and painted exactly as the child would be without it, and it hears the gestures that land inside the child. A detector that wants a tap gives the child none of its own look — no ink, no hover — which is what `InkWell` and the buttons are for.
+It is a transparent wrapper: it **is** its child, laid out and painted exactly as the child would be without it, and it hears the gestures that land inside the child. A detector that wants a tap gives the child none of its own look (no ink, no hover) which is what `InkWell` and the buttons are for.
 
 ```rust
 use frus_widgets::{GestureDetector, Text};

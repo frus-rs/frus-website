@@ -37,7 +37,7 @@ impl Offstage {
 From [`frus-examples/widgets/src/features/interaction/widgets/visibility.rs`](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/interaction/widgets/visibility.rs):
 
 ```rust
-//! `Visibility` and `Offstage` — hide a child, and choose how much of it survives being
+//! `Visibility` and `Offstage`: hide a child, and choose how much of it survives being
 //! hidden: its box, its input, or nothing at all.
 
 use frus::{component, Align, Column, Container, Offstage, Row, Switch, Text, Visibility, Widget};
@@ -119,9 +119,9 @@ pub fn example() -> Box<dyn Widget> {
 | Type | Method | Argument | Effect |
 | --- | --- | --- | --- |
 | `Visibility` | `.visible()` | `visible: bool` | Whether the child is shown. |
-| `Visibility` | `.maintain_size()` | — | Keeps the child's **box** while hidden: it is laid out and measured as usual, but not drawn, not clickable and not read out. |
-| `Visibility` | `.maintain_interactivity()` | — | Keeps the child **taking input** while hidden. Only meaningful together with `maintain_size`, and rarely what you want: an invisible control that still reacts surprises everyone but its author. |
-| `Visibility` | `.maintain_semantics()` | — | Keeps the child in the **accessibility tree** while hidden — for content that is visually redundant but should still be announced. |
+| `Visibility` | `.maintain_size()` |  | Keeps the child's **box** while hidden: it is laid out and measured as usual, but not drawn, not clickable and not read out. |
+| `Visibility` | `.maintain_interactivity()` |  | Keeps the child **taking input** while hidden. Only meaningful together with `maintain_size`, and rarely what you want: an invisible control that still reacts surprises everyone but its author. |
+| `Visibility` | `.maintain_semantics()` |  | Keeps the child in the **accessibility tree** while hidden: for content that is visually redundant but should still be announced. |
 | `Visibility` | `.replacement()` | `replacement: impl Widget<Msg> + 'static` | What to show in the child's place when it is hidden **and** its box is not maintained. |
 | `Offstage` | `.offstage()` | `offstage: bool` | Turns it on or off from a condition; `false` lays the child out normally. |
 
@@ -137,13 +137,13 @@ The plain form collapses the child away entirely, as `Offstage` does:
 Visibility::new(banner).visible(has_error)
 ```
 
-`maintain_size` keeps the box — the child still measures and still takes its space, it is simply not drawn. That is what stops a row from twitching as a spinner comes and goes, and what lets two alternating labels of different widths hold a column steady:
+`maintain_size` keeps the box: the child still measures and still takes its space, it is simply not drawn. That is what stops a row from twitching as a spinner comes and goes, and what lets two alternating labels of different widths hold a column steady:
 
 ```rust
 Visibility::new(spinner).visible(loading).maintain_size()
 ```
 
-`replacement` puts something else in the collapsed child's place instead — a spacer, a placeholder, a shorter message.
+`replacement` puts something else in the collapsed child's place instead: a spacer, a placeholder, a shorter message.
 
 ### `Offstage`
 
@@ -153,7 +153,7 @@ Takes its child **out of the layout entirely**: no box, no paint, no input, no a
 Offstage::new(panel).offstage(!expanded)
 ```
 
-The child is not built into the tree while offstage, so it holds no retained state — a caret position, a scroll offset — and starts fresh when it comes back. That is the right trade for a branch that is genuinely gone; `Visibility::maintain_size` is the one to reach for when the box has to stay.
+The child is not built into the tree while offstage, so it holds no retained state (a caret position, a scroll offset) and starts fresh when it comes back. That is the right trade for a branch that is genuinely gone; `Visibility::maintain_size` is the one to reach for when the box has to stay.
 
 ## See also
 

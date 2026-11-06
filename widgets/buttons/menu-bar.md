@@ -40,7 +40,7 @@ impl SubmenuButton {
 From [`frus-examples/widgets/src/features/buttons/widgets/menu_bar.rs`](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/buttons/widgets/menu_bar.rs):
 
 ```rust
-//! `MenuBar`, `SubmenuButton` and `MenuPath` — the File / Edit / View menus along the
+//! `MenuBar`, `SubmenuButton` and `MenuPath`: the File / Edit / View menus along the
 //! top of a desktop window, with submenus inside them.
 
 use frus::{
@@ -56,7 +56,7 @@ pub fn example() -> Box<dyn Widget> {
 
 struct MenuBarDemo;
 
-/// Which menu is open is a **path** — the menu on the bar, then the submenu inside it —
+/// Which menu is open is a **path** (the menu on the bar, then the submenu inside it)
 /// kept by the application like any other state.
 struct MenuBarDemoState {
     path: MenuPath,
@@ -114,8 +114,8 @@ impl State for MenuBarDemoState {
             }),
         ));
 
-        // The bar reports the path it should have next — a menu opened, moved to,
-        // or everything closed — and the handler stores it.
+        // The bar reports the path it should have next (a menu opened, moved to,
+        // or everything closed) and the handler stores it.
         let bar = MenuBar::new(
             &self.path,
             cx.handler(|s: &mut MenuBarDemoState, path: MenuPath| s.path = path),
@@ -153,7 +153,7 @@ impl State for MenuBarDemoState {
 | `MenuBar` | `.menu()` | `menu: SubmenuButton<Msg>` | Adds a menu to the bar. |
 | `SubmenuButton` | `.item()` | `item: MenuItem<Msg>` | Adds a row. |
 | `SubmenuButton` | `.submenu()` | `submenu: SubmenuButton<Msg>` | Adds a row that opens `submenu` beside this menu. |
-| `SubmenuButton` | `.divider()` | — | Adds the rule between two groups. |
+| `SubmenuButton` | `.divider()` |  | Adds the rule between two groups. |
 | `SubmenuButton` | `.enabled()` | `enabled: bool` | Whether the menu can be opened. A disabled one is still shown, greyed. |
 
 ## Behaviour

@@ -32,7 +32,7 @@ impl IconButton {
 From [`frus-examples/widgets/src/features/buttons/widgets/icon_button.rs`](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/buttons/widgets/icon_button.rs):
 
 ```rust
-//! `IconButton` — a square button holding one icon, for compact actions in toolbars,
+//! `IconButton`: a square button holding one icon, for compact actions in toolbars,
 //! list rows and app bars.
 
 use frus::{
@@ -105,8 +105,8 @@ impl State for IconButtonDemoState {
                     ),
             )),
             Box::new(Text::new(format!("Liked {} times", self.likes))),
-            // A toggle: `selected` swaps to the filled look. The state is yours — the
-            // button only shows it — so the press flips a field.
+            // A toggle: `selected` swaps to the filled look. The state is yours (the
+            // button only shows it) so the press flips a field.
             Box::new(section(
                 "Selected (toggle)",
                 Row::new()
@@ -193,7 +193,7 @@ impl State for IconButtonDemoState {
 | `.border_color()` | `color: Color` | The outline's colour. |
 | `.border_width()` | `width: f32` | The outline's thickness; `0.0` removes it. |
 | `.radius()` | `radius: impl Into<BorderRadius>` | The corner radii. Unset, the button is a **circle**. |
-| `.tap_target()` | `target: TapTarget` | **How much room it reserves for a finger** (`TapTarget`). Unset, the theme's answer, which is `Padded` — at least 48 pixels either way, whatever this control paints in the middle of it. |
+| `.tap_target()` | `target: TapTarget` | **How much room it reserves for a finger** (`TapTarget`). Unset, the theme's answer, which is `Padded`: at least 48 pixels either way, whatever this control paints in the middle of it. |
 
 ## Behaviour
 

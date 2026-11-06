@@ -49,7 +49,7 @@ impl Intrinsic {
 From [`frus-examples/widgets/src/features/layout/widgets/constrained_box.rs`](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/layout/widgets/constrained_box.rs):
 
 ```rust
-//! `ConstrainedBox`, `LimitedBox`, `IntrinsicWidth` and `IntrinsicHeight` — change how
+//! `ConstrainedBox`, `LimitedBox`, `IntrinsicWidth` and `IntrinsicHeight`: change how
 //! big a child is allowed to be, rather than setting its size outright.
 
 use frus::{
@@ -70,7 +70,7 @@ pub fn example() -> Box<dyn Widget> {
                 .child(floor("OK"))
                 .child(floor("A longer label")),
         )),
-        // A ceiling: a paragraph never gets wider than 240 px, however wide the page — a
+        // A ceiling: a paragraph never gets wider than 240 px, however wide the page, a
         // comfortable reading measure.
         Box::new(section(
             "Maximum width",
@@ -172,11 +172,11 @@ fn floor(label: &str) -> ColoredBox {
 
 Floors and ceilings on either axis, for a child that would otherwise be free to take any size.
 
-A floor and a ceiling that are equal make the box **tight**: whatever the child or the space on offer says, that is the size. Set nothing and the box is transparent — it is the constraints that make it worth having, not the box.
+A floor and a ceiling that are equal make the box **tight**: whatever the child or the space on offer says, that is the size. Set nothing and the box is transparent: it is the constraints that make it worth having, not the box.
 
 ### `LimitedBox`
 
-A box that **caps its child only where nothing else does**: where the room on offer has no end — down a column's scroll, along a list — the child may take at most `max_width` or `max_height`; where it has one, the box changes nothing.
+A box that **caps its child only where nothing else does**: where the room on offer has no end (down a column's scroll, along a list) the child may take at most `max_width` or `max_height`; where it has one, the box changes nothing.
 
 ```rust
 use frus_widgets::{LimitedBox, Text};
@@ -193,7 +193,7 @@ A box sized to what its content would **like** to be.
 
 The usual case: a column of buttons that should all be as wide as the widest label, and no wider. Stretching gives them the whole column; hugging gives each its own width; only an intrinsic width gives them all the widest one.
 
-It is not free. The content is measured **once more**, unconstrained, before it is laid out for real — which is why it is a widget you reach for deliberately and not a property every box carries. Nested one inside another, the cost multiplies.
+It is not free. The content is measured **once more**, unconstrained, before it is laid out for real, which is why it is a widget you reach for deliberately and not a property every box carries. Nested one inside another, the cost multiplies.
 
 ## See also
 

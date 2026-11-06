@@ -36,7 +36,7 @@ impl ExpansionPanelList {
 From [`frus-examples/widgets/src/features/scrolling/widgets/expansionpanel.rs`](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/scrolling/widgets/expansionpanel.rs):
 
 ```rust
-//! `ExpansionPanelList` — a column of panels drawn as one surface that splits apart as a
+//! `ExpansionPanelList`: a column of panels drawn as one surface that splits apart as a
 //! panel opens: a settings screen, an FAQ, the steps of a checkout.
 
 use frus::{Callback, Container, ExpansionPanel, ExpansionPanelList, Text, Widget};
@@ -74,8 +74,8 @@ pub fn example() -> Box<dyn Widget> {
             Text::new("Wrapping and a note."),
         ));
 
-        // `radio`: at most one open. Its message carries the resulting state — `Some(i)`
-        // or `None` — so the app just stores it.
+        // `radio`: at most one open. Its message carries the resulting state (`Some(i)`
+        // or `None`) so the app just stores it.
         let set = radio.clone();
         let exclusive = ExpansionPanelList::radio(radio.get(), move |state: Option<usize>| {
             let set = set.clone();
@@ -113,8 +113,8 @@ pub fn example() -> Box<dyn Widget> {
 | Method | Argument | Effect |
 | --- | --- | --- |
 | `.panel()` | `panel: ExpansionPanel<Msg>` | Adds a panel, after the ones already there. |
-| `.gap()` | `gap: f32` | The room an open panel is given either side of it — what makes it read as lifted out of the card rather than merely coloured differently. 16 by default. |
-| `.radius()` | `radius: f32` | The corner radius of a card — the run's outer corners, and all four of an open panel's. |
+| `.gap()` | `gap: f32` | The room an open panel is given either side of it: what makes it read as lifted out of the card rather than merely coloured differently. 16 by default. |
+| `.radius()` | `radius: f32` | The corner radius of a card: the run's outer corners, and all four of an open panel's. |
 | `.background()` | `color: Color` | The surface the panels are drawn on. |
 | `.divider_color()` | `color: Color` | The hairline between two shut panels of the same card. |
 | `.elevation()` | `elevation: f32` | How far the cards sit off the page: each run of shut panels, and each open panel, casts one shadow. 2 by default; `0.0` is flat. |
@@ -125,7 +125,7 @@ A column of `ExpansionPanel`s drawn as **one surface** that splits as a panel op
 
 A column of `ExpansionTile`s is already an accordion as far as the state goes. What it is not is one *object*: it is a stack of independent rows, and nothing about it says the shut ones belong together.
 
-Two modes, and they say two different things because they want two different states: `new` is the free one (`on_toggle(index, now_open)`, any number open), and `radio` is the exclusive one, whose message carries the **resulting** choice rather than the index pressed — so *one at a time* is a property of what the widget sends rather than a rule the application has to remember.
+Two modes, and they say two different things because they want two different states: `new` is the free one (`on_toggle(index, now_open)`, any number open), and `radio` is the exclusive one, whose message carries the **resulting** choice rather than the index pressed, so *one at a time* is a property of what the widget sends rather than a rule the application has to remember.
 
 ## See also
 

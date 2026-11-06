@@ -37,12 +37,12 @@ impl Actions {
 From [`frus-examples/widgets/src/features/interaction/widgets/shortcuts.rs`](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/interaction/widgets/shortcuts.rs):
 
 ```rust
-//! `Shortcuts`, `Actions`, `ActionListener` and `CallbackShortcuts` — keyboard shortcuts.
+//! `Shortcuts`, `Actions`, `ActionListener` and `CallbackShortcuts`: keyboard shortcuts.
 //!
 //! The work is split in two on purpose. `Shortcuts` maps a **keystroke to an intent**
 //! (Ctrl+S means "save") and knows nothing of saving. `Actions` maps an **intent to a
 //! handler** and knows nothing of keys. Either side can be replaced on its own: a subtree
-//! can rebind the keys, or answer "save" differently — the innermost answer wins.
+//! can rebind the keys, or answer "save" differently: the innermost answer wins.
 
 use frus::{
     component, ActionListener, Actions, Align, Callback, CallbackShortcuts, Column, Container,

@@ -31,13 +31,13 @@ impl Semantics {
 From [`frus-examples/widgets/src/features/interaction/widgets/semantics.rs`](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/interaction/widgets/semantics.rs):
 
 ```rust
-//! `Semantics`, `ExcludeSemantics` — what a screen reader is told about a widget, said
+//! `Semantics`, `ExcludeSemantics`: what a screen reader is told about a widget, said
 //! from outside it.
 //!
 //! Built-in widgets describe themselves (a button says it is a button, with its label).
 //! These wrappers are for what only you know: an icon-only control's name, a row that is
 //! really one thing, a heading made of a widget, a decoration that should stay silent.
-//! Nothing changes on screen — turn on a screen reader (Narrator, TalkBack) to hear it.
+//! Nothing changes on screen: turn on a screen reader (Narrator, TalkBack) to hear it.
 
 use frus::{
     component, Align, Alignment, Column, Container, ExcludeSemantics, Icon, Icons, Role, Row,
@@ -135,11 +135,11 @@ pub fn example() -> Box<dyn Widget> {
 | Method | Argument | Effect |
 | --- | --- | --- |
 | `.merging()` | `merging: bool` | Whether this speaks **for** the subtree (dropping its annotations and carrying over what they said) or merely **beside** it. Off by default; see the type's docs for why that is the safe default rather than the faithful one. |
-| `.label()` | `label: impl Into<String>` | Sets the accessible name — what a screen reader reads out. |
+| `.label()` | `label: impl Into<String>` | Sets the accessible name: what a screen reader reads out. |
 | `.value()` | `value: impl Into<String>` | Sets the textual value: a field's contents, a slider's position. |
 | `.role()` | `role: Role` | Sets the announced role. |
 | `.toggled()` | `on: bool` | Marks it checked or unchecked. |
-| `.clickable()` | `clickable: bool` | Announces it as actionable — the reader offers "activate". |
+| `.clickable()` | `clickable: bool` | Announces it as actionable: the reader offers "activate". |
 | `.disabled()` | `disabled: bool` | Announces it as disabled. |
 
 ## Behaviour
@@ -154,7 +154,7 @@ Semantics::merge(Flex::row().child(Checkbox::new(on)).child(Text::new("Notificat
 
 ### It adds a node; merging replaces them
 
-By default this **adds** an annotation and leaves the child's alone: safe, and what a caller naming an otherwise anonymous box wants. `Semantics::merging` is the other answer — the subtree's annotations are dropped and this one speaks for all of them, carrying over what they said through `SemanticsProperties::over`.
+By default this **adds** an annotation and leaves the child's alone: safe, and what a caller naming an otherwise anonymous box wants. `Semantics::merging` is the other answer: the subtree's annotations are dropped and this one speaks for all of them, carrying over what they said through `SemanticsProperties::over`.
 
 The default is the additive one **because the destructive one cannot be undone by the caller**. Wrapping a whole screen to name it, under a merging default, would collapse every control on it into a single node; the reverse mistake leaves one node too many, which is noise rather than loss.
 

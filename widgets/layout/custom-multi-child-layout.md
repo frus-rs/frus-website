@@ -29,7 +29,7 @@ impl CustomMultiChildLayout {
 From [`frus-examples/widgets/src/features/layout/widgets/custom_multi_child_layout.rs`](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/layout/widgets/custom_multi_child_layout.rs):
 
 ```rust
-//! `CustomMultiChildLayout` — children measured and placed by a function you write, for
+//! `CustomMultiChildLayout`: children measured and placed by a function you write, for
 //! arrangements no row, column or stack can express.
 //!
 //! Each child is named by a key. The function gets the layout's size, measures each

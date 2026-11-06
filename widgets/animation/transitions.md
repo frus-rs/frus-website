@@ -29,8 +29,8 @@ impl Size {
 From [`frus-examples/widgets/src/features/animation/widgets/transitions.rs`](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/animation/widgets/transitions.rs):
 
 ```rust
-//! The explicit transitions — `FadeTransition`, `SlideTransition`, `ScaleTransition`,
-//! `SizeTransition` (and a turn with `Transform::rotate`) — driven by a number **the
+//! The explicit transitions: `FadeTransition`, `SlideTransition`, `ScaleTransition`,
+//! `SizeTransition` (and a turn with `Transform::rotate`): driven by a number **the
 //! application owns**, here an `AnimationController`.
 //!
 //! The implicit `Animated*` widgets run on the framework's clock. These take the progress

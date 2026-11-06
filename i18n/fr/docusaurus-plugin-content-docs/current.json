@@ -1,0 +1,22 @@
+{
+  "version.label": {
+    "message": "Prochaine",
+    "description": "The label for version current"
+  },
+  "sidebar.docs.category.The guide": {
+    "message": "Le guide",
+    "description": "The label for category 'The guide' in sidebar 'docs'"
+  },
+  "sidebar.docs.category.Tooling": {
+    "message": "Outils",
+    "description": "The label for category 'Tooling' in sidebar 'docs'"
+  },
+  "sidebar.docs.category.Internals": {
+    "message": "Fonctionnement interne",
+    "description": "The label for category 'Internals' in sidebar 'docs'"
+  },
+  "sidebar.docs.link.API reference": {
+    "message": "Référence de l'API",
+    "description": "The label for link 'API reference' in sidebar 'docs', linking to 'https://docs.rs/frus'"
+  }
+}

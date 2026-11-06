@@ -41,7 +41,7 @@ impl MediaScope {
 From [`frus-examples/widgets/src/features/state/widgets/media_query.rs`](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/state/widgets/media_query.rs):
 
 ```rust
-//! `MediaQuery` — what the screen is like: its size, density, the system's insets (status
+//! `MediaQuery`: what the screen is like: its size, density, the system's insets (status
 //! bar, notch, keyboard), the reader's text size, light or dark, orientation and size
 //! class. `MediaScope` changes part of it for a subtree.
 //!
@@ -135,8 +135,8 @@ pub fn example() -> Box<dyn Widget> {
 | `MediaQuery` | `.with_system_gesture_insets()` | `insets: Insets` | Sets the edges a system gesture starts from. |
 | `MediaQuery` | `.with_title_bar()` | `title_bar: Option<crate::TitleBar>` | The title bar's line, shared with the application (milestone 640). |
 | `MediaQuery` | `.with_insets()` | `insets: WindowInsets` | Sets both kinds of inset at once, from what the shell reports. |
-| `MediaQuery` | `.remove_padding()` | `edges: Edges` | The query as a descendant sees it once `edges` of the padding have been **consumed** by a widget that already made room for them — an app bar takes the top, say. What was consumed is taken off the padding and off the view padding (floored at zero), so nothing below insets for it a second time. |
-| `MediaQuery` | `.remove_view_insets()` | `edges: Edges` | The same description with the selected edges' `view_insets` zeroed — the keyboard equivalent of `remove_padding`. |
+| `MediaQuery` | `.remove_padding()` | `edges: Edges` | The query as a descendant sees it once `edges` of the padding have been **consumed** by a widget that already made room for them: an app bar takes the top, say. What was consumed is taken off the padding and off the view padding (floored at zero), so nothing below insets for it a second time. |
+| `MediaQuery` | `.remove_view_insets()` | `edges: Edges` | The same description with the selected edges' `view_insets` zeroed: the keyboard equivalent of `remove_padding`. |
 
 ## Behaviour
 

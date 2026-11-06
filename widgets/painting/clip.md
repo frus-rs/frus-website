@@ -54,7 +54,7 @@ impl ClipPath {
 From [`frus-examples/widgets/src/features/painting/widgets/clip.rs`](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/painting/widgets/clip.rs):
 
 ```rust
-//! `ClipRect`, `ClipRRect`, `ClipOval` and `ClipPath` — cut a child's painting to a
+//! `ClipRect`, `ClipRRect`, `ClipOval` and `ClipPath`: cut a child's painting to a
 //! shape: rounded corners on a picture, a round avatar, a star.
 //!
 //! A clip changes what is painted, never the layout: the box keeps its size, only the
@@ -74,7 +74,7 @@ pub fn example() -> Box<dyn Widget> {
             Wrap::new()
                 .gap(16.0)
                 .run_gap(16.0)
-                // Rounded corners — the same radius everywhere, or per corner.
+                // Rounded corners: the same radius everywhere, or per corner.
                 .child(labelled("ClipRRect", ClipRRect::new(16.0).child(picture())))
                 .child(labelled(
                     "ClipRRect, top only",
@@ -88,8 +88,8 @@ pub fn example() -> Box<dyn Widget> {
                     ClipPath::new(star(100.0, 100.0)).child(picture()),
                 )),
         )),
-        // `ClipRect` cuts at the box's edges. A child that paints past them — here one
-        // scaled up 1.3× by a transform — stays inside instead of covering its
+        // `ClipRect` cuts at the box's edges. A child that paints past them (here one
+        // scaled up 1.3× by a transform) stays inside instead of covering its
         // neighbours.
         Box::new(section(
             "ClipRect",
@@ -167,7 +167,7 @@ fn labelled(label: &str, child: impl Widget + 'static) -> Column {
 
 ### `ClipRect`
 
-**Clips its child to its box**: whatever the child paints past the box's edges is cut off — a picture larger than its frame, content sliding in from outside, a transform that moves something past the edge. Same layout rules as `ClipRRect`, with square corners.
+**Clips its child to its box**: whatever the child paints past the box's edges is cut off, a picture larger than its frame, content sliding in from outside, a transform that moves something past the edge. Same layout rules as `ClipRRect`, with square corners.
 
 ```rust
 use frus_widgets::{ClipRect, Text};
@@ -177,9 +177,9 @@ let _cropped: ClipRect<()> = ClipRect::new().child(Text::new("Cut at the edge"))
 
 ### `ClipRRect`
 
-Clips its child to a **rounded rectangle** — a radius **per corner**. The subtree is painted in a layer whose shape erases whatever overflows the corners (antialiased edges) — the building block of a thumbnail, a squircle avatar, a card with soft corners (or only the top rounded, like a rising sheet) whose content (an image, a gradient…) hugs the rounding exactly.
+Clips its child to a **rounded rectangle**: a radius **per corner**. The subtree is painted in a layer whose shape erases whatever overflows the corners (antialiased edges): the building block of a thumbnail, a squircle avatar, a card with soft corners (or only the top rounded, like a rising sheet) whose content (an image, a gradient…) hugs the rounding exactly.
 
-A pass-through in layout: the box takes the size the parent gives it (like its child), and the rounding is **inscribed** in that box. Each radius is clamped to half the smaller dimension (beyond that the corners meet — a stadium).
+A pass-through in layout: the box takes the size the parent gives it (like its child), and the rounding is **inscribed** in that box. Each radius is clamped to half the smaller dimension (beyond that the corners meet: a stadium).
 
 ```rust
 ClipRRect::new(12.0).child(Image::asset("photo.png"))              // uniform
@@ -196,7 +196,7 @@ ClipOval::new().child(Image::asset("avatar.png"))
 
 ### `ClipPath`
 
-Clips its child to an **arbitrary path**: the subtree is painted in a layer where a **mask** (the path, rendered by the GPU) erases everything outside it — stars, pointed cut-outs, speech bubbles, free-form shapes, with antialiased edges.
+Clips its child to an **arbitrary path**: the subtree is painted in a layer where a **mask** (the path, rendered by the GPU) erases everything outside it, stars, pointed cut-outs, speech bubbles, free-form shapes, with antialiased edges.
 
 The path is given in **local coordinates** (the origin at the top-left corner of the widget's box); the walk offsets it to the screen position. A layout pass-through, like `ClipRRect`.
 

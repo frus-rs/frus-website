@@ -29,7 +29,7 @@ impl Placeholder {
 From [`frus-examples/widgets/src/features/layout/widgets/placeholder.rs`](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/layout/widgets/placeholder.rs):
 
 ```rust
-//! `Placeholder` — a crossed box standing in for a widget you have not written yet, so
+//! `Placeholder`: a crossed box standing in for a widget you have not written yet, so
 //! the shape of a layout is readable before any of it is built.
 
 use frus::{Align, Color, Column, MainAxisSize, Placeholder, Row, Widget};

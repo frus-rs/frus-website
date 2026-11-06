@@ -38,7 +38,7 @@ impl GridTileBar {
 From [`frus-examples/widgets/src/features/display/widgets/gridtile.rs`](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/display/widgets/gridtile.rs):
 
 ```rust
-//! `GridTile` and `GridTileBar` — a cell of an image grid, with a strip of text laid
+//! `GridTile` and `GridTileBar`: a cell of an image grid, with a strip of text laid
 //! **over** it rather than under it, so every row of the grid stays the same height.
 
 use frus::{
@@ -129,13 +129,13 @@ fn photo(hex: &str) -> Container {
 | Type | Method | Argument | Effect |
 | --- | --- | --- | --- |
 | `GridTile` | `.header()` | `header: impl Widget<Msg> + 'static` | Typically a `GridTileBar`. |
-| `GridTile` | `.footer()` | `footer: impl Widget<Msg> + 'static` | — |
-| `GridTileBar` | `.background_color()` | `color: Color` | Untold, **nothing** — the picture shows through, which is the arrangement the widget is for. |
+| `GridTile` | `.footer()` | `footer: impl Widget<Msg> + 'static` |  |
+| `GridTileBar` | `.background_color()` | `color: Color` | Untold, **nothing**: the picture shows through, which is the arrangement the widget is for. |
 | `GridTileBar` | `.foreground_color()` | `color: Color` | The colour of the words and glyphs in the bar. |
-| `GridTileBar` | `.leading()` | `leading: impl Widget<Msg> + 'static` | — |
+| `GridTileBar` | `.leading()` | `leading: impl Widget<Msg> + 'static` |  |
 | `GridTileBar` | `.title()` | `title: impl Widget<Msg> + 'static` | Typically a `Text`, which takes the bar's type and colour without being told. |
 | `GridTileBar` | `.subtitle()` | `subtitle: impl Widget<Msg> + 'static` | **Its presence is what makes the bar 68 rather than 48**, so this is a size decision as much as a content one. |
-| `GridTileBar` | `.trailing()` | `trailing: impl Widget<Msg> + 'static` | — |
+| `GridTileBar` | `.trailing()` | `trailing: impl Widget<Msg> + 'static` |  |
 | `GridTileBar` | `.height()` | `height: f32` | The bar's height, over the two the content would have chosen. |
 | `GridTileBar` | `.title_style()` | `style: TextStyle` | The title's type. |
 | `GridTileBar` | `.subtitle_style()` | `style: TextStyle` | The subtitle's. |

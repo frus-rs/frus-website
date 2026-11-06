@@ -29,8 +29,8 @@ impl Alert {
 From [`frus-examples/widgets/src/features/feedback/widgets/alert.rs`](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/feedback/widgets/alert.rs):
 
 ```rust
-//! `Alert` — a message box that sits **in the flow** of the page and stays: info,
-//! success, warning or error, with an optional title. No actions, no overlay — for
+//! `Alert`: a message box that sits **in the flow** of the page and stays: info,
+//! success, warning or error, with an optional title. No actions, no overlay: for
 //! context next to what it is about.
 
 use frus::{Alert, Align, Color, Column, TextStyle, Widget};
@@ -73,12 +73,12 @@ pub fn example() -> Box<dyn Widget> {
 
 | Method | Argument | Effect |
 | --- | --- | --- |
-| `.title_text_style()` | `style: TextStyle` | — |
-| `.content_text_style()` | `style: TextStyle` | — |
+| `.title_text_style()` | `style: TextStyle` |  |
+| `.content_text_style()` | `style: TextStyle` |  |
 | `.title()` | `title: impl Into<String>` | Adds a title. |
-| `.success()` | — | The success variant. |
-| `.warning()` | — | Variante avertissement. |
-| `.error()` | — | Variante erreur. |
+| `.success()` |  | The success variant. |
+| `.warning()` |  | Variante avertissement. |
+| `.error()` |  | Variante erreur. |
 
 ## Behaviour
 

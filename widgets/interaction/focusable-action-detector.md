@@ -40,12 +40,12 @@ impl KeyboardListener {
 From [`frus-examples/widgets/src/features/interaction/widgets/keyboard.rs`](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/interaction/widgets/keyboard.rs):
 
 ```rust
-//! `FocusableActionDetector` and `KeyboardListener` — a custom control that answers the
+//! `FocusableActionDetector` and `KeyboardListener`: a custom control that answers the
 //! keyboard for itself.
 //!
 //! `FocusableActionDetector` is a focus stop with its own key table: click it (or Tab to
 //! it) and its keys work while it has the focus. `KeyboardListener` hands every keystroke
-//! inside it to a closure — the escape hatch when a table cannot say what you need.
+//! inside it to a closure: the escape hatch when a table cannot say what you need.
 
 use frus::{
     Align, Alignment, Callback, Column, Container, Focus, FocusableActionDetector, Intent,

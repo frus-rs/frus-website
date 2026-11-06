@@ -29,7 +29,7 @@ impl StickyHeader {
 From [`frus-examples/widgets/src/features/scrolling/widgets/sticky.rs`](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/scrolling/widgets/sticky.rs):
 
 ```rust
-//! `StickyHeader` — a section header that stays at the top of a scroll view while its
+//! `StickyHeader`: a section header that stays at the top of a scroll view while its
 //! section is in view, and is pushed off by the next section's header.
 
 use frus::{
@@ -95,7 +95,7 @@ use frus_widgets::{Flex, SingleChildScrollView, StickyHeader, Text};
 let _contacts = SingleChildScrollView::<()>::new().child(
     Flex::column()
         .child(StickyHeader::new(Text::new("A"), Text::new("Ada\nAlan")))
-        .child(StickyHeader::new(Text::new("B"), Text::new("Barbara\nBjarne"))),
+        .child(StickyHeader::new(Text::new("B"), Text::new("Barbara\nBjarne")))
 );
 ```
 

@@ -78,7 +78,7 @@ impl DatePicker {
 From [`frus-examples/widgets/src/features/inputs/widgets/date_picker.rs`](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/inputs/widgets/date_picker.rs):
 
 ```rust
-//! `DatePicker` — a month calendar. It is controlled: the application keeps the month on
+//! `DatePicker`: a month calendar. It is controlled: the application keeps the month on
 //! show and the selection; the calendar reports clicked days and month changes. It can
 //! disable days, and select a range.
 
@@ -147,7 +147,7 @@ impl StatefulWidget for DatePickerDemo {
 pub fn describe(date: Option<Date>) -> String {
     match date {
         Some((y, m, d)) => format!("{y}-{m:02}-{d:02}"),
-        None => "—".to_string(),
+        None => ": ".to_string(),
     }
 }
 
@@ -228,7 +228,7 @@ impl State for DatePickerDemoState {
 
 | Method | Argument | Effect |
 | --- | --- | --- |
-| `.day_text_style()` | `style: TextStyle` | — |
+| `.day_text_style()` | `style: TextStyle` |  |
 | `.weekday_text_style()` | `style: TextStyle` | See `day_text_style`. |
 
 ## Behaviour

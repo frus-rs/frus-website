@@ -29,7 +29,7 @@ impl DraggableScrollableSheet {
 From [`frus-examples/widgets/src/features/feedback/widgets/draggable_sheet.rs`](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/feedback/widgets/draggable_sheet.rs):
 
 ```rust
-//! `DraggableScrollableSheet` — a panel along the bottom that follows the finger between
+//! `DraggableScrollableSheet`: a panel along the bottom that follows the finger between
 //! the heights it may rest at, and hands the gesture over to the list inside it (the
 //! "nearby places" sheet of a map). It is not modal: the page behind stays usable.
 
@@ -170,13 +170,13 @@ impl State for SheetDemoState {
 | `.initial()` | `size: f32` | The height it starts at, before a finger has moved it. Half, unset. |
 | `.min()` | `size: f32` | The lowest height it rests at while it stays open. A quarter, unset. |
 | `.max()` | `size: f32` | The highest height it goes to. All of the box, unset. |
-| `.snap()` | `snap: bool` | Whether a release settles on a stop — `min`, `max` and any `snap_sizes` — rather than coasting. |
+| `.snap()` | `snap: bool` | Whether a release settles on a stop (`min`, `max` and any `snap_sizes`) rather than coasting. |
 | `.snap_sizes()` | `sizes: impl IntoIterator<Item = f32>` | Heights between `min` and `max` it may also settle on, and snapping turned on. |
-| `.on_dismiss()` | `message: impl Into<Msg>` | The message sent once the sheet has been lowered to nothing — which this also allows, below `min`. Unset, `min` is as low as it goes. |
+| `.on_dismiss()` | `message: impl Into<Msg>` | The message sent once the sheet has been lowered to nothing, which this also allows, below `min`. Unset, `min` is as low as it goes. |
 
 ## Behaviour
 
-Heights are shares of that box. It starts at `initial` (half), moves between `min` (a quarter) and `max` (all of it), and coasts where it is thrown unless it is told to `snap` — which giving it `snap_sizes` does. Given `on_dismiss`, it can be lowered past `min` to nothing, and the message goes once it has arrived there.
+Heights are shares of that box. It starts at `initial` (half), moves between `min` (a quarter) and `max` (all of it), and coasts where it is thrown unless it is told to `snap`, which giving it `snap_sizes` does. Given `on_dismiss`, it can be lowered past `min` to nothing, and the message goes once it has arrived there.
 
 The retained height is keyed by identity, and forgotten on the first frame the sheet is not in the tree: an application that removes a dismissed sheet and shows it again gets it back at its initial height.
 

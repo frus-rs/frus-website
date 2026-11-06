@@ -45,7 +45,7 @@ impl Spacer {
 From [`frus-examples/widgets/src/features/layout/widgets/expanded.rs`](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/layout/widgets/expanded.rs):
 
 ```rust
-//! `Expanded`, `Flexible` and `Spacer` — share the free room of a `Row` or a `Column`
+//! `Expanded`, `Flexible` and `Spacer`: share the free room of a `Row` or a `Column`
 //! between some of its children.
 
 use frus::{Alignment, Color, Container, Expanded, Flexible, Row, Spacer, Text, Widget};
@@ -88,7 +88,7 @@ pub fn example() -> Box<dyn Widget> {
                 .child(Expanded::new(filler("Expanded", "#6366F1"))),
         )),
         // A long text in a `Flexible` wraps instead of pushing its neighbours off the
-        // row — the usual cure for a row that overflows.
+        // row: the usual cure for a row that overflows.
         Box::new(section(
             "Flexible wraps long text",
             Row::new()
@@ -142,12 +142,12 @@ fn filler(label: &str, color: &str) -> Container {
 
 | Type | Method | Argument | Effect |
 | --- | --- | --- | --- |
-| `Expanded` | `.loose()` | — | — |
+| `Expanded` | `.loose()` |  |  |
 | `Expanded` | `.flex()` | `flex: f32` | The share of the spare room, when several children expand: two children at `flex(2.0)` and `flex(1.0)` split it two to one. |
 | `Flexible` | `.flex()` | `flex: f32` | The share of the spare room, when several children are flexible: two children at `flex(2.0)` and `flex(1.0)` split it two to one. |
-| `Flexible` | `.tight()` | — | A **tight** fit: the child takes its whole share whether it asked for it or not. The same box as `Expanded::new`. |
-| `Flexible` | `.fit()` | `fit: FlexFit` | — |
-| `Spacer` | `.flex()` | `flex: f32` | — |
+| `Flexible` | `.tight()` |  | A **tight** fit: the child takes its whole share whether it asked for it or not. The same box as `Expanded::new`. |
+| `Flexible` | `.fit()` | `fit: FlexFit` |  |
+| `Spacer` | `.flex()` | `flex: f32` |  |
 
 ## Behaviour
 
@@ -155,11 +155,11 @@ fn filler(label: &str, color: &str) -> Container {
 
 Wraps a child so it takes the spare room along its parent's main axis.
 
-Three properties at once — a basis of zero, a grow factor, and no automatic minimum — because a bare grow factor does nothing for the case this exists for: a flex item's automatic minimum size is its own content, so `flex: 1` on a long label grows it and still lets it refuse to be narrower than its text.
+Three properties at once (a basis of zero, a grow factor, and no automatic minimum) because a bare grow factor does nothing for the case this exists for: a flex item's automatic minimum size is its own content, so `flex: 1` on a long label grows it and still lets it refuse to be narrower than its text.
 
 ### `Flexible`
 
-That is the widget for a label that should stay its natural width in a wide row and ellipsise in a narrow one. Reach for `Expanded` — or `Flexible::new(child).tight()`, the same box — when the child should fill its share whether it wanted to or not.
+That is the widget for a label that should stay its natural width in a wide row and ellipsise in a narrow one. Reach for `Expanded` (or `Flexible::new(child).tight()`, the same box) when the child should fill its share whether it wanted to or not.
 
 ### `Spacer`
 

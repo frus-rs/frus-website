@@ -29,7 +29,7 @@ impl BottomSheet {
 From [`frus-examples/widgets/src/features/feedback/widgets/bottom_sheet.rs`](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/feedback/widgets/bottom_sheet.rs):
 
 ```rust
-//! `BottomSheet` — a modal panel that slides up from the bottom of the window, over a
+//! `BottomSheet`: a modal panel that slides up from the bottom of the window, over a
 //! scrim, for a few contextual actions or a short form. A tap on the scrim closes it.
 //!
 //! In a page with a `Scaffold`, `Scaffold::bottom_sheet(panel, open, toggle)` does the
@@ -138,8 +138,8 @@ impl State for BottomSheetDemoState {
 | Method | Argument | Effect |
 | --- | --- | --- |
 | `.background()` | `color: Color` | The sheet's surface. Unset, the theme's, then the scheme's `surface_container_low`. |
-| `.shape()` | `shape: ShapeBorder` | — |
-| `.on_dismiss()` | `message: impl Into<Msg>` | Message emitted on a click on the scrim (outside the sheet) — to close it. |
+| `.shape()` | `shape: ShapeBorder` |  |
+| `.on_dismiss()` | `message: impl Into<Msg>` | Message emitted on a click on the scrim (outside the sheet): to close it. |
 | `.sheet()` | `content: impl Widget<Msg> + 'static` | Sets the **sheet's content** (actions, a short form…). |
 | `.body()` | `body: impl Widget<Msg> + 'static` | Sets the **background body** (always visible) and finalises the sheet. |
 

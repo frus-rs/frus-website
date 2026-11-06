@@ -37,7 +37,7 @@ impl ListView {
 From [`frus-examples/widgets/src/features/scrolling/widgets/listview.rs`](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/scrolling/widgets/listview.rs):
 
 ```rust
-//! `ListView` — a virtualised list: only the rows on screen are built, laid out and
+//! `ListView`: a virtualised list: only the rows on screen are built, laid out and
 //! painted, so ten thousand rows cost what ten do. Every row has the same extent.
 
 use frus::{
@@ -54,7 +54,7 @@ pub fn example() -> Box<dyn Widget> {
 
         // `ListView::new(count, extent, build)`: `build(index)` is called only for the
         // rows in view, every frame they are in view. So a row is a plain widget made
-        // from the index — not a component with hooks of its own; state that a row
+        // from the index, not a component with hooks of its own; state that a row
         // shows lives above the list, like `tapped` here.
         let on_tap = tapped.clone();
         let selected = tapped.get();
@@ -85,7 +85,7 @@ pub fn example() -> Box<dyn Widget> {
         .height(80.0)
         .width(320.0);
 
-        // `reverse()` starts at the end — the newest message at the bottom of a chat.
+        // `reverse()` starts at the end: the newest message at the bottom of a chat.
         let chat = ListView::new(30, 40.0, |i| {
             Container::new()
                 .padding_each(4.0, 12.0, 4.0, 12.0)
@@ -121,7 +121,7 @@ fn framed(list: ListView) -> Container {
 | --- | --- | --- |
 | `.estimated_extent()` | `extent: f32` | The extent to count an item at before any has been measured, for a list made by `ListView::builder`. 56 unless told; a guess close to the real rows keeps the scrollbar from changing its mind as they are measured. |
 | `.axis()` | `axis: Axis` | Which way the list runs: down the screen (the default) or across it. |
-| `.reverse()` | — | Builds **from the far end**: item 0 sits at the end the axis finishes at — the bottom of a vertical list, the trailing edge of a horizontal one — item 1 before it, and the list starts resting there. |
+| `.reverse()` |  | Builds **from the far end**: item 0 sits at the end the axis finishes at (the bottom of a vertical list, the trailing edge of a horizontal one) item 1 before it, and the list starts resting there. |
 | `.padding()` | `padding: f32` | Insets the content, **inside** the viewport: the padding scrolls with what it surrounds rather than shrinking the window onto it. |
 | `.padding_each()` | `top: f32, right: f32, bottom: f32, left: f32` | The same, one side at a time. |
 | `.physics()` | `physics: ScrollPhysics` | Overrides how the list behaves at its edges and after a fling; see `crate::scroll::SingleChildScrollView::physics`. |
@@ -129,8 +129,8 @@ fn framed(list: ListView) -> Container {
 | `.width()` | `width: f32` | Sets the viewport width, in logical pixels. |
 | `.height()` | `height: f32` | Sets the viewport height, in logical pixels. |
 | `.flex()` | `grow: f32` | Flex growth factor along the parent's main axis. |
-| `.on_scroll()` | `on_scroll: impl Fn(crate::ScrollPosition) -> R + 'static` | **Says where this list is** whenever it moves — a "back to top" button that appears once it has gone down, a "row 1 240 of 5 000", a load-more when the end comes into view. |
-| `.notify_every()` | `px: f32` | Reports no more often than every `px` of movement — and **always** reports where it comes to rest, however short the last step was. |
+| `.on_scroll()` | `on_scroll: impl Fn(crate::ScrollPosition) -> R + 'static` | **Says where this list is** whenever it moves: a "back to top" button that appears once it has gone down, a "row 1 240 of 5 000", a load-more when the end comes into view. |
+| `.notify_every()` | `px: f32` | Reports no more often than every `px` of movement, and **always** reports where it comes to rest, however short the last step was. |
 
 ## Behaviour
 

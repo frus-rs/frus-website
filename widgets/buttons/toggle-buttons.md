@@ -32,7 +32,7 @@ impl ToggleButtons {
 From [`frus-examples/widgets/src/features/buttons/widgets/toggle_buttons.rs`](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/buttons/widgets/toggle_buttons.rs):
 
 ```rust
-//! `ToggleButtons` — a bank of buttons sharing their edges, each one on or off on its
+//! `ToggleButtons`: a bank of buttons sharing their edges, each one on or off on its
 //! own. Unlike a segmented button, any number can be on at once (bold + italic).
 
 use frus::{
@@ -133,23 +133,23 @@ impl State for ToggleDemoState {
 
 | Method | Argument | Effect |
 | --- | --- | --- |
-| `.child()` | `child: impl Widget<Msg> + 'static` | — |
+| `.child()` | `child: impl Widget<Msg> + 'static` |  |
 | `.child_boxed()` | `child: Box<dyn Widget<Msg>>` | The same, for a child that is already boxed. |
 | `.enabled()` | `enabled: bool` | Whether the bank can be pressed at all. |
 | `.direction()` | `axis: ToggleAxis` | A row by default. |
 | `.vertical_direction()` | `direction: VerticalDirection` | Ignored by a row, whose order is the reading direction's to decide and which mirrors with the rest of the frame. |
-| `.render_border()` | `render: bool` | — |
+| `.render_border()` | `render: bool` |  |
 | `.border_width()` | `width: f32` | Untold, `TOGGLE_BUTTONS_BORDER_WIDTH`. |
-| `.border_radius()` | `radius: impl Into<BorderRadius>` | — |
-| `.border_color()` | `color: Color` | — |
+| `.border_radius()` | `radius: impl Into<BorderRadius>` |  |
+| `.border_color()` | `color: Color` |  |
 | `.selected_border_color()` | `color: Color` | A seam between an on button and an off one takes **this**, from either side. |
-| `.disabled_border_color()` | `color: Color` | — |
-| `.color()` | `color: Color` | — |
-| `.selected_color()` | `color: Color` | — |
-| `.disabled_color()` | `color: Color` | — |
-| `.fill_color()` | `fill: WidgetStateProperty<Color>` | — |
-| `.text_style()` | `style: TextStyle` | — |
-| `.min_size()` | `width: f32, height: f32` | Untold, `TOGGLE_BUTTON_MIN_SIZE` both ways — the tap target, which is a floor and not a size: a wider child makes a wider button. |
+| `.disabled_border_color()` | `color: Color` |  |
+| `.color()` | `color: Color` |  |
+| `.selected_color()` | `color: Color` |  |
+| `.disabled_color()` | `color: Color` |  |
+| `.fill_color()` | `fill: WidgetStateProperty<Color>` |  |
+| `.text_style()` | `style: TextStyle` |  |
+| `.min_size()` | `width: f32, height: f32` | Untold, `TOGGLE_BUTTON_MIN_SIZE` both ways: the tap target, which is a floor and not a size: a wider child makes a wider button. |
 | `.max_size()` | `width: f32, height: f32` | The largest a button may be. Untold, unbounded. |
 
 ## Behaviour

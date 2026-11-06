@@ -29,7 +29,7 @@ impl AnimatedContainer {
 From [`frus-examples/widgets/src/features/animation/widgets/animated_container.rs`](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/animation/widgets/animated_container.rs):
 
 ```rust
-//! `AnimatedContainer` — a box whose colour, size, corners and opacity glide to each new
+//! `AnimatedContainer`: a box whose colour, size, corners and opacity glide to each new
 //! value instead of jumping there.
 //!
 //! This is an **implicit** animation: you never start or stop anything. Build the box with
@@ -151,7 +151,7 @@ fn three_curves() -> Component {
 
 ## Behaviour
 
-A box whose properties **animate** on every change: color, size, radius and opacity — all with the **same** `(duration, curve)`. Builds a `Container` under the hood.
+A box whose properties **animate** on every change: color, size, radius and opacity, all with the **same** `(duration, curve)`. Builds a `Container` under the hood.
 
 ```rust
 AnimatedContainer::new(0.3, Curve::ease_in_out())

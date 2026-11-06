@@ -42,7 +42,7 @@ impl AnimatedOpacity {
 From [`frus-examples/widgets/src/features/animation/widgets/animated_opacity.rs`](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/animation/widgets/animated_opacity.rs):
 
 ```rust
-//! `Opacity` and `AnimatedOpacity` — see-through by a fixed amount, or fading to each new
+//! `Opacity` and `AnimatedOpacity`: see-through by a fixed amount, or fading to each new
 //! amount.
 //!
 //! Both composite the child **as one group**: overlapping parts do not darken where they
@@ -59,8 +59,8 @@ pub fn example() -> Box<dyn Widget> {
     sections(vec![
         // A fixed opacity: a watermark, a placeholder, something deliberately quiet.
         Box::new(section("Opacity", fixed())),
-        // A fade: a hint that comes and goes. The child keeps its room while invisible —
-        // nothing around it moves.
+        // A fade: a hint that comes and goes. The child keeps its room while invisible:
+// nothing around it moves.
         Box::new(section("AnimatedOpacity", fading())),
     ])
 }

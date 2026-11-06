@@ -37,7 +37,7 @@ impl LineChart {
 From [`frus-examples/widgets/src/features/display/widgets/chart.rs`](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/display/widgets/chart.rs):
 
 ```rust
-//! `BarChart` and `LineChart` — self-painted, themed views of a series of
+//! `BarChart` and `LineChart`: self-painted, themed views of a series of
 //! `(label, value)` pairs: bars to compare amounts, a line to read a trend.
 
 use frus::{BarChart, Color, LineChart, Text, Widget};
@@ -71,7 +71,7 @@ pub fn example() -> Box<dyn Widget> {
         };
 
         // Several series share one scale: grouped side by side, or stacked. A clickable
-        // legend lets the reader hide one — the hidden list is the app's state.
+        // legend lets the reader hide one: the hidden list is the app's state.
         let toggle_series = hidden.clone();
         let flip = stacked.clone();
         let grouped = BarChart::new(series())
@@ -134,12 +134,12 @@ pub fn example() -> Box<dyn Widget> {
 | `BarChart` | `.name()` | `name: impl Into<String>` | Names the **main** series (displayed in the legend). |
 | `BarChart` | `.series()` | `name: impl Into<String>, color: Color, values: impl IntoIterator<Item = f32>` | Adds an **extra series** `(name, colour, values)`, drawn as bars **grouped** side by side within each category. Every series shares the scale and the axis. |
 | `BarChart` | `.legend()` | `legend: bool` | Shows a **legend** (colour swatch + name) for each series. Off by default. |
-| `BarChart` | `.hidden()` | `indices: impl IntoIterator<Item = usize>` | **Hides** the series at the given indices (not drawn, dimmed in the legend) — milestone 215. |
-| `BarChart` | `.on_legend()` | `on_legend: impl Fn(usize) -> R + 'static` | Makes the **legend clickable**: `on_legend(index)` on a click on an entry — milestone 215. |
+| `BarChart` | `.hidden()` | `indices: impl IntoIterator<Item = usize>` | **Hides** the series at the given indices (not drawn, dimmed in the legend): milestone 215. |
+| `BarChart` | `.on_legend()` | `on_legend: impl Fn(usize) -> R + 'static` | Makes the **legend clickable**: `on_legend(index)` on a click on an entry, milestone 215. |
 | `BarChart` | `.stacked()` | `stacked: bool` | **Stacks** the series: one bar per category, segmented by series (cumulative bars), instead of bars grouped side by side (milestone 212). Off by default. |
-| `BarChart` | `.on_point()` | `on_point: impl Fn(usize, usize) -> R + 'static` | Makes the **bars clickable**: `on_point(category, series)` on a click on a visible bar (or stacked stratum). None by default — milestone 222. |
-| `BarChart` | `.selected()` | `selected: Option<(usize, usize)>` | **Pins** a bar/stratum `(category, series)`: it gets a persistent accent ring (highlighting the current selection, as a clicked detail). `None` = nothing — milestone 223. |
-| `BarChart` | `.normalized()` | `normalized: bool` | Normalises the stacking to **100%**: each column fills the whole height, each stratum taking its **share** of the category's total (rather than its absolute value). Only has an effect in multi-series stacked mode. Off by default — milestone 224. |
+| `BarChart` | `.on_point()` | `on_point: impl Fn(usize, usize) -> R + 'static` | Makes the **bars clickable**: `on_point(category, series)` on a click on a visible bar (or stacked stratum). None by default: milestone 222. |
+| `BarChart` | `.selected()` | `selected: Option<(usize, usize)>` | **Pins** a bar/stratum `(category, series)`: it gets a persistent accent ring (highlighting the current selection, as a clicked detail). `None` = nothing: milestone 223. |
+| `BarChart` | `.normalized()` | `normalized: bool` | Normalises the stacking to **100%**: each column fills the whole height, each stratum taking its **share** of the category's total (rather than its absolute value). Only has an effect in multi-series stacked mode. Off by default: milestone 224. |
 | `LineChart` | `.color()` | `color: Color` | Overrides the colour of the stroke (default: the theme's `primary`). |
 | `LineChart` | `.height()` | `height: f32` | Height of the chart in logical pixels (200 by default). |
 | `LineChart` | `.grid()` | `divisions: usize` | Adds a **y-axis**: `divisions` horizontal grid lines with their ticks (`0..max`) in a left margin. `0` (the default) = no axis. |
@@ -148,12 +148,12 @@ pub fn example() -> Box<dyn Widget> {
 | `LineChart` | `.series()` | `name: impl Into<String>, color: Color, values: impl IntoIterator<Item = f32>` | Adds an **extra series** `(name, colour, values)`, aligned by index onto the main series' categories. Every series shares the scale and the axis. |
 | `LineChart` | `.legend()` | `legend: bool` | Shows a **legend** (colour swatch + name) for each named series. Off by default. |
 | `LineChart` | `.stacked()` | `stacked: bool` | **Stacks** the series: each area is cumulated above the previous ones (cumulative areas), so a total and its composition can be read. Implies filling the bands. Off by default. |
-| `LineChart` | `.hidden()` | `indices: impl IntoIterator<Item = usize>` | **Hides** the series at the given indices (not drawn, dimmed in the legend) — milestone 215. |
-| `LineChart` | `.on_legend()` | `on_legend: impl Fn(usize) -> R + 'static` | Makes the **legend clickable**: `on_legend(index)` on a click on an entry — milestone 215. |
-| `LineChart` | `.animated()` | `animated: bool` | Animates a **pulsing halo** (growing then fading) on the hovered point. Asks for a continuous repaint for as long as the chart is displayed. Off by default — milestone 217. |
-| `LineChart` | `.on_point()` | `on_point: impl Fn(usize, usize) -> R + 'static` | Makes the **points clickable**: `on_point(category, series)` on a click near a marker (of the visible series). None by default — milestone 221. |
-| `LineChart` | `.selected()` | `selected: Option<(usize, usize)>` | **Pins** a point `(category, series)`: it gets a persistent halo + accent ring (highlighting the current selection, as a clicked detail). `None` = nothing — milestone 223. |
-| `LineChart` | `.normalized()` | `normalized: bool` | Normalises the stacking to **100%**: each category fills the whole height, each stratum taking its **share** of the total. Only has an effect on multi-series stacked areas. Off by default — milestone 224. |
+| `LineChart` | `.hidden()` | `indices: impl IntoIterator<Item = usize>` | **Hides** the series at the given indices (not drawn, dimmed in the legend): milestone 215. |
+| `LineChart` | `.on_legend()` | `on_legend: impl Fn(usize) -> R + 'static` | Makes the **legend clickable**: `on_legend(index)` on a click on an entry, milestone 215. |
+| `LineChart` | `.animated()` | `animated: bool` | Animates a **pulsing halo** (growing then fading) on the hovered point. Asks for a continuous repaint for as long as the chart is displayed. Off by default: milestone 217. |
+| `LineChart` | `.on_point()` | `on_point: impl Fn(usize, usize) -> R + 'static` | Makes the **points clickable**: `on_point(category, series)` on a click near a marker (of the visible series). None by default: milestone 221. |
+| `LineChart` | `.selected()` | `selected: Option<(usize, usize)>` | **Pins** a point `(category, series)`: it gets a persistent halo + accent ring (highlighting the current selection, as a clicked detail). `None` = nothing: milestone 223. |
+| `LineChart` | `.normalized()` | `normalized: bool` | Normalises the stacking to **100%**: each category fills the whole height, each stratum taking its **share** of the total. Only has an effect on multi-series stacked areas. Off by default: milestone 224. |
 
 ## Behaviour
 

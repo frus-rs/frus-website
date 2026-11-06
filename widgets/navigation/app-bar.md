@@ -29,7 +29,7 @@ impl AppBar {
 From [`frus-examples/widgets/src/features/navigation/widgets/appbar.rs`](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/navigation/widgets/appbar.rs):
 
 ```rust
-//! `AppBar` — the bar at the top of a screen: a leading button, a title, actions, and
+//! `AppBar`: the bar at the top of a screen: a leading button, a title, actions, and
 //! optionally a widget under it (tabs, a search field). Actions can fold into an
 //! overflow menu when the bar runs out of width.
 
@@ -111,7 +111,7 @@ pub fn example() -> Box<dyn Widget> {
             .foldable_action("Archive", close_after("Archive"))
             .build();
 
-        // `bottom` puts a widget under the bar, inside its background — usually tabs.
+        // `bottom` puts a widget under the bar, inside its background: usually tabs.
         let pick = tab.clone();
         let tabs = TabBar::new(tab.get(), move |i: usize| {
             let pick = pick.clone();
@@ -148,7 +148,7 @@ fn framed(bar: Box<dyn Widget>) -> Container {
 | --- | --- | --- |
 | `.width()` | `width: f32` | The **available width** for the bar, in logical pixels: what drives the folding. It is a *size*, not a platform indicator. |
 | `.title_style()` | `style: TextStyle` | The text title's style (size/weight/italic/color). |
-| `.title()` | `widget: impl Widget<Msg> + 'static` | The title, as **any widget** — a text, a logo, a composed row. |
+| `.title()` | `widget: impl Widget<Msg> + 'static` | The title, as **any widget**: a text, a logo, a composed row. |
 | `.leading()` | `widget: impl Widget<Msg> + 'static` | The leading element (a menu or back button…), optional. |
 | `.automatically_imply_leading()` | `imply: bool` | Whether a bar with **no `leading` of its own** may take one from the shell it stands in. |
 | `.automatically_imply_actions()` | `imply: bool` | Whether a bar with **no actions of its own** may take one from the shell it stands in. |
@@ -163,24 +163,24 @@ fn framed(bar: Box<dyn Widget>) -> Container {
 | `.background()` | `color: Color` | The bar's background color (transparent by default: the parent decides). |
 | `.height()` | `height: f32` | An imposed bar height (by default, the content's natural height). |
 | `.center_title()` | `centered: bool` | Centres the title in the space left between the leading and the actions, rather than starting it flush after the leading. |
-| `.bottom()` | `widget: impl Widget<Msg> + 'static` | A widget **under** the bar, spanning its width — a row of tabs, a search field, a progress bar. It belongs to the bar, so it sits inside the background. |
+| `.bottom()` | `widget: impl Widget<Msg> + 'static` | A widget **under** the bar, spanning its width: a row of tabs, a search field, a progress bar. It belongs to the bar, so it sits inside the background. |
 | `.leading_width()` | `width: f32` | The width reserved for the leading slot. Unset, it is the Material slot width; a leading wider than that would otherwise push the title without the folding budget knowing, and the actions would run off the edge. |
 | `.title_spacing()` | `spacing: f32` | The gap between the leading and the title. |
-| `.foreground()` | `color: Color` | The colour of the bar's own text — the title, and the labelled actions. Unset, each follows the theme. |
-| `.elevation()` | `elevation: f32` | How far off the page the bar sits. `0` — the default — is flat, which is what a bar sitting on a surface of the same colour wants. |
-| `.shape()` | `shape: ShapeBorder` | — |
-| `.radius()` | `radius: impl Into<BorderRadius>` | The corner radii — the shorthand for a rounded rectangle, writing into the same one field `shape` does. The last of the two called is the one that counts. |
+| `.foreground()` | `color: Color` | The colour of the bar's own text: the title, and the labelled actions. Unset, each follows the theme. |
+| `.elevation()` | `elevation: f32` | How far off the page the bar sits. `0` (the default) is flat, which is what a bar sitting on a surface of the same colour wants. |
+| `.shape()` | `shape: ShapeBorder` |  |
+| `.radius()` | `radius: impl Into<BorderRadius>` | The corner radii: the shorthand for a rounded rectangle, writing into the same one field `shape` does. The last of the two called is the one that counts. |
 | `.shadow_color()` | `color: Color` | The colour of the shadow the bar casts. Only visible with an `elevation`. |
-| `.surface_tint()` | `color: Color` | — |
-| `.force_material_transparency()` | `force: bool` | Draws the bar with **no surface at all**: no background, no tint, no shadow — only what it holds. |
-| `.toolbar_opacity()` | `opacity: f32` | The opacity of the toolbar row — the leading, the title and the actions — without touching the bar's surface. `1.0` by default. |
+| `.surface_tint()` | `color: Color` |  |
+| `.force_material_transparency()` | `force: bool` | Draws the bar with **no surface at all**: no background, no tint, no shadow, only what it holds. |
+| `.toolbar_opacity()` | `opacity: f32` | The opacity of the toolbar row (the leading, the title and the actions) without touching the bar's surface. `1.0` by default. |
 | `.bottom_opacity()` | `opacity: f32` | The opacity of the `bottom` slot, independently of the toolbar. `1.0` by default. |
 | `.actions_padding()` | `padding: f32` | Padding **across** the **actions** as a group, at its two ends, on top of the gap between them. |
 | `.exclude_header_semantics()` | `exclude: bool` | Stops the title being announced as a **heading**. |
 | `.flexible_space()` | `widget: impl Widget<Msg> + 'static` | A widget stacked **behind** the toolbar and the `bottom`, filling the bar's whole box. |
-| `.icon_theme()` | `icons: IconTheme` | — |
-| `.actions_icon_theme()` | `icons: IconTheme` | — |
-| `.toolbar_text_style()` | `style: TextStyle` | The type worn by the **words in the bar that are not the title** — a label beside the back arrow, a "Save" in the actions, anything a caller handed over already assembled. |
+| `.icon_theme()` | `icons: IconTheme` |  |
+| `.actions_icon_theme()` | `icons: IconTheme` |  |
+| `.toolbar_text_style()` | `style: TextStyle` | The type worn by the **words in the bar that are not the title**: a label beside the back arrow, a "Save" in the actions, anything a caller handed over already assembled. |
 
 ## Behaviour
 

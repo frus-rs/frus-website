@@ -34,7 +34,7 @@ impl AnimatedPadding {
 From [`frus-examples/widgets/src/features/animation/widgets/animated_padding.rs`](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/animation/widgets/animated_padding.rs):
 
 ```rust
-//! `AnimatedPadding` — insets its child by an amount that moves to each new value, so a
+//! `AnimatedPadding`: insets its child by an amount that moves to each new value, so a
 //! selected row can step in rather than jump.
 
 use frus::{
@@ -103,7 +103,7 @@ No builder methods: everything is set through the constructor.
 
 **Moves its child's inset** rather than letting the space around it jump.
 
-Unlike the two above, this one is **layout**: the interpolated padding is injected while the tree is being measured, so everything beside and below the child follows it as it moves. That is the point of padding animating at all — a paint-time offset would slide the child over its neighbours instead of making room.
+Unlike the two above, this one is **layout**: the interpolated padding is injected while the tree is being measured, so everything beside and below the child follows it as it moves. That is the point of padding animating at all: a paint-time offset would slide the child over its neighbours instead of making room.
 
 ```rust
 use frus_core::Curve;
@@ -114,7 +114,7 @@ let _row: AnimatedPadding<()> = AnimatedPadding::new(
     if selected { 24.0 } else { 8.0 },
     0.2,
     Curve::ease_in_out(),
-    Text::new("Inbox"),
+    Text::new("Inbox")
 );
 ```
 

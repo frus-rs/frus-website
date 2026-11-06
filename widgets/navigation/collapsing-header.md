@@ -32,7 +32,7 @@ impl CollapsingHeader {
 From [`frus-examples/widgets/src/features/navigation/widgets/collapsingheader.rs`](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/navigation/widgets/collapsingheader.rs):
 
 ```rust
-//! `CollapsingHeader` — a tall header at the top of a scrolling page that shrinks to a
+//! `CollapsingHeader`: a tall header at the top of a scrolling page that shrinks to a
 //! toolbar as the page scrolls, then stays pinned (or goes entirely).
 
 use frus::{
@@ -112,7 +112,7 @@ fn framed(page: Box<dyn Widget>) -> Container {
 | --- | --- | --- |
 | `.expanded_height()` | `height: f32` | The height when nothing has scrolled, overriding the body's top padding. |
 | `.collapsed_height()` | `height: f32` | The height it stops shrinking at. Ignored by `CollapsingHeader::floating`. |
-| `.floating()` | — | **Goes entirely** instead of stopping at a toolbar, leaving the whole window to the content — a reading view, where the chrome is worth its room only while somebody is choosing what to read. |
+| `.floating()` |  | **Goes entirely** instead of stopping at a toolbar, leaving the whole window to the content: a reading view, where the chrome is worth its room only while somebody is choosing what to read. |
 
 ## Behaviour
 

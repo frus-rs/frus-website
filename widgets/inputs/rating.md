@@ -33,7 +33,7 @@ impl Rating {
 From [`frus-examples/widgets/src/features/inputs/widgets/rating.rs`](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/inputs/widgets/rating.rs):
 
 ```rust
-//! `Rating` — a score given by tapping stars.
+//! `Rating`: a score given by tapping stars.
 
 use frus::{Rating, State, StateContext, StatefulWidget, Text, Widget};
 

@@ -25,7 +25,7 @@ pub struct StreamBuilder;
 From [`frus-examples/widgets/src/features/state/widgets/stream_builder.rs`](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/state/widgets/stream_builder.rs):
 
 ```rust
-//! `use_stream` and `StreamBuilder` — work that gives **several** values as it goes: a
+//! `use_stream` and `StreamBuilder`: work that gives **several** values as it goes: a
 //! progress, a feed, messages. The work is handed a `StreamSink` and `add`s each value;
 //! the component shows the latest one, then knows when the work is done.
 

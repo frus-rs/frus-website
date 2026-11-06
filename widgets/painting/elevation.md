@@ -23,7 +23,7 @@ This demo shows a pattern rather than one type. The names it uses are in the exa
 From [`frus-examples/widgets/src/features/painting/widgets/elevation.rs`](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/painting/widgets/elevation.rs):
 
 ```rust
-//! Elevation — the shadows a surface casts at a given height above the page, from the
+//! Elevation: the shadows a surface casts at a given height above the page, from the
 //! standard table: `BoxShadow::for_elevation(height, colour)`.
 //!
 //! Cards, menus, dialogs and buttons use these heights. Use the same function for your
@@ -38,8 +38,8 @@ use crate::common::shared::{section, sections};
 
 pub fn example() -> Box<dyn Widget> {
     sections(vec![
-        // Three shadows per height — a sharp one close under the surface, a softer one
-        // further down, a wide faint one all round — in the colour given at full strength.
+        // Three shadows per height (a sharp one close under the surface, a softer one
+        // further down, a wide faint one all round) in the colour given at full strength.
         Box::new(section(
             "Standard heights",
             // The gaps leave room for the shadows, which paint outside each surface.

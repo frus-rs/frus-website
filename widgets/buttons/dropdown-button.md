@@ -29,7 +29,7 @@ impl DropdownButton {
 From [`frus-examples/widgets/src/features/buttons/widgets/dropdown_button.rs`](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/buttons/widgets/dropdown_button.rs):
 
 ```rust
-//! `DropdownButton` and `DropdownOption` — a button showing the current choice, whose
+//! `DropdownButton` and `DropdownOption`: a button showing the current choice, whose
 //! options float below it. For picking one value from a short, closed list.
 
 use frus::{
@@ -147,7 +147,7 @@ impl State for DropdownDemoState {
 
 | Method | Argument | Effect |
 | --- | --- | --- |
-| `.text_style()` | `style: TextStyle` | — |
+| `.text_style()` | `style: TextStyle` |  |
 | `.menu_background()` | `color: Color` | **The surface the options float on**, over `DropdownTheme::menu_background` and `surface_container`. |
 | `.menu_shape()` | `shape: ShapeBorder` | What shape the panel is, over the theme's and the framework's corner. |
 | `.menu_radius()` | `radius: impl Into<BorderRadius>` | The shorthand for a rounded panel. |

@@ -32,9 +32,9 @@ impl ScrollOverlay {
 From [`frus-examples/widgets/src/features/scrolling/widgets/scrolloverlay.rs`](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/scrolling/widgets/scrolloverlay.rs):
 
 ```rust
-//! `ScrollOverlay` — something drawn over a scroll region and rebuilt from its offset in
+//! `ScrollOverlay`: something drawn over a scroll region and rebuilt from its offset in
 //! the same frame: a shadow under a header once content slides beneath it, a rule that
-//! fills as you read. (For state that must change — loading more — use `on_scroll`.)
+//! fills as you read. (For state that must change (loading more) use `on_scroll`.)
 
 use frus::{Color, Column, Container, ListTile, ListView, ScrollOverlay, Text, Widget};
 
@@ -66,7 +66,7 @@ pub fn example() -> Box<dyn Widget> {
                 6.0,
                 Color::rgba(0.0, 0.0, 0.0, shadow),
             )])
-            .child(Text::new(format!("Contents — {y:.0} px down")));
+            .child(Text::new(format!("Contents, {y:.0} px down")));
         Column::new().child(header)
     });
 

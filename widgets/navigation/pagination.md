@@ -33,7 +33,7 @@ impl Pagination {
 From [`frus-examples/widgets/src/features/navigation/widgets/pagination.rs`](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/navigation/widgets/pagination.rs):
 
 ```rust
-//! `Pagination` — a page picker: previous, a window of page numbers, next. Pages are
+//! `Pagination`: a page picker: previous, a window of page numbers, next. Pages are
 //! counted from 1, and the current page is the app's state.
 
 use frus::{Align, Column, Pagination, Text, Widget};

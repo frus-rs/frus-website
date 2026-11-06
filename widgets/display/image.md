@@ -39,7 +39,7 @@ impl ImageIcon {
 From [`frus-examples/widgets/src/features/display/widgets/image.rs`](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/display/widgets/image.rs):
 
 ```rust
-//! `Image` — a bitmap fitted into a box: embedded with `asset!`, made from pixels, or
+//! `Image`: a bitmap fitted into a box: embedded with `asset!`, made from pixels, or
 //! fetched over the network. `ImageIcon` puts a picture where an icon goes.
 
 use frus::{
@@ -91,7 +91,7 @@ pub fn example() -> Box<dyn Widget> {
         };
 
         sections(vec![
-            // `asset!` embeds the file at compile time — no path to get wrong at run time.
+            // `asset!` embeds the file at compile time: no path to get wrong at run time.
             // The path is relative to this source file. Give one side and the other
             // follows the picture's own ratio.
             Box::new(section(
@@ -172,10 +172,10 @@ fn fitted(label: &str, fit: BoxFit) -> Column {
 | `Image` | `.size()` | `width: f32, height: f32` | Both at once. |
 | `Image` | `.cache_width()` | `pixels: u32` | **Decodes the picture this many physical pixels wide**, whatever the file's own width; the height follows from the image's own ratio unless `cache_height` is given too, in which case the picture is decoded at the smallest size, at its own ratio, that covers both. Never larger than the file. |
 | `Image` | `.cache_height()` | `pixels: u32` | `cache_width`, for the height. |
-| `Image` | `.full_resolution()` | — | **Decodes the file at its own size**, however small the box: for a picture that is shown larger than its box says — under a zoom, a scale transform, a hero flight to a full-screen view — and must stay sharp there. |
+| `Image` | `.full_resolution()` |  | **Decodes the file at its own size**, however small the box: for a picture that is shown larger than its box says (under a zoom, a scale transform, a hero flight to a full-screen view) and must stay sharp there. |
 | `Image` | `.fit()` | `fit: BoxFit` | Changes the fit mode. |
 | `Image` | `.alignment()` | `alignment: impl Into<AlignmentGeometry>` | Where the image sits in a box it does not fill, and which part of it survives a box it overflows. |
-| `Image` | `.tint()` | `tint: Color` | A multiplied tint, white leaving it unchanged — for bitmap icons, say. |
+| `Image` | `.tint()` | `tint: Color` | A multiplied tint, white leaving it unchanged: for bitmap icons, say. |
 | `Image` | `.opacity()` | `opacity: f32` | Draws the image at a fraction of its opacity, `1.0` being fully opaque. |
 | `Image` | `.semantic_label()` | `label: impl Into<String>` | What a screen reader says instead of the picture. |
 | `Image` | `.exclude_from_semantics()` | `exclude: bool` | Leaves the image out of the tree a screen reader walks. |
@@ -196,7 +196,7 @@ An image, fitted by `fit` into whatever box it ends up with.
 
 **A picture used where an icon would go**: a brand mark, a flag, a custom glyph that is artwork rather than a path.
 
-It is an icon in every way that matters to the layout and the theme — the ambient size from `IconTheme`, the same square box, the same place in a row of them — and a picture in the one way that matters to the painter. So it sits in an `IconButton`, a list tile's leading slot or an app bar action without any of them knowing.
+It is an icon in every way that matters to the layout and the theme (the ambient size from `IconTheme`, the same square box, the same place in a row of them) and a picture in the one way that matters to the painter. So it sits in an `IconButton`, a list tile's leading slot or an app bar action without any of them knowing.
 
 **Untinted by default**, which is the one place it parts from `crate::Icon`. An icon is a silhouette and takes the foreground colour; a picture usually has colours of its own, and a brand mark flattened to `on_surface` the first time an application themes its icons is a brand mark nobody recognises.
 

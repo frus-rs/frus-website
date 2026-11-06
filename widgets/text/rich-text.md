@@ -37,7 +37,7 @@ impl TextSpan {
 From [`frus-examples/widgets/src/features/text/widgets/rich_text.rs`](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/text/widgets/rich_text.rs):
 
 ```rust
-//! `RichText` and `TextSpan` — one paragraph in several styles: a bold word, a link-
+//! `RichText` and `TextSpan`: one paragraph in several styles: a bold word, a link-
 //! coloured phrase, a price in two sizes.
 //!
 //! A `TextSpan` is a tree: each span has its own text and children, and a child
@@ -86,7 +86,7 @@ pub fn example() -> Box<dyn Widget> {
                     .child(TextSpan::new(" / month")),
             ),
         )),
-        // A whole span can carry a full `TextStyle` — here monospace for inline code —
+        // A whole span can carry a full `TextStyle` (here monospace for inline code)
         // and a decoration in a colour of its own.
         Box::new(section(
             "Inline code and a coloured strikethrough",
@@ -135,19 +135,19 @@ pub fn example() -> Box<dyn Widget> {
 
 | Type | Method | Argument | Effect |
 | --- | --- | --- | --- |
-| `RichText` | `.base_style()` | `style: TextStyle` | Overrides the base style (the root of the cascade) — typically one step of the theme's scale (`.base_style(theme.text.body_large)`). |
-| `RichText` | `.wrap()` | — | Wraps at the width the parent offers. This is the default; the call is kept because saying so at the call site is not redundant when it is the point. |
-| `RichText` | `.no_wrap()` | — | Keeps the runs on **one line**, explicit newlines aside. |
-| `RichText` | `.align()` | `align: TextAlign` | Where the lines sit **inside the box** the paragraph was given. As with `crate::Text`, it does nothing to a paragraph that shrink-wraps — and makes the paragraph take the width it is offered, so that there is something to sit in. |
+| `RichText` | `.base_style()` | `style: TextStyle` | Overrides the base style (the root of the cascade): typically one step of the theme's scale (`.base_style(theme.text.body_large)`). |
+| `RichText` | `.wrap()` |  | Wraps at the width the parent offers. This is the default; the call is kept because saying so at the call site is not redundant when it is the point. |
+| `RichText` | `.no_wrap()` |  | Keeps the runs on **one line**, explicit newlines aside. |
+| `RichText` | `.align()` | `align: TextAlign` | Where the lines sit **inside the box** the paragraph was given. As with `crate::Text`, it does nothing to a paragraph that shrink-wraps, and makes the paragraph take the width it is offered, so that there is something to sit in. |
 | `RichText` | `.max_lines()` | `max_lines: usize` | At most `max_lines` lines; the rest is dropped and `RichText::overflow` decides how the last one ends. Saying so also tells the layout this paragraph may be given **less than it asked for**. |
 | `RichText` | `.overflow()` | `overflow: TextOverflow` | What becomes of runs that do not fit: cut, cut with an ellipsis, faded out, or drawn past the box. |
-| `TextSpan` | `.bold()` | — | Makes this subtree bold. |
+| `TextSpan` | `.bold()` |  | Makes this subtree bold. |
 | `TextSpan` | `.weight()` | `weight: FontWeight` | Sets this subtree's weight. |
-| `TextSpan` | `.italic()` | — | Makes this subtree italic. |
+| `TextSpan` | `.italic()` |  | Makes this subtree italic. |
 | `TextSpan` | `.size()` | `size: f32` | Sets this subtree's size. |
 | `TextSpan` | `.color()` | `color: Color` | Sets this subtree's colour. |
-| `TextSpan` | `.underline()` | — | Underlines this subtree. It combines with the decoration already set on this node, but not with the parent's. |
-| `TextSpan` | `.strikethrough()` | — | Strikes through this subtree. |
+| `TextSpan` | `.underline()` |  | Underlines this subtree. It combines with the decoration already set on this node, but not with the parent's. |
+| `TextSpan` | `.strikethrough()` |  | Strikes through this subtree. |
 | `TextSpan` | `.decoration()` | `decoration: TextDecoration` | Sets this subtree's decoration lines. |
 | `TextSpan` | `.decoration_color()` | `color: Color` | Sets this subtree's decoration colour. |
 | `TextSpan` | `.style()` | `style: TextStyle` | Applies a whole `TextStyle` as this subtree's override, **replacing** whatever this span had said before. |
@@ -159,11 +159,11 @@ pub fn example() -> Box<dyn Widget> {
 
 A rich text paragraph. It wraps at the width it is offered, as `crate::Text` does and for the same reason: a piece of prose in a box narrower than itself is a paragraph.
 
-Everything milestones 343 and 344 gave `Text` is here — `RichText::align`, `RichText::max_lines`, `RichText::overflow`, `RichText::no_wrap` — because the three questions they answer are questions about *text*, and the styles being mixed changes none of them.
+Everything milestones 343 and 344 gave `Text` is here (`RichText::align`, `RichText::max_lines`, `RichText::overflow`, `RichText::no_wrap`) because the three questions they answer are questions about *text*, and the styles being mixed changes none of them.
 
 ### `TextSpan`
 
-A **rich-text tree**: each node carries a fragment of text, *partial* style overrides — whatever is unspecified **inherits** from the parent, so a `.bold()` child keeps its parent's size — and children of its own.
+A **rich-text tree**: each node carries a fragment of text, *partial* style overrides (whatever is unspecified **inherits** from the parent, so a `.bold()` child keeps its parent's size) and children of its own.
 
 ```rust
 let span = TextSpan::new("Hello ")

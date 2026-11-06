@@ -40,7 +40,7 @@ impl Radio {
 From [`frus-examples/widgets/src/features/inputs/widgets/radio.rs`](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/inputs/widgets/radio.rs):
 
 ```rust
-//! `RadioGroup` and `Radio` — one choice out of a few, all visible at once. `RadioGroup`
+//! `RadioGroup` and `Radio`: one choice out of a few, all visible at once. `RadioGroup`
 //! lays out a labelled set; `Radio` is a single button for layouts of your own.
 
 use frus::{Color, Radio, RadioGroup, Row, State, StateContext, StatefulWidget, Text, Widget};
@@ -124,9 +124,9 @@ impl State for RadioDemoState {
 | `RadioGroup` | `.active_border_color()` | `color: Color` | That ring under a pointer, a finger or focus. |
 | `RadioGroup` | `.label_color()` | `color: Color` | The labels' colour; the theme's `on_surface` otherwise. |
 | `RadioGroup` | `.option()` | `label: impl Into<String>` | Adds an option, in order. |
-| `RadioGroup` | `.enabled()` | `enabled: bool` | Whether the group can be chosen from. Disabled it is **inert** — no message, out of the tab order, announced as unavailable — and it still shows which option is chosen. |
-| `RadioGroup` | `.tap_target()` | `target: TapTarget` | **How much room it reserves for a finger** (`TapTarget`). Unset, the theme's answer, which is `Padded` — at least 48 pixels either way, whatever this control paints in the middle of it. |
-| `Radio` | `.label()` | `label: impl Into<String>` | The words beside it. Empty by default, which is what a radio in a row that has its own title wants — see `RadioListTile`. |
+| `RadioGroup` | `.enabled()` | `enabled: bool` | Whether the group can be chosen from. Disabled it is **inert** (no message, out of the tab order, announced as unavailable) and it still shows which option is chosen. |
+| `RadioGroup` | `.tap_target()` | `target: TapTarget` | **How much room it reserves for a finger** (`TapTarget`). Unset, the theme's answer, which is `Padded`: at least 48 pixels either way, whatever this control paints in the middle of it. |
+| `Radio` | `.label()` | `label: impl Into<String>` | The words beside it. Empty by default, which is what a radio in a row that has its own title wants: see `RadioListTile`. |
 | `Radio` | `.label_size()` | `size: f32` | The label's size, in pixels. |
 | `Radio` | `.on_select()` | `message: impl Into<Msg>` | What to say when it is pressed. A radio with no message is inert. |
 | `Radio` | `.enabled()` | `enabled: bool` | Whether it can be pressed. |
@@ -134,7 +134,7 @@ impl State for RadioDemoState {
 | `Radio` | `.border_color()` | `color: Color` | The ring while it is not, at rest. |
 | `Radio` | `.active_border_color()` | `color: Color` | And the ring while it is not, under a finger, a pointer or focus. |
 | `Radio` | `.label_color()` | `color: Color` | The label's colour. |
-| `Radio` | `.visual_density()` | `density: crate::VisualDensity` | — |
+| `Radio` | `.visual_density()` | `density: crate::VisualDensity` |  |
 | `Radio` | `.splash_radius()` | `radius: f32` | **The halo's radius** under a pointer, the keyboard or a finger. Unset, the theme's, then 20. |
 | `Radio` | `.tap_target()` | `target: TapTarget` | How much room it reserves for the finger that works it. |
 

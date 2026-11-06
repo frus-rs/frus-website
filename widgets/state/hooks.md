@@ -23,7 +23,7 @@ This demo shows a pattern rather than one type. The names it uses are in the exa
 From [`frus-examples/widgets/src/features/state/widgets/hooks.rs`](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/state/widgets/hooks.rs):
 
 ```rust
-//! Hooks — `use_state`, `use_ref` and `use_memo`: state kept by a plain function
+//! Hooks: `use_state`, `use_ref` and `use_memo`: state kept by a plain function
 //! component (`frus::component(|cx| ..)`), with no struct to declare.
 //!
 //! Hooks are matched to their values by the **order** they are called in, so call them
@@ -72,7 +72,7 @@ pub fn counter() -> Component {
 pub fn builds() -> Component {
     component(|cx| {
         // A `use_ref` changes without rebuilding: right for bookkeeping the screen does not
-        // show directly — a timer handle, a previous value, a counter of builds.
+        // show directly: a timer handle, a previous value, a counter of builds.
         let built = cx.use_ref(|| 0_u32);
         built.update(|n| *n += 1);
         let pending = cx.use_ref(|| 0_u32);
@@ -92,7 +92,7 @@ pub fn builds() -> Component {
                                 .on_press(move || add.update(|n| *n += 1)),
                         )
                         .child(
-                            // Setting a state — even to the same value — rebuilds, and
+                            // Setting a state (even to the same value) rebuilds, and
                             // the ref's current value shows.
                             Button::new("Rebuild")
                                 .variant(Variant::Outlined)
@@ -159,7 +159,7 @@ pub fn primes() -> Component {
     })
 }
 
-/// How many primes are below `n` — a sieve, cheap but not free.
+/// How many primes are below `n`: a sieve, cheap but not free.
 pub fn count_primes(n: usize) -> usize {
     if n < 3 {
         return 0;

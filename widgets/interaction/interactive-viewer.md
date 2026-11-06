@@ -29,7 +29,7 @@ impl InteractiveViewer {
 From [`frus-examples/widgets/src/features/interaction/widgets/interactive_viewer.rs`](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/interaction/widgets/interactive_viewer.rs):
 
 ```rust
-//! `InteractiveViewer` — a viewport whose content can be panned (drag) and zoomed (mouse
+//! `InteractiveViewer`: a viewport whose content can be panned (drag) and zoomed (mouse
 //! wheel, trackpad or pinch): a map, a diagram, a photo.
 //!
 //! The pan and the zoom are kept by the framework between frames; you only say how big

@@ -33,7 +33,7 @@ impl SizedBox {
 From [`frus-examples/widgets/src/features/layout/widgets/sized_box.rs`](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/layout/widgets/sized_box.rs):
 
 ```rust
-//! `SizedBox` — a box of a given size: to size its child, or, empty, as a fixed gap.
+//! `SizedBox`: a box of a given size: to size its child, or, empty, as a fixed gap.
 
 use frus::{Alignment, Color, Container, Row, SizedBox, Text, Widget};
 
@@ -46,7 +46,7 @@ pub fn example() -> Box<dyn Widget> {
             "Width and height",
             SizedBox::new(filler("160 × 48")).width(160.0).height(48.0),
         )),
-        // `square` is the same on both axes — an avatar, an icon slot.
+        // `square` is the same on both axes: an avatar, an icon slot.
         Box::new(section("Square", SizedBox::square(64.0, filler("64")))),
         // An empty one is a fixed gap: between two children of a row that has no
         // `spacing`, for instance.
@@ -117,7 +117,7 @@ fn tag(label: &str) -> Container {
 
 ## Behaviour
 
-A box of a given size — or one that fills what it is given, or one that takes only what its child needs.
+A box of a given size, or one that fills what it is given, or one that takes only what its child needs.
 
 `SizedBox::empty()` with a size is also the plainest way to put a gap somewhere that has no gap of its own; with no child it draws nothing at all.
 

@@ -45,7 +45,7 @@ impl DrawerButton {
 From [`frus-examples/widgets/src/features/buttons/widgets/action_buttons.rs`](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/buttons/widgets/action_buttons.rs):
 
 ```rust
-//! `BackButton`, `CloseButton`, `DrawerButton` and `EndDrawerButton` — icon buttons
+//! `BackButton`, `CloseButton`, `DrawerButton` and `EndDrawerButton`: icon buttons
 //! whose meaning is fixed. They know their icon and their accessible name (translated
 //! by the framework), so an app bar never spells them out by hand.
 

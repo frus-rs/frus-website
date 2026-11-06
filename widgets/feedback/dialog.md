@@ -29,7 +29,7 @@ impl Dialog {
 From [`frus-examples/widgets/src/features/feedback/widgets/dialog.rs`](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/feedback/widgets/dialog.rs):
 
 ```rust
-//! `Dialog` — the modal surface on its own: rounded, raised, held off the window's edges,
+//! `Dialog`: the modal surface on its own: rounded, raised, held off the window's edges,
 //! with **any content** in it. For what is not a title-and-buttons question: a small form,
 //! a picture, a progress report.
 

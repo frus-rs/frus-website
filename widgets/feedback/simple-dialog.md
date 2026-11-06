@@ -29,7 +29,7 @@ impl SimpleDialog {
 From [`frus-examples/widgets/src/features/feedback/widgets/simple_dialog.rs`](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/feedback/widgets/simple_dialog.rs):
 
 ```rust
-//! `SimpleDialog` and `SimpleDialogOption` — a modal list of choices, answered by
+//! `SimpleDialog` and `SimpleDialogOption`: a modal list of choices, answered by
 //! picking one row. No buttons: choosing **is** the answer.
 
 use frus::{
@@ -123,18 +123,18 @@ impl State for SimpleDialogDemoState {
 
 | Method | Argument | Effect |
 | --- | --- | --- |
-| `.on_dismiss()` | `message: impl Into<Msg>` | What a click on the scrim sends — see `Dialog::on_dismiss`. |
+| `.on_dismiss()` | `message: impl Into<Msg>` | What a click on the scrim sends: see `Dialog::on_dismiss`. |
 | `.title()` | `title: impl Into<String>` | The heading, as text. |
 | `.title_widget()` | `title: impl Widget<Msg> + 'static` | The heading, as a widget. |
 | `.title_text_style()` | `style: TextStyle` | The heading's type. `headlineSmall` by default, as `AlertDialog`'s is. |
 | `.title_padding()` | `padding: Insets` | The space around the heading. |
 | `.content_padding()` | `padding: Insets` | The space around the list of options. **No side padding** by default: an option is a full-width row that pads itself. |
 | `.content_text_style()` | `style: TextStyle` | What the options are set in. `bodyMedium` by default. |
-| `.option()` | `option: impl Widget<Msg> + 'static` | Adds an option — usually a `SimpleDialogOption`. |
-| `.background()` | `color: Color` | The surface's colour — see `Dialog::background`. |
-| `.elevation()` | `elevation: f32` | How far off the page it sits — see `Dialog::elevation`. |
-| `.shape()` | `shape: ShapeBorder` | **What shape it is** — see `Dialog::shape`. |
-| `.inset_padding()` | `padding: Insets` | How far off the window's edges — see `Dialog::inset_padding`. |
+| `.option()` | `option: impl Widget<Msg> + 'static` | Adds an option: usually a `SimpleDialogOption`. |
+| `.background()` | `color: Color` | The surface's colour: see `Dialog::background`. |
+| `.elevation()` | `elevation: f32` | How far off the page it sits: see `Dialog::elevation`. |
+| `.shape()` | `shape: ShapeBorder` | **What shape it is**: see `Dialog::shape`. |
+| `.inset_padding()` | `padding: Insets` | How far off the window's edges: see `Dialog::inset_padding`. |
 
 ## Behaviour
 

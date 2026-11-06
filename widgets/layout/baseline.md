@@ -29,7 +29,7 @@ impl Baseline {
 From [`frus-examples/widgets/src/features/layout/widgets/baseline.rs`](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/layout/widgets/baseline.rs):
 
 ```rust
-//! `Baseline`, `IgnoreBaseline` and `Align::Baseline` — line text up on the line its
+//! `Baseline`, `IgnoreBaseline` and `Align::Baseline`: line text up on the line its
 //! letters sit on, not on the tops or middles of the boxes.
 
 use frus::{
@@ -47,7 +47,7 @@ pub fn example() -> Box<dyn Widget> {
         // On their baselines they share a line, whatever their sizes.
         Box::new(section("Align::Baseline", price(Align::Baseline))),
         // A row aligned on baselines follows the lowest one it finds. `IgnoreBaseline`
-        // takes a piece out of the reckoning — here, the badge's text, which would
+        // takes a piece out of the reckoning: here, the badge's text, which would
         // otherwise drag the line down to its own.
         Box::new(section(
             "IgnoreBaseline",
@@ -66,7 +66,7 @@ pub fn example() -> Box<dyn Widget> {
                     ),
                 ),
         )),
-        // `Baseline` puts its child's baseline a set distance below its top — to pin a
+        // `Baseline` puts its child's baseline a set distance below its top: to pin a
         // label to a rule drawn elsewhere. The grey line is 32 px down; so is the text's
         // baseline.
         Box::new(section(
@@ -107,7 +107,7 @@ fn price(align: Align) -> Row {
 
 Positions its child so that the **child's baseline** lands `baseline` logical pixels below the top of this box, then grows to contain it.
 
-It is the manual version of what `Align::Baseline` does automatically: a way to pin one piece of text to a line decided elsewhere — a caption on a rule, a label on a grid, a figure on a chart's axis.
+It is the manual version of what `Align::Baseline` does automatically: a way to pin one piece of text to a line decided elsewhere, a caption on a rule, a label on a grid, a figure on a chart's axis.
 
 If the child's own baseline is already lower than `baseline` there is nowhere to push it up to, and the child is **top-aligned** instead. A child with no text in it has no baseline; its bottom edge is used, which is what a plain box amounts to.
 
@@ -115,7 +115,7 @@ If the child's own baseline is already lower than `baseline` there is nowhere to
 Baseline::new(24.0).child(Text::new("on the line"))
 ```
 
-There is no choice of baseline *kind*. The measurement here is the alphabetic baseline — the line Latin, Greek and Cyrillic sit on — because that is the one the text engine reports. An ideographic baseline is a different number and offering a name for it that resolved to the same value would be worse than not offering it.
+There is no choice of baseline *kind*. The measurement here is the alphabetic baseline (the line Latin, Greek and Cyrillic sit on) because that is the one the text engine reports. An ideographic baseline is a different number and offering a name for it that resolved to the same value would be worse than not offering it.
 
 ## See also
 

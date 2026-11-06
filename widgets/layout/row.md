@@ -37,7 +37,7 @@ impl Column {
 From [`frus-examples/widgets/src/features/layout/widgets/row_column.rs`](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/layout/widgets/row_column.rs):
 
 ```rust
-//! `Row` and `Column` — children in a line, across or down: the two containers most
+//! `Row` and `Column`: children in a line, across or down: the two containers most
 //! screens are built from.
 
 use frus::{
@@ -49,7 +49,7 @@ use crate::common::shared::{section, sections};
 
 pub fn example() -> Box<dyn Widget> {
     sections(vec![
-        // `spacing` puts the same gap between every pair of children — no spacer widgets.
+        // `spacing` puts the same gap between every pair of children: no spacer widgets.
         Box::new(section(
             "Row with spacing",
             Row::new()
@@ -82,7 +82,7 @@ pub fn example() -> Box<dyn Widget> {
                 .child(tall_row(Align::End, "End"))
                 .child(tall_row(Align::Stretch, "Stretch")),
         )),
-        // `MainAxisSize::Min` makes the row only as wide as its children — the size you
+        // `MainAxisSize::Min` makes the row only as wide as its children: the size you
         // want for a row that is itself placed by something else, such as a button's
         // icon and label.
         Box::new(section(

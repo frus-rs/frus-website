@@ -43,7 +43,7 @@ impl DateTimeRange {
 From [`frus-examples/widgets/src/features/inputs/widgets/date_time_range.rs`](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/inputs/widgets/date_time_range.rs):
 
 ```rust
-//! `DateTimeRange` — two months side by side for a date range, a start and an end time
+//! `DateTimeRange`: two months side by side for a date range, a start and an end time
 //! below, and a "start → end" summary on top. For booking a whole slot.
 
 use frus::{

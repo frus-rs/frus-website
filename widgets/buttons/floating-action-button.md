@@ -31,7 +31,7 @@ impl FloatingActionButton {
 From [`frus-examples/widgets/src/features/buttons/widgets/fab.rs`](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/buttons/widgets/fab.rs):
 
 ```rust
-//! `FloatingActionButton` — the one action a screen is for, floating above it. Put it in
+//! `FloatingActionButton`: the one action a screen is for, floating above it. Put it in
 //! a `Scaffold` with `.fab(..)`; here the buttons sit in the page so all sizes show.
 
 use frus::{
@@ -124,19 +124,19 @@ impl State for FabDemoState {
 | Method | Argument | Effect |
 | --- | --- | --- |
 | `.icon()` | `icon: IconData` | The glyph, over whatever was there. On an extended button it goes before the words. |
-| `.small()` | — | **The smaller box**: 40 across, cornered at 12, with the same glyph. |
-| `.large()` | — | **The larger box**: 96 across, cornered at 28, with a 36 glyph. |
+| `.small()` |  | **The smaller box**: 40 across, cornered at 12, with the same glyph. |
+| `.large()` |  | **The larger box**: 96 across, cornered at 28, with a 36 glyph. |
 | `.size()` | `size: FabSize` | Which of the four this is, said outright. |
 | `.on_press()` | `message: impl Into<Msg>` | What it does. A button with no message is **inert**, which is not the same as disabled: see `enabled`. |
 | `.enabled()` | `enabled: bool` | Whether it can be pressed. |
 | `.background()` | `color: Color` | **The surface**, over the theme's and `primary_container`. |
 | `.foreground()` | `color: Color` | **What is drawn on it**, over the theme's and `on_primary_container`. |
 | `.elevation()` | `elevation: f32` | How far off the page it sits at rest, in pixels. Six by default. |
-| `.hover_elevation()` | `elevation: f32` | — |
+| `.hover_elevation()` | `elevation: f32` |  |
 | `.shape()` | `shape: ShapeBorder` | **What shape it is**, over the theme's and the corner its size asks for. |
-| `.radius()` | `radius: impl Into<BorderRadius>` | The shorthand for a rounded rectangle. `shape(ShapeBorder::stadium())` is the round button a docked one needs — see the note on `Self::shape_of`. |
+| `.radius()` | `radius: impl Into<BorderRadius>` | The shorthand for a rounded rectangle. `shape(ShapeBorder::stadium())` is the round button a docked one needs: see the note on `Self::shape_of`. |
 | `.icon_size()` | `size: f32` | How big the glyph is, over the theme's and the size's own. |
-| `.label_style()` | `style: TextStyle` | — |
+| `.label_style()` | `style: TextStyle` |  |
 
 ## Behaviour
 

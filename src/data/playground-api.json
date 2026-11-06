@@ -323,7 +323,7 @@
      "args": [
       "1.0"
      ],
-     "doc": "A uniform outer margin: space reserved around the box — outside the decoration, it pushes the siblings away without growing the background or the border."
+     "doc": "A uniform outer margin: space reserved around the box, outside the decoration, it pushes the siblings away without growing the background or the border."
     },
     {
      "name": "radius",
@@ -568,7 +568,7 @@
      "args": [
       "child"
      ],
-     "doc": "Wraps a layer, pinned nowhere yet — which on its own is the stack's alignment at the child's natural size."
+     "doc": "Wraps a layer, pinned nowhere yet (which on its own is the stack's alignment at the child's natural size."
     },
     {
      "name": "fill",
@@ -583,7 +583,7 @@
      "args": [
       "1.0"
      ],
-     "doc": "Distance from the stack's left edge — the left in either reading direction; see start for one that follows the script."
+     "doc": "Distance from the stack's left edge) the left in either reading direction; see start for one that follows the script."
     },
     {
      "name": "top",
@@ -782,7 +782,7 @@
       "usize",
       "|index| Text::new(\"row\")"
      ],
-     "doc": "A virtualised list of count items of any extent, built on demand by build(index) — a feed of posts of different lengths, a chat, search results with and without a picture."
+     "doc": "A virtualised list of count items of any extent, built on demand by build(index) (a feed of posts of different lengths, a chat, search results with and without a picture."
     }
    ],
    "methods": [
@@ -796,7 +796,7 @@
     {
      "name": "reverse",
      "args": [],
-     "doc": "Builds from the far end: item 0 sits at the end the axis finishes at — the bottom of a vertical list, the trailing edge of a horizontal one — item 1 before it, and the list starts resting there."
+     "doc": "Builds from the far end: item 0 sits at the end the axis finishes at) the bottom of a vertical list, the trailing edge of a horizontal one, item 1 before it, and the list starts resting there."
     },
     {
      "name": "padding",
@@ -1011,7 +1011,7 @@
      "args": [
       "1.0"
      ],
-     "doc": "Insets the line from the leading edge, leaving the box where it is — how a list separates rows without cutting through their leading icons."
+     "doc": "Insets the line from the leading edge, leaving the box where it is, how a list separates rows without cutting through their leading icons."
     },
     {
      "name": "end_indent",
@@ -1132,7 +1132,7 @@
      "args": [
       "1.0"
      ],
-     "doc": "Font size — sugar for Button::label_style with the label step resized."
+     "doc": "Font size, sugar for Button::label_style with the label step resized."
     }
    ]
   },
@@ -1389,7 +1389,7 @@
      "args": [
       "Icons::STAR"
      ],
-     "doc": "An icon in the theme's colour and at the theme's size — 24 px unless a theme says otherwise."
+     "doc": "An icon in the theme's colour and at the theme's size, 24 px unless a theme says otherwise."
     }
    ],
    "methods": [
@@ -1737,7 +1737,7 @@
      "args": [
       "\"text\""
      ],
-     "doc": "Hint displayed inside the field while it is empty — and, for a field with no label, the name a screen reader gives it."
+     "doc": "Hint displayed inside the field while it is empty (and, for a field with no label, the name a screen reader gives it."
     },
     {
      "name": "helper",
@@ -1811,7 +1811,7 @@
     {
      "name": "read_only",
      "args": [],
-     "doc": "A field whose value can be read, selected and copied — but not changed."
+     "doc": "A field whose value can be read, selected and copied) but not changed."
     }
    ]
   },
@@ -1838,7 +1838,7 @@
      "args": [
       "Icons::STAR"
      ],
-     "doc": "A leading icon — the avatar or glyph an entry chip carries."
+     "doc": "A leading icon, the avatar or glyph an entry chip carries."
     },
     {
      "name": "enabled",
@@ -2183,7 +2183,7 @@
      "args": [
       "Colors::RED"
      ],
-     "doc": "A multiplied tint, white leaving it unchanged — for bitmap icons, say."
+     "doc": "A multiplied tint, white leaving it unchanged, for bitmap icons, say."
     },
     {
      "name": "opacity",
@@ -2726,7 +2726,7 @@
     {
      "name": "new",
      "args": [],
-     "doc": "Creates a bar with no title, as wide as the surface it is being built for — which is what decides how many actions fit on the line and how many fold into the overflow menu."
+     "doc": "Creates a bar with no title, as wide as the surface it is being built for (which is what decides how many actions fit on the line and how many fold into the overflow menu."
     }
    ],
    "methods": [
@@ -2735,7 +2735,7 @@
      "args": [
       "child"
      ],
-     "doc": "The title, as any widget — a text, a logo, a composed row."
+     "doc": "The title, as any widget) a text, a logo, a composed row."
     },
     {
      "name": "leading",
@@ -2770,7 +2770,7 @@
      "args": [
       "Colors::RED"
      ],
-     "doc": "The colour of the bar's own text — the title, and the labelled actions."
+     "doc": "The colour of the bar's own text (the title, and the labelled actions."
     },
     {
      "name": "elevation",
@@ -2854,7 +2854,7 @@
       "\"text\""
      ],
      "returns": "BottomNavigationBarItem",
-     "doc": "An item with icon — one of the bundled icons, or a glyph — and label."
+     "doc": "An item with icon) one of the bundled icons, or a glyph, and label."
     }
    ],
    "methods": []

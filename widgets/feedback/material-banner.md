@@ -30,7 +30,7 @@ impl MaterialBanner {
 From [`frus-examples/widgets/src/features/feedback/widgets/material_banner.rs`](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/feedback/widgets/material_banner.rs):
 
 ```rust
-//! `MaterialBanner` — a message across the top of the content that stays until one of its
+//! `MaterialBanner`: a message across the top of the content that stays until one of its
 //! actions is taken. Between a snack bar (gone in seconds) and a dialog (blocks
 //! everything): for something important that can wait, like "you are offline".
 
@@ -141,8 +141,8 @@ impl State for BannerDemoState {
 | `.background()` | `color: Color` | The banner's colour. A low container tone by default. |
 | `.surface_tint()` | `color: Color` | What the surface is tinted towards for its elevation. |
 | `.shadow_color()` | `color: Color` | The shadow's colour. Unset, there is none. |
-| `.divider_color()` | `color: Color` | The rule along the bottom, which is drawn **only when the banner is flat** — see `Self::elevation`. |
-| `.elevation()` | `elevation: f32` | How far off the page it sits. `0` by default — see `BANNER_ELEVATION`. |
+| `.divider_color()` | `color: Color` | The rule along the bottom, which is drawn **only when the banner is flat**: see `Self::elevation`. |
+| `.elevation()` | `elevation: f32` | How far off the page it sits. `0` by default: see `BANNER_ELEVATION`. |
 | `.padding()` | `padding: Insets` | The padding around the message row. |
 | `.margin()` | `margin: Insets` | The margin around the banner. |
 | `.leading_padding()` | `padding: Insets` | What the leading slot is held off the message by. |
@@ -152,7 +152,7 @@ impl State for BannerDemoState {
 
 A message across the top of the screen with the actions that answer it.
 
-It sits **in the flow**, not over it: a banner is put above the content it is about, usually as the first child of a screen's column. Nothing hides it on a timer, which is the whole difference from a snack bar — an action does.
+It sits **in the flow**, not over it: a banner is put above the content it is about, usually as the first child of a screen's column. Nothing hides it on a timer, which is the whole difference from a snack bar: an action does.
 
 ## See also
 

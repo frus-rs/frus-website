@@ -32,12 +32,12 @@ impl Listener {
 From [`frus-examples/widgets/src/features/interaction/widgets/listener.rs`](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/interaction/widgets/listener.rs):
 
 ```rust
-//! `Listener` — the pointer's raw events on a widget: down, move, up, cancel, and a mouse's
+//! `Listener`: the pointer's raw events on a widget: down, move, up, cancel, and a mouse's
 //! hover, with positions in the widget's own coordinates.
 //!
 //! Unlike `GestureDetector` it recognises nothing and competes with nothing: a button
 //! inside still takes its tap, a scroll still scrolls, and the listener hears every event
-//! anyway. A pointer that went down inside is followed wherever it goes until it lifts —
+//! anyway. A pointer that went down inside is followed wherever it goes until it lifts:
 //! what a drawing surface or a custom control is built on.
 
 use std::collections::VecDeque;
@@ -92,7 +92,7 @@ impl RawPointerState {
         if event.kind != ListenerEventKind::Hover && event.kind != ListenerEventKind::Move {
             let device = if event.touch { "finger" } else { "mouse" };
             self.log.push_front(format!(
-                "{:?} at ({:.0}, {:.0}) — {device}",
+                "{:?} at ({:.0}, {:.0}), {device}",
                 event.kind, event.local.x, event.local.y
             ));
             self.log.truncate(LOG);

@@ -29,7 +29,7 @@ impl Container {
 From [`frus-examples/widgets/src/features/layout/widgets/container.rs`](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/layout/widgets/container.rs):
 
 ```rust
-//! `Container` — one box that can size, pad, colour, round, border and shadow its child.
+//! `Container`: one box that can size, pad, colour, round, border and shadow its child.
 
 use frus::{BorderRadius, BoxDecoration, BoxShadow, Color, Colors, Container, Row, Text, Widget};
 
@@ -71,7 +71,7 @@ pub fn example() -> Box<dyn Widget> {
                 )])
                 .child(Text::new("A card-like box").color(Color::hex("#09090B"))),
         )),
-        // `decoration` takes the whole description at once — what a theme or a design
+        // `decoration` takes the whole description at once: what a theme or a design
         // system would hand you.
         Box::new(section(
             "BoxDecoration",
@@ -95,39 +95,39 @@ pub fn example() -> Box<dyn Widget> {
 
 | Method | Argument | Effect |
 | --- | --- | --- |
-| `.min_width()` | `width: f32` | — |
+| `.min_width()` | `width: f32` |  |
 | `.max_width()` | `width: f32` | **At most `width` wide.** |
 | `.min_height()` | `height: f32` | **At least `height` tall.** |
 | `.max_height()` | `height: f32` | **At most `height` tall.** |
-| `.translated()` | `dx: f32, dy: f32` | — |
+| `.translated()` | `dx: f32, dy: f32` |  |
 | `.scaled()` | `sx: f32, sy: f32` | **Scaled by `(sx, sy)`** when painted, about the `transform_alignment`. |
 | `.rotated()` | `radians: f32` | **Turned by `radians`** when painted, about the `transform_alignment`. |
 | `.transform_alignment()` | `pivot: frus_core::Alignment` | **The point a scale and a turn are about**, within the box. Unset, its centre. |
-| `.repaint_boundary()` | — | Marks this container as a **repaint boundary**: its subtree is cached and reused for as long as its geometry and its descendants' interaction state stay stable. To be placed around **static** content that would otherwise be repainted on every frame of a neighbouring animation. |
+| `.repaint_boundary()` |  | Marks this container as a **repaint boundary**: its subtree is cached and reused for as long as its geometry and its descendants' interaction state stay stable. To be placed around **static** content that would otherwise be repainted on every frame of a neighbouring animation. |
 | `.width()` | `width: f32` | Sets the width, in logical pixels. |
 | `.height()` | `height: f32` | Sets the height, in logical pixels. |
-| `.width_fraction()` | `fraction: f32` | Sets the width as a **fraction of the space the parent offers** — `1.0` fills it. |
+| `.width_fraction()` | `fraction: f32` | Sets the width as a **fraction of the space the parent offers**: `1.0` fills it. |
 | `.flex()` | `grow: f32` | Flex growth factor along the parent's main axis. |
 | `.shrink()` | `shrink: f32` | How much of a row's deficit this box absorbs. |
-| `.no_shrink()` | — | This box never shrinks — the default said out loud, kept because a layout that depends on it reads better for saying so. See `Self::shrink`. |
+| `.no_shrink()` |  | This box never shrinks: the default said out loud, kept because a layout that depends on it reads better for saying so. See `Self::shrink`. |
 | `.padding()` | `padding: f32` | Uniform inner padding, in logical pixels. |
 | `.padding_each()` | `top: f32, right: f32, bottom: f32, left: f32` | Inner padding per side (top, right, bottom, left). |
-| `.padding_insets()` | `padding: impl Into<InsetsGeometry>` | Sets the padding from any insets: one number, physical `Insets` — whose left stays on the left in a right-to-left script — or `InsetsDirectional`, whose start is the right there. |
+| `.padding_insets()` | `padding: impl Into<InsetsGeometry>` | Sets the padding from any insets: one number, physical `Insets` (whose left stays on the left in a right-to-left script) or `InsetsDirectional`, whose start is the right there. |
 | `.margin_insets()` | `margin: impl Into<InsetsGeometry>` | Sets the margin from any insets, as `padding_insets` does the padding. |
-| `.margin()` | `margin: f32` | A uniform **outer** margin: space reserved **around** the box — outside the decoration, it pushes the siblings away without growing the background or the border. |
+| `.margin()` | `margin: f32` | A uniform **outer** margin: space reserved **around** the box, outside the decoration, it pushes the siblings away without growing the background or the border. |
 | `.margin_each()` | `top: f32, right: f32, bottom: f32, left: f32` | Outer margin per side (top, right, bottom, left). |
 | `.radius()` | `radius: impl Into<BorderRadius>` | The rounded corner radii: uniform via `f32` (`.radius(10.0)`) or per corner via `BorderRadius` (`.radius(BorderRadius::top(12.0))`). |
-| `.clip()` | — | **Clips** the child to this box, corners included. |
+| `.clip()` |  | **Clips** the child to this box, corners included. |
 | `.border()` | `width: f32, color: Color` | The border: width (in px) and color, the same on all four sides. |
-| `.box_border()` | `border: impl Into<BoxBorder>` | **The border, side by side** — a `Border` or a `BorderDirectional`, each side its own width and colour (milestone 641). |
+| `.box_border()` | `border: impl Into<BoxBorder>` | **The border, side by side**: a `Border` or a `BorderDirectional`, each side its own width and colour (milestone 641). |
 | `.shape()` | `shape: BoxShape` | **A rectangle or a circle** (milestone 641). A circle is centred in the box, as wide as its shorter side, and its radius is not read. |
 | `.shadows()` | `shadows: impl IntoIterator<Item = BoxShadow>` | **The shadows**, painted in order behind the box (milestone 641). |
 | `.color()` | `color: Color` | The background color at rest. |
 | `.hover_color()` | `color: Color` | The background color on hover. |
 | `.pressed_color()` | `color: Color` | The background color when pressed. |
 | `.gradient()` | `end: Color, dir: [f32; 2]` | A linear background gradient (`color` → `end`), with `dir` in `[0,1]²` space (`[0.0, 1.0]` = top→bottom, for instance). |
-| `.image()` | `image: DecorationImage` | A picture over the background, under the border, clipped to the corners or the circle — fitted, aligned, repeated or sliced as the `DecorationImage` says. |
-| `.background_blend_mode()` | `mode: frus_core::BlendMode` | Blends the background — the colour or the gradient — with what is under the box by `mode` rather than painting it over: a multiply that darkens the picture behind, a colour that tints it, a difference that inverts it. |
+| `.image()` | `image: DecorationImage` | A picture over the background, under the border, clipped to the corners or the circle: fitted, aligned, repeated or sliced as the `DecorationImage` says. |
+| `.background_blend_mode()` | `mode: frus_core::BlendMode` | Blends the background (the colour or the gradient) with what is under the box by `mode` rather than painting it over: a multiply that darkens the picture behind, a colour that tints it, a difference that inverts it. |
 | `.shadow()` | `dx: f32, dy: f32, blur: f32, color: Color` | A drop shadow: the `(dx, dy)` offset, the blur radius and the color. Each call adds one, over those already there. |
 | `.on_click()` | `message: impl Into<Msg>` | The message emitted when the container is clicked. |
 | `.on_long_press()` | `message: impl Into<Msg>` | The message emitted by a **long press** (a press held without movement). A long press supersedes the click. |
@@ -136,11 +136,11 @@ pub fn example() -> Box<dyn Widget> {
 | `.animated_opacity()` | `opacity: f32, duration: f32, curve: Curve` | Like `Container::opacity`, but the opacity **animates** toward `opacity` on every change, with `duration` (in seconds) and `curve`. The fade applies to the whole group. |
 | `.animated_color()` | `color: Color, duration: f32, curve: Curve` | A background whose color **animates** toward `color` on every change, with `duration` (in seconds) and `curve`. The runtime interpolates from the current color; on mount it adopts `color` with no transition. Note: one box shares a single `(duration, curve)` across its animations (opacity, color). |
 | `.animated_size()` | `width: f32, height: f32, duration: f32, curve: Curve` | A box whose **size** animates toward `width×height` on every change, with `duration` and `curve`. The interpolated size is injected **at layout time** (the children reposition accordingly). On mount it adopts the target with no transition. |
-| `.animated_radius()` | `radius: impl Into<BorderRadius>, duration: f32, curve: Curve` | A box whose **corner radius** animates toward `radius` on every change, with `duration` and `curve` — the corners morph smoothly. Uniform via `f32`, or per corner via `BorderRadius`. On mount it adopts the target with no transition. |
+| `.animated_radius()` | `radius: impl Into<BorderRadius>, duration: f32, curve: Curve` | A box whose **corner radius** animates toward `radius` on every change, with `duration` and `curve`: the corners morph smoothly. Uniform via `f32`, or per corner via `BorderRadius`. On mount it adopts the target with no transition. |
 | `.animated_padding()` | `padding: f32, duration: f32, curve: Curve` | A box whose (uniform) **inner padding** animates toward `padding` on every change, with `duration` and `curve`. The interpolated padding is injected **at layout time** (the content repositions). On mount it adopts the target with no transition. |
 | `.animated_alignment()` | `alignment: impl Into<AlignmentGeometry>, duration: f32, curve: Curve` | A box whose **anchor** animates toward `alignment` on every change, with `duration` and `curve`: the child slides through the free space instead of jumping across it. On mount it adopts the anchor with no transition. |
-| `.alignment()` | `alignment: impl Into<AlignmentGeometry>` | **Anchors the child** within the box: centred, in a corner, against an edge… Accepts a **physical** anchor (`Alignment`) or a **directional** one (`AlignmentDirectional`, resolved for RTL at render time) — both through `Into`. By default, with no anchor, the child stretches to fill the container (the flex behaviour); setting an anchor leaves the child at its natural size and positions it. |
-| `.foreground()` | `decoration: BoxDecoration` | — |
+| `.alignment()` | `alignment: impl Into<AlignmentGeometry>` | **Anchors the child** within the box: centred, in a corner, against an edge… Accepts a **physical** anchor (`Alignment`) or a **directional** one (`AlignmentDirectional`, resolved for RTL at render time), both through `Into`. By default, with no anchor, the child stretches to fill the container (the flex behaviour); setting an anchor leaves the child at its natural size and positions it. |
+| `.foreground()` | `decoration: BoxDecoration` |  |
 | `.decoration()` | `decoration: BoxDecoration` | Sets the box's fill, gradient, picture, blend mode, border, shadows and shape from a `BoxDecoration` at once. What the decoration leaves unset changes nothing; the radius and the shape are always adopted. |
 
 ## Behaviour

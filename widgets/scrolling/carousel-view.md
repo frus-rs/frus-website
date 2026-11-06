@@ -34,7 +34,7 @@ impl CarouselView {
 From [`frus-examples/widgets/src/features/scrolling/widgets/carousel.rs`](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/scrolling/widgets/carousel.rs):
 
 ```rust
-//! `CarouselView` — one slide at a time between ‹ and › arrows. It is controlled: the
+//! `CarouselView`: one slide at a time between ‹ and › arrows. It is controlled: the
 //! app keeps the index and supplies the slide for it, so only one slide is ever built.
 
 use frus::{CarouselView, Center, Color, Colors, Container, Text, Widget};

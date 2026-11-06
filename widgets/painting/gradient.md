@@ -32,11 +32,11 @@ pub enum Gradient {
 From [`frus-examples/widgets/src/features/painting/widgets/gradients.rs`](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/painting/widgets/gradients.rs):
 
 ```rust
-//! Gradients — `LinearGradient`, `RadialGradient` and `SweepGradient`, painted by a
+//! Gradients: `LinearGradient`, `RadialGradient` and `SweepGradient`, painted by a
 //! `BoxDecoration` (on a `Container` or a `DecoratedBox`).
 //!
 //! The three are plain structs: start from `new(colors)` and change the public fields
-//! you need — stops, tile mode, centre, angles — with struct update syntax.
+//! you need (stops, tile mode, centre, angles) with struct update syntax.
 
 use frus::{
     Alignment, BoxDecoration, BoxShape, Color, Column, Container, Gradient, LinearGradient,

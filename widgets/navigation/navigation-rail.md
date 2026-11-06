@@ -32,7 +32,7 @@ impl NavigationRail {
 From [`frus-examples/widgets/src/features/navigation/widgets/navrail.rs`](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/navigation/widgets/navrail.rs):
 
 ```rust
-//! `NavigationRail` — the main destinations down the side of a tablet or desktop
+//! `NavigationRail`: the main destinations down the side of a tablet or desktop
 //! window: glyphs alone, glyphs with labels, or extended with the labels beside them.
 
 use frus::{
@@ -135,30 +135,30 @@ impl State for RailDemoState {
 | Method | Argument | Effect |
 | --- | --- | --- |
 | `.labels()` | `labels: RailLabels` | When the destinations say what they are. |
-| `.extended()` | `extended: bool` | — |
-| `.group_alignment()` | `alignment: f32` | — |
-| `.leading()` | `widget: impl Widget<Msg> + 'static` | — |
+| `.extended()` | `extended: bool` |  |
+| `.group_alignment()` | `alignment: f32` |  |
+| `.leading()` | `widget: impl Widget<Msg> + 'static` |  |
 | `.leading_boxed()` | `widget: Box<dyn Widget<Msg>>` | `Self::leading`, for a slot that is already boxed. |
-| `.trailing()` | `widget: impl Widget<Msg> + 'static` | — |
+| `.trailing()` | `widget: impl Widget<Msg> + 'static` |  |
 | `.trailing_boxed()` | `widget: Box<dyn Widget<Msg>>` | `Self::trailing`, for a slot that is already boxed. |
-| `.main_axis_alignment()` | `alignment: Justify` | — |
-| `.scrollable()` | — | — |
+| `.main_axis_alignment()` | `alignment: Justify` |  |
+| `.scrollable()` |  |  |
 | `.use_indicator()` | `use_indicator: bool` | On unless said otherwise, as it is over there. |
-| `.elevation()` | `elevation: f32` | — |
+| `.elevation()` | `elevation: f32` |  |
 | `.leading_at_top()` | `pinned: bool` | Whether the leading slot is **pinned to the top** instead of travelling with the destinations. |
 | `.trailing_at_bottom()` | `pinned: bool` | Whether the trailing slot is **pinned to the bottom**. |
 | `.item()` | `icon: impl Into<DestinationIcon>, label: impl Into<String>` | Adds a destination (glyph + label). |
-| `.destinations()` | `destinations: impl IntoIterator<Item = NavigationDestination>` | Adds a whole list of destinations **declared elsewhere** — one navigation, handed to whichever chrome the width called for. |
+| `.destinations()` | `destinations: impl IntoIterator<Item = NavigationDestination>` | Adds a whole list of destinations **declared elsewhere**: one navigation, handed to whichever chrome the width called for. |
 | `.badge()` | `count: u32` | Adds a notification count to the **last** destination. |
-| `.badge_dot()` | — | Adds a dot to the **last** destination's glyph (milestone 707). |
-| `.tooltip()` | `message: impl Into<String>` | — |
-| `.selected_icon()` | `icon: impl Into<DestinationIcon>` | — |
-| `.disabled()` | — | — |
-| `.indicator_color()` | `color: Color` | — |
-| `.indicator_shape()` | `shape: ShapeBorder` | — |
-| `.overlay_color()` | `overlay: WidgetStateProperty<Color>` | — |
-| `.label_text_style()` | `style: TextStyle` | — |
-| `.badge_text_style()` | `style: TextStyle` | — |
+| `.badge_dot()` |  | Adds a dot to the **last** destination's glyph (milestone 707). |
+| `.tooltip()` | `message: impl Into<String>` |  |
+| `.selected_icon()` | `icon: impl Into<DestinationIcon>` |  |
+| `.disabled()` |  |  |
+| `.indicator_color()` | `color: Color` |  |
+| `.indicator_shape()` | `shape: ShapeBorder` |  |
+| `.overlay_color()` | `overlay: WidgetStateProperty<Color>` |  |
+| `.label_text_style()` | `style: TextStyle` |  |
+| `.badge_text_style()` | `style: TextStyle` |  |
 | `.background()` | `color: Color` | The rail's surface. |
 
 ## Behaviour

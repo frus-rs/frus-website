@@ -29,7 +29,7 @@ impl BottomAppBar {
 From [`frus-examples/widgets/src/features/navigation/widgets/bottomappbar.rs`](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/navigation/widgets/bottomappbar.rs):
 
 ```rust
-//! `BottomAppBar` — a bar of actions along the bottom of a screen, for the screen you
+//! `BottomAppBar`: a bar of actions along the bottom of a screen, for the screen you
 //! are on (not for moving between screens). The scaffold cuts a notch in it for a
 //! docked floating action button.
 
@@ -139,7 +139,7 @@ impl State for BottomAppBarDemoState {
 
 | Method | Argument | Effect |
 | --- | --- | --- |
-| `.child()` | `child: impl Widget<Msg> + 'static` | What the bar carries — usually a row of buttons. |
+| `.child()` | `child: impl Widget<Msg> + 'static` | What the bar carries: usually a row of buttons. |
 | `.color()` | `color: Color` | The bar's colour. The theme's surface by default. |
 | `.height()` | `height: f32` | The bar's height (64 px by default). |
 | `.padding()` | `padding: f32` | The padding around its content. |

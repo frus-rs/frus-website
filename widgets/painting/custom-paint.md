@@ -33,11 +33,11 @@ impl CustomPaint {
 From [`frus-examples/widgets/src/features/painting/widgets/custom_paint.rs`](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/painting/widgets/custom_paint.rs):
 
 ```rust
-//! `CustomPaint` — a fixed-size canvas you draw yourself: charts, gauges, signatures,
+//! `CustomPaint`: a fixed-size canvas you draw yourself: charts, gauges, signatures,
 //! anything no widget draws for you.
 //!
 //! The closure gets the `Scene` to draw into, its box on screen (`Rect`, in window
-//! coordinates — offset everything by `bounds.x` / `bounds.y`) and the theme, so the
+//! coordinates: offset everything by `bounds.x` / `bounds.y`) and the theme, so the
 //! drawing follows light and dark mode like every widget does.
 
 use frus::{

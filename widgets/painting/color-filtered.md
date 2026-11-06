@@ -31,7 +31,7 @@ impl ColorFiltered {
 From [`frus-examples/widgets/src/features/painting/widgets/color_filtered.rs`](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/painting/widgets/color_filtered.rs):
 
 ```rust
-//! `ColorFiltered` — changes the colours of everything a child paints: greyscale,
+//! `ColorFiltered`: changes the colours of everything a child paints: greyscale,
 //! sepia, inverted, tinted.
 //!
 //! A filter is a `ColorFilter` value: a 5 × 4 colour matrix, with ready-made ones for
@@ -89,7 +89,7 @@ pub fn example() -> Box<dyn Widget> {
                     ColorFiltered::mode(Color::hex("#F59E0B"), BlendMode::Screen).child(picture()),
                 )),
         )),
-        // `enabled(false)` removes the filter entirely (no layer at all) — the way to
+        // `enabled(false)` removes the filter entirely (no layer at all): the way to
         // switch an effect off, here a "greyed out" state.
         Box::new(section("Switched by state", toggled())),
     ])
@@ -148,7 +148,7 @@ fn labelled(label: &str, child: impl Widget + 'static) -> Column {
 
 Applies a `ColorFilter` to every pixel of its child: greyscale, a tint, a contrast curve, a silhouette.
 
-Each pixel is transformed on its own, so nothing moves and nothing spreads — the subtree keeps exactly the shape it had. Use `ImageFiltered` when the effect needs a pixel's neighbours, and `BackdropFilter` when it should apply to what is painted *underneath* rather than to the child.
+Each pixel is transformed on its own, so nothing moves and nothing spreads: the subtree keeps exactly the shape it had. Use `ImageFiltered` when the effect needs a pixel's neighbours, and `BackdropFilter` when it should apply to what is painted *underneath* rather than to the child.
 
 ```rust
 ColorFiltered::new(ColorFilter::grayscale()).child(Image::asset("photo.png"))

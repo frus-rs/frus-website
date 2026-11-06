@@ -41,12 +41,12 @@ pub struct OrientationBuilder;
 From [`frus-examples/widgets/src/features/state/widgets/responsive.rs`](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/state/widgets/responsive.rs):
 
 ```rust
-//! `Responsive`, `LayoutBuilder` and `OrientationBuilder` — one interface, several
+//! `Responsive`, `LayoutBuilder` and `OrientationBuilder`: one interface, several
 //! layouts.
 //!
 //! `responsive(width)` picks a subtree by size class (compact < 600 px, medium < 840 px,
 //! expanded beyond), usually from the window's width. `LayoutBuilder` builds from the room
-//! **this box** is given — a component that adapts wherever it is put, in a sidebar as
+//! **this box** is given: a component that adapts wherever it is put, in a sidebar as
 //! well as full screen. Resize the window to watch them switch.
 
 use frus::{

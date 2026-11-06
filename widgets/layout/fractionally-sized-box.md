@@ -29,7 +29,7 @@ impl FractionallySizedBox {
 From [`frus-examples/widgets/src/features/layout/widgets/fractionally_sized_box.rs`](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/layout/widgets/fractionally_sized_box.rs):
 
 ```rust
-//! `FractionallySizedBox` — a box sized as a fraction of the room its parent offers.
+//! `FractionallySizedBox`: a box sized as a fraction of the room its parent offers.
 
 use frus::{
     component, Alignment, Color, Column, Container, Curve, FractionallySizedBox, Slider, Text,
@@ -55,7 +55,7 @@ pub fn example() -> Box<dyn Widget> {
                 ),
         )),
         // Live: drag the slider and the bar takes that share of the width. `animated`
-        // makes it glide to each new size instead of jumping — a progress bar.
+        // makes it glide to each new size instead of jumping: a progress bar.
         Box::new(section("Animated, driven by state", live_bar())),
     ])
 }
@@ -113,7 +113,7 @@ fn fill(label: &str) -> Container {
 
 Takes a **fraction** of the parent's size on each axis that is set: `width_factor(0.5)` = half the parent's width, `height_factor(0.25)` = a quarter of its height. An axis left **unset** follows its content (its natural size). The child fills the box (stretch / `flex`).
 
-Rather than constraining the child, the box **sizes itself** as a percentage of the parent (via `Dimension::Percent`). In the common case — a child that fills — that gives the same visual result, and it fits the flex model.
+Rather than constraining the child, the box **sizes itself** as a percentage of the parent (via `Dimension::Percent`). In the common case (a child that fills) that gives the same visual result, and it fits the flex model.
 
 `FractionallySizedBox::animated` makes each change of factor a movement instead of a jump; `crate::AnimatedFractionallySizedBox` is the name for the same thing.
 

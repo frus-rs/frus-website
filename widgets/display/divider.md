@@ -37,7 +37,7 @@ impl VerticalDivider {
 From [`frus-examples/widgets/src/features/display/widgets/divider.rs`](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/display/widgets/divider.rs):
 
 ```rust
-//! `Divider` and `VerticalDivider` — a thin rule in the theme's colours, across a column
+//! `Divider` and `VerticalDivider`: a thin rule in the theme's colours, across a column
 //! or down a row.
 
 use frus::{Align, Color, Column, Container, Divider, Row, Text, VerticalDivider, Widget};
@@ -104,16 +104,16 @@ pub fn example() -> Box<dyn Widget> {
 | --- | --- | --- | --- |
 | `Divider` | `.height()` | `height: f32` | The room the separator takes in the layout, line and air together. Defaults to `DIVIDER_SPACE`. |
 | `Divider` | `.thickness()` | `thickness: f32` | The thickness of the line itself. Defaults to `DIVIDER_THICKNESS`. |
-| `Divider` | `.indent()` | `indent: f32` | Insets the line from the **leading** edge, leaving the box where it is — how a list separates rows without cutting through their leading icons. |
+| `Divider` | `.indent()` | `indent: f32` | Insets the line from the **leading** edge, leaving the box where it is: how a list separates rows without cutting through their leading icons. |
 | `Divider` | `.end_indent()` | `end_indent: f32` | Insets the line from the **trailing** edge. |
 | `Divider` | `.radius()` | `radius: impl Into<BorderRadius>` | A thick rule reads as a bar, and a bar with square ends is the only thing in an interface that still has them. |
 | `Divider` | `.color()` | `color: Color` | Overrides the line's colour. Defaults to the theme's discreet outline. |
-| `VerticalDivider` | `.width()` | `width: f32` | The room the separator takes **across** the row, line and air together. Defaults to `DIVIDER_SPACE` — the same figure a horizontal one takes, and the same theme field, which is why one number covers both. |
+| `VerticalDivider` | `.width()` | `width: f32` | The room the separator takes **across** the row, line and air together. Defaults to `DIVIDER_SPACE`: the same figure a horizontal one takes, and the same theme field, which is why one number covers both. |
 | `VerticalDivider` | `.thickness()` | `thickness: f32` | The thickness of the line itself. Defaults to `DIVIDER_THICKNESS`. |
 | `VerticalDivider` | `.indent()` | `indent: f32` | Insets the line from the **top**, leaving the box where it is. |
 | `VerticalDivider` | `.end_indent()` | `end_indent: f32` | Insets the line from the **bottom**. |
 | `VerticalDivider` | `.color()` | `color: Color` | Overrides the line's colour. Defaults to the theme's discreet outline. |
-| `VerticalDivider` | `.radius()` | `radius: impl Into<BorderRadius>` | — |
+| `VerticalDivider` | `.radius()` | `radius: impl Into<BorderRadius>` |  |
 
 ## Behaviour
 
@@ -143,7 +143,7 @@ Flex::row()
     .child(right_pane)
 ```
 
-**It takes its row's full height, whatever the row said about alignment.** A row that centres its children would otherwise give this one the height of its content, and its content is nothing — so a rule in a centred row would be a rule nobody can see, which is the first thing anybody hits.
+**It takes its row's full height, whatever the row said about alignment.** A row that centres its children would otherwise give this one the height of its content, and its content is nothing, so a rule in a centred row would be a rule nobody can see, which is the first thing anybody hits.
 
 It still needs a height to fill: a row is as tall as its tallest child, so a rule between two things that size themselves is as tall as they are, and one standing alone in a row of nothing else is nothing at all.
 

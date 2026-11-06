@@ -33,7 +33,7 @@ impl ScrollTo {
 From [`frus-examples/widgets/src/features/scrolling/widgets/scrollto.rs`](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/scrolling/widgets/scrollto.rs):
 
 ```rust
-//! Programmatic scrolling — reading where a scroll area is (`on_scroll` and
+//! Programmatic scrolling: reading where a scroll area is (`on_scroll` and
 //! `ScrollPosition`) and moving it (`keyed` + `frus::host::scroll_to`): a "back to top"
 //! button, jumping to an item, a chat that opens at its newest message.
 
@@ -128,7 +128,7 @@ fn button(label: &str, on_press: impl Fn() + 'static) -> Button {
 | `.aligned()` | `align: f32` | Where in the window the item of `ScrollTo::index` comes to rest: `0.0` at its leading edge (the default), `0.5` in its middle, `1.0` at its far edge. |
 | `.and_x()` | `target: ScrollTarget` | Also moves the horizontal axis to `target`. |
 | `.and_y()` | `target: ScrollTarget` | Also moves the vertical axis to `target`. |
-| `.instant()` | — | **Arrive** rather than travel: no animation, the offset is simply there. |
+| `.instant()` |  | **Arrive** rather than travel: no animation, the offset is simply there. |
 
 ## Behaviour
 
@@ -136,7 +136,7 @@ fn button(label: &str, on_press: impl Fn() + 'static) -> Button {
 
 `None` on an axis leaves that axis where it is, which is what lets one type serve a vertical page, a sideways strip and the rare surface that scrolls both ways without a caller ever writing a coordinate it did not mean.
 
-Carried by a command, resolved against the frame that follows it, and **refused by a region a finger is holding** — an offset has one owner at a time, and the finger is the one the reader can see.
+Carried by a command, resolved against the frame that follows it, and **refused by a region a finger is holding**: an offset has one owner at a time, and the finger is the one the reader can see.
 
 ## See also
 

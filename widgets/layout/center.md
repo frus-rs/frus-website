@@ -37,7 +37,7 @@ impl Aligned {
 From [`frus-examples/widgets/src/features/layout/widgets/align.rs`](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/layout/widgets/align.rs):
 
 ```rust
-//! `Center` and `Aligned` — place one child somewhere inside the room it is given.
+//! `Center` and `Aligned`: place one child somewhere inside the room it is given.
 
 use frus::{
     Aligned, Alignment, AlignmentDirectional, Center, Color, Container, Text, Widget, Wrap,
@@ -49,7 +49,7 @@ pub fn example() -> Box<dyn Widget> {
     sections(vec![
         // `Center` takes all the room it is offered and puts its child in the middle.
         Box::new(section("Center", frame(Center::new(dot("center"))))),
-        // `Aligned` does the same at any of the nine named spots — or anywhere between
+        // `Aligned` does the same at any of the nine named spots, or anywhere between
         // them: `Alignment::new(x, y)` runs from -1 (left/top) to 1 (right/bottom).
         Box::new(section(
             "Aligned",
@@ -120,7 +120,7 @@ fn dot(text: &str) -> Container {
 
 ### `Center`
 
-**Centres its child** in the room it is given — an `Aligned` at `Alignment::CENTER`, and the same room.
+**Centres its child** in the room it is given: an `Aligned` at `Alignment::CENTER`, and the same room.
 
 ```rust
 use frus_widgets::{Center, Text};
@@ -138,7 +138,7 @@ The box takes all the room on offer, and the child sits at the anchor inside it:
 use frus_core::Alignment;
 use frus_widgets::{Aligned, Text};
 
-let _signature: Aligned<()> = Aligned::new(Alignment::BOTTOM_RIGHT, Text::new("— the team"));
+let _signature: Aligned<()> = Aligned::new(Alignment::BOTTOM_RIGHT, Text::new(", the team"));
 ```
 
 **How much room it takes.** All of what its parent hands down: a whole page, a whole card, the whole cell of a grid. The exception is along a row's or a column's own direction when the line holds other children. The line is shared there, so the box is only as long as its child, and the child is centred across the line only. Wrap it in `Expanded` to give it the rest of the line.

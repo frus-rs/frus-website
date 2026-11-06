@@ -46,7 +46,7 @@ impl SwitchListTile {
 From [`frus-examples/widgets/src/features/inputs/widgets/control_tiles.rs`](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/inputs/widgets/control_tiles.rs):
 
 ```rust
-//! `CheckboxListTile`, `RadioListTile` and `SwitchListTile` — list rows whose **whole
+//! `CheckboxListTile`, `RadioListTile` and `SwitchListTile`: list rows whose **whole
 //! width** works one control. For settings screens: a tap anywhere on the row toggles,
 //! not only on the 20-pixel box.
 
@@ -174,52 +174,52 @@ impl State for TilesDemoState {
 
 | Type | Method | Argument | Effect |
 | --- | --- | --- | --- |
-| `CheckboxListTile` | `.title()` | — | The row's first line. |
-| `CheckboxListTile` | `.subtitle()` | — | Its second. |
-| `CheckboxListTile` | `.secondary()` | — | The widget in the **other** slot — an icon, usually. The control takes the side `control_affinity` names and this takes the side left over. |
-| `CheckboxListTile` | `.control_affinity()` | — | — |
-| `CheckboxListTile` | `.dense()` | — | The tighter row. |
-| `CheckboxListTile` | `.three_line()` | — | A row tall enough for a two-line subtitle. |
-| `CheckboxListTile` | `.selected()` | — | Whether this is the row the reader is on, which is a different question from whether the control is on. |
-| `CheckboxListTile` | `.enabled()` | — | Whether the row and its control can be worked at all. Disabled, **neither** answers: a row that still reported a tap while its control refused one would be two controls disagreeing. |
-| `CheckboxListTile` | `.tile_color()` | — | The row's surface. |
-| `CheckboxListTile` | `.selected_tile_color()` | — | And its surface while it is the row the reader is on. |
-| `CheckboxListTile` | `.shape()` | — | What shape the row is. |
-| `CheckboxListTile` | `.content_padding()` | — | The room kept inside it. |
-| `CheckboxListTile` | `.title_style()` | — | The title's type. |
-| `CheckboxListTile` | `.subtitle_style()` | — | The subtitle's. |
+| `CheckboxListTile` | `.title()` |  | The row's first line. |
+| `CheckboxListTile` | `.subtitle()` |  | Its second. |
+| `CheckboxListTile` | `.secondary()` |  | The widget in the **other** slot: an icon, usually. The control takes the side `control_affinity` names and this takes the side left over. |
+| `CheckboxListTile` | `.control_affinity()` |  |  |
+| `CheckboxListTile` | `.dense()` |  | The tighter row. |
+| `CheckboxListTile` | `.three_line()` |  | A row tall enough for a two-line subtitle. |
+| `CheckboxListTile` | `.selected()` |  | Whether this is the row the reader is on, which is a different question from whether the control is on. |
+| `CheckboxListTile` | `.enabled()` |  | Whether the row and its control can be worked at all. Disabled, **neither** answers: a row that still reported a tap while its control refused one would be two controls disagreeing. |
+| `CheckboxListTile` | `.tile_color()` |  | The row's surface. |
+| `CheckboxListTile` | `.selected_tile_color()` |  | And its surface while it is the row the reader is on. |
+| `CheckboxListTile` | `.shape()` |  | What shape the row is. |
+| `CheckboxListTile` | `.content_padding()` |  | The room kept inside it. |
+| `CheckboxListTile` | `.title_style()` |  | The title's type. |
+| `CheckboxListTile` | `.subtitle_style()` |  | The subtitle's. |
 | `CheckboxListTile` | `.active_color()` | `color: Color` | The colour of a ticked box, over the theme's and `primary`. |
 | `CheckboxListTile` | `.check_color()` | `color: Color` | The colour of the tick itself. |
 | `CheckboxListTile` | `.checkbox_radius()` | `radius: f32` | The box's corner. |
-| `RadioListTile` | `.title()` | — | The row's first line. |
-| `RadioListTile` | `.subtitle()` | — | Its second. |
-| `RadioListTile` | `.secondary()` | — | The widget in the **other** slot — an icon, usually. The control takes the side `control_affinity` names and this takes the side left over. |
-| `RadioListTile` | `.control_affinity()` | — | — |
-| `RadioListTile` | `.dense()` | — | The tighter row. |
-| `RadioListTile` | `.three_line()` | — | A row tall enough for a two-line subtitle. |
-| `RadioListTile` | `.selected()` | — | Whether this is the row the reader is on, which is a different question from whether the control is on. |
-| `RadioListTile` | `.enabled()` | — | Whether the row and its control can be worked at all. Disabled, **neither** answers: a row that still reported a tap while its control refused one would be two controls disagreeing. |
-| `RadioListTile` | `.tile_color()` | — | The row's surface. |
-| `RadioListTile` | `.selected_tile_color()` | — | And its surface while it is the row the reader is on. |
-| `RadioListTile` | `.shape()` | — | What shape the row is. |
-| `RadioListTile` | `.content_padding()` | — | The room kept inside it. |
-| `RadioListTile` | `.title_style()` | — | The title's type. |
-| `RadioListTile` | `.subtitle_style()` | — | The subtitle's. |
+| `RadioListTile` | `.title()` |  | The row's first line. |
+| `RadioListTile` | `.subtitle()` |  | Its second. |
+| `RadioListTile` | `.secondary()` |  | The widget in the **other** slot: an icon, usually. The control takes the side `control_affinity` names and this takes the side left over. |
+| `RadioListTile` | `.control_affinity()` |  |  |
+| `RadioListTile` | `.dense()` |  | The tighter row. |
+| `RadioListTile` | `.three_line()` |  | A row tall enough for a two-line subtitle. |
+| `RadioListTile` | `.selected()` |  | Whether this is the row the reader is on, which is a different question from whether the control is on. |
+| `RadioListTile` | `.enabled()` |  | Whether the row and its control can be worked at all. Disabled, **neither** answers: a row that still reported a tap while its control refused one would be two controls disagreeing. |
+| `RadioListTile` | `.tile_color()` |  | The row's surface. |
+| `RadioListTile` | `.selected_tile_color()` |  | And its surface while it is the row the reader is on. |
+| `RadioListTile` | `.shape()` |  | What shape the row is. |
+| `RadioListTile` | `.content_padding()` |  | The room kept inside it. |
+| `RadioListTile` | `.title_style()` |  | The title's type. |
+| `RadioListTile` | `.subtitle_style()` |  | The subtitle's. |
 | `RadioListTile` | `.active_color()` | `color: Color` | The ring and the dot while it is the chosen one, over the theme's and `primary`. |
-| `SwitchListTile` | `.title()` | — | The row's first line. |
-| `SwitchListTile` | `.subtitle()` | — | Its second. |
-| `SwitchListTile` | `.secondary()` | — | The widget in the **other** slot — an icon, usually. The control takes the side `control_affinity` names and this takes the side left over. |
-| `SwitchListTile` | `.control_affinity()` | — | — |
-| `SwitchListTile` | `.dense()` | — | The tighter row. |
-| `SwitchListTile` | `.three_line()` | — | A row tall enough for a two-line subtitle. |
-| `SwitchListTile` | `.selected()` | — | Whether this is the row the reader is on, which is a different question from whether the control is on. |
-| `SwitchListTile` | `.enabled()` | — | Whether the row and its control can be worked at all. Disabled, **neither** answers: a row that still reported a tap while its control refused one would be two controls disagreeing. |
-| `SwitchListTile` | `.tile_color()` | — | The row's surface. |
-| `SwitchListTile` | `.selected_tile_color()` | — | And its surface while it is the row the reader is on. |
-| `SwitchListTile` | `.shape()` | — | What shape the row is. |
-| `SwitchListTile` | `.content_padding()` | — | The room kept inside it. |
-| `SwitchListTile` | `.title_style()` | — | The title's type. |
-| `SwitchListTile` | `.subtitle_style()` | — | The subtitle's. |
+| `SwitchListTile` | `.title()` |  | The row's first line. |
+| `SwitchListTile` | `.subtitle()` |  | Its second. |
+| `SwitchListTile` | `.secondary()` |  | The widget in the **other** slot: an icon, usually. The control takes the side `control_affinity` names and this takes the side left over. |
+| `SwitchListTile` | `.control_affinity()` |  |  |
+| `SwitchListTile` | `.dense()` |  | The tighter row. |
+| `SwitchListTile` | `.three_line()` |  | A row tall enough for a two-line subtitle. |
+| `SwitchListTile` | `.selected()` |  | Whether this is the row the reader is on, which is a different question from whether the control is on. |
+| `SwitchListTile` | `.enabled()` |  | Whether the row and its control can be worked at all. Disabled, **neither** answers: a row that still reported a tap while its control refused one would be two controls disagreeing. |
+| `SwitchListTile` | `.tile_color()` |  | The row's surface. |
+| `SwitchListTile` | `.selected_tile_color()` |  | And its surface while it is the row the reader is on. |
+| `SwitchListTile` | `.shape()` |  | What shape the row is. |
+| `SwitchListTile` | `.content_padding()` |  | The room kept inside it. |
+| `SwitchListTile` | `.title_style()` |  | The title's type. |
+| `SwitchListTile` | `.subtitle_style()` |  | The subtitle's. |
 | `SwitchListTile` | `.active_color()` | `color: Color` | The thumb while it is on, over the theme's. |
 | `SwitchListTile` | `.active_track_color()` | `color: Color` | The track while it is on. |
 

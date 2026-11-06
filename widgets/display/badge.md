@@ -31,7 +31,7 @@ impl Badge {
 From [`frus-examples/widgets/src/features/display/widgets/badge.rs`](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/display/widgets/badge.rs):
 
 ```rust
-//! `Badge` — the small mark that says "there is something here": a count on an inbox,
+//! `Badge`: the small mark that says "there is something here": a count on an inbox,
 //! a dot on a bell.
 
 use frus::{
@@ -56,7 +56,7 @@ pub fn example() -> Box<dyn Widget> {
             )
             .layer(
                 Positioned::new(
-                    // A count of zero hides the label and leaves a dot — or, as here, the
+                    // A count of zero hides the label and leaves a dot, or, as here, the
                     // application drops the badge altogether.
                     if unread.get() > 0 {
                         Box::new(Badge::new(count_label(unread.get()))) as Box<dyn Widget>
@@ -144,15 +144,15 @@ pub fn count_label(count: u32) -> String {
 | Method | Argument | Effect |
 | --- | --- | --- |
 | `.max_count()` | `max: u32` | The largest count written out; past it the badge reads `max+`. 999 by default. |
-| `.label_visible()` | `visible: bool` | Whether the badge is shown. `false` takes it away — on its own it takes no room and draws nothing, and on a child only the child is left — so a count of zero needs no `if` around the widget: `Badge::count(n).label_visible(n > 0)`. |
-| `.background_color()` | `color: Color` | — |
+| `.label_visible()` | `visible: bool` | Whether the badge is shown. `false` takes it away (on its own it takes no room and draws nothing, and on a child only the child is left) so a count of zero needs no `if` around the widget: `Badge::count(n).label_visible(n > 0)`. |
+| `.background_color()` | `color: Color` |  |
 | `.text_color()` | `color: Color` | The label's colour on that fill; the theme's `on_error` otherwise. |
-| `.text_style()` | `style: TextStyle` | The label's whole style — size, weight, family. Its colour is `text_color`'s. |
+| `.text_style()` | `style: TextStyle` | The label's whole style: size, weight, family. Its colour is `text_color`'s. |
 | `.small_size()` | `size: f32` | The diameter of a badge with no label. |
 | `.large_size()` | `size: f32` | The height of a badge that carries one. |
 | `.padding()` | `padding: f32` | The label's room either side. |
 | `.alignment()` | `alignment: impl Into<AlignmentGeometry>` | Where on its child a pinned badge goes (`Badge::on`): the child's top-end corner by default, or the theme's. An `AlignmentDirectional` follows the reading direction. |
-| `.offset()` | `across: f32, down: f32` | How far a pinned badge with a label is moved from its place, `(across, down)`: a little past the end and above the top by default — `(4, -4)`, mirrored for a right-to-left reading — or the theme's. A dot is not moved: it sits in the corner. |
+| `.offset()` | `across: f32, down: f32` | How far a pinned badge with a label is moved from its place, `(across, down)`: a little past the end and above the top by default (`(4, -4)`, mirrored for a right-to-left reading) or the theme's. A dot is not moved: it sits in the corner. |
 
 ## Behaviour
 

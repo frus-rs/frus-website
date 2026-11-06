@@ -29,7 +29,7 @@ impl RangeSlider {
 From [`frus-examples/widgets/src/features/inputs/widgets/range_slider.rs`](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/inputs/widgets/range_slider.rs):
 
 ```rust
-//! `RangeSlider` — two thumbs on one track, for picking an interval (a price range, a
+//! `RangeSlider`: two thumbs on one track, for picking an interval (a price range, a
 //! time window).
 
 use frus::{Color, RangeSlider, State, StateContext, StatefulWidget, Text, Widget};
@@ -125,7 +125,7 @@ impl State for RangeDemoState {
 | `.value_indicator_shape()` | `shape: impl SliderValueIndicatorShape + 'static` | Paints the value indicators with `shape`. |
 | `.enabled()` | `enabled: bool` | Whether the slider can be moved. Disabled it takes no drag, no key and no focus, and still shows its interval. |
 | `.on_change()` | `on_change: impl Fn(f32, f32) -> R + 'static` | A closure producing a message from the new interval, `(start, end)`, in the slider's units. |
-| `.on_change_start()` | `on_start: impl Fn(f32, f32) -> R + 'static` | — |
+| `.on_change_start()` | `on_start: impl Fn(f32, f32) -> R + 'static` |  |
 | `.on_change_end()` | `on_end: impl Fn(f32, f32) -> R + 'static` | Sent once when the drag ends, with the interval it settled on. |
 
 ## Behaviour

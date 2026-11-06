@@ -29,7 +29,7 @@ impl Card {
 From [`frus-examples/widgets/src/features/display/widgets/card.rs`](https://github.com/frus-rs/frus/blob/e6fba33f5b42d5a93e23a6b0e43fce3f366a3692/frus-examples/widgets/src/features/display/widgets/card.rs):
 
 ```rust
-//! `Card` — a themed surface that groups one piece of content: elevated, filled or
+//! `Card`: a themed surface that groups one piece of content: elevated, filled or
 //! outlined.
 
 use frus::{
@@ -89,7 +89,7 @@ pub fn example() -> Box<dyn Widget> {
     ])
 }
 
-/// A small card holding one word — the variants side by side.
+/// A small card holding one word: the variants side by side.
 fn labelled(card: Card, label: &str) -> Card {
     card.child(Text::new(label))
 }
@@ -100,8 +100,8 @@ fn labelled(card: Card, label: &str) -> Card {
 | Method | Argument | Effect |
 | --- | --- | --- |
 | `.variant()` | `variant: CardVariant` | Chooses the variant. |
-| `.filled()` | — | A flat tonal card: no shadow, no outline. |
-| `.outlined()` | — | An outlined card: a hairline, no shadow. |
+| `.filled()` |  | A flat tonal card: no shadow, no outline. |
+| `.outlined()` |  | An outlined card: a hairline, no shadow. |
 | `.padding()` | `padding: f32` | Uniform padding **inside** the card. |
 | `.margin()` | `margin: f32` | Uniform room **outside** the card. Defaults to `CARD_MARGIN`; `0.0` for a caller that spaces its children itself. |
 | `.elevation()` | `elevation: f32` | How far off the surface the card sits. `0.0` removes the shadow; the default is `CARD_ELEVATION` for an elevated card and nothing for the other two. |
