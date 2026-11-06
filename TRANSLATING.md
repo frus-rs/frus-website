@@ -32,7 +32,7 @@ when the site is built, into `docs/` (run `npm run sync` to get them). A page's 
    - the headings' meaning: a link to `#the-tray` from another page follows the English
      heading, so translate the heading and add the English anchor after it:
      `## La zone de notification {#the-tray}`.
-4. Look at it: `npm run start -- --locale fr` serves the site in that language.
+4. Look at it: `npm run start:fr` serves the site in French (`npm run start -- --locale <locale>` in another language).
 5. Open a pull request with one page, or a few. A reviewer reads it for meaning and for the
    terms below.
 
